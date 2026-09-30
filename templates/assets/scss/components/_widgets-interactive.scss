@@ -1,0 +1,271 @@
+/*--------------------------------------------------------------
+# Dashboard Widgets - Interactive
+--------------------------------------------------------------*/
+
+/* Calendar Widget */
+.widget-calendar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-md);
+}
+
+.widget-calendar-nav {
+  display: flex;
+  gap: var(--spacing-xs);
+}
+
+.widget-calendar-nav button {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+  color: var(--muted-color);
+}
+
+.widget-calendar-nav button:hover {
+  background: var(--background-color);
+  color: var(--default-color);
+}
+
+.widget-calendar-month {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--heading-color);
+}
+
+.widget-calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+  text-align: center;
+}
+
+.widget-calendar-day-header {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--muted-color);
+  padding: var(--spacing-sm);
+}
+
+.widget-calendar-day {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8125rem;
+  color: var(--default-color);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+}
+
+.widget-calendar-day:hover {
+  background: var(--background-color);
+}
+
+.widget-calendar-day.other-month {
+  color: var(--light-color);
+}
+
+.widget-calendar-day.today {
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  font-weight: 600;
+}
+
+.widget-calendar-day.has-event::after {
+  content: "";
+  position: absolute;
+  bottom: 4px;
+  width: 4px;
+  height: 4px;
+  background: var(--accent-color);
+  border-radius: var(--radius-full);
+}
+
+/* Quick Actions Widget */
+.quick-actions-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-sm);
+}
+
+.quick-action-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.quick-action-item:hover {
+  background: var(--background-color);
+}
+
+.quick-action-icon {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.quick-action-label {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--default-color);
+}
+
+/* Project List Widget */
+.project-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-item {
+  display: flex;
+  align-items: center;
+  padding: var(--spacing-md) var(--spacing-lg);
+  gap: var(--spacing-lg);
+}
+
+.project-item:not(:last-child) {
+  border-bottom: 1px solid var(--border-color-light);
+}
+
+.project-info {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  min-width: 220px;
+}
+
+.project-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  font-size: 1.125rem;
+  flex-shrink: 0;
+}
+
+.project-details {
+  min-width: 0;
+}
+
+.project-name {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--heading-color);
+}
+
+.project-client {
+  font-size: 0.75rem;
+  color: var(--muted-color);
+}
+
+.project-team {
+  min-width: 120px;
+}
+
+.avatar-group {
+  display: flex;
+  align-items: center;
+}
+
+.avatar-group .avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-full);
+  border: 2px solid var(--surface-color);
+  margin-left: -8px;
+  object-fit: cover;
+}
+
+.avatar-group .avatar:first-child {
+  margin-left: 0;
+}
+
+.avatar-more {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--background-color);
+  border-radius: var(--radius-full);
+  border: 2px solid var(--surface-color);
+  margin-left: -8px;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: var(--muted-color);
+}
+
+.project-progress-info {
+  min-width: 150px;
+}
+
+.project-progress-label {
+  font-size: 0.75rem;
+  color: var(--muted-color);
+}
+
+.project-progress-value {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--heading-color);
+}
+
+.project-deadline {
+  display: flex;
+  flex-direction: column;
+  min-width: 100px;
+}
+
+.deadline-label {
+  font-size: 0.6875rem;
+  color: var(--muted-color);
+  text-transform: uppercase;
+}
+
+.deadline-date {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--default-color);
+}
+
+.project-status {
+  min-width: 80px;
+}
+
+.project-actions {
+  min-width: 40px;
+}
+
+@media (max-width: 1199px) {
+  .project-item {
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+  }
+
+  .project-info {
+    min-width: 100%;
+  }
+
+  .project-team,
+  .project-progress-info,
+  .project-deadline,
+  .project-status {
+    min-width: auto;
+  }
+}

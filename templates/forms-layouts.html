@@ -1,0 +1,1853 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Layouts - TrendyAdmin</title>
+  <meta name="description" content="TrendyAdmin - Bootstrap Admin Template">
+  <meta name="keywords" content="admin, dashboard, bootstrap">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts - Plus Jakarta Sans (body) + Outfit (headings) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="assets/vendor/phosphor-icons/phosphor-icons.css" rel="stylesheet">
+  <link href="assets/vendor/lucide-icons/lucide.css" rel="stylesheet">
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/choices.js/choices.min.css" rel="stylesheet">
+  <link href="assets/vendor/flatpickr/flatpickr.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+    * Template Name: TrendyAdmin - Bootstrap Admin Template
+    * Template URL: https://bootstrapmade.com/trendy-admin-bootstrap-dashboard-template/
+    * Updated: Jul 29 2026 with Bootstrap v5.3.8
+    * Author: BootstrapMade.com
+    * License: https://bootstrapmade.com/license/
+    ======================================================== -->
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-inner">
+      <!-- Header Left -->
+      <div class="header-left">
+        <button class="sidebar-toggle" title="Toggle Sidebar">
+          <i class="ph ph-list"></i>
+        </button>
+        <a href="index.html" class="header-logo">
+          <span class="header-logo-mark"><i class="bi bi-lightning-charge-fill"></i></span>
+          <span class="header-logo-text">TrendyAdmin</span>
+        </a>
+
+        <!-- Apps Quick Access -->
+        <div class="header-action dropdown apps-dropdown">
+          <button class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" title="Quick Access">
+            <i class="ph ph-dots-nine"></i>
+          </button>
+          <div class="dropdown-menu">
+            <div class="apps-menu-header">
+              <h6>Quick Access</h6>
+              <span>Jump straight into an app</span>
+            </div>
+            <div class="apps-grid">
+              <a href="apps-chat.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-chat-circle-dots"></i></span>
+                <span>Chat</span>
+              </a>
+              <a href="apps-email.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-envelope"></i></span>
+                <span>Email</span>
+              </a>
+              <a href="apps-calendar.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-calendar-blank"></i></span>
+                <span>Calendar</span>
+              </a>
+              <a href="apps-kanban.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-kanban"></i></span>
+                <span>Kanban</span>
+              </a>
+              <a href="apps-file-manager.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-folder-open"></i></span>
+                <span>Files</span>
+              </a>
+              <a href="apps-todo.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-check-square"></i></span>
+                <span>Todo</span>
+              </a>
+              <a href="apps-contacts.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-address-book"></i></span>
+                <span>Contacts</span>
+              </a>
+              <a href="apps-support.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-headset"></i></span>
+                <span>Support</span>
+              </a>
+              <a href="invoice-list.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-receipt"></i></span>
+                <span>Invoices</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Header Search (Desktop) -->
+      <div class="header-search">
+        <form class="search-form" action="search-results.html" method="GET">
+          <button type="submit"><i class="ph ph-magnifying-glass"></i></button>
+          <input type="search" name="q" placeholder="Search anything..." autocomplete="off">
+          <span class="search-hint">⌘K</span>
+        </form>
+      </div>
+
+      <!-- Header Right -->
+      <div class="header-right">
+        <!-- Desktop Actions (hidden on mobile, shown in mobile menu) -->
+        <div class="header-actions-desktop">
+          <!-- Quick Create -->
+          <div class="dropdown create-dropdown">
+            <button class="create-btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="ph ph-plus"></i>
+              <span>Create</span>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end create-menu">
+              <a class="dropdown-item" href="apps-kanban.html">
+                <span class="create-item-icon"><i class="ph ph-kanban"></i></span>
+                <span class="create-item-text">
+                  <span class="create-item-title">New Project</span>
+                  <span class="create-item-sub">Start a kanban board</span>
+                </span>
+              </a>
+              <a class="dropdown-item" href="apps-todo.html">
+                <span class="create-item-icon"><i class="ph ph-check-square"></i></span>
+                <span class="create-item-text">
+                  <span class="create-item-title">New Task</span>
+                  <span class="create-item-sub">Add to your todo list</span>
+                </span>
+              </a>
+              <a class="dropdown-item" href="apps-contacts.html">
+                <span class="create-item-icon"><i class="ph ph-user-plus"></i></span>
+                <span class="create-item-text">
+                  <span class="create-item-title">New Contact</span>
+                  <span class="create-item-sub">Save a new person</span>
+                </span>
+              </a>
+              <a class="dropdown-item" href="invoice-list.html">
+                <span class="create-item-icon"><i class="ph ph-receipt"></i></span>
+                <span class="create-item-text">
+                  <span class="create-item-title">New Invoice</span>
+                  <span class="create-item-sub">Bill a customer</span>
+                </span>
+              </a>
+            </div>
+          </div>
+
+          <div class="header-divider"></div>
+
+          <!-- Theme Toggle -->
+          <button class="header-action theme-toggle" title="Toggle Theme">
+            <i class="ph ph-moon icon-dark"></i>
+            <i class="ph ph-sun icon-light"></i>
+          </button>
+
+          <!-- Fullscreen Toggle -->
+          <button class="header-action fullscreen-toggle" onclick="toggleFullscreen()" title="Fullscreen">
+            <i class="ph ph-arrows-out icon-enter"></i>
+            <i class="ph ph-arrows-in icon-exit"></i>
+          </button>
+
+          <!-- Messages -->
+          <div class="header-action dropdown messages-dropdown">
+            <button class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" title="Messages">
+              <i class="ph ph-chat-teardrop-text"></i>
+              <span class="badge">2</span>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end">
+              <div class="messages-header">
+                <h6>Messages</h6>
+                <a href="apps-chat.html">View all</a>
+              </div>
+              <div class="messages-list">
+                <a href="apps-chat.html" class="message-item unread">
+                  <span class="message-avatar">
+                    <img src="assets/img/avatars/avatar-2.webp" alt="Sarah Johnson">
+                    <span class="message-status"></span>
+                  </span>
+                  <span class="message-content">
+                    <span class="message-name">Sarah Johnson</span>
+                    <span class="message-text">The new dashboard mockups look amazing! 🔥</span>
+                  </span>
+                  <span class="message-time">2m</span>
+                </a>
+                <a href="apps-chat.html" class="message-item unread">
+                  <span class="message-avatar">
+                    <img src="assets/img/avatars/avatar-3.webp" alt="Mike Chen">
+                  </span>
+                  <span class="message-content">
+                    <span class="message-name">Mike Chen</span>
+                    <span class="message-text">Can you review my PR when you get a chance?</span>
+                  </span>
+                  <span class="message-time">1h</span>
+                </a>
+                <a href="apps-chat.html" class="message-item">
+                  <span class="message-avatar">
+                    <img src="assets/img/avatars/avatar-4.webp" alt="Emma Davis">
+                  </span>
+                  <span class="message-content">
+                    <span class="message-name">Emma Davis</span>
+                    <span class="message-text">Meeting moved to 3pm tomorrow</span>
+                  </span>
+                  <span class="message-time">3h</span>
+                </a>
+              </div>
+              <div class="messages-footer">
+                <a href="apps-chat.html">Open chat <i class="ph ph-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Notifications -->
+          <div class="header-action dropdown notification-dropdown">
+            <button class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" title="Notifications">
+              <i class="ph ph-bell"></i>
+              <span class="badge">3</span>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end">
+              <div class="notification-header">
+                <h6>You have 3 new notifications</h6>
+                <a href="#" class="notification-mark-read" data-notification-action="mark-all-read" title="Mark all as read">
+                  <i class="ph ph-checks"></i>
+                </a>
+              </div>
+              <div class="notification-list">
+                <div class="notification-item unread">
+                  <span class="notification-icon success">
+                    <i class="ph ph-check-circle"></i>
+                  </span>
+                  <span class="notification-content">
+                    <span class="notification-title">Order Completed</span>
+                    <span class="notification-text">Your order #12345 has been delivered</span>
+                  </span>
+                  <span class="notification-meta">
+                    <span class="notification-time">5m</span>
+                    <span class="notification-dot"></span>
+                  </span>
+                </div>
+                <div class="notification-item unread">
+                  <span class="notification-icon warning">
+                    <i class="ph ph-warning"></i>
+                  </span>
+                  <span class="notification-content">
+                    <span class="notification-title">Low Storage</span>
+                    <span class="notification-text">Server storage is running low (85% used)</span>
+                  </span>
+                  <span class="notification-meta">
+                    <span class="notification-time">1h</span>
+                    <span class="notification-dot"></span>
+                  </span>
+                </div>
+                <div class="notification-item">
+                  <span class="notification-icon info">
+                    <i class="ph ph-info"></i>
+                  </span>
+                  <span class="notification-content">
+                    <span class="notification-title">New Feature</span>
+                    <span class="notification-text">Dark mode is now available</span>
+                  </span>
+                  <span class="notification-meta">
+                    <span class="notification-time">2h</span>
+                    <span class="notification-dot"></span>
+                  </span>
+                </div>
+              </div>
+              <div class="notification-footer">
+                <a href="notifications.html">View all</a>
+                <a href="settings.html">Settings</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="header-divider"></div>
+
+          <!-- User Dropdown -->
+          <div class="header-action dropdown user-dropdown">
+            <button class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="assets/img/profile-img.webp" alt="User" class="avatar">
+              <span class="user-name">John Doe</span>
+              <i class="ph ph-caret-down user-caret"></i>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end">
+              <div class="user-menu-card">
+                <span class="user-menu-avatar">
+                  <img src="assets/img/profile-img.webp" alt="User">
+                </span>
+                <span class="user-menu-name">John Doe</span>
+                <span class="user-menu-mail">john@trendyadmin.com</span>
+                <span class="user-menu-role">Administrator</span>
+              </div>
+              <div class="user-menu-body">
+                <a class="dropdown-item" href="profile.html">
+                  <span class="user-menu-item-icon"><i class="ph ph-user"></i></span>
+                  My Profile
+                  <i class="ph ph-caret-right user-menu-item-caret"></i>
+                </a>
+                <a class="dropdown-item" href="settings.html">
+                  <span class="user-menu-item-icon"><i class="ph ph-gear"></i></span>
+                  Settings
+                  <i class="ph ph-caret-right user-menu-item-caret"></i>
+                </a>
+                <a class="dropdown-item" href="activity.html">
+                  <span class="user-menu-item-icon"><i class="ph ph-pulse"></i></span>
+                  Activity Log
+                  <i class="ph ph-caret-right user-menu-item-caret"></i>
+                </a>
+                <a class="dropdown-item" href="invoice-list.html">
+                  <span class="user-menu-item-icon"><i class="ph ph-receipt"></i></span>
+                  Billing
+                  <i class="ph ph-caret-right user-menu-item-caret"></i>
+                </a>
+              </div>
+              <div class="user-menu-footer">
+                <a href="auth-login.html" class="user-menu-signout">
+                  <i class="ph ph-sign-out"></i> Sign Out
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile Actions (visible only on mobile) -->
+        <div class="header-actions-mobile">
+          <!-- Search Toggle (Mobile) -->
+          <button class="header-action search-toggle" title="Search">
+            <i class="ph ph-magnifying-glass"></i>
+          </button>
+
+          <!-- Mobile Menu Toggle -->
+          <button class="header-action mobile-menu-toggle" title="More">
+            <i class="ph ph-dots-three-vertical"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Search -->
+  <div class="mobile-search">
+    <form class="search-form" action="search-results.html" method="GET">
+      <input type="search" name="q" placeholder="Search anything..." autocomplete="off">
+      <button type="submit"><i class="ph ph-magnifying-glass"></i></button>
+    </form>
+  </div>
+
+  <!-- Mobile Header Menu -->
+  <div class="mobile-header-menu">
+    <div class="mobile-header-menu-content">
+      <!-- Theme Toggle -->
+      <button class="mobile-menu-item theme-toggle" title="Toggle Theme">
+        <i class="ph ph-moon icon-dark"></i>
+        <i class="ph ph-sun icon-light"></i>
+        <span class="mobile-menu-label">Theme</span>
+      </button>
+
+      <!-- Fullscreen Toggle -->
+      <button class="mobile-menu-item fullscreen-toggle" onclick="toggleFullscreen()" title="Fullscreen">
+        <i class="ph ph-arrows-out icon-enter"></i>
+        <i class="ph ph-arrows-in icon-exit"></i>
+        <span class="mobile-menu-label">Fullscreen</span>
+      </button>
+
+      <!-- Messages -->
+      <a href="apps-chat.html" class="mobile-menu-item">
+        <i class="ph ph-chat-teardrop-text"></i>
+        <span class="badge">2</span>
+        <span class="mobile-menu-label">Messages</span>
+      </a>
+
+      <!-- Notifications -->
+      <a href="notifications.html" class="mobile-menu-item">
+        <i class="ph ph-bell"></i>
+        <span class="badge">3</span>
+        <span class="mobile-menu-label">Notifications</span>
+      </a>
+
+      <!-- Profile -->
+      <a href="profile.html" class="mobile-menu-item">
+        <i class="ph ph-user"></i>
+        <span class="mobile-menu-label">Profile</span>
+      </a>
+
+      <!-- Sign Out -->
+      <a href="auth-login.html" class="mobile-menu-item mobile-menu-item-danger">
+        <i class="ph ph-sign-out"></i>
+        <span class="mobile-menu-label">Sign Out</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <!-- Sidebar Header -->
+    <div class="sidebar-header">
+      <a href="index.html" class="sidebar-logo">
+        <span class="sidebar-logo-mark"><i class="bi bi-lightning-charge-fill"></i></span>
+        <span class="sidebar-logo-text">TrendyAdmin</span>
+      </a>
+      <button class="sidebar-close">
+        <i class="ph ph-x"></i>
+      </button>
+    </div>
+
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar-nav">
+      <ul class="nav-menu">
+        <li class="nav-heading"><span>Overview</span></li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="index.html">
+            <span class="nav-icon"><i class="ph ph-house"></i></span>
+            <span class="nav-text">Home</span>
+          </a>
+        </li>
+
+        <!-- Dashboards Submenu -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-gauge"></i></span>
+            <span class="nav-text">Dashboards</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="dashboard-sales.html">Sales</a></li>
+            <li><a class="nav-link " href="dashboard-analytics.html">Analytics</a></li>
+            <li><a class="nav-link " href="dashboard-crm.html">CRM</a></li>
+            <li><a class="nav-link " href="dashboard-marketing.html">Marketing</a></li>
+            <li><a class="nav-link " href="dashboard-projects.html">Projects</a></li>
+            <li><a class="nav-link " href="dashboard-finance.html">Finance</a></li>
+          </ul>
+        </li>
+
+        <!-- Users -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-users"></i></span>
+            <span class="nav-text">Users</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="users.html">Users List</a></li>
+            <li><a class="nav-link " href="users-view.html">User View</a></li>
+            <li><a class="nav-link " href="users-edit.html">User Edit</a></li>
+            <li><a class="nav-link " href="profile.html">Profile</a></li>
+            <!-- 3rd Level - Settings submenu -->
+            <li class="has-submenu ">
+              <a class="nav-link" href="#" aria-expanded="false">
+                Settings
+                <i class="ph ph-caret-right nav-arrow"></i>
+              </a>
+              <ul class="nav-submenu ">
+                <li><a class="nav-link " href="settings.html">Account</a></li>
+                <li><a class="nav-link " href="notifications.html">Notifications</a></li>
+                <li><a class="nav-link " href="activity.html">Activity</a></li>
+              </ul>
+            </li>
+            <li><a class="nav-link " href="roles.html">Roles & Permissions</a></li>
+          </ul>
+        </li>
+
+        <!-- Authentication -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-shield-check"></i></span>
+            <span class="nav-text">Authentication</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="auth-login.html">Login</a></li>
+            <li><a class="nav-link " href="auth-register.html">Register</a></li>
+            <li><a class="nav-link " href="auth-forgot-password.html">Forgot Password</a></li>
+            <li><a class="nav-link " href="auth-reset-password.html">Reset Password</a></li>
+            <li><a class="nav-link " href="auth-verify-email.html">Email Verification</a></li>
+            <li><a class="nav-link " href="auth-two-factor.html">Two Factor Auth</a></li>
+            <li><a class="nav-link " href="auth-lock-screen.html">Lock Screen</a></li>
+          </ul>
+        </li>
+
+        <!-- Apps Section -->
+        <li class="nav-heading"><span>Apps</span></li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-calendar.html">
+            <span class="nav-icon"><i class="ph ph-calendar-blank"></i></span>
+            <span class="nav-text">Calendar</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-kanban.html">
+            <span class="nav-icon"><i class="ph ph-kanban"></i></span>
+            <span class="nav-text">Kanban Board</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-chat.html">
+            <span class="nav-icon"><i class="ph ph-chat-circle-dots"></i></span>
+            <span class="nav-text">Chat</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-contacts.html">
+            <span class="nav-icon"><i class="ph ph-address-book"></i></span>
+            <span class="nav-text">Contacts</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-file-manager.html">
+            <span class="nav-icon"><i class="ph ph-folder-open"></i></span>
+            <span class="nav-text">File Manager</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-email.html">
+            <span class="nav-icon"><i class="ph ph-envelope"></i></span>
+            <span class="nav-text">Email</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-todo.html">
+            <span class="nav-icon"><i class="ph ph-check-square"></i></span>
+            <span class="nav-text">Todo List</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-support.html">
+            <span class="nav-icon"><i class="ph ph-headset"></i></span>
+            <span class="nav-text">Support Center</span>
+          </a>
+        </li>
+
+        <!-- UI Elements Section -->
+        <li class="nav-heading"><span>UI Elements</span></li>
+
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-puzzle-piece"></i></span>
+            <span class="nav-text">Components</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="components-alerts.html">Alerts</a></li>
+            <li><a class="nav-link " href="components-accordion.html">Accordion</a></li>
+            <li><a class="nav-link " href="components-badges.html">Badges</a></li>
+            <li><a class="nav-link " href="components-breadcrumbs.html">Breadcrumbs</a></li>
+            <li><a class="nav-link " href="components-buttons.html">Buttons</a></li>
+            <li><a class="nav-link " href="components-cards.html">Cards</a></li>
+            <li><a class="nav-link " href="components-carousel.html">Carousel</a></li>
+            <li><a class="nav-link " href="components-dropdowns.html">Dropdowns</a></li>
+            <li><a class="nav-link " href="components-list-group.html">List Group</a></li>
+            <li><a class="nav-link " href="components-modal.html">Modal</a></li>
+            <li><a class="nav-link " href="components-nav-tabs.html">Navs & Tabs</a></li>
+            <li><a class="nav-link " href="components-offcanvas.html">Offcanvas</a></li>
+            <li><a class="nav-link " href="components-pagination.html">Pagination</a></li>
+            <li><a class="nav-link " href="components-popovers.html">Popovers</a></li>
+            <li><a class="nav-link " href="components-progress.html">Progress</a></li>
+            <li><a class="nav-link " href="components-spinners.html">Spinners</a></li>
+            <li><a class="nav-link " href="components-toasts.html">Toasts</a></li>
+            <li><a class="nav-link " href="components-tooltips.html">Tooltips</a></li>
+          </ul>
+        </li>
+
+        <!-- Widgets -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-stack"></i></span>
+            <span class="nav-text">Widgets</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="widgets-cards.html">Cards</a></li>
+            <li><a class="nav-link " href="widgets-banners.html">Banners</a></li>
+            <li><a class="nav-link " href="widgets-charts.html">Charts</a></li>
+            <li><a class="nav-link " href="widgets-apps.html">Apps</a></li>
+            <li><a class="nav-link " href="widgets-data.html">Data</a></li>
+          </ul>
+        </li>
+
+        <!-- Forms Section -->
+        <li class="nav-item has-submenu open">
+          <a class="nav-link" href="#" aria-expanded="true">
+            <span class="nav-icon"><i class="ph ph-list-checks"></i></span>
+            <span class="nav-text">Forms</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu show">
+            <li><a class="nav-link " href="forms-elements.html">Form Elements</a></li>
+            <li><a class="nav-link active" href="forms-layouts.html">Form Layouts</a></li>
+            <li><a class="nav-link " href="forms-validation.html">Validation</a></li>
+            <li><a class="nav-link " href="forms-wizard.html">Wizard</a></li>
+            <li><a class="nav-link " href="forms-editors.html">Rich Editors</a></li>
+            <li><a class="nav-link " href="forms-pickers.html">Date/Time Pickers</a></li>
+            <li><a class="nav-link " href="forms-select.html">Advanced Select</a></li>
+            <li><a class="nav-link " href="forms-upload.html">File Upload</a></li>
+          </ul>
+        </li>
+
+        <!-- Tables Section -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-table"></i></span>
+            <span class="nav-text">Tables</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="tables-basic.html">Basic Tables</a></li>
+            <li><a class="nav-link " href="tables-datatables.html">DataTables</a></li>
+            <li><a class="nav-link " href="tables-responsive.html">Responsive Tables</a></li>
+          </ul>
+        </li>
+
+        <!-- Charts Section -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-chart-bar"></i></span>
+            <span class="nav-text">Charts</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="charts-apexcharts.html">ApexCharts</a></li>
+            <li><a class="nav-link " href="charts-chartjs.html">Chart.js</a></li>
+            <li><a class="nav-link " href="charts-echarts.html">ECharts</a></li>
+          </ul>
+        </li>
+
+        <!-- Icons Section -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-diamond"></i></span>
+            <span class="nav-text">Icons</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="icons-bootstrap.html">Bootstrap Icons</a></li>
+            <li><a class="nav-link " href="icons-remixicon.html">Remix Icons</a></li>
+            <li><a class="nav-link " href="icons-fontawesome.html">Font Awesome</a></li>
+            <li><a class="nav-link " href="icons-phosphor.html">Phosphor Icons</a></li>
+            <li><a class="nav-link " href="icons-lucide.html">Lucide Icons</a></li>
+          </ul>
+        </li>
+
+        <!-- Pages Section -->
+        <li class="nav-heading"><span>Pages</span></li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="contact.html">
+            <span class="nav-icon"><i class="ph ph-envelope-simple"></i></span>
+            <span class="nav-text">Contact</span>
+          </a>
+        </li>
+
+        <!-- Invoices -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-receipt"></i></span>
+            <span class="nav-text">Invoices</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="invoice-list.html">Invoice List</a></li>
+            <li><a class="nav-link " href="invoice.html">Invoice View</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="pricing.html">
+            <span class="nav-icon"><i class="ph ph-tag"></i></span>
+            <span class="nav-text">Pricing</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="faq.html">
+            <span class="nav-icon"><i class="ph ph-question"></i></span>
+            <span class="nav-text">FAQ</span>
+          </a>
+        </li>
+
+        <!-- Error Pages -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-warning"></i></span>
+            <span class="nav-text">Error Pages</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="error-404.html">404 Not Found</a></li>
+            <li><a class="nav-link " href="error-403.html">403 Forbidden</a></li>
+            <li><a class="nav-link " href="error-500.html">500 Server Error</a></li>
+            <li><a class="nav-link " href="error-maintenance.html">Maintenance</a></li>
+            <li><a class="nav-link " href="error-coming-soon.html">Coming Soon</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="timeline.html">
+            <span class="nav-icon"><i class="ph ph-clock-counter-clockwise"></i></span>
+            <span class="nav-text">Timeline</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="search-results.html">
+            <span class="nav-icon"><i class="ph ph-magnifying-glass"></i></span>
+            <span class="nav-text">Search Results</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="blank.html">
+            <span class="nav-icon"><i class="ph ph-file"></i></span>
+            <span class="nav-text">Blank Page</span>
+          </a>
+        </li>
+
+      </ul>
+    </nav>
+
+    <!-- Sidebar Footer - User Card -->
+    <div class="sidebar-footer">
+      <div class="sidebar-user">
+        <a href="profile.html" class="sidebar-user-link">
+          <span class="sidebar-user-avatar">
+            <img src="assets/img/profile-img.webp" alt="User">
+            <span class="sidebar-user-status"></span>
+          </span>
+          <span class="sidebar-user-info">
+            <span class="sidebar-user-name">John Doe</span>
+            <span class="sidebar-user-role">Administrator</span>
+          </span>
+        </a>
+        <div class="sidebar-user-actions">
+          <a href="settings.html" class="sidebar-user-action" title="Settings">
+            <i class="ph ph-gear"></i>
+          </a>
+          <a href="auth-login.html" class="sidebar-user-action sidebar-user-logout" title="Logout">
+            <i class="ph ph-sign-out"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Sidebar Overlay (Mobile) -->
+  <div class="sidebar-overlay"></div>
+
+  <!-- Main Content -->
+  <main class="main">
+    <div class="main-content page-forms-layouts">
+      <!-- Page Header -->
+      <div class="page-header">
+        <h1 class="page-title">Form Layouts</h1>
+        <nav class="breadcrumb">
+          <a href="index.html" class="breadcrumb-item">Home</a>
+          <a href="#" class="breadcrumb-item">Forms</a>
+          <span class="breadcrumb-item active">Form Layouts</span>
+        </nav>
+      </div>
+
+      <!-- Vertical Form (Default) -->
+      <section class="section">
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Vertical Form</h5>
+                <p class="card-subtitle">Default stacked layout with labels above inputs</p>
+              </div>
+              <div class="card-body">
+                <form>
+                  <div class="mb-3">
+                    <label for="verticalName" class="form-label">Full Name</label>
+                    <input type="text" class="form-control" id="verticalName" placeholder="Enter your name">
+                  </div>
+                  <div class="mb-3">
+                    <label for="verticalEmail" class="form-label">Email Address</label>
+                    <input type="email" class="form-control" id="verticalEmail" placeholder="Enter your email">
+                  </div>
+                  <div class="mb-3">
+                    <label for="verticalPassword" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="verticalPassword" placeholder="Enter password">
+                  </div>
+                  <div class="mb-3">
+                    <label for="verticalBio" class="form-label">Bio</label>
+                    <textarea class="form-control" id="verticalBio" rows="3" placeholder="Tell us about yourself"></textarea>
+                  </div>
+                  <div class="form-check mb-3">
+                    <input class="form-check-input" type="checkbox" id="verticalRemember">
+                    <label class="form-check-label" for="verticalRemember">Remember me</label>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Vertical Form with Icons</h5>
+                <p class="card-subtitle">Vertical form with input group icons</p>
+              </div>
+              <div class="card-body">
+                <form>
+                  <div class="mb-3">
+                    <label for="iconName" class="form-label">Full Name</label>
+                    <div class="input-group">
+                      <span class="input-group-text"><i class="ph ph-user"></i></span>
+                      <input type="text" class="form-control" id="iconName" placeholder="Enter your name">
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="iconEmail" class="form-label">Email Address</label>
+                    <div class="input-group">
+                      <span class="input-group-text"><i class="ph ph-envelope"></i></span>
+                      <input type="email" class="form-control" id="iconEmail" placeholder="Enter your email">
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="iconPhone" class="form-label">Phone Number</label>
+                    <div class="input-group">
+                      <span class="input-group-text"><i class="ph ph-phone"></i></span>
+                      <input type="tel" class="form-control" id="iconPhone" placeholder="Enter phone number">
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="iconWebsite" class="form-label">Website</label>
+                    <div class="input-group">
+                      <span class="input-group-text"><i class="ph ph-globe"></i></span>
+                      <input type="url" class="form-control" id="iconWebsite" placeholder="https://example.com">
+                    </div>
+                  </div>
+                  <div class="form-check mb-3">
+                    <input class="form-check-input" type="checkbox" id="iconNewsletter">
+                    <label class="form-check-label" for="iconNewsletter">Subscribe to newsletter</label>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Horizontal Form -->
+      <section class="section">
+        <h5 class="section-title mb-3">Horizontal Form</h5>
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Basic Horizontal Form</h5>
+                <p class="card-subtitle">Labels aligned to the left of inputs</p>
+              </div>
+              <div class="card-body">
+                <form>
+                  <div class="row mb-3">
+                    <label for="horizontalName" class="col-sm-3 col-form-label">Name</label>
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control" id="horizontalName" placeholder="Full name">
+                    </div>
+                  </div>
+                  <div class="row mb-3">
+                    <label for="horizontalEmail" class="col-sm-3 col-form-label">Email</label>
+                    <div class="col-sm-9">
+                      <input type="email" class="form-control" id="horizontalEmail" placeholder="Email address">
+                    </div>
+                  </div>
+                  <div class="row mb-3">
+                    <label for="horizontalPassword" class="col-sm-3 col-form-label">Password</label>
+                    <div class="col-sm-9">
+                      <input type="password" class="form-control" id="horizontalPassword" placeholder="Password">
+                    </div>
+                  </div>
+                  <div class="row mb-3">
+                    <label class="col-sm-3 col-form-label">Gender</label>
+                    <div class="col-sm-9">
+                      <select class="form-select">
+                        <option selected>Select gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row mb-3">
+                    <div class="col-sm-9 offset-sm-3">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="horizontalCheck">
+                        <label class="form-check-label" for="horizontalCheck">Remember me</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-9 offset-sm-3">
+                      <button type="submit" class="btn btn-primary">Sign In</button>
+                      <button type="reset" class="btn btn-outline-secondary ms-2">Reset</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Horizontal Form Sizing</h5>
+                <p class="card-subtitle">Different label widths for horizontal layout</p>
+              </div>
+              <div class="card-body">
+                <form>
+                  <p class="small text-muted mb-3">Wide labels (col-sm-4)</p>
+                  <div class="row mb-3">
+                    <label for="wideLabel1" class="col-sm-4 col-form-label">First Name</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control" id="wideLabel1">
+                    </div>
+                  </div>
+                  <div class="row mb-4">
+                    <label for="wideLabel2" class="col-sm-4 col-form-label">Last Name</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control" id="wideLabel2">
+                    </div>
+                  </div>
+
+                  <p class="small text-muted mb-3">Narrow labels (col-sm-2)</p>
+                  <div class="row mb-3">
+                    <label for="narrowLabel1" class="col-sm-2 col-form-label">Email</label>
+                    <div class="col-sm-10">
+                      <input type="email" class="form-control" id="narrowLabel1">
+                    </div>
+                  </div>
+                  <div class="row mb-3">
+                    <label for="narrowLabel2" class="col-sm-2 col-form-label">Phone</label>
+                    <div class="col-sm-10">
+                      <input type="tel" class="form-control" id="narrowLabel2">
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Inline Form -->
+      <section class="section">
+        <h5 class="section-title mb-3">Inline Form</h5>
+        <div class="row g-4">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="card-title">Basic Inline Form</h5>
+                <p class="card-subtitle">Form elements displayed inline on larger screens</p>
+              </div>
+              <div class="card-body">
+                <form class="row row-cols-lg-auto g-3 align-items-center">
+                  <div class="col-12">
+                    <label class="visually-hidden" for="inlineUsername">Username</label>
+                    <div class="input-group">
+                      <span class="input-group-text">@</span>
+                      <input type="text" class="form-control" id="inlineUsername" placeholder="Username">
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <label class="visually-hidden" for="inlineEmail2">Email</label>
+                    <input type="email" class="form-control" id="inlineEmail2" placeholder="Email">
+                  </div>
+                  <div class="col-12">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="inlineRemember2">
+                      <label class="form-check-label" for="inlineRemember2">Remember me</label>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Search Form</h5>
+                <p class="card-subtitle">Common inline search pattern</p>
+              </div>
+              <div class="card-body">
+                <form class="d-flex gap-2">
+                  <div class="flex-grow-1">
+                    <input type="search" class="form-control" placeholder="Search...">
+                  </div>
+                  <button type="submit" class="btn btn-primary">
+                    <i class="ph ph-magnifying-glass me-1"></i> Search
+                  </button>
+                </form>
+
+                <hr class="my-4">
+
+                <form class="d-flex gap-2">
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="ph ph-magnifying-glass"></i></span>
+                    <input type="search" class="form-control" placeholder="Search products...">
+                  </div>
+                  <select class="form-select" style="max-width: 150px;">
+                    <option>All</option>
+                    <option>Products</option>
+                    <option>Users</option>
+                    <option>Orders</option>
+                  </select>
+                  <button type="submit" class="btn btn-primary">Go</button>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Filter Form</h5>
+                <p class="card-subtitle">Inline filter controls</p>
+              </div>
+              <div class="card-body">
+                <form class="row g-3">
+                  <div class="col-md-4">
+                    <select class="form-select">
+                      <option selected>Category</option>
+                      <option>Electronics</option>
+                      <option>Clothing</option>
+                      <option>Books</option>
+                    </select>
+                  </div>
+                  <div class="col-md-3">
+                    <select class="form-select">
+                      <option selected>Status</option>
+                      <option>Active</option>
+                      <option>Pending</option>
+                      <option>Inactive</option>
+                    </select>
+                  </div>
+                  <div class="col-md-3">
+                    <input type="date" class="form-control">
+                  </div>
+                  <div class="col-md-2">
+                    <button type="submit" class="btn btn-outline-primary w-100">Filter</button>
+                  </div>
+                </form>
+
+                <hr class="my-4">
+
+                <div class="d-flex flex-wrap gap-2">
+                  <span class="badge bg-primary d-flex align-items-center gap-1">
+                    Electronics <button type="button" class="btn-close btn-close-white" style="font-size: 0.6rem;"></button>
+                  </span>
+                  <span class="badge bg-primary d-flex align-items-center gap-1">
+                    Active <button type="button" class="btn-close btn-close-white" style="font-size: 0.6rem;"></button>
+                  </span>
+                  <a href="#" class="small text-muted">Clear all</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Grid Form -->
+      <section class="section">
+        <h5 class="section-title mb-3">Grid Form Layouts</h5>
+        <div class="row g-4">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="card-title">Multi-Column Form</h5>
+                <p class="card-subtitle">Form with multiple columns using Bootstrap grid</p>
+              </div>
+              <div class="card-body">
+                <form>
+                  <div class="row g-3">
+                    <div class="col-md-6">
+                      <label for="gridFirstName" class="form-label">First Name</label>
+                      <input type="text" class="form-control" id="gridFirstName">
+                    </div>
+                    <div class="col-md-6">
+                      <label for="gridLastName" class="form-label">Last Name</label>
+                      <input type="text" class="form-control" id="gridLastName">
+                    </div>
+                    <div class="col-md-6">
+                      <label for="gridEmail" class="form-label">Email</label>
+                      <input type="email" class="form-control" id="gridEmail">
+                    </div>
+                    <div class="col-md-6">
+                      <label for="gridPhone" class="form-label">Phone</label>
+                      <input type="tel" class="form-control" id="gridPhone">
+                    </div>
+                    <div class="col-12">
+                      <label for="gridAddress" class="form-label">Address</label>
+                      <input type="text" class="form-control" id="gridAddress" placeholder="1234 Main St">
+                    </div>
+                    <div class="col-12">
+                      <label for="gridAddress2" class="form-label">Address 2 <span class="text-muted">(Optional)</span></label>
+                      <input type="text" class="form-control" id="gridAddress2" placeholder="Apartment, studio, or floor">
+                    </div>
+                    <div class="col-md-5">
+                      <label for="gridCity" class="form-label">City</label>
+                      <input type="text" class="form-control" id="gridCity">
+                    </div>
+                    <div class="col-md-4">
+                      <label for="gridState" class="form-label">State</label>
+                      <select class="form-select" id="gridState">
+                        <option selected>Choose...</option>
+                        <option>California</option>
+                        <option>New York</option>
+                        <option>Texas</option>
+                        <option>Florida</option>
+                      </select>
+                    </div>
+                    <div class="col-md-3">
+                      <label for="gridZip" class="form-label">Zip</label>
+                      <input type="text" class="form-control" id="gridZip">
+                    </div>
+                    <div class="col-12">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="gridCheck">
+                        <label class="form-check-label" for="gridCheck">Check me out</label>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <button type="submit" class="btn btn-primary">Save Address</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Complex Grid Layouts -->
+      <section class="section">
+        <h5 class="section-title mb-3">Complex Grid Layouts</h5>
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Three Column Layout</h5>
+                <p class="card-subtitle">Evenly distributed three columns</p>
+              </div>
+              <div class="card-body">
+                <form>
+                  <div class="row g-3">
+                    <div class="col-md-4">
+                      <label for="col3First" class="form-label">First Name</label>
+                      <input type="text" class="form-control" id="col3First">
+                    </div>
+                    <div class="col-md-4">
+                      <label for="col3Middle" class="form-label">Middle Name</label>
+                      <input type="text" class="form-control" id="col3Middle">
+                    </div>
+                    <div class="col-md-4">
+                      <label for="col3Last" class="form-label">Last Name</label>
+                      <input type="text" class="form-control" id="col3Last">
+                    </div>
+                    <div class="col-md-4">
+                      <label for="col3Day" class="form-label">Day</label>
+                      <select class="form-select" id="col3Day">
+                        <option selected>Day</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                        <option>13</option>
+                        <option>14</option>
+                        <option>15</option>
+                        <option>16</option>
+                        <option>17</option>
+                        <option>18</option>
+                        <option>19</option>
+                        <option>20</option>
+                        <option>21</option>
+                        <option>22</option>
+                        <option>23</option>
+                        <option>24</option>
+                        <option>25</option>
+                        <option>26</option>
+                        <option>27</option>
+                        <option>28</option>
+                        <option>29</option>
+                        <option>30</option>
+                        <option>31</option>
+                      </select>
+                    </div>
+                    <div class="col-md-4">
+                      <label for="col3Month" class="form-label">Month</label>
+                      <select class="form-select" id="col3Month">
+                        <option selected>Month</option>
+                        <option>January</option>
+                        <option>February</option>
+                        <option>March</option>
+                        <option>April</option>
+                        <option>May</option>
+                        <option>June</option>
+                        <option>July</option>
+                        <option>August</option>
+                        <option>September</option>
+                        <option>October</option>
+                        <option>November</option>
+                        <option>December</option>
+                      </select>
+                    </div>
+                    <div class="col-md-4">
+                      <label for="col3Year" class="form-label">Year</label>
+                      <select class="form-select" id="col3Year">
+                        <option selected>Year</option>
+                        <option>2026</option>
+                        <option>2025</option>
+                        <option>2024</option>
+                        <option>2023</option>
+                        <option>2022</option>
+                        <option>2021</option>
+                        <option>2020</option>
+                        <option>2019</option>
+                        <option>2018</option>
+                        <option>2017</option>
+                        <option>2016</option>
+                        <option>2015</option>
+                        <option>2014</option>
+                        <option>2013</option>
+                        <option>2012</option>
+                        <option>2011</option>
+                        <option>2010</option>
+                        <option>2009</option>
+                        <option>2008</option>
+                        <option>2007</option>
+                        <option>2006</option>
+                        <option>2005</option>
+                        <option>2004</option>
+                        <option>2003</option>
+                        <option>2002</option>
+                        <option>2001</option>
+                        <option>2000</option>
+                        <option>1999</option>
+                        <option>1998</option>
+                        <option>1997</option>
+                        <option>1996</option>
+                        <option>1995</option>
+                        <option>1994</option>
+                        <option>1993</option>
+                        <option>1992</option>
+                        <option>1991</option>
+                        <option>1990</option>
+                        <option>1989</option>
+                        <option>1988</option>
+                        <option>1987</option>
+                        <option>1986</option>
+                        <option>1985</option>
+                        <option>1984</option>
+                        <option>1983</option>
+                        <option>1982</option>
+                        <option>1981</option>
+                        <option>1980</option>
+                        <option>1979</option>
+                        <option>1978</option>
+                        <option>1977</option>
+                        <option>1976</option>
+                        <option>1975</option>
+                        <option>1974</option>
+                        <option>1973</option>
+                        <option>1972</option>
+                        <option>1971</option>
+                        <option>1970</option>
+                        <option>1969</option>
+                        <option>1968</option>
+                        <option>1967</option>
+                        <option>1966</option>
+                        <option>1965</option>
+                        <option>1964</option>
+                        <option>1963</option>
+                        <option>1962</option>
+                        <option>1961</option>
+                        <option>1960</option>
+                        <option>1959</option>
+                        <option>1958</option>
+                        <option>1957</option>
+                        <option>1956</option>
+                        <option>1955</option>
+                        <option>1954</option>
+                        <option>1953</option>
+                        <option>1952</option>
+                        <option>1951</option>
+                        <option>1950</option>
+                      </select>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Mixed Width Columns</h5>
+                <p class="card-subtitle">Different column widths in the same row</p>
+              </div>
+              <div class="card-body">
+                <form>
+                  <div class="row g-3">
+                    <div class="col-md-8">
+                      <label for="mixedStreet" class="form-label">Street Address</label>
+                      <input type="text" class="form-control" id="mixedStreet">
+                    </div>
+                    <div class="col-md-4">
+                      <label for="mixedApt" class="form-label">Apt/Suite</label>
+                      <input type="text" class="form-control" id="mixedApt">
+                    </div>
+                    <div class="col-md-3">
+                      <label for="mixedCountry" class="form-label">Country Code</label>
+                      <select class="form-select" id="mixedCountry">
+                        <option selected>+1</option>
+                        <option>+44</option>
+                        <option>+91</option>
+                        <option>+86</option>
+                      </select>
+                    </div>
+                    <div class="col-md-9">
+                      <label for="mixedPhone" class="form-label">Phone Number</label>
+                      <input type="tel" class="form-control" id="mixedPhone">
+                    </div>
+                    <div class="col-md-2">
+                      <label for="mixedCurrency" class="form-label">Currency</label>
+                      <select class="form-select" id="mixedCurrency">
+                        <option selected>USD</option>
+                        <option>EUR</option>
+                        <option>GBP</option>
+                      </select>
+                    </div>
+                    <div class="col-md-10">
+                      <label for="mixedAmount" class="form-label">Amount</label>
+                      <input type="number" class="form-control" id="mixedAmount" placeholder="0.00">
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Form Sections -->
+      <section class="section">
+        <h5 class="section-title mb-3">Sectioned Forms</h5>
+        <div class="row g-4">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="card-title">Account Settings Form</h5>
+                <p class="card-subtitle">Form divided into logical sections</p>
+              </div>
+              <div class="card-body">
+                <form>
+                  <!-- Personal Information Section -->
+                  <h6 class="text-uppercase text-muted small fw-semibold mb-3">Personal Information</h6>
+                  <div class="row g-3 mb-4">
+                    <div class="col-md-6">
+                      <label for="sectionFirstName" class="form-label">First Name</label>
+                      <input type="text" class="form-control" id="sectionFirstName" value="John">
+                    </div>
+                    <div class="col-md-6">
+                      <label for="sectionLastName" class="form-label">Last Name</label>
+                      <input type="text" class="form-control" id="sectionLastName" value="Doe">
+                    </div>
+                    <div class="col-md-6">
+                      <label for="sectionEmail" class="form-label">Email</label>
+                      <input type="email" class="form-control" id="sectionEmail" value="john.doe@example.com">
+                    </div>
+                    <div class="col-md-6">
+                      <label for="sectionPhone" class="form-label">Phone</label>
+                      <input type="tel" class="form-control" id="sectionPhone" value="+1 (555) 123-4567">
+                    </div>
+                  </div>
+
+                  <hr class="my-4">
+
+                  <!-- Company Information Section -->
+                  <h6 class="text-uppercase text-muted small fw-semibold mb-3">Company Information</h6>
+                  <div class="row g-3 mb-4">
+                    <div class="col-md-6">
+                      <label for="sectionCompany" class="form-label">Company Name</label>
+                      <input type="text" class="form-control" id="sectionCompany" value="Acme Inc.">
+                    </div>
+                    <div class="col-md-6">
+                      <label for="sectionRole" class="form-label">Role</label>
+                      <input type="text" class="form-control" id="sectionRole" value="Software Engineer">
+                    </div>
+                    <div class="col-md-4">
+                      <label for="sectionDepartment" class="form-label">Department</label>
+                      <select class="form-select" id="sectionDepartment">
+                        <option>Engineering</option>
+                        <option>Design</option>
+                        <option>Marketing</option>
+                        <option>Sales</option>
+                      </select>
+                    </div>
+                    <div class="col-md-4">
+                      <label for="sectionTeam" class="form-label">Team Size</label>
+                      <select class="form-select" id="sectionTeam">
+                        <option>1-10</option>
+                        <option selected>11-50</option>
+                        <option>51-200</option>
+                        <option>200+</option>
+                      </select>
+                    </div>
+                    <div class="col-md-4">
+                      <label for="sectionTimezone" class="form-label">Timezone</label>
+                      <select class="form-select" id="sectionTimezone">
+                        <option>Pacific Time (PT)</option>
+                        <option>Mountain Time (MT)</option>
+                        <option>Central Time (CT)</option>
+                        <option selected>Eastern Time (ET)</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <hr class="my-4">
+
+                  <!-- Notification Preferences Section -->
+                  <h6 class="text-uppercase text-muted small fw-semibold mb-3">Notification Preferences</h6>
+                  <div class="row g-3 mb-4">
+                    <div class="col-12">
+                      <div class="form-check form-switch mb-2">
+                        <input class="form-check-input" type="checkbox" id="sectionEmailNotif" checked>
+                        <label class="form-check-label" for="sectionEmailNotif">Email notifications</label>
+                      </div>
+                      <div class="form-check form-switch mb-2">
+                        <input class="form-check-input" type="checkbox" id="sectionPushNotif" checked>
+                        <label class="form-check-label" for="sectionPushNotif">Push notifications</label>
+                      </div>
+                      <div class="form-check form-switch mb-2">
+                        <input class="form-check-input" type="checkbox" id="sectionSmsNotif">
+                        <label class="form-check-label" for="sectionSmsNotif">SMS notifications</label>
+                      </div>
+                      <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="sectionWeeklyDigest" checked>
+                        <label class="form-check-label" for="sectionWeeklyDigest">Weekly digest email</label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="d-flex justify-content-end gap-2">
+                    <button type="button" class="btn btn-outline-secondary">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Save Changes</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Two Column Form with Sidebar -->
+      <section class="section">
+        <h5 class="section-title mb-3">Two Column Layout with Sidebar</h5>
+        <div class="row g-4">
+          <div class="col-lg-8">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="card-title">Create New Product</h5>
+                <p class="card-subtitle">Main form content area</p>
+              </div>
+              <div class="card-body">
+                <form>
+                  <div class="mb-3">
+                    <label for="productName" class="form-label">Product Name</label>
+                    <input type="text" class="form-control" id="productName" placeholder="Enter product name">
+                  </div>
+                  <div class="mb-3">
+                    <label for="productDesc" class="form-label">Description</label>
+                    <textarea class="form-control" id="productDesc" rows="4" placeholder="Enter product description"></textarea>
+                  </div>
+                  <div class="row g-3 mb-3">
+                    <div class="col-md-6">
+                      <label for="productPrice" class="form-label">Price</label>
+                      <div class="input-group">
+                        <span class="input-group-text">$</span>
+                        <input type="number" class="form-control" id="productPrice" placeholder="0.00">
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <label for="productCompare" class="form-label">Compare at Price</label>
+                      <div class="input-group">
+                        <span class="input-group-text">$</span>
+                        <input type="number" class="form-control" id="productCompare" placeholder="0.00">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row g-3 mb-3">
+                    <div class="col-md-4">
+                      <label for="productSKU" class="form-label">SKU</label>
+                      <input type="text" class="form-control" id="productSKU" placeholder="SKU-001">
+                    </div>
+                    <div class="col-md-4">
+                      <label for="productBarcode" class="form-label">Barcode</label>
+                      <input type="text" class="form-control" id="productBarcode" placeholder="123456789">
+                    </div>
+                    <div class="col-md-4">
+                      <label for="productQty" class="form-label">Quantity</label>
+                      <input type="number" class="form-control" id="productQty" placeholder="0">
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="productTags" class="form-label">Tags</label>
+                    <input type="text" class="form-control" id="productTags" placeholder="Enter tags separated by commas">
+                    <div class="form-text">Separate tags with commas</div>
+                  </div>
+                </form>
+              </div>
+              <div class="card-footer d-flex justify-content-between">
+                <button type="button" class="btn btn-outline-danger">Delete</button>
+                <div>
+                  <button type="button" class="btn btn-outline-secondary me-2">Save Draft</button>
+                  <button type="submit" class="btn btn-primary">Publish</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card mb-4">
+              <div class="card-header">
+                <h5 class="card-title">Status</h5>
+              </div>
+              <div class="card-body">
+                <div class="mb-3">
+                  <label for="productStatus" class="form-label">Product Status</label>
+                  <select class="form-select" id="productStatus">
+                    <option value="draft">Draft</option>
+                    <option value="active" selected>Active</option>
+                    <option value="archived">Archived</option>
+                  </select>
+                </div>
+                <div class="form-check form-switch">
+                  <input class="form-check-input" type="checkbox" id="productFeatured">
+                  <label class="form-check-label" for="productFeatured">Featured Product</label>
+                </div>
+              </div>
+            </div>
+            <div class="card mb-4">
+              <div class="card-header">
+                <h5 class="card-title">Organization</h5>
+              </div>
+              <div class="card-body">
+                <div class="mb-3">
+                  <label for="productCategory" class="form-label">Category</label>
+                  <select class="form-select" id="productCategory">
+                    <option selected>Select category</option>
+                    <option>Electronics</option>
+                    <option>Clothing</option>
+                    <option>Home & Garden</option>
+                    <option>Sports</option>
+                  </select>
+                </div>
+                <div class="mb-0">
+                  <label for="productBrand" class="form-label">Brand</label>
+                  <select class="form-select" id="productBrand">
+                    <option selected>Select brand</option>
+                    <option>Apple</option>
+                    <option>Samsung</option>
+                    <option>Nike</option>
+                    <option>Adidas</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">
+                <h5 class="card-title">Product Image</h5>
+              </div>
+              <div class="card-body">
+                <div class="border border-dashed rounded p-4 text-center">
+                  <i class="ph ph-cloud-arrow-up fs-1 text-muted"></i>
+                  <p class="mb-2">Drag & drop image here</p>
+                  <p class="small text-muted mb-3">or</p>
+                  <input type="file" class="form-control" accept="image/*">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Form Cards -->
+      <section class="section">
+        <h5 class="section-title mb-3">Card-Based Forms</h5>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title mb-3">Contact Us</h5>
+                <form>
+                  <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="Your Name">
+                  </div>
+                  <div class="mb-3">
+                    <input type="email" class="form-control" placeholder="Your Email">
+                  </div>
+                  <div class="mb-3">
+                    <select class="form-select">
+                      <option selected>Subject</option>
+                      <option>General Inquiry</option>
+                      <option>Support</option>
+                      <option>Feedback</option>
+                    </select>
+                  </div>
+                  <div class="mb-3">
+                    <textarea class="form-control" rows="4" placeholder="Your Message"></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-primary w-100">Send Message</button>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title mb-3">Newsletter</h5>
+                <p class="text-muted small">Subscribe to our newsletter for updates and exclusive content.</p>
+                <form>
+                  <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="First Name">
+                  </div>
+                  <div class="mb-3">
+                    <input type="email" class="form-control" placeholder="Email Address">
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label small">Interests</label>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="interestTech" checked>
+                      <label class="form-check-label" for="interestTech">Technology</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="interestDesign">
+                      <label class="form-check-label" for="interestDesign">Design</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="interestBusiness">
+                      <label class="form-check-label" for="interestBusiness">Business</label>
+                    </div>
+                  </div>
+                  <button type="submit" class="btn btn-primary w-100">Subscribe</button>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title mb-3">Quick Feedback</h5>
+                <p class="text-muted small">How satisfied are you with our service?</p>
+                <form>
+                  <div class="mb-3">
+                    <div class="d-flex justify-content-between mb-2">
+                      <span class="small text-muted">Not satisfied</span>
+                      <span class="small text-muted">Very satisfied</span>
+                    </div>
+                    <div class="btn-group w-100" role="group">
+                      <input type="radio" class="btn-check" name="satisfaction" id="sat1" autocomplete="off">
+                      <label class="btn btn-outline-secondary" for="sat1">1</label>
+                      <input type="radio" class="btn-check" name="satisfaction" id="sat2" autocomplete="off">
+                      <label class="btn btn-outline-secondary" for="sat2">2</label>
+                      <input type="radio" class="btn-check" name="satisfaction" id="sat3" autocomplete="off">
+                      <label class="btn btn-outline-secondary" for="sat3">3</label>
+                      <input type="radio" class="btn-check" name="satisfaction" id="sat4" autocomplete="off" checked>
+                      <label class="btn btn-outline-secondary" for="sat4">4</label>
+                      <input type="radio" class="btn-check" name="satisfaction" id="sat5" autocomplete="off">
+                      <label class="btn btn-outline-secondary" for="sat5">5</label>
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <textarea class="form-control" rows="3" placeholder="Additional comments (optional)"></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-primary w-100">Submit Feedback</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Responsive Horizontal Form -->
+      <section class="section">
+        <h5 class="section-title mb-3">Responsive Form Layout</h5>
+        <div class="row g-4">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="card-title">Responsive Profile Form</h5>
+                <p class="card-subtitle">Horizontal on desktop, stacked on mobile</p>
+              </div>
+              <div class="card-body">
+                <form>
+                  <div class="row mb-3">
+                    <label for="respAvatar" class="col-lg-2 col-form-label">Avatar</label>
+                    <div class="col-lg-10">
+                      <div class="d-flex align-items-center gap-3">
+                        <img src="assets/img/profile-img.webp" alt="Avatar" class="rounded-circle" width="64" height="64">
+                        <div>
+                          <input type="file" class="form-control form-control-sm" id="respAvatar" accept="image/*">
+                          <div class="form-text">JPG, PNG or GIF. Max 2MB.</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row mb-3">
+                    <label for="respUsername" class="col-lg-2 col-form-label">Username</label>
+                    <div class="col-lg-10">
+                      <input type="text" class="form-control" id="respUsername" value="johndoe">
+                      <div class="form-text">Your public username.</div>
+                    </div>
+                  </div>
+                  <div class="row mb-3">
+                    <label for="respFullname" class="col-lg-2 col-form-label">Full Name</label>
+                    <div class="col-lg-5">
+                      <input type="text" class="form-control" placeholder="First name" value="John">
+                    </div>
+                    <div class="col-lg-5 mt-2 mt-lg-0">
+                      <input type="text" class="form-control" placeholder="Last name" value="Doe">
+                    </div>
+                  </div>
+                  <div class="row mb-3">
+                    <label for="respEmail2" class="col-lg-2 col-form-label">Email</label>
+                    <div class="col-lg-10">
+                      <input type="email" class="form-control" id="respEmail2" value="john.doe@example.com">
+                    </div>
+                  </div>
+                  <div class="row mb-3">
+                    <label for="respBio" class="col-lg-2 col-form-label">Bio</label>
+                    <div class="col-lg-10">
+                      <textarea class="form-control" id="respBio" rows="3">Software developer passionate about building great products.</textarea>
+                      <div class="form-text">Brief description for your profile. URLs are hyperlinked.</div>
+                    </div>
+                  </div>
+                  <div class="row mb-3">
+                    <label class="col-lg-2 col-form-label">Visibility</label>
+                    <div class="col-lg-10">
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="visibility" id="visPublic" checked>
+                        <label class="form-check-label" for="visPublic">
+                          <strong>Public</strong>
+                          <div class="text-muted small">Anyone can see your profile</div>
+                        </label>
+                      </div>
+                      <div class="form-check mt-2">
+                        <input class="form-check-input" type="radio" name="visibility" id="visPrivate">
+                        <label class="form-check-label" for="visPrivate">
+                          <strong>Private</strong>
+                          <div class="text-muted small">Only approved followers can see your profile</div>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-10 offset-lg-2">
+                      <button type="submit" class="btn btn-primary">Update Profile</button>
+                      <button type="button" class="btn btn-outline-secondary ms-2">Cancel</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <span class="footer-brand-mark"><i class="bi bi-lightning-charge-fill"></i></span>
+          <span class="footer-copyright">
+            &copy; 2026 <a href="#">TrendyAdmin</a>. All Rights Reserved.
+          </span>
+        </div>
+        <div class="footer-links">
+          <a href="#">About</a>
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Contact</a>
+        </div>
+        <div class="footer-credits">
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Back to Top -->
+  <a href="#" class="back-to-top">
+    <i class="ph ph-arrow-up"></i>
+  </a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="assets/vendor/chart.js/chart.umd.js"></script>
+  <script src="assets/vendor/echarts/echarts.min.js"></script>
+  <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="assets/vendor/quill/quill.js"></script>
+  <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+  <script src="assets/vendor/choices.js/choices.min.js"></script>
+  <script src="assets/vendor/flatpickr/flatpickr.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS Files -->
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <!-- App Sidebar Toggle (for app pages with sidebars) -->
+  <script src="assets/js/apps-sidebar-toggle.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,2006 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chart Widgets - TrendyAdmin</title>
+  <meta name="description" content="TrendyAdmin - Bootstrap Admin Template">
+  <meta name="keywords" content="admin, dashboard, bootstrap">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts - Plus Jakarta Sans (body) + Outfit (headings) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="assets/vendor/phosphor-icons/phosphor-icons.css" rel="stylesheet">
+  <link href="assets/vendor/lucide-icons/lucide.css" rel="stylesheet">
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/choices.js/choices.min.css" rel="stylesheet">
+  <link href="assets/vendor/flatpickr/flatpickr.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+    * Template Name: TrendyAdmin - Bootstrap Admin Template
+    * Template URL: https://bootstrapmade.com/trendy-admin-bootstrap-dashboard-template/
+    * Updated: Jul 29 2026 with Bootstrap v5.3.8
+    * Author: BootstrapMade.com
+    * License: https://bootstrapmade.com/license/
+    ======================================================== -->
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-inner">
+      <!-- Header Left -->
+      <div class="header-left">
+        <button class="sidebar-toggle" title="Toggle Sidebar">
+          <i class="ph ph-list"></i>
+        </button>
+        <a href="index.html" class="header-logo">
+          <span class="header-logo-mark"><i class="bi bi-lightning-charge-fill"></i></span>
+          <span class="header-logo-text">TrendyAdmin</span>
+        </a>
+
+        <!-- Apps Quick Access -->
+        <div class="header-action dropdown apps-dropdown">
+          <button class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" title="Quick Access">
+            <i class="ph ph-dots-nine"></i>
+          </button>
+          <div class="dropdown-menu">
+            <div class="apps-menu-header">
+              <h6>Quick Access</h6>
+              <span>Jump straight into an app</span>
+            </div>
+            <div class="apps-grid">
+              <a href="apps-chat.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-chat-circle-dots"></i></span>
+                <span>Chat</span>
+              </a>
+              <a href="apps-email.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-envelope"></i></span>
+                <span>Email</span>
+              </a>
+              <a href="apps-calendar.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-calendar-blank"></i></span>
+                <span>Calendar</span>
+              </a>
+              <a href="apps-kanban.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-kanban"></i></span>
+                <span>Kanban</span>
+              </a>
+              <a href="apps-file-manager.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-folder-open"></i></span>
+                <span>Files</span>
+              </a>
+              <a href="apps-todo.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-check-square"></i></span>
+                <span>Todo</span>
+              </a>
+              <a href="apps-contacts.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-address-book"></i></span>
+                <span>Contacts</span>
+              </a>
+              <a href="apps-support.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-headset"></i></span>
+                <span>Support</span>
+              </a>
+              <a href="invoice-list.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-receipt"></i></span>
+                <span>Invoices</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Header Search (Desktop) -->
+      <div class="header-search">
+        <form class="search-form" action="search-results.html" method="GET">
+          <button type="submit"><i class="ph ph-magnifying-glass"></i></button>
+          <input type="search" name="q" placeholder="Search anything..." autocomplete="off">
+          <span class="search-hint">⌘K</span>
+        </form>
+      </div>
+
+      <!-- Header Right -->
+      <div class="header-right">
+        <!-- Desktop Actions (hidden on mobile, shown in mobile menu) -->
+        <div class="header-actions-desktop">
+          <!-- Quick Create -->
+          <div class="dropdown create-dropdown">
+            <button class="create-btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="ph ph-plus"></i>
+              <span>Create</span>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end create-menu">
+              <a class="dropdown-item" href="apps-kanban.html">
+                <span class="create-item-icon"><i class="ph ph-kanban"></i></span>
+                <span class="create-item-text">
+                  <span class="create-item-title">New Project</span>
+                  <span class="create-item-sub">Start a kanban board</span>
+                </span>
+              </a>
+              <a class="dropdown-item" href="apps-todo.html">
+                <span class="create-item-icon"><i class="ph ph-check-square"></i></span>
+                <span class="create-item-text">
+                  <span class="create-item-title">New Task</span>
+                  <span class="create-item-sub">Add to your todo list</span>
+                </span>
+              </a>
+              <a class="dropdown-item" href="apps-contacts.html">
+                <span class="create-item-icon"><i class="ph ph-user-plus"></i></span>
+                <span class="create-item-text">
+                  <span class="create-item-title">New Contact</span>
+                  <span class="create-item-sub">Save a new person</span>
+                </span>
+              </a>
+              <a class="dropdown-item" href="invoice-list.html">
+                <span class="create-item-icon"><i class="ph ph-receipt"></i></span>
+                <span class="create-item-text">
+                  <span class="create-item-title">New Invoice</span>
+                  <span class="create-item-sub">Bill a customer</span>
+                </span>
+              </a>
+            </div>
+          </div>
+
+          <div class="header-divider"></div>
+
+          <!-- Theme Toggle -->
+          <button class="header-action theme-toggle" title="Toggle Theme">
+            <i class="ph ph-moon icon-dark"></i>
+            <i class="ph ph-sun icon-light"></i>
+          </button>
+
+          <!-- Fullscreen Toggle -->
+          <button class="header-action fullscreen-toggle" onclick="toggleFullscreen()" title="Fullscreen">
+            <i class="ph ph-arrows-out icon-enter"></i>
+            <i class="ph ph-arrows-in icon-exit"></i>
+          </button>
+
+          <!-- Messages -->
+          <div class="header-action dropdown messages-dropdown">
+            <button class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" title="Messages">
+              <i class="ph ph-chat-teardrop-text"></i>
+              <span class="badge">2</span>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end">
+              <div class="messages-header">
+                <h6>Messages</h6>
+                <a href="apps-chat.html">View all</a>
+              </div>
+              <div class="messages-list">
+                <a href="apps-chat.html" class="message-item unread">
+                  <span class="message-avatar">
+                    <img src="assets/img/avatars/avatar-2.webp" alt="Sarah Johnson">
+                    <span class="message-status"></span>
+                  </span>
+                  <span class="message-content">
+                    <span class="message-name">Sarah Johnson</span>
+                    <span class="message-text">The new dashboard mockups look amazing! 🔥</span>
+                  </span>
+                  <span class="message-time">2m</span>
+                </a>
+                <a href="apps-chat.html" class="message-item unread">
+                  <span class="message-avatar">
+                    <img src="assets/img/avatars/avatar-3.webp" alt="Mike Chen">
+                  </span>
+                  <span class="message-content">
+                    <span class="message-name">Mike Chen</span>
+                    <span class="message-text">Can you review my PR when you get a chance?</span>
+                  </span>
+                  <span class="message-time">1h</span>
+                </a>
+                <a href="apps-chat.html" class="message-item">
+                  <span class="message-avatar">
+                    <img src="assets/img/avatars/avatar-4.webp" alt="Emma Davis">
+                  </span>
+                  <span class="message-content">
+                    <span class="message-name">Emma Davis</span>
+                    <span class="message-text">Meeting moved to 3pm tomorrow</span>
+                  </span>
+                  <span class="message-time">3h</span>
+                </a>
+              </div>
+              <div class="messages-footer">
+                <a href="apps-chat.html">Open chat <i class="ph ph-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Notifications -->
+          <div class="header-action dropdown notification-dropdown">
+            <button class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" title="Notifications">
+              <i class="ph ph-bell"></i>
+              <span class="badge">3</span>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end">
+              <div class="notification-header">
+                <h6>You have 3 new notifications</h6>
+                <a href="#" class="notification-mark-read" data-notification-action="mark-all-read" title="Mark all as read">
+                  <i class="ph ph-checks"></i>
+                </a>
+              </div>
+              <div class="notification-list">
+                <div class="notification-item unread">
+                  <span class="notification-icon success">
+                    <i class="ph ph-check-circle"></i>
+                  </span>
+                  <span class="notification-content">
+                    <span class="notification-title">Order Completed</span>
+                    <span class="notification-text">Your order #12345 has been delivered</span>
+                  </span>
+                  <span class="notification-meta">
+                    <span class="notification-time">5m</span>
+                    <span class="notification-dot"></span>
+                  </span>
+                </div>
+                <div class="notification-item unread">
+                  <span class="notification-icon warning">
+                    <i class="ph ph-warning"></i>
+                  </span>
+                  <span class="notification-content">
+                    <span class="notification-title">Low Storage</span>
+                    <span class="notification-text">Server storage is running low (85% used)</span>
+                  </span>
+                  <span class="notification-meta">
+                    <span class="notification-time">1h</span>
+                    <span class="notification-dot"></span>
+                  </span>
+                </div>
+                <div class="notification-item">
+                  <span class="notification-icon info">
+                    <i class="ph ph-info"></i>
+                  </span>
+                  <span class="notification-content">
+                    <span class="notification-title">New Feature</span>
+                    <span class="notification-text">Dark mode is now available</span>
+                  </span>
+                  <span class="notification-meta">
+                    <span class="notification-time">2h</span>
+                    <span class="notification-dot"></span>
+                  </span>
+                </div>
+              </div>
+              <div class="notification-footer">
+                <a href="notifications.html">View all</a>
+                <a href="settings.html">Settings</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="header-divider"></div>
+
+          <!-- User Dropdown -->
+          <div class="header-action dropdown user-dropdown">
+            <button class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="assets/img/profile-img.webp" alt="User" class="avatar">
+              <span class="user-name">John Doe</span>
+              <i class="ph ph-caret-down user-caret"></i>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end">
+              <div class="user-menu-card">
+                <span class="user-menu-avatar">
+                  <img src="assets/img/profile-img.webp" alt="User">
+                </span>
+                <span class="user-menu-name">John Doe</span>
+                <span class="user-menu-mail">john@trendyadmin.com</span>
+                <span class="user-menu-role">Administrator</span>
+              </div>
+              <div class="user-menu-body">
+                <a class="dropdown-item" href="profile.html">
+                  <span class="user-menu-item-icon"><i class="ph ph-user"></i></span>
+                  My Profile
+                  <i class="ph ph-caret-right user-menu-item-caret"></i>
+                </a>
+                <a class="dropdown-item" href="settings.html">
+                  <span class="user-menu-item-icon"><i class="ph ph-gear"></i></span>
+                  Settings
+                  <i class="ph ph-caret-right user-menu-item-caret"></i>
+                </a>
+                <a class="dropdown-item" href="activity.html">
+                  <span class="user-menu-item-icon"><i class="ph ph-pulse"></i></span>
+                  Activity Log
+                  <i class="ph ph-caret-right user-menu-item-caret"></i>
+                </a>
+                <a class="dropdown-item" href="invoice-list.html">
+                  <span class="user-menu-item-icon"><i class="ph ph-receipt"></i></span>
+                  Billing
+                  <i class="ph ph-caret-right user-menu-item-caret"></i>
+                </a>
+              </div>
+              <div class="user-menu-footer">
+                <a href="auth-login.html" class="user-menu-signout">
+                  <i class="ph ph-sign-out"></i> Sign Out
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile Actions (visible only on mobile) -->
+        <div class="header-actions-mobile">
+          <!-- Search Toggle (Mobile) -->
+          <button class="header-action search-toggle" title="Search">
+            <i class="ph ph-magnifying-glass"></i>
+          </button>
+
+          <!-- Mobile Menu Toggle -->
+          <button class="header-action mobile-menu-toggle" title="More">
+            <i class="ph ph-dots-three-vertical"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Search -->
+  <div class="mobile-search">
+    <form class="search-form" action="search-results.html" method="GET">
+      <input type="search" name="q" placeholder="Search anything..." autocomplete="off">
+      <button type="submit"><i class="ph ph-magnifying-glass"></i></button>
+    </form>
+  </div>
+
+  <!-- Mobile Header Menu -->
+  <div class="mobile-header-menu">
+    <div class="mobile-header-menu-content">
+      <!-- Theme Toggle -->
+      <button class="mobile-menu-item theme-toggle" title="Toggle Theme">
+        <i class="ph ph-moon icon-dark"></i>
+        <i class="ph ph-sun icon-light"></i>
+        <span class="mobile-menu-label">Theme</span>
+      </button>
+
+      <!-- Fullscreen Toggle -->
+      <button class="mobile-menu-item fullscreen-toggle" onclick="toggleFullscreen()" title="Fullscreen">
+        <i class="ph ph-arrows-out icon-enter"></i>
+        <i class="ph ph-arrows-in icon-exit"></i>
+        <span class="mobile-menu-label">Fullscreen</span>
+      </button>
+
+      <!-- Messages -->
+      <a href="apps-chat.html" class="mobile-menu-item">
+        <i class="ph ph-chat-teardrop-text"></i>
+        <span class="badge">2</span>
+        <span class="mobile-menu-label">Messages</span>
+      </a>
+
+      <!-- Notifications -->
+      <a href="notifications.html" class="mobile-menu-item">
+        <i class="ph ph-bell"></i>
+        <span class="badge">3</span>
+        <span class="mobile-menu-label">Notifications</span>
+      </a>
+
+      <!-- Profile -->
+      <a href="profile.html" class="mobile-menu-item">
+        <i class="ph ph-user"></i>
+        <span class="mobile-menu-label">Profile</span>
+      </a>
+
+      <!-- Sign Out -->
+      <a href="auth-login.html" class="mobile-menu-item mobile-menu-item-danger">
+        <i class="ph ph-sign-out"></i>
+        <span class="mobile-menu-label">Sign Out</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <!-- Sidebar Header -->
+    <div class="sidebar-header">
+      <a href="index.html" class="sidebar-logo">
+        <span class="sidebar-logo-mark"><i class="bi bi-lightning-charge-fill"></i></span>
+        <span class="sidebar-logo-text">TrendyAdmin</span>
+      </a>
+      <button class="sidebar-close">
+        <i class="ph ph-x"></i>
+      </button>
+    </div>
+
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar-nav">
+      <ul class="nav-menu">
+        <li class="nav-heading"><span>Overview</span></li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="index.html">
+            <span class="nav-icon"><i class="ph ph-house"></i></span>
+            <span class="nav-text">Home</span>
+          </a>
+        </li>
+
+        <!-- Dashboards Submenu -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-gauge"></i></span>
+            <span class="nav-text">Dashboards</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="dashboard-sales.html">Sales</a></li>
+            <li><a class="nav-link " href="dashboard-analytics.html">Analytics</a></li>
+            <li><a class="nav-link " href="dashboard-crm.html">CRM</a></li>
+            <li><a class="nav-link " href="dashboard-marketing.html">Marketing</a></li>
+            <li><a class="nav-link " href="dashboard-projects.html">Projects</a></li>
+            <li><a class="nav-link " href="dashboard-finance.html">Finance</a></li>
+          </ul>
+        </li>
+
+        <!-- Users -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-users"></i></span>
+            <span class="nav-text">Users</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="users.html">Users List</a></li>
+            <li><a class="nav-link " href="users-view.html">User View</a></li>
+            <li><a class="nav-link " href="users-edit.html">User Edit</a></li>
+            <li><a class="nav-link " href="profile.html">Profile</a></li>
+            <!-- 3rd Level - Settings submenu -->
+            <li class="has-submenu ">
+              <a class="nav-link" href="#" aria-expanded="false">
+                Settings
+                <i class="ph ph-caret-right nav-arrow"></i>
+              </a>
+              <ul class="nav-submenu ">
+                <li><a class="nav-link " href="settings.html">Account</a></li>
+                <li><a class="nav-link " href="notifications.html">Notifications</a></li>
+                <li><a class="nav-link " href="activity.html">Activity</a></li>
+              </ul>
+            </li>
+            <li><a class="nav-link " href="roles.html">Roles & Permissions</a></li>
+          </ul>
+        </li>
+
+        <!-- Authentication -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-shield-check"></i></span>
+            <span class="nav-text">Authentication</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="auth-login.html">Login</a></li>
+            <li><a class="nav-link " href="auth-register.html">Register</a></li>
+            <li><a class="nav-link " href="auth-forgot-password.html">Forgot Password</a></li>
+            <li><a class="nav-link " href="auth-reset-password.html">Reset Password</a></li>
+            <li><a class="nav-link " href="auth-verify-email.html">Email Verification</a></li>
+            <li><a class="nav-link " href="auth-two-factor.html">Two Factor Auth</a></li>
+            <li><a class="nav-link " href="auth-lock-screen.html">Lock Screen</a></li>
+          </ul>
+        </li>
+
+        <!-- Apps Section -->
+        <li class="nav-heading"><span>Apps</span></li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-calendar.html">
+            <span class="nav-icon"><i class="ph ph-calendar-blank"></i></span>
+            <span class="nav-text">Calendar</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-kanban.html">
+            <span class="nav-icon"><i class="ph ph-kanban"></i></span>
+            <span class="nav-text">Kanban Board</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-chat.html">
+            <span class="nav-icon"><i class="ph ph-chat-circle-dots"></i></span>
+            <span class="nav-text">Chat</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-contacts.html">
+            <span class="nav-icon"><i class="ph ph-address-book"></i></span>
+            <span class="nav-text">Contacts</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-file-manager.html">
+            <span class="nav-icon"><i class="ph ph-folder-open"></i></span>
+            <span class="nav-text">File Manager</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-email.html">
+            <span class="nav-icon"><i class="ph ph-envelope"></i></span>
+            <span class="nav-text">Email</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-todo.html">
+            <span class="nav-icon"><i class="ph ph-check-square"></i></span>
+            <span class="nav-text">Todo List</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-support.html">
+            <span class="nav-icon"><i class="ph ph-headset"></i></span>
+            <span class="nav-text">Support Center</span>
+          </a>
+        </li>
+
+        <!-- UI Elements Section -->
+        <li class="nav-heading"><span>UI Elements</span></li>
+
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-puzzle-piece"></i></span>
+            <span class="nav-text">Components</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="components-alerts.html">Alerts</a></li>
+            <li><a class="nav-link " href="components-accordion.html">Accordion</a></li>
+            <li><a class="nav-link " href="components-badges.html">Badges</a></li>
+            <li><a class="nav-link " href="components-breadcrumbs.html">Breadcrumbs</a></li>
+            <li><a class="nav-link " href="components-buttons.html">Buttons</a></li>
+            <li><a class="nav-link " href="components-cards.html">Cards</a></li>
+            <li><a class="nav-link " href="components-carousel.html">Carousel</a></li>
+            <li><a class="nav-link " href="components-dropdowns.html">Dropdowns</a></li>
+            <li><a class="nav-link " href="components-list-group.html">List Group</a></li>
+            <li><a class="nav-link " href="components-modal.html">Modal</a></li>
+            <li><a class="nav-link " href="components-nav-tabs.html">Navs & Tabs</a></li>
+            <li><a class="nav-link " href="components-offcanvas.html">Offcanvas</a></li>
+            <li><a class="nav-link " href="components-pagination.html">Pagination</a></li>
+            <li><a class="nav-link " href="components-popovers.html">Popovers</a></li>
+            <li><a class="nav-link " href="components-progress.html">Progress</a></li>
+            <li><a class="nav-link " href="components-spinners.html">Spinners</a></li>
+            <li><a class="nav-link " href="components-toasts.html">Toasts</a></li>
+            <li><a class="nav-link " href="components-tooltips.html">Tooltips</a></li>
+          </ul>
+        </li>
+
+        <!-- Widgets -->
+        <li class="nav-item has-submenu open">
+          <a class="nav-link" href="#" aria-expanded="true">
+            <span class="nav-icon"><i class="ph ph-stack"></i></span>
+            <span class="nav-text">Widgets</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu show">
+            <li><a class="nav-link " href="widgets-cards.html">Cards</a></li>
+            <li><a class="nav-link " href="widgets-banners.html">Banners</a></li>
+            <li><a class="nav-link active" href="widgets-charts.html">Charts</a></li>
+            <li><a class="nav-link " href="widgets-apps.html">Apps</a></li>
+            <li><a class="nav-link " href="widgets-data.html">Data</a></li>
+          </ul>
+        </li>
+
+        <!-- Forms Section -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-list-checks"></i></span>
+            <span class="nav-text">Forms</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="forms-elements.html">Form Elements</a></li>
+            <li><a class="nav-link " href="forms-layouts.html">Form Layouts</a></li>
+            <li><a class="nav-link " href="forms-validation.html">Validation</a></li>
+            <li><a class="nav-link " href="forms-wizard.html">Wizard</a></li>
+            <li><a class="nav-link " href="forms-editors.html">Rich Editors</a></li>
+            <li><a class="nav-link " href="forms-pickers.html">Date/Time Pickers</a></li>
+            <li><a class="nav-link " href="forms-select.html">Advanced Select</a></li>
+            <li><a class="nav-link " href="forms-upload.html">File Upload</a></li>
+          </ul>
+        </li>
+
+        <!-- Tables Section -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-table"></i></span>
+            <span class="nav-text">Tables</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="tables-basic.html">Basic Tables</a></li>
+            <li><a class="nav-link " href="tables-datatables.html">DataTables</a></li>
+            <li><a class="nav-link " href="tables-responsive.html">Responsive Tables</a></li>
+          </ul>
+        </li>
+
+        <!-- Charts Section -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-chart-bar"></i></span>
+            <span class="nav-text">Charts</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="charts-apexcharts.html">ApexCharts</a></li>
+            <li><a class="nav-link " href="charts-chartjs.html">Chart.js</a></li>
+            <li><a class="nav-link " href="charts-echarts.html">ECharts</a></li>
+          </ul>
+        </li>
+
+        <!-- Icons Section -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-diamond"></i></span>
+            <span class="nav-text">Icons</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="icons-bootstrap.html">Bootstrap Icons</a></li>
+            <li><a class="nav-link " href="icons-remixicon.html">Remix Icons</a></li>
+            <li><a class="nav-link " href="icons-fontawesome.html">Font Awesome</a></li>
+            <li><a class="nav-link " href="icons-phosphor.html">Phosphor Icons</a></li>
+            <li><a class="nav-link " href="icons-lucide.html">Lucide Icons</a></li>
+          </ul>
+        </li>
+
+        <!-- Pages Section -->
+        <li class="nav-heading"><span>Pages</span></li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="contact.html">
+            <span class="nav-icon"><i class="ph ph-envelope-simple"></i></span>
+            <span class="nav-text">Contact</span>
+          </a>
+        </li>
+
+        <!-- Invoices -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-receipt"></i></span>
+            <span class="nav-text">Invoices</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="invoice-list.html">Invoice List</a></li>
+            <li><a class="nav-link " href="invoice.html">Invoice View</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="pricing.html">
+            <span class="nav-icon"><i class="ph ph-tag"></i></span>
+            <span class="nav-text">Pricing</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="faq.html">
+            <span class="nav-icon"><i class="ph ph-question"></i></span>
+            <span class="nav-text">FAQ</span>
+          </a>
+        </li>
+
+        <!-- Error Pages -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-warning"></i></span>
+            <span class="nav-text">Error Pages</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="error-404.html">404 Not Found</a></li>
+            <li><a class="nav-link " href="error-403.html">403 Forbidden</a></li>
+            <li><a class="nav-link " href="error-500.html">500 Server Error</a></li>
+            <li><a class="nav-link " href="error-maintenance.html">Maintenance</a></li>
+            <li><a class="nav-link " href="error-coming-soon.html">Coming Soon</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="timeline.html">
+            <span class="nav-icon"><i class="ph ph-clock-counter-clockwise"></i></span>
+            <span class="nav-text">Timeline</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="search-results.html">
+            <span class="nav-icon"><i class="ph ph-magnifying-glass"></i></span>
+            <span class="nav-text">Search Results</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="blank.html">
+            <span class="nav-icon"><i class="ph ph-file"></i></span>
+            <span class="nav-text">Blank Page</span>
+          </a>
+        </li>
+
+      </ul>
+    </nav>
+
+    <!-- Sidebar Footer - User Card -->
+    <div class="sidebar-footer">
+      <div class="sidebar-user">
+        <a href="profile.html" class="sidebar-user-link">
+          <span class="sidebar-user-avatar">
+            <img src="assets/img/profile-img.webp" alt="User">
+            <span class="sidebar-user-status"></span>
+          </span>
+          <span class="sidebar-user-info">
+            <span class="sidebar-user-name">John Doe</span>
+            <span class="sidebar-user-role">Administrator</span>
+          </span>
+        </a>
+        <div class="sidebar-user-actions">
+          <a href="settings.html" class="sidebar-user-action" title="Settings">
+            <i class="ph ph-gear"></i>
+          </a>
+          <a href="auth-login.html" class="sidebar-user-action sidebar-user-logout" title="Logout">
+            <i class="ph ph-sign-out"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Sidebar Overlay (Mobile) -->
+  <div class="sidebar-overlay"></div>
+
+  <!-- Main Content -->
+  <main class="main">
+    <div class="main-content page-widgets-charts">
+      <!-- Page Header -->
+      <div class="page-header">
+        <h1 class="page-title">Chart Widgets</h1>
+        <nav class="breadcrumb">
+          <a href="index.html" class="breadcrumb-item">Home</a>
+          <a href="#" class="breadcrumb-item">Widgets</a>
+          <span class="breadcrumb-item active">Charts</span>
+        </nav>
+      </div>
+
+      <!-- Mini Stat Cards with Sparklines -->
+      <section class="section">
+        <h5 class="section-title mb-3">Mini Stat Cards with Sparklines</h5>
+        <div class="row g-4">
+          <!-- Active Users Stat -->
+          <div class="col-lg-3 col-md-6">
+            <div class="card widget-chart-stat">
+              <div class="card-body">
+                <div class="widget-chart-stat-header">
+                  <div>
+                    <div class="widget-chart-stat-value">3,847</div>
+                    <div class="widget-chart-stat-label">Active Users</div>
+                  </div>
+                  <span class="widget-chart-stat-change positive">+2.8%</span>
+                </div>
+                <div class="widget-chart-sparkline primary">
+                  <svg viewBox="0 0 100 30" preserveAspectRatio="none">
+                    <path d="M0,25 Q10,20 20,22 T40,15 T60,20 T80,10 T100,15" fill="none" stroke="currentColor" stroke-width="2" />
+                    <path d="M0,25 Q10,20 20,22 T40,15 T60,20 T80,10 T100,15 V30 H0 Z" fill="currentColor" opacity="0.1" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Page Sessions Stat -->
+          <div class="col-lg-3 col-md-6">
+            <div class="card widget-chart-stat">
+              <div class="card-body">
+                <div class="widget-chart-stat-header">
+                  <div>
+                    <div class="widget-chart-stat-value">24,892</div>
+                    <div class="widget-chart-stat-label">Sessions</div>
+                  </div>
+                  <span class="widget-chart-stat-change negative">-1.5%</span>
+                </div>
+                <div class="widget-chart-sparkline-bars info">
+                  <span style="height: 55%"></span>
+                  <span style="height: 75%"></span>
+                  <span style="height: 35%"></span>
+                  <span style="height: 85%"></span>
+                  <span style="height: 65%"></span>
+                  <span style="height: 45%"></span>
+                  <span style="height: 80%"></span>
+                  <span style="height: 60%"></span>
+                  <span style="height: 70%"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bounce Rate Stat -->
+          <div class="col-lg-3 col-md-6">
+            <div class="card widget-chart-stat">
+              <div class="card-body">
+                <div class="widget-chart-stat-header">
+                  <div>
+                    <div class="widget-chart-stat-value">42.5%</div>
+                    <div class="widget-chart-stat-label">Bounce Rate</div>
+                  </div>
+                  <span class="widget-chart-stat-change positive">+0.8%</span>
+                </div>
+                <div class="widget-chart-sparkline warning">
+                  <svg viewBox="0 0 100 30" preserveAspectRatio="none">
+                    <path d="M0,20 Q15,25 25,18 T50,22 T75,12 T100,18" fill="none" stroke="currentColor" stroke-width="2" />
+                    <path d="M0,20 Q15,25 25,18 T50,22 T75,12 T100,18 V30 H0 Z" fill="currentColor" opacity="0.1" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Revenue Stat -->
+          <div class="col-lg-3 col-md-6">
+            <div class="card widget-chart-stat">
+              <div class="card-body">
+                <div class="widget-chart-stat-header">
+                  <div>
+                    <div class="widget-chart-stat-label">Monthly Revenue</div>
+                    <div class="widget-chart-stat-value">$54,720</div>
+                  </div>
+                </div>
+                <div class="widget-chart-sparkline-bars dark">
+                  <span style="height: 45%"></span>
+                  <span style="height: 65%"></span>
+                  <span style="height: 35%"></span>
+                  <span style="height: 75%"></span>
+                  <span style="height: 55%"></span>
+                  <span style="height: 85%"></span>
+                  <span style="height: 40%"></span>
+                  <span style="height: 70%"></span>
+                  <span style="height: 50%"></span>
+                  <span style="height: 80%"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Overall Balance & ROI Cards -->
+      <section class="section">
+        <h5 class="section-title mb-3">Balance & ROI Cards</h5>
+        <div class="row g-4">
+          <!-- Account Overview -->
+          <div class="col-lg-8">
+            <div class="card">
+              <div class="card-body">
+                <div class="widget-balance-header">
+                  <div>
+                    <div class="widget-balance-label">Account Overview</div>
+                    <div class="widget-balance-value">$1,847,320</div>
+                    <div class="widget-balance-change">
+                      <i class="ph-duotone ph-caret-up"></i>
+                      <span class="positive">12.7%</span>
+                      <span class="text-muted">vs last quarter</span>
+                    </div>
+                  </div>
+                  <div class="widget-balance-tabs">
+                    <button class="active">Revenue</button>
+                    <button>Costs</button>
+                  </div>
+                </div>
+                <div class="widget-balance-content">
+                  <div class="widget-balance-chart">
+                    <svg viewBox="0 0 400 120" preserveAspectRatio="none">
+                      <path d="M0,80 Q50,90 100,70 T200,60 T300,75 T400,50" fill="none" stroke="var(--accent-color)" stroke-width="2" />
+                      <path d="M0,80 Q50,90 100,70 T200,60 T300,75 T400,50 V120 H0 Z" fill="var(--accent-color)" opacity="0.1" />
+                    </svg>
+                    <div class="widget-balance-chart-labels">
+                      <span>Oct</span>
+                      <span>Nov</span>
+                      <span>Dec</span>
+                      <span>Jan</span>
+                      <span>Feb</span>
+                      <span>Mar</span>
+                      <span>Apr</span>
+                    </div>
+                  </div>
+                  <div class="widget-balance-stats">
+                    <div class="widget-balance-stat-item">
+                      <div class="widget-balance-stat-icon primary">
+                        <i class="ph ph-trend-up"></i>
+                      </div>
+                      <div>
+                        <div class="widget-balance-stat-label">Gross Revenue</div>
+                        <div class="widget-balance-stat-value">$28,450</div>
+                      </div>
+                    </div>
+                    <div class="widget-balance-stat-item">
+                      <div class="widget-balance-stat-icon success">
+                        <i class="ph ph-currency-dollar"></i>
+                      </div>
+                      <div>
+                        <div class="widget-balance-stat-label">Net Profit</div>
+                        <div class="widget-balance-stat-value">$12,680</div>
+                      </div>
+                    </div>
+                    <div class="widget-balance-stat-item">
+                      <div class="widget-balance-stat-icon info">
+                        <i class="ph ph-users"></i>
+                      </div>
+                      <div>
+                        <div class="widget-balance-stat-label">New Clients</div>
+                        <div class="widget-balance-stat-value">1,284</div>
+                      </div>
+                    </div>
+                    <div class="widget-balance-stat-item">
+                      <div class="widget-balance-stat-icon warning">
+                        <i class="ph ph-wallet"></i>
+                      </div>
+                      <div>
+                        <div class="widget-balance-stat-label">Operating Cost</div>
+                        <div class="widget-balance-stat-value">$8,920</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Growth Rate -->
+          <div class="col-lg-4">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Growth Rate</h5>
+                <div class="card-actions">
+                  <button class="btn btn-sm btn-light"><i class="ph ph-dots-three-vertical"></i></button>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="widget-roi-header">
+                  <div class="widget-roi-icon">
+                    <i class="ph ph-trend-up"></i>
+                  </div>
+                  <div class="widget-roi-values">
+                    <div class="widget-roi-percent">156%</div>
+                    <div class="widget-roi-label">YTD Growth</div>
+                  </div>
+                  <div class="widget-roi-change">
+                    <span class="positive">+18%</span>
+                    <span class="text-muted">This Quarter</span>
+                  </div>
+                </div>
+                <div class="widget-roi-chart">
+                  <div class="widget-roi-bars">
+                    <div class="widget-roi-bar-group">
+                      <div class="widget-roi-bar" style="height: 35%"></div>
+                      <span>Q1</span>
+                    </div>
+                    <div class="widget-roi-bar-group">
+                      <div class="widget-roi-bar" style="height: 55%"></div>
+                      <span>Q2</span>
+                    </div>
+                    <div class="widget-roi-bar-group">
+                      <div class="widget-roi-bar highlight" style="height: 75%"></div>
+                      <span>Q3</span>
+                    </div>
+                    <div class="widget-roi-bar-group">
+                      <div class="widget-roi-bar" style="height: 65%"></div>
+                      <span>Q4</span>
+                    </div>
+                    <div class="widget-roi-bar-group">
+                      <div class="widget-roi-bar" style="height: 85%"></div>
+                      <span>Q1</span>
+                    </div>
+                    <div class="widget-roi-bar-group">
+                      <div class="widget-roi-bar" style="height: 50%"></div>
+                      <span>Q2</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Stat Cards with Charts -->
+      <section class="section">
+        <h5 class="section-title mb-3">Stat Cards with Mini Charts</h5>
+        <div class="row g-4">
+          <!-- Subscribers -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card widget-stat-chart">
+              <div class="card-body">
+                <div class="widget-stat-chart-header">
+                  <div class="widget-stat-chart-icon primary">
+                    <i class="ph ph-envelope"></i>
+                  </div>
+                  <span class="widget-stat-chart-title">Email Subscribers</span>
+                  <button class="btn btn-sm btn-light ms-auto"><i class="ph ph-dots-three-vertical"></i></button>
+                </div>
+                <div class="widget-stat-chart-content">
+                  <div class="widget-stat-chart-value">8,294</div>
+                  <div class="widget-stat-chart-bars primary">
+                    <span style="height: 35%"></span>
+                    <span style="height: 55%"></span>
+                    <span style="height: 25%"></span>
+                    <span style="height: 75%"></span>
+                    <span style="height: 45%"></span>
+                    <span style="height: 65%"></span>
+                    <span style="height: 40%"></span>
+                    <span style="height: 85%"></span>
+                  </div>
+                </div>
+                <div class="widget-stat-chart-footer positive">
+                  +15% this week
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Gross Margin -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card widget-stat-chart">
+              <div class="card-body">
+                <div class="widget-stat-chart-header">
+                  <div class="widget-stat-chart-icon success">
+                    <i class="ph ph-percent"></i>
+                  </div>
+                  <span class="widget-stat-chart-title">Gross Margin</span>
+                  <button class="btn btn-sm btn-light ms-auto"><i class="ph ph-dots-three-vertical"></i></button>
+                </div>
+                <div class="widget-stat-chart-content">
+                  <div class="widget-stat-chart-value">68.4%</div>
+                  <div class="widget-stat-chart-line success">
+                    <svg viewBox="0 0 100 40" preserveAspectRatio="none">
+                      <path d="M0,35 Q10,30 20,32 T40,25 T60,28 T80,15 T100,20" fill="none" stroke="currentColor" stroke-width="2" />
+                    </svg>
+                  </div>
+                </div>
+                <div class="widget-stat-chart-footer positive">
+                  +5.2% vs target
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Budget Remaining -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card widget-stat-chart">
+              <div class="card-body">
+                <div class="widget-stat-chart-header">
+                  <div class="widget-stat-chart-icon info">
+                    <i class="ph ph-piggy-bank"></i>
+                  </div>
+                  <span class="widget-stat-chart-title">Budget Remaining</span>
+                  <button class="btn btn-sm btn-light ms-auto"><i class="ph ph-dots-three-vertical"></i></button>
+                </div>
+                <div class="widget-stat-chart-content">
+                  <div class="widget-stat-chart-value">$18,450</div>
+                  <div class="widget-stat-chart-donut info">
+                    <svg viewBox="0 0 36 36">
+                      <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="var(--border-color)" stroke-width="3" />
+                      <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3" stroke-dasharray="68, 100" />
+                    </svg>
+                  </div>
+                </div>
+                <div class="widget-stat-chart-footer positive">
+                  32% of budget used
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Current Value Card -->
+      <section class="section">
+        <h5 class="section-title mb-3">Multi-Metric Cards</h5>
+        <div class="row g-4">
+          <!-- Financial Summary -->
+          <div class="col-12">
+            <div class="card">
+              <div class="card-body">
+                <div class="widget-value-header">
+                  <h5 class="card-title mb-0">Financial Summary</h5>
+                  <div class="widget-value-tabs">
+                    <button class="active">Inflow</button>
+                    <button>Outflow</button>
+                  </div>
+                </div>
+                <div class="row g-4 mt-2">
+                  <!-- Invoiced -->
+                  <div class="col-lg-4">
+                    <div class="widget-value-item">
+                      <div class="widget-value-chart-bars primary">
+                        <span style="height: 45%"></span>
+                        <span style="height: 65%"></span>
+                        <span style="height: 35%"></span>
+                        <span style="height: 80%"></span>
+                        <span style="height: 55%"></span>
+                        <span style="height: 70%"></span>
+                      </div>
+                      <div class="widget-value-info">
+                        <span class="widget-value-label">Invoiced</span>
+                        <div class="widget-value-amount">
+                          <span class="value">$42,180</span>
+                          <span class="change positive">+3.4%</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Collected -->
+                  <div class="col-lg-4">
+                    <div class="widget-value-item">
+                      <div class="widget-value-chart-bars info">
+                        <span style="height: 55%"></span>
+                        <span style="height: 40%"></span>
+                        <span style="height: 75%"></span>
+                        <span style="height: 50%"></span>
+                        <span style="height: 65%"></span>
+                        <span style="height: 45%"></span>
+                      </div>
+                      <div class="widget-value-info">
+                        <span class="widget-value-label">Collected</span>
+                        <div class="widget-value-amount">
+                          <span class="value">$38,940</span>
+                          <span class="change positive">+2.1%</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Outstanding -->
+                  <div class="col-lg-4">
+                    <div class="widget-value-item highlight">
+                      <div class="widget-value-chart-area">
+                        <div class="widget-value-chart-tooltip">$156,890</div>
+                        <svg viewBox="0 0 100 50" preserveAspectRatio="none">
+                          <path d="M0,45 Q20,40 40,35 T80,25 T100,30" fill="none" stroke="var(--accent-color)" stroke-width="2" />
+                          <path d="M0,45 Q20,40 40,35 T80,25 T100,30 V50 H0 Z" fill="var(--accent-color)" opacity="0.1" />
+                        </svg>
+                      </div>
+                      <div class="widget-value-info">
+                        <span class="widget-value-label">Year to Date</span>
+                        <div class="widget-value-amount">
+                          <span class="value">$156,890</span>
+                          <span class="change positive">+8.7%</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Yearly Stats Row -->
+      <section class="section">
+        <h5 class="section-title mb-3">Yearly Stats Cards</h5>
+        <div class="row g-4">
+          <!-- Annual Summary -->
+          <div class="col-lg-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <h6 class="widget-yearly-title">Annual Summary</h6>
+                <div class="widget-yearly-value">$284,760</div>
+                <div class="widget-yearly-change">
+                  <span class="badge badge-soft-primary"><i class="ph ph-arrow-up"></i></span>
+                  <span class="positive">+14%</span>
+                  <span class="text-muted">vs previous year</span>
+                </div>
+                <div class="widget-yearly-legend">
+                  <span><i class="ph-duotone ph-circle text-primary"></i> 2024</span>
+                  <span><i class="ph-duotone ph-circle text-info"></i> 2025</span>
+                </div>
+                <div class="widget-yearly-donut">
+                  <svg viewBox="0 0 36 36">
+                    <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="var(--info-color)" stroke-width="4" />
+                    <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="var(--accent-color)" stroke-width="4" stroke-dasharray="65, 100" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quarterly Performance -->
+          <div class="col-lg-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <div class="widget-sales-header">
+                  <div>
+                    <h6 class="widget-sales-title">Quarterly Performance</h6>
+                    <span class="text-muted">By department</span>
+                  </div>
+                </div>
+                <div class="widget-sales-chart">
+                  <div class="widget-sales-bars">
+                    <div class="widget-sales-bar-item">
+                      <div class="bar" style="height: 40%"></div>
+                      <span>Sales</span>
+                    </div>
+                    <div class="widget-sales-bar-item">
+                      <div class="bar" style="height: 60%"></div>
+                      <span>Mktg</span>
+                    </div>
+                    <div class="widget-sales-bar-item highlight">
+                      <div class="bar" style="height: 90%"></div>
+                      <span>Dev</span>
+                    </div>
+                    <div class="widget-sales-bar-item">
+                      <div class="bar" style="height: 75%"></div>
+                      <span>Ops</span>
+                    </div>
+                    <div class="widget-sales-bar-item">
+                      <div class="bar" style="height: 55%"></div>
+                      <span>HR</span>
+                    </div>
+                    <div class="widget-sales-bar-item">
+                      <div class="bar" style="height: 65%"></div>
+                      <span>Fin</span>
+                    </div>
+                    <div class="widget-sales-bar-item">
+                      <div class="bar" style="height: 45%"></div>
+                      <span>Legal</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="widget-sales-footer">
+                  <div class="widget-sales-stat">
+                    <i class="ph ph-grid-nine"></i>
+                    <span class="label">Budget</span>
+                    <span class="value">$124,500</span>
+                  </div>
+                  <div class="widget-sales-stat">
+                    <i class="ph ph-grid-nine"></i>
+                    <span class="label">Spent</span>
+                    <span class="value">$98,240</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Regional Comparison -->
+          <div class="col-lg-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <div class="widget-revenue-header">
+                  <div>
+                    <h6 class="widget-revenue-title">Regional Comparison</h6>
+                    <span class="text-muted">Revenue by region</span>
+                  </div>
+                </div>
+                <div class="widget-revenue-legend">
+                  <span><i class="ph-duotone ph-circle text-primary"></i> Americas</span>
+                  <span><i class="ph-duotone ph-circle text-info"></i> Europe</span>
+                </div>
+                <div class="widget-revenue-chart">
+                  <div class="widget-revenue-bars">
+                    <div class="bar-group">
+                      <div class="bar positive" style="height: 55%"></div>
+                      <div class="bar negative" style="height: 35%"></div>
+                      <span>Q1</span>
+                    </div>
+                    <div class="bar-group">
+                      <div class="bar positive" style="height: 45%"></div>
+                      <div class="bar negative" style="height: 25%"></div>
+                      <span>Q2</span>
+                    </div>
+                    <div class="bar-group">
+                      <div class="bar positive" style="height: 65%"></div>
+                      <div class="bar negative" style="height: 40%"></div>
+                      <span>Q3</span>
+                    </div>
+                    <div class="bar-group">
+                      <div class="bar positive" style="height: 50%"></div>
+                      <div class="bar negative" style="height: 30%"></div>
+                      <span>Q4</span>
+                    </div>
+                    <div class="bar-group">
+                      <div class="bar positive" style="height: 60%"></div>
+                      <div class="bar negative" style="height: 45%"></div>
+                      <span>Q1</span>
+                    </div>
+                    <div class="bar-group">
+                      <div class="bar positive" style="height: 40%"></div>
+                      <div class="bar negative" style="height: 20%"></div>
+                      <span>Q2</span>
+                    </div>
+                  </div>
+                  <div class="widget-revenue-axis">
+                    <span>100k</span>
+                    <span>50k</span>
+                    <span>0</span>
+                    <span>-50k</span>
+                    <span>-100k</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Monthly Earnings & Analytics -->
+      <section class="section">
+        <h5 class="section-title mb-3">Earnings & Analytics Cards</h5>
+        <div class="row g-4">
+          <!-- Weekly Revenue -->
+          <div class="col-lg-3 col-md-6">
+            <div class="card widget-earnings">
+              <div class="card-body">
+                <div class="widget-earnings-header">
+                  <h6 class="widget-earnings-title">Weekly Revenue</h6>
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" checked>
+                  </div>
+                </div>
+                <div class="widget-earnings-value">
+                  $12,480
+                  <span class="badge badge-soft-primary ms-2"><i class="ph ph-arrow-up"></i> +6%</span>
+                </div>
+                <div class="widget-earnings-chart">
+                  <svg viewBox="0 0 150 50" preserveAspectRatio="none">
+                    <path d="M0,40 Q30,35 50,38 T100,30 T150,35" fill="none" stroke="var(--accent-color)" stroke-width="2" />
+                    <path d="M0,40 Q30,35 50,38 T100,30 T150,35 V50 H0 Z" fill="var(--accent-color)" opacity="0.15" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Traffic Sources -->
+          <div class="col-lg-5 col-md-6">
+            <div class="card h-100">
+              <div class="card-body">
+                <div class="widget-visited-header">
+                  <h6 class="widget-visited-title">Traffic Sources</h6>
+                  <select class="form-select form-select-sm" style="width: auto;">
+                    <option>This Month</option>
+                    <option>Last Month</option>
+                    <option>This Quarter</option>
+                  </select>
+                </div>
+                <div class="widget-visited-chart">
+                  <div class="widget-visited-bars">
+                    <div class="bar-item highlight">
+                      <div class="bar" style="height: 85%"></div>
+                      <span>Direct</span>
+                    </div>
+                    <div class="bar-item">
+                      <div class="bar" style="height: 65%"></div>
+                      <span>Social</span>
+                    </div>
+                    <div class="bar-item">
+                      <div class="bar" style="height: 75%"></div>
+                      <span>Search</span>
+                    </div>
+                    <div class="bar-item">
+                      <div class="bar" style="height: 55%"></div>
+                      <span>Email</span>
+                    </div>
+                    <div class="bar-item">
+                      <div class="bar" style="height: 45%"></div>
+                      <span>Ads</span>
+                    </div>
+                    <div class="bar-item">
+                      <div class="bar" style="height: 35%"></div>
+                      <span>Other</span>
+                    </div>
+                  </div>
+                  <div class="widget-visited-axis">
+                    <span>10k</span>
+                    <span>7.5k</span>
+                    <span>5k</span>
+                    <span>2.5k</span>
+                  </div>
+                </div>
+                <div class="widget-visited-legend">
+                  <span><i class="ph-duotone ph-circle text-primary"></i> Organic</span>
+                  <span><i class="ph-duotone ph-circle text-muted"></i> Paid</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Conversion Funnel -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card h-100">
+              <div class="card-body">
+                <h6 class="widget-impressions-title">Conversion Funnel</h6>
+                <div class="widget-impressions-value">$892,450</div>
+                <div class="widget-impressions-meta">
+                  <span class="text-muted">(vs last period)</span>
+                  <span class="badge badge-soft-success"><i class="ph ph-arrow-up"></i> +12%</span>
+                </div>
+                <div class="widget-impressions-chart">
+                  <svg viewBox="0 0 100 60" preserveAspectRatio="none">
+                    <path d="M0,50 Q15,45 25,48 T50,40 T75,45 T100,35" fill="none" stroke="var(--accent-color)" stroke-width="2" />
+                    <path d="M0,50 Q15,45 25,48 T50,40 T75,45 T100,35 V60 H0 Z" fill="var(--accent-color)" opacity="0.1" />
+                  </svg>
+                </div>
+                <div class="widget-impressions-stats">
+                  <div class="widget-impressions-stat">
+                    <span class="label">Visitors</span>
+                    <span class="value">48,290</span>
+                    <span class="badge badge-soft-success"><i class="ph ph-arrow-up"></i> +8%</span>
+                  </div>
+                  <div class="widget-impressions-stat">
+                    <span class="label">Leads</span>
+                    <span class="value">6,842</span>
+                    <span class="badge badge-soft-primary"><i class="ph ph-arrow-up"></i> +5%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Delivery Analytics & Marketing -->
+      <section class="section">
+        <h5 class="section-title mb-3">Analytics Cards with Radar & Donut</h5>
+        <div class="row g-4">
+          <!-- Campaign Performance -->
+          <div class="col-lg-6">
+            <div class="card">
+              <div class="card-body">
+                <div class="widget-delivery-header">
+                  <h5 class="card-title">Campaign Performance</h5>
+                  <div class="widget-delivery-tabs">
+                    <button class="active">Active</button>
+                    <button>Completed</button>
+                  </div>
+                  <button class="btn btn-sm btn-light"><i class="ph ph-dots-three-vertical"></i></button>
+                </div>
+                <div class="widget-delivery-content">
+                  <div class="widget-delivery-chart">
+                    <svg viewBox="0 0 200 200" class="widget-radar-chart">
+                      <polygon points="100,20 180,80 150,180 50,180 20,80" fill="none" stroke="var(--border-color)" stroke-width="1" />
+                      <polygon points="100,50 150,90 130,150 70,150 50,90" fill="none" stroke="var(--border-color)" stroke-width="1" />
+                      <polygon points="100,80 120,100 110,130 90,130 80,100" fill="none" stroke="var(--border-color)" stroke-width="1" />
+                      <polygon points="100,40 160,85 140,165 60,165 40,85" fill="var(--accent-color)" fill-opacity="0.2" stroke="var(--accent-color)" stroke-width="2" />
+                      <text x="100" y="15" text-anchor="middle" font-size="10" fill="var(--muted-color)">Reach</text>
+                      <text x="190" y="80" text-anchor="start" font-size="10" fill="var(--muted-color)">Engage</text>
+                      <text x="155" y="190" text-anchor="middle" font-size="10" fill="var(--muted-color)">Convert</text>
+                      <text x="45" y="190" text-anchor="middle" font-size="10" fill="var(--muted-color)">Retain</text>
+                      <text x="10" y="80" text-anchor="end" font-size="10" fill="var(--muted-color)">Refer</text>
+                    </svg>
+                  </div>
+                  <div class="widget-delivery-info">
+                    <div class="widget-delivery-message">
+                      <i class="ph ph-megaphone"></i>
+                      <div>
+                        <strong>Summer Campaign</strong>
+                        <span>Exceeding targets!</span>
+                      </div>
+                    </div>
+                    <div class="widget-delivery-stats">
+                      <div class="widget-delivery-stat">
+                        <span class="dot primary"></span>
+                        <span class="value">34.8%</span>
+                        <span class="label">Engagement Rate</span>
+                      </div>
+                      <div class="widget-delivery-stat">
+                        <span class="dot info"></span>
+                        <span class="value">18.5%</span>
+                        <span class="label">Click Rate</span>
+                      </div>
+                      <div class="widget-delivery-stat">
+                        <span class="dot danger"></span>
+                        <span class="value">8.2%</span>
+                        <span class="label">Conversion Rate</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Performance Metrics -->
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Performance Metrics</h5>
+                <div class="card-actions">
+                  <button class="btn btn-sm btn-light"><i class="ph ph-dots-three-vertical"></i></button>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="widget-marketing-content">
+                  <div class="widget-marketing-stats">
+                    <div class="widget-marketing-stat">
+                      <div class="widget-marketing-icon primary">
+                        <i class="ph ph-eye"></i>
+                      </div>
+                      <div>
+                        <span class="label">Page Views</span>
+                        <span class="value">+4.2k</span>
+                      </div>
+                    </div>
+                    <div class="widget-marketing-stat">
+                      <div class="widget-marketing-icon warning">
+                        <i class="ph ph-clock-counter-clockwise"></i>
+                      </div>
+                      <div>
+                        <span class="label">Avg. Session</span>
+                        <span class="value">3:42</span>
+                      </div>
+                    </div>
+                    <div class="widget-marketing-stat">
+                      <div class="widget-marketing-icon info">
+                        <i class="ph ph-hand-pointing"></i>
+                      </div>
+                      <div>
+                        <span class="label">Interactions</span>
+                        <span class="value">1.8k</span>
+                      </div>
+                    </div>
+                    <div class="widget-marketing-stat">
+                      <div class="widget-marketing-icon success">
+                        <i class="ph ph-trophy"></i>
+                      </div>
+                      <div>
+                        <span class="label">Goals Met</span>
+                        <span class="value">89%</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="widget-marketing-chart">
+                    <div class="widget-gauge">
+                      <svg viewBox="0 0 100 60">
+                        <path d="M10,55 A40,40 0 0,1 90,55" fill="none" stroke="var(--border-color)" stroke-width="8" stroke-linecap="round" />
+                        <path d="M10,55 A40,40 0 0,1 50,15" fill="none" stroke="var(--accent-color)" stroke-width="8" stroke-linecap="round" />
+                        <path d="M50,15 A40,40 0 0,1 70,20" fill="none" stroke="var(--warning-color)" stroke-width="8" stroke-linecap="round" />
+                        <path d="M70,20 A40,40 0 0,1 80,30" fill="none" stroke="var(--success-color)" stroke-width="8" stroke-linecap="round" />
+                      </svg>
+                      <div class="widget-gauge-value">342</div>
+                      <div class="widget-gauge-label">Overall health score for your digital presence.</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="widget-marketing-footer">
+                  <div class="widget-marketing-tip">
+                    <i class="ph ph-lightbulb"></i>
+                    <span>View detailed analytics to optimize performance.</span>
+                  </div>
+                  <button class="btn btn-primary btn-sm rounded-circle">
+                    <i class="ph ph-arrow-right"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Bottom Stats Row -->
+      <section class="section">
+        <h5 class="section-title mb-3">Bottom Stats Cards</h5>
+        <div class="row g-4">
+          <!-- New Orders -->
+          <div class="col-lg-4">
+            <div class="card">
+              <div class="card-body">
+                <div class="widget-bottom-header">
+                  <div>
+                    <h6 class="widget-bottom-title">New Orders</h6>
+                    <span class="text-muted">Past 14 days</span>
+                  </div>
+                  <div class="widget-bottom-values">
+                    <span class="value">1,847</span>
+                    <span class="change positive">+18.4%</span>
+                  </div>
+                </div>
+                <div class="widget-bottom-chart primary">
+                  <svg viewBox="0 0 150 50" preserveAspectRatio="none">
+                    <path d="M0,40 Q25,35 50,38 T100,30 T150,25" fill="none" stroke="currentColor" stroke-width="2" />
+                    <path d="M0,40 Q25,35 50,38 T100,30 T150,25 V50 H0 Z" fill="currentColor" opacity="0.1" />
+                  </svg>
+                </div>
+                <div class="widget-bottom-legend">
+                  <div class="widget-bottom-legend-item">
+                    <span class="dot primary"></span>
+                    <span>This Period</span>
+                    <span class="value">1,847</span>
+                  </div>
+                  <div class="widget-bottom-legend-item">
+                    <span class="dot muted"></span>
+                    <span>Previous</span>
+                    <span class="value">1,562</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Transactions -->
+          <div class="col-lg-4">
+            <div class="card">
+              <div class="card-body">
+                <div class="widget-bottom-header">
+                  <div>
+                    <h6 class="widget-bottom-title">Transactions</h6>
+                    <span class="text-muted">Daily breakdown</span>
+                  </div>
+                  <div class="widget-bottom-values">
+                    <span class="value">$28,450</span>
+                    <span class="change negative">-2.1%</span>
+                  </div>
+                </div>
+                <div class="widget-bottom-bars">
+                  <div class="bar-day">
+                    <div class="bar-fill" style="height: 65%"></div>
+                    <span>M</span>
+                  </div>
+                  <div class="bar-day">
+                    <div class="bar-fill" style="height: 45%"></div>
+                    <span>T</span>
+                  </div>
+                  <div class="bar-day">
+                    <div class="bar-fill" style="height: 80%"></div>
+                    <span>W</span>
+                  </div>
+                  <div class="bar-day">
+                    <div class="bar-fill" style="height: 55%"></div>
+                    <span>T</span>
+                  </div>
+                  <div class="bar-day">
+                    <div class="bar-fill" style="height: 85%"></div>
+                    <span>F</span>
+                  </div>
+                  <div class="bar-day">
+                    <div class="bar-fill" style="height: 70%"></div>
+                    <span>S</span>
+                  </div>
+                  <div class="bar-day">
+                    <div class="bar-fill" style="height: 40%"></div>
+                    <span>S</span>
+                  </div>
+                </div>
+                <div class="widget-bottom-legend">
+                  <div class="widget-bottom-legend-item">
+                    <span class="dot primary"></span>
+                    <span>Online</span>
+                    <span class="value">64%</span>
+                  </div>
+                  <div class="widget-bottom-legend-item">
+                    <span class="dot muted"></span>
+                    <span>In-Store</span>
+                    <span class="value">36%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Inventory -->
+          <div class="col-lg-4">
+            <div class="card">
+              <div class="card-body">
+                <div class="widget-bottom-header">
+                  <div>
+                    <h6 class="widget-bottom-title">Inventory</h6>
+                    <span class="text-muted">Stock levels</span>
+                  </div>
+                  <div class="widget-bottom-values">
+                    <span class="value">4,582</span>
+                    <span class="change positive">+9.2%</span>
+                  </div>
+                </div>
+                <div class="widget-bottom-donut">
+                  <svg viewBox="0 0 36 36">
+                    <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="var(--border-color)" stroke-width="3" />
+                    <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="var(--info-color)" stroke-width="3" stroke-dasharray="78, 100" />
+                  </svg>
+                </div>
+                <div class="widget-bottom-footer">
+                  <span class="text-muted">78% capacity utilized</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sales Profit & Product Sales -->
+      <section class="section">
+        <h5 class="section-title mb-3">Sales & Product Charts</h5>
+        <div class="row g-4">
+          <!-- Revenue Trend -->
+          <div class="col-lg-8">
+            <div class="card">
+              <div class="card-body">
+                <div class="widget-profit-header">
+                  <h5 class="card-title">Revenue Trend</h5>
+                  <div class="widget-profit-tabs">
+                    <button class="active">Revenue</button>
+                    <button>Expenses</button>
+                  </div>
+                </div>
+                <div class="widget-profit-chart">
+                  <svg viewBox="0 0 400 150" preserveAspectRatio="none">
+                    <path d="M0,120 Q50,100 100,110 T200,80 T300,90 T400,60" fill="none" stroke="var(--accent-color)" stroke-width="2" />
+                    <path d="M0,120 Q50,100 100,110 T200,80 T300,90 T400,60 V150 H0 Z" fill="var(--accent-color)" opacity="0.1" />
+                  </svg>
+                  <div class="widget-profit-labels">
+                    <span>May</span>
+                    <span>Jun</span>
+                    <span>Jul</span>
+                    <span>Aug</span>
+                    <span>Sep</span>
+                    <span>Oct</span>
+                    <span>Nov</span>
+                    <span>Dec</span>
+                    <span>Jan</span>
+                  </div>
+                  <div class="widget-profit-axis">
+                    <span>$100k</span>
+                    <span>$75k</span>
+                    <span>$50k</span>
+                    <span>$25k</span>
+                  </div>
+                </div>
+                <div class="widget-profit-footer">
+                  <div class="widget-profit-stat">
+                    <div class="widget-profit-stat-icon primary">
+                      <i class="ph ph-trend-up"></i>
+                    </div>
+                    <div>
+                      <span class="value">$248,920</span>
+                      <span class="badge badge-soft-primary">+12%</span>
+                    </div>
+                    <span class="label">Total Revenue</span>
+                  </div>
+                  <div class="widget-profit-stat">
+                    <div class="widget-profit-stat-icon warning">
+                      <i class="ph ph-money"></i>
+                    </div>
+                    <div>
+                      <span class="value">$72,480</span>
+                    </div>
+                    <span class="label">Net Income</span>
+                  </div>
+                  <button class="btn btn-primary">View Report</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category Distribution -->
+          <div class="col-lg-4">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Category Distribution</h5>
+                <div class="card-actions">
+                  <button class="btn btn-sm btn-light"><i class="ph ph-dots-three-vertical"></i></button>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="widget-product-donut">
+                  <svg viewBox="0 0 36 36">
+                    <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="var(--danger-color)" stroke-width="4" />
+                    <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="var(--warning-color)" stroke-width="4" stroke-dasharray="72, 100" />
+                    <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="var(--success-color)" stroke-width="4" stroke-dasharray="50, 100" />
+                    <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="var(--accent-color)" stroke-width="4" stroke-dasharray="32, 100" />
+                  </svg>
+                  <div class="widget-product-donut-center">
+                    <span class="value">12,847</span>
+                    <span class="badge badge-soft-success"><i class="ph ph-trend-up"></i> Top Seller</span>
+                  </div>
+                </div>
+                <div class="widget-product-legend">
+                  <div class="widget-product-legend-row">
+                    <span><i class="ph-duotone ph-circle text-primary"></i> 32% Electronics</span>
+                    <span><i class="ph-duotone ph-circle text-success"></i> 18% Apparel</span>
+                  </div>
+                  <div class="widget-product-legend-row">
+                    <span><i class="ph-duotone ph-circle text-warning"></i> 22% Home</span>
+                    <span><i class="ph-duotone ph-circle text-danger"></i> 28% Other</span>
+                  </div>
+                </div>
+                <p class="widget-product-note text-muted text-center">
+                  Distribution of sales across main product categories this quarter
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sales Overview & Annual Profit -->
+      <section class="section">
+        <h5 class="section-title mb-3">Overview & Conversion Cards</h5>
+        <div class="row g-4">
+          <!-- Monthly Breakdown -->
+          <div class="col-lg-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <div class="widget-overview-header">
+                  <h6 class="widget-overview-title">Monthly Breakdown</h6>
+                  <span class="text-muted">Revenue split</span>
+                </div>
+                <div class="widget-overview-donut">
+                  <svg viewBox="0 0 36 36">
+                    <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="var(--info-color)" stroke-width="4" />
+                    <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="var(--accent-color)" stroke-width="4" stroke-dasharray="58, 100" />
+                  </svg>
+                  <div class="widget-overview-donut-value">$384,720</div>
+                </div>
+                <div class="widget-overview-stats">
+                  <div class="widget-overview-stat">
+                    <i class="ph ph-arrow-circle-up"></i>
+                    <span class="value">$224,180</span>
+                    <span class="label">Gross</span>
+                  </div>
+                  <div class="widget-overview-stat">
+                    <i class="ph ph-arrow-circle-down"></i>
+                    <span class="value">$160,540</span>
+                    <span class="label">Net</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Channel Performance -->
+          <div class="col-lg-4">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Channel Performance</h5>
+                <div class="card-actions">
+                  <button class="btn btn-sm btn-light"><i class="ph ph-dots-three-vertical"></i></button>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="widget-marketing-mini">
+                  <div class="widget-marketing-mini-stats">
+                    <div class="widget-marketing-mini-stat">
+                      <div class="icon primary"><i class="ph ph-storefront"></i></div>
+                      <div>
+                        <span class="label">Website</span>
+                        <span class="value">+5.8k</span>
+                      </div>
+                    </div>
+                    <div class="widget-marketing-mini-stat">
+                      <div class="icon warning"><i class="ph ph-device-mobile"></i></div>
+                      <div>
+                        <span class="label">Mobile App</span>
+                        <span class="value">2.4k</span>
+                      </div>
+                    </div>
+                    <div class="widget-marketing-mini-stat">
+                      <div class="icon success"><i class="ph ph-buildings"></i></div>
+                      <div>
+                        <span class="label">Retail</span>
+                        <span class="value">1.9k</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="widget-marketing-mini-chart">
+                    <svg viewBox="0 0 36 36">
+                      <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="var(--success-color)" stroke-width="4" />
+                      <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="var(--accent-color)" stroke-width="4" stroke-dasharray="68, 100" />
+                    </svg>
+                    <span class="value">10.1k</span>
+                  </div>
+                </div>
+                <div class="widget-marketing-mini-footer">
+                  <span>See channel breakdown details</span>
+                  <button class="btn btn-primary btn-sm rounded-circle">
+                    <i class="ph ph-arrow-right"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Conversion Analysis -->
+          <div class="col-lg-4">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Conversion Analysis</h5>
+                <div class="card-actions">
+                  <button class="btn btn-sm btn-light"><i class="ph ph-dots-three-vertical"></i></button>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="widget-annual-chart">
+                  <div class="widget-annual-rate">
+                    <span class="label">Success Rate</span>
+                    <span class="value">24.6%</span>
+                  </div>
+                  <svg viewBox="0 0 150 50" preserveAspectRatio="none">
+                    <path d="M0,40 Q30,35 50,38 T100,30 T150,25" fill="none" stroke="var(--accent-color)" stroke-width="2" />
+                    <path d="M0,40 Q30,35 50,38 T100,30 T150,25 V50 H0 Z" fill="var(--accent-color)" opacity="0.1" />
+                  </svg>
+                </div>
+                <div class="widget-annual-stats">
+                  <div class="widget-annual-stat">
+                    <span class="label">Cart Additions</span>
+                    <span class="sublabel">8 interactions</span>
+                    <div class="widget-annual-stat-value">
+                      <span class="value">$34,890</span>
+                      <span class="change positive">+9.8%</span>
+                    </div>
+                  </div>
+                  <div class="widget-annual-stat">
+                    <span class="label">Completed Orders</span>
+                    <span class="sublabel">15 interactions</span>
+                    <div class="widget-annual-stat-value">
+                      <span class="value">$28,420</span>
+                      <span class="change negative">-4.2%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <span class="footer-brand-mark"><i class="bi bi-lightning-charge-fill"></i></span>
+          <span class="footer-copyright">
+            &copy; 2026 <a href="#">TrendyAdmin</a>. All Rights Reserved.
+          </span>
+        </div>
+        <div class="footer-links">
+          <a href="#">About</a>
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Contact</a>
+        </div>
+        <div class="footer-credits">
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Back to Top -->
+  <a href="#" class="back-to-top">
+    <i class="ph ph-arrow-up"></i>
+  </a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="assets/vendor/chart.js/chart.umd.js"></script>
+  <script src="assets/vendor/echarts/echarts.min.js"></script>
+  <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="assets/vendor/quill/quill.js"></script>
+  <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+  <script src="assets/vendor/choices.js/choices.min.js"></script>
+  <script src="assets/vendor/flatpickr/flatpickr.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS Files -->
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <!-- App Sidebar Toggle (for app pages with sidebars) -->
+  <script src="assets/js/apps-sidebar-toggle.js"></script>
+
+</body>
+
+</html>

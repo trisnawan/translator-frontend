@@ -1,13 +1,59 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>TranslatorFrontend</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-</head>
-<body>
-  <app-root></app-root>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <title>Translator Service</title>
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Multi language translation REST API panel" />
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+    <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
+
+    <!-- Google Fonts - Plus Jakarta Sans (body) + Outfit (headings) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--
+    Vendor CSS is referenced directly (exactly like the TrendyAdmin template)
+    instead of being bundled: the icon stylesheets load their own font files
+    relative to the stylesheet, which the bundler would otherwise try to inline.
+    `assets/css/main.css` is generated from `templates/assets/scss/main.scss` by
+    `npm run build:css`.
+  -->
+    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="assets/vendor/remixicon/remixicon.css" />
+    <link rel="stylesheet" href="assets/vendor/phosphor-icons/phosphor-icons.css" />
+    <link rel="stylesheet" href="assets/vendor/flatpickr.min.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+
+    <!--
+    Apply the persisted colour scheme before the first paint so a dark-mode
+    user never sees a light flash. Mirrors `assets/js/theme.js`.
+  -->
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem('theme');
+          var dark = stored
+            ? stored === 'dark'
+            : window.matchMedia('(prefers-color-scheme: dark)').matches;
+          if (dark) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+          }
+        } catch (e) {
+          /* storage unavailable (private mode) - fall back to light */
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <app-root></app-root>
+  </body>
 </html>

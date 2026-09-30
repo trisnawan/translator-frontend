@@ -1,0 +1,301 @@
+/*--------------------------------------------------------------
+# Roles & Permissions Page - TrendyAdmin
+# Selectable role cards with avatar stacks + permission matrix
+--------------------------------------------------------------*/
+
+.page-roles {
+
+  /* Role cards grid */
+  .rl-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .rl-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: var(--spacing-lg);
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--card-shadow);
+    text-align: left;
+    cursor: pointer;
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+  }
+
+  .rl-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .rl-card.selected {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 3px var(--input-focus-ring), var(--shadow-md);
+  }
+
+  .rl-card-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .rl-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    border-radius: var(--radius-lg);
+    font-size: 1.375rem;
+  }
+
+  .rl-icon.accent {
+    background: color-mix(in srgb, var(--accent-color), transparent 88%);
+    color: var(--accent-color);
+  }
+
+  .rl-icon.success {
+    background: var(--success-color-light);
+    color: var(--success-color);
+  }
+
+  .rl-icon.warning {
+    background: var(--warning-color-light);
+    color: var(--warning-color);
+  }
+
+  .rl-icon.danger {
+    background: var(--danger-color-light);
+    color: var(--danger-color);
+  }
+
+  .rl-icon.info {
+    background: var(--info-color-light);
+    color: var(--info-color);
+  }
+
+  .rl-selected-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border-radius: var(--radius-full);
+    background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), var(--danger-color) 45%));
+    color: var(--contrast-color);
+    font-size: 0.75rem;
+  }
+
+  .rl-name {
+    font-family: var(--heading-font);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--heading-color);
+    margin-bottom: 2px;
+  }
+
+  .rl-desc {
+    font-size: 0.7812rem;
+    color: var(--muted-color);
+    line-height: 1.5;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .rl-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: auto;
+    padding-top: var(--spacing-sm);
+    border-top: 1px dashed var(--border-color-light);
+  }
+
+  .rl-avatars {
+    display: flex;
+    align-items: center;
+  }
+
+  .rl-avatars img,
+  .rl-avatars span {
+    width: 26px;
+    height: 26px;
+    border-radius: var(--radius-full);
+    border: 2px solid var(--card-bg);
+    margin-left: -7px;
+  }
+
+  .rl-avatars img {
+    object-fit: cover;
+  }
+
+  .rl-avatars img:first-child {
+    margin-left: 0;
+  }
+
+  .rl-avatars span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.575rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    background: color-mix(in srgb, var(--accent-color), transparent 88%);
+  }
+
+  .rl-count {
+    font-size: 0.7187rem;
+    font-weight: 600;
+    color: var(--muted-color);
+  }
+
+  /* New role card */
+  .rl-card-new {
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    border-style: dashed;
+    border-color: var(--border-color-dark);
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .rl-card-new:hover {
+    border-color: var(--accent-color);
+    background: color-mix(in srgb, var(--accent-color), transparent 96%);
+    box-shadow: none;
+  }
+
+  .rl-new-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: var(--radius-full);
+    background: color-mix(in srgb, var(--accent-color), transparent 90%);
+    color: var(--accent-color);
+    font-size: 1.25rem;
+  }
+
+  .rl-new-text {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--muted-color);
+  }
+
+  .rl-card-new:hover .rl-new-text {
+    color: var(--accent-color);
+  }
+
+  /* Matrix header */
+  .rl-matrix-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+    padding: var(--spacing-lg);
+    border-bottom: 1px solid var(--border-color-light);
+  }
+
+  .rl-matrix-header .dash-card-subtitle {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 4px;
+  }
+
+  /* Matrix table */
+  .rl-matrix {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .rl-matrix thead th {
+    padding: 10px var(--spacing-lg);
+    font-size: 0.6875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--muted-color);
+    background: var(--table-header-bg);
+    border-bottom: 1px solid var(--border-color-light);
+    white-space: nowrap;
+  }
+
+  .rl-matrix thead th:not(:first-child) {
+    text-align: center;
+    width: 90px;
+  }
+
+  .rl-matrix td {
+    padding: 10px var(--spacing-lg);
+    border-bottom: 1px solid var(--border-color-light);
+    vertical-align: middle;
+    font-size: 0.8437rem;
+  }
+
+  .rl-matrix td:not(:first-child) {
+    text-align: center;
+  }
+
+  .rl-matrix tbody tr:hover:not(.rl-group) {
+    background: color-mix(in srgb, var(--accent-color), transparent 97%);
+  }
+
+  .rl-matrix tbody tr:last-child td {
+    border-bottom: none;
+  }
+
+  /* Module group rows */
+  .rl-group td {
+    padding: 8px var(--spacing-lg);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--accent-color);
+    background: color-mix(in srgb, var(--accent-color), transparent 95%);
+  }
+
+  .rl-group td i {
+    margin-right: 8px;
+    font-size: 0.9375rem;
+  }
+
+  .rl-module {
+    padding-left: var(--spacing-xl);
+    color: var(--default-color);
+    font-weight: 500;
+  }
+
+  .rl-na {
+    color: var(--light-color);
+  }
+
+  .rl-matrix .form-check-input {
+    margin: 0;
+    cursor: pointer;
+  }
+
+  /* Responsive */
+  @media (max-width: 1199px) {
+    .rl-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 575px) {
+    .rl-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+}

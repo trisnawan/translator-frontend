@@ -1,0 +1,1239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finance Dashboard - TrendyAdmin</title>
+  <meta name="description" content="TrendyAdmin - Bootstrap Admin Template">
+  <meta name="keywords" content="admin, dashboard, bootstrap">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts - Plus Jakarta Sans (body) + Outfit (headings) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="assets/vendor/phosphor-icons/phosphor-icons.css" rel="stylesheet">
+  <link href="assets/vendor/lucide-icons/lucide.css" rel="stylesheet">
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/choices.js/choices.min.css" rel="stylesheet">
+  <link href="assets/vendor/flatpickr/flatpickr.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+    * Template Name: TrendyAdmin - Bootstrap Admin Template
+    * Template URL: https://bootstrapmade.com/trendy-admin-bootstrap-dashboard-template/
+    * Updated: Jul 29 2026 with Bootstrap v5.3.8
+    * Author: BootstrapMade.com
+    * License: https://bootstrapmade.com/license/
+    ======================================================== -->
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-inner">
+      <!-- Header Left -->
+      <div class="header-left">
+        <button class="sidebar-toggle" title="Toggle Sidebar">
+          <i class="ph ph-list"></i>
+        </button>
+        <a href="index.html" class="header-logo">
+          <span class="header-logo-mark"><i class="bi bi-lightning-charge-fill"></i></span>
+          <span class="header-logo-text">TrendyAdmin</span>
+        </a>
+
+        <!-- Apps Quick Access -->
+        <div class="header-action dropdown apps-dropdown">
+          <button class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" title="Quick Access">
+            <i class="ph ph-dots-nine"></i>
+          </button>
+          <div class="dropdown-menu">
+            <div class="apps-menu-header">
+              <h6>Quick Access</h6>
+              <span>Jump straight into an app</span>
+            </div>
+            <div class="apps-grid">
+              <a href="apps-chat.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-chat-circle-dots"></i></span>
+                <span>Chat</span>
+              </a>
+              <a href="apps-email.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-envelope"></i></span>
+                <span>Email</span>
+              </a>
+              <a href="apps-calendar.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-calendar-blank"></i></span>
+                <span>Calendar</span>
+              </a>
+              <a href="apps-kanban.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-kanban"></i></span>
+                <span>Kanban</span>
+              </a>
+              <a href="apps-file-manager.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-folder-open"></i></span>
+                <span>Files</span>
+              </a>
+              <a href="apps-todo.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-check-square"></i></span>
+                <span>Todo</span>
+              </a>
+              <a href="apps-contacts.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-address-book"></i></span>
+                <span>Contacts</span>
+              </a>
+              <a href="apps-support.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-headset"></i></span>
+                <span>Support</span>
+              </a>
+              <a href="invoice-list.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-receipt"></i></span>
+                <span>Invoices</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Header Search (Desktop) -->
+      <div class="header-search">
+        <form class="search-form" action="search-results.html" method="GET">
+          <button type="submit"><i class="ph ph-magnifying-glass"></i></button>
+          <input type="search" name="q" placeholder="Search anything..." autocomplete="off">
+          <span class="search-hint">⌘K</span>
+        </form>
+      </div>
+
+      <!-- Header Right -->
+      <div class="header-right">
+        <!-- Desktop Actions (hidden on mobile, shown in mobile menu) -->
+        <div class="header-actions-desktop">
+          <!-- Quick Create -->
+          <div class="dropdown create-dropdown">
+            <button class="create-btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="ph ph-plus"></i>
+              <span>Create</span>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end create-menu">
+              <a class="dropdown-item" href="apps-kanban.html">
+                <span class="create-item-icon"><i class="ph ph-kanban"></i></span>
+                <span class="create-item-text">
+                  <span class="create-item-title">New Project</span>
+                  <span class="create-item-sub">Start a kanban board</span>
+                </span>
+              </a>
+              <a class="dropdown-item" href="apps-todo.html">
+                <span class="create-item-icon"><i class="ph ph-check-square"></i></span>
+                <span class="create-item-text">
+                  <span class="create-item-title">New Task</span>
+                  <span class="create-item-sub">Add to your todo list</span>
+                </span>
+              </a>
+              <a class="dropdown-item" href="apps-contacts.html">
+                <span class="create-item-icon"><i class="ph ph-user-plus"></i></span>
+                <span class="create-item-text">
+                  <span class="create-item-title">New Contact</span>
+                  <span class="create-item-sub">Save a new person</span>
+                </span>
+              </a>
+              <a class="dropdown-item" href="invoice-list.html">
+                <span class="create-item-icon"><i class="ph ph-receipt"></i></span>
+                <span class="create-item-text">
+                  <span class="create-item-title">New Invoice</span>
+                  <span class="create-item-sub">Bill a customer</span>
+                </span>
+              </a>
+            </div>
+          </div>
+
+          <div class="header-divider"></div>
+
+          <!-- Theme Toggle -->
+          <button class="header-action theme-toggle" title="Toggle Theme">
+            <i class="ph ph-moon icon-dark"></i>
+            <i class="ph ph-sun icon-light"></i>
+          </button>
+
+          <!-- Fullscreen Toggle -->
+          <button class="header-action fullscreen-toggle" onclick="toggleFullscreen()" title="Fullscreen">
+            <i class="ph ph-arrows-out icon-enter"></i>
+            <i class="ph ph-arrows-in icon-exit"></i>
+          </button>
+
+          <!-- Messages -->
+          <div class="header-action dropdown messages-dropdown">
+            <button class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" title="Messages">
+              <i class="ph ph-chat-teardrop-text"></i>
+              <span class="badge">2</span>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end">
+              <div class="messages-header">
+                <h6>Messages</h6>
+                <a href="apps-chat.html">View all</a>
+              </div>
+              <div class="messages-list">
+                <a href="apps-chat.html" class="message-item unread">
+                  <span class="message-avatar">
+                    <img src="assets/img/avatars/avatar-2.webp" alt="Sarah Johnson">
+                    <span class="message-status"></span>
+                  </span>
+                  <span class="message-content">
+                    <span class="message-name">Sarah Johnson</span>
+                    <span class="message-text">The new dashboard mockups look amazing! 🔥</span>
+                  </span>
+                  <span class="message-time">2m</span>
+                </a>
+                <a href="apps-chat.html" class="message-item unread">
+                  <span class="message-avatar">
+                    <img src="assets/img/avatars/avatar-3.webp" alt="Mike Chen">
+                  </span>
+                  <span class="message-content">
+                    <span class="message-name">Mike Chen</span>
+                    <span class="message-text">Can you review my PR when you get a chance?</span>
+                  </span>
+                  <span class="message-time">1h</span>
+                </a>
+                <a href="apps-chat.html" class="message-item">
+                  <span class="message-avatar">
+                    <img src="assets/img/avatars/avatar-4.webp" alt="Emma Davis">
+                  </span>
+                  <span class="message-content">
+                    <span class="message-name">Emma Davis</span>
+                    <span class="message-text">Meeting moved to 3pm tomorrow</span>
+                  </span>
+                  <span class="message-time">3h</span>
+                </a>
+              </div>
+              <div class="messages-footer">
+                <a href="apps-chat.html">Open chat <i class="ph ph-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Notifications -->
+          <div class="header-action dropdown notification-dropdown">
+            <button class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" title="Notifications">
+              <i class="ph ph-bell"></i>
+              <span class="badge">3</span>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end">
+              <div class="notification-header">
+                <h6>You have 3 new notifications</h6>
+                <a href="#" class="notification-mark-read" data-notification-action="mark-all-read" title="Mark all as read">
+                  <i class="ph ph-checks"></i>
+                </a>
+              </div>
+              <div class="notification-list">
+                <div class="notification-item unread">
+                  <span class="notification-icon success">
+                    <i class="ph ph-check-circle"></i>
+                  </span>
+                  <span class="notification-content">
+                    <span class="notification-title">Order Completed</span>
+                    <span class="notification-text">Your order #12345 has been delivered</span>
+                  </span>
+                  <span class="notification-meta">
+                    <span class="notification-time">5m</span>
+                    <span class="notification-dot"></span>
+                  </span>
+                </div>
+                <div class="notification-item unread">
+                  <span class="notification-icon warning">
+                    <i class="ph ph-warning"></i>
+                  </span>
+                  <span class="notification-content">
+                    <span class="notification-title">Low Storage</span>
+                    <span class="notification-text">Server storage is running low (85% used)</span>
+                  </span>
+                  <span class="notification-meta">
+                    <span class="notification-time">1h</span>
+                    <span class="notification-dot"></span>
+                  </span>
+                </div>
+                <div class="notification-item">
+                  <span class="notification-icon info">
+                    <i class="ph ph-info"></i>
+                  </span>
+                  <span class="notification-content">
+                    <span class="notification-title">New Feature</span>
+                    <span class="notification-text">Dark mode is now available</span>
+                  </span>
+                  <span class="notification-meta">
+                    <span class="notification-time">2h</span>
+                    <span class="notification-dot"></span>
+                  </span>
+                </div>
+              </div>
+              <div class="notification-footer">
+                <a href="notifications.html">View all</a>
+                <a href="settings.html">Settings</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="header-divider"></div>
+
+          <!-- User Dropdown -->
+          <div class="header-action dropdown user-dropdown">
+            <button class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="assets/img/profile-img.webp" alt="User" class="avatar">
+              <span class="user-name">John Doe</span>
+              <i class="ph ph-caret-down user-caret"></i>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end">
+              <div class="user-menu-card">
+                <span class="user-menu-avatar">
+                  <img src="assets/img/profile-img.webp" alt="User">
+                </span>
+                <span class="user-menu-name">John Doe</span>
+                <span class="user-menu-mail">john@trendyadmin.com</span>
+                <span class="user-menu-role">Administrator</span>
+              </div>
+              <div class="user-menu-body">
+                <a class="dropdown-item" href="profile.html">
+                  <span class="user-menu-item-icon"><i class="ph ph-user"></i></span>
+                  My Profile
+                  <i class="ph ph-caret-right user-menu-item-caret"></i>
+                </a>
+                <a class="dropdown-item" href="settings.html">
+                  <span class="user-menu-item-icon"><i class="ph ph-gear"></i></span>
+                  Settings
+                  <i class="ph ph-caret-right user-menu-item-caret"></i>
+                </a>
+                <a class="dropdown-item" href="activity.html">
+                  <span class="user-menu-item-icon"><i class="ph ph-pulse"></i></span>
+                  Activity Log
+                  <i class="ph ph-caret-right user-menu-item-caret"></i>
+                </a>
+                <a class="dropdown-item" href="invoice-list.html">
+                  <span class="user-menu-item-icon"><i class="ph ph-receipt"></i></span>
+                  Billing
+                  <i class="ph ph-caret-right user-menu-item-caret"></i>
+                </a>
+              </div>
+              <div class="user-menu-footer">
+                <a href="auth-login.html" class="user-menu-signout">
+                  <i class="ph ph-sign-out"></i> Sign Out
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile Actions (visible only on mobile) -->
+        <div class="header-actions-mobile">
+          <!-- Search Toggle (Mobile) -->
+          <button class="header-action search-toggle" title="Search">
+            <i class="ph ph-magnifying-glass"></i>
+          </button>
+
+          <!-- Mobile Menu Toggle -->
+          <button class="header-action mobile-menu-toggle" title="More">
+            <i class="ph ph-dots-three-vertical"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Search -->
+  <div class="mobile-search">
+    <form class="search-form" action="search-results.html" method="GET">
+      <input type="search" name="q" placeholder="Search anything..." autocomplete="off">
+      <button type="submit"><i class="ph ph-magnifying-glass"></i></button>
+    </form>
+  </div>
+
+  <!-- Mobile Header Menu -->
+  <div class="mobile-header-menu">
+    <div class="mobile-header-menu-content">
+      <!-- Theme Toggle -->
+      <button class="mobile-menu-item theme-toggle" title="Toggle Theme">
+        <i class="ph ph-moon icon-dark"></i>
+        <i class="ph ph-sun icon-light"></i>
+        <span class="mobile-menu-label">Theme</span>
+      </button>
+
+      <!-- Fullscreen Toggle -->
+      <button class="mobile-menu-item fullscreen-toggle" onclick="toggleFullscreen()" title="Fullscreen">
+        <i class="ph ph-arrows-out icon-enter"></i>
+        <i class="ph ph-arrows-in icon-exit"></i>
+        <span class="mobile-menu-label">Fullscreen</span>
+      </button>
+
+      <!-- Messages -->
+      <a href="apps-chat.html" class="mobile-menu-item">
+        <i class="ph ph-chat-teardrop-text"></i>
+        <span class="badge">2</span>
+        <span class="mobile-menu-label">Messages</span>
+      </a>
+
+      <!-- Notifications -->
+      <a href="notifications.html" class="mobile-menu-item">
+        <i class="ph ph-bell"></i>
+        <span class="badge">3</span>
+        <span class="mobile-menu-label">Notifications</span>
+      </a>
+
+      <!-- Profile -->
+      <a href="profile.html" class="mobile-menu-item">
+        <i class="ph ph-user"></i>
+        <span class="mobile-menu-label">Profile</span>
+      </a>
+
+      <!-- Sign Out -->
+      <a href="auth-login.html" class="mobile-menu-item mobile-menu-item-danger">
+        <i class="ph ph-sign-out"></i>
+        <span class="mobile-menu-label">Sign Out</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <!-- Sidebar Header -->
+    <div class="sidebar-header">
+      <a href="index.html" class="sidebar-logo">
+        <span class="sidebar-logo-mark"><i class="bi bi-lightning-charge-fill"></i></span>
+        <span class="sidebar-logo-text">TrendyAdmin</span>
+      </a>
+      <button class="sidebar-close">
+        <i class="ph ph-x"></i>
+      </button>
+    </div>
+
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar-nav">
+      <ul class="nav-menu">
+        <li class="nav-heading"><span>Overview</span></li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="index.html">
+            <span class="nav-icon"><i class="ph ph-house"></i></span>
+            <span class="nav-text">Home</span>
+          </a>
+        </li>
+
+        <!-- Dashboards Submenu -->
+        <li class="nav-item has-submenu open">
+          <a class="nav-link" href="#" aria-expanded="true">
+            <span class="nav-icon"><i class="ph ph-gauge"></i></span>
+            <span class="nav-text">Dashboards</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu show">
+            <li><a class="nav-link " href="dashboard-sales.html">Sales</a></li>
+            <li><a class="nav-link " href="dashboard-analytics.html">Analytics</a></li>
+            <li><a class="nav-link " href="dashboard-crm.html">CRM</a></li>
+            <li><a class="nav-link " href="dashboard-marketing.html">Marketing</a></li>
+            <li><a class="nav-link " href="dashboard-projects.html">Projects</a></li>
+            <li><a class="nav-link active" href="dashboard-finance.html">Finance</a></li>
+          </ul>
+        </li>
+
+        <!-- Users -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-users"></i></span>
+            <span class="nav-text">Users</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="users.html">Users List</a></li>
+            <li><a class="nav-link " href="users-view.html">User View</a></li>
+            <li><a class="nav-link " href="users-edit.html">User Edit</a></li>
+            <li><a class="nav-link " href="profile.html">Profile</a></li>
+            <!-- 3rd Level - Settings submenu -->
+            <li class="has-submenu ">
+              <a class="nav-link" href="#" aria-expanded="false">
+                Settings
+                <i class="ph ph-caret-right nav-arrow"></i>
+              </a>
+              <ul class="nav-submenu ">
+                <li><a class="nav-link " href="settings.html">Account</a></li>
+                <li><a class="nav-link " href="notifications.html">Notifications</a></li>
+                <li><a class="nav-link " href="activity.html">Activity</a></li>
+              </ul>
+            </li>
+            <li><a class="nav-link " href="roles.html">Roles & Permissions</a></li>
+          </ul>
+        </li>
+
+        <!-- Authentication -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-shield-check"></i></span>
+            <span class="nav-text">Authentication</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="auth-login.html">Login</a></li>
+            <li><a class="nav-link " href="auth-register.html">Register</a></li>
+            <li><a class="nav-link " href="auth-forgot-password.html">Forgot Password</a></li>
+            <li><a class="nav-link " href="auth-reset-password.html">Reset Password</a></li>
+            <li><a class="nav-link " href="auth-verify-email.html">Email Verification</a></li>
+            <li><a class="nav-link " href="auth-two-factor.html">Two Factor Auth</a></li>
+            <li><a class="nav-link " href="auth-lock-screen.html">Lock Screen</a></li>
+          </ul>
+        </li>
+
+        <!-- Apps Section -->
+        <li class="nav-heading"><span>Apps</span></li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-calendar.html">
+            <span class="nav-icon"><i class="ph ph-calendar-blank"></i></span>
+            <span class="nav-text">Calendar</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-kanban.html">
+            <span class="nav-icon"><i class="ph ph-kanban"></i></span>
+            <span class="nav-text">Kanban Board</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-chat.html">
+            <span class="nav-icon"><i class="ph ph-chat-circle-dots"></i></span>
+            <span class="nav-text">Chat</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-contacts.html">
+            <span class="nav-icon"><i class="ph ph-address-book"></i></span>
+            <span class="nav-text">Contacts</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-file-manager.html">
+            <span class="nav-icon"><i class="ph ph-folder-open"></i></span>
+            <span class="nav-text">File Manager</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-email.html">
+            <span class="nav-icon"><i class="ph ph-envelope"></i></span>
+            <span class="nav-text">Email</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-todo.html">
+            <span class="nav-icon"><i class="ph ph-check-square"></i></span>
+            <span class="nav-text">Todo List</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-support.html">
+            <span class="nav-icon"><i class="ph ph-headset"></i></span>
+            <span class="nav-text">Support Center</span>
+          </a>
+        </li>
+
+        <!-- UI Elements Section -->
+        <li class="nav-heading"><span>UI Elements</span></li>
+
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-puzzle-piece"></i></span>
+            <span class="nav-text">Components</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="components-alerts.html">Alerts</a></li>
+            <li><a class="nav-link " href="components-accordion.html">Accordion</a></li>
+            <li><a class="nav-link " href="components-badges.html">Badges</a></li>
+            <li><a class="nav-link " href="components-breadcrumbs.html">Breadcrumbs</a></li>
+            <li><a class="nav-link " href="components-buttons.html">Buttons</a></li>
+            <li><a class="nav-link " href="components-cards.html">Cards</a></li>
+            <li><a class="nav-link " href="components-carousel.html">Carousel</a></li>
+            <li><a class="nav-link " href="components-dropdowns.html">Dropdowns</a></li>
+            <li><a class="nav-link " href="components-list-group.html">List Group</a></li>
+            <li><a class="nav-link " href="components-modal.html">Modal</a></li>
+            <li><a class="nav-link " href="components-nav-tabs.html">Navs & Tabs</a></li>
+            <li><a class="nav-link " href="components-offcanvas.html">Offcanvas</a></li>
+            <li><a class="nav-link " href="components-pagination.html">Pagination</a></li>
+            <li><a class="nav-link " href="components-popovers.html">Popovers</a></li>
+            <li><a class="nav-link " href="components-progress.html">Progress</a></li>
+            <li><a class="nav-link " href="components-spinners.html">Spinners</a></li>
+            <li><a class="nav-link " href="components-toasts.html">Toasts</a></li>
+            <li><a class="nav-link " href="components-tooltips.html">Tooltips</a></li>
+          </ul>
+        </li>
+
+        <!-- Widgets -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-stack"></i></span>
+            <span class="nav-text">Widgets</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="widgets-cards.html">Cards</a></li>
+            <li><a class="nav-link " href="widgets-banners.html">Banners</a></li>
+            <li><a class="nav-link " href="widgets-charts.html">Charts</a></li>
+            <li><a class="nav-link " href="widgets-apps.html">Apps</a></li>
+            <li><a class="nav-link " href="widgets-data.html">Data</a></li>
+          </ul>
+        </li>
+
+        <!-- Forms Section -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-list-checks"></i></span>
+            <span class="nav-text">Forms</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="forms-elements.html">Form Elements</a></li>
+            <li><a class="nav-link " href="forms-layouts.html">Form Layouts</a></li>
+            <li><a class="nav-link " href="forms-validation.html">Validation</a></li>
+            <li><a class="nav-link " href="forms-wizard.html">Wizard</a></li>
+            <li><a class="nav-link " href="forms-editors.html">Rich Editors</a></li>
+            <li><a class="nav-link " href="forms-pickers.html">Date/Time Pickers</a></li>
+            <li><a class="nav-link " href="forms-select.html">Advanced Select</a></li>
+            <li><a class="nav-link " href="forms-upload.html">File Upload</a></li>
+          </ul>
+        </li>
+
+        <!-- Tables Section -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-table"></i></span>
+            <span class="nav-text">Tables</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="tables-basic.html">Basic Tables</a></li>
+            <li><a class="nav-link " href="tables-datatables.html">DataTables</a></li>
+            <li><a class="nav-link " href="tables-responsive.html">Responsive Tables</a></li>
+          </ul>
+        </li>
+
+        <!-- Charts Section -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-chart-bar"></i></span>
+            <span class="nav-text">Charts</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="charts-apexcharts.html">ApexCharts</a></li>
+            <li><a class="nav-link " href="charts-chartjs.html">Chart.js</a></li>
+            <li><a class="nav-link " href="charts-echarts.html">ECharts</a></li>
+          </ul>
+        </li>
+
+        <!-- Icons Section -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-diamond"></i></span>
+            <span class="nav-text">Icons</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="icons-bootstrap.html">Bootstrap Icons</a></li>
+            <li><a class="nav-link " href="icons-remixicon.html">Remix Icons</a></li>
+            <li><a class="nav-link " href="icons-fontawesome.html">Font Awesome</a></li>
+            <li><a class="nav-link " href="icons-phosphor.html">Phosphor Icons</a></li>
+            <li><a class="nav-link " href="icons-lucide.html">Lucide Icons</a></li>
+          </ul>
+        </li>
+
+        <!-- Pages Section -->
+        <li class="nav-heading"><span>Pages</span></li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="contact.html">
+            <span class="nav-icon"><i class="ph ph-envelope-simple"></i></span>
+            <span class="nav-text">Contact</span>
+          </a>
+        </li>
+
+        <!-- Invoices -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-receipt"></i></span>
+            <span class="nav-text">Invoices</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="invoice-list.html">Invoice List</a></li>
+            <li><a class="nav-link " href="invoice.html">Invoice View</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="pricing.html">
+            <span class="nav-icon"><i class="ph ph-tag"></i></span>
+            <span class="nav-text">Pricing</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="faq.html">
+            <span class="nav-icon"><i class="ph ph-question"></i></span>
+            <span class="nav-text">FAQ</span>
+          </a>
+        </li>
+
+        <!-- Error Pages -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-warning"></i></span>
+            <span class="nav-text">Error Pages</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="error-404.html">404 Not Found</a></li>
+            <li><a class="nav-link " href="error-403.html">403 Forbidden</a></li>
+            <li><a class="nav-link " href="error-500.html">500 Server Error</a></li>
+            <li><a class="nav-link " href="error-maintenance.html">Maintenance</a></li>
+            <li><a class="nav-link " href="error-coming-soon.html">Coming Soon</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="timeline.html">
+            <span class="nav-icon"><i class="ph ph-clock-counter-clockwise"></i></span>
+            <span class="nav-text">Timeline</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="search-results.html">
+            <span class="nav-icon"><i class="ph ph-magnifying-glass"></i></span>
+            <span class="nav-text">Search Results</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="blank.html">
+            <span class="nav-icon"><i class="ph ph-file"></i></span>
+            <span class="nav-text">Blank Page</span>
+          </a>
+        </li>
+
+      </ul>
+    </nav>
+
+    <!-- Sidebar Footer - User Card -->
+    <div class="sidebar-footer">
+      <div class="sidebar-user">
+        <a href="profile.html" class="sidebar-user-link">
+          <span class="sidebar-user-avatar">
+            <img src="assets/img/profile-img.webp" alt="User">
+            <span class="sidebar-user-status"></span>
+          </span>
+          <span class="sidebar-user-info">
+            <span class="sidebar-user-name">John Doe</span>
+            <span class="sidebar-user-role">Administrator</span>
+          </span>
+        </a>
+        <div class="sidebar-user-actions">
+          <a href="settings.html" class="sidebar-user-action" title="Settings">
+            <i class="ph ph-gear"></i>
+          </a>
+          <a href="auth-login.html" class="sidebar-user-action sidebar-user-logout" title="Logout">
+            <i class="ph ph-sign-out"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Sidebar Overlay (Mobile) -->
+  <div class="sidebar-overlay"></div>
+
+  <!-- Main Content -->
+  <main class="main">
+    <div class="main-content page-dashboard-finance">
+      <!-- Page Header -->
+      <div class="fin-header">
+        <div class="fin-header-info">
+          <h1 class="fin-header-title">Finance</h1>
+          <p class="fin-header-subtitle">Track balances, budgets and money movement in one place.</p>
+        </div>
+        <div class="fin-header-actions">
+          <button type="button" class="fin-btn-ghost">
+            <i class="ph ph-calendar-blank"></i> Jan 1 &ndash; Jan 31, 2026 <i class="ph ph-caret-down"></i>
+          </button>
+          <button type="button" class="fin-btn-gradient">
+            <i class="ph ph-plus"></i> Add Transaction
+          </button>
+        </div>
+      </div>
+
+      <!-- Balance Hero Row -->
+      <div class="fin-hero-row">
+        <!-- Total Balance (plum panel) -->
+        <div class="fin-balance-card">
+          <div class="fin-balance-top">
+            <span class="fin-balance-icon"><i class="ph ph-wallet"></i></span>
+            <div class="fin-balance-heading">
+              <span class="fin-balance-label">Total Balance</span>
+              <span class="fin-balance-account">Business account &bull; USD</span>
+            </div>
+            <span class="fin-balance-trend"><i class="ph ph-trend-up"></i> +15.3%</span>
+          </div>
+          <div class="fin-balance-amount">$248,762<span>.50</span></div>
+          <div class="fin-balance-stats">
+            <div class="fin-balance-stat">
+              <span class="fin-balance-stat-arrow income"><i class="ph ph-arrow-up-right"></i></span>
+              <div class="fin-balance-stat-info">
+                <span class="fin-balance-stat-label">Income this month</span>
+                <span class="fin-balance-stat-value">$48,200</span>
+              </div>
+            </div>
+            <div class="fin-balance-divider"></div>
+            <div class="fin-balance-stat">
+              <span class="fin-balance-stat-arrow expense"><i class="ph ph-arrow-down-right"></i></span>
+              <div class="fin-balance-stat-info">
+                <span class="fin-balance-stat-label">Expenses this month</span>
+                <span class="fin-balance-stat-value">$21,400</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Side KPI tiles -->
+        <div class="fin-hero-side">
+          <div class="card fin-kpi">
+            <span class="fin-kpi-icon success"><i class="ph ph-trend-up"></i></span>
+            <div class="fin-kpi-body">
+              <span class="fin-kpi-label">Net Profit</span>
+              <span class="fin-kpi-value">$162,333</span>
+            </div>
+            <span class="fin-kpi-trend up"><i class="ph ph-arrow-up"></i> 22.5%</span>
+          </div>
+          <div class="card fin-kpi">
+            <span class="fin-kpi-icon info"><i class="ph ph-arrows-left-right"></i></span>
+            <div class="fin-kpi-body">
+              <span class="fin-kpi-label">Cash Flow</span>
+              <span class="fin-kpi-value">$52,847</span>
+            </div>
+            <span class="fin-kpi-trend down"><i class="ph ph-arrow-down"></i> 3.2%</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Row: Cash Flow chart + Budgets -->
+      <div class="fin-main-row">
+        <div class="card fin-chart-card">
+          <div class="dash-card-header">
+            <div>
+              <h5 class="dash-card-title">Cash Flow</h5>
+              <span class="dash-card-subtitle">Income vs expenses, last 12 months</span>
+            </div>
+            <div class="fin-seg" role="group" aria-label="Chart period">
+              <button type="button" class="fin-seg-btn">6M</button>
+              <button type="button" class="fin-seg-btn active">1Y</button>
+              <button type="button" class="fin-seg-btn">All</button>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="fin-chart" id="cashFlowChart"></div>
+          </div>
+        </div>
+
+        <div class="card fin-budgets-card">
+          <div class="dash-card-header">
+            <div>
+              <h5 class="dash-card-title">Budgets</h5>
+              <span class="dash-card-subtitle">January allocation</span>
+            </div>
+            <a href="#" class="dash-link">Manage <i class="ph ph-arrow-right"></i></a>
+          </div>
+          <div class="card-body">
+            <div class="fin-budget-list">
+              <div class="fin-budget-item">
+                <span class="fin-budget-icon accent"><i class="ph ph-megaphone"></i></span>
+                <div class="fin-budget-info">
+                  <div class="fin-budget-head">
+                    <span class="fin-budget-name">Marketing</span>
+                    <span class="fin-budget-pct">73%</span>
+                  </div>
+                  <span class="fin-budget-amounts">$18,240 of $25,000</span>
+                  <div class="fin-budget-track">
+                    <div class="fin-budget-fill" style="width: 73%"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="fin-budget-item">
+                <span class="fin-budget-icon info"><i class="ph ph-gear"></i></span>
+                <div class="fin-budget-info">
+                  <div class="fin-budget-head">
+                    <span class="fin-budget-name">Operations</span>
+                    <span class="fin-budget-pct">71%</span>
+                  </div>
+                  <span class="fin-budget-amounts">$42,850 of $60,000</span>
+                  <div class="fin-budget-track">
+                    <div class="fin-budget-fill" style="width: 71%"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="fin-budget-item over">
+                <span class="fin-budget-icon warning"><i class="ph ph-users"></i></span>
+                <div class="fin-budget-info">
+                  <div class="fin-budget-head">
+                    <span class="fin-budget-name">Payroll</span>
+                    <span class="fin-budget-pct">90%</span>
+                  </div>
+                  <span class="fin-budget-amounts">$89,500 of $100,000</span>
+                  <div class="fin-budget-track">
+                    <div class="fin-budget-fill" style="width: 90%"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="fin-budget-item">
+                <span class="fin-budget-icon success"><i class="ph ph-app-window"></i></span>
+                <div class="fin-budget-info">
+                  <div class="fin-budget-head">
+                    <span class="fin-budget-name">Software</span>
+                    <span class="fin-budget-pct">43%</span>
+                  </div>
+                  <span class="fin-budget-amounts">$6,420 of $15,000</span>
+                  <div class="fin-budget-track">
+                    <div class="fin-budget-fill" style="width: 43%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Row: Transactions + Upcoming Payments -->
+      <div class="fin-bottom-row">
+        <div class="card fin-transactions-card">
+          <div class="dash-card-header">
+            <div>
+              <h5 class="dash-card-title">Recent Transactions</h5>
+              <span class="dash-card-subtitle">Latest money in and out</span>
+            </div>
+            <a href="#" class="dash-link">View all <i class="ph ph-arrow-right"></i></a>
+          </div>
+          <div class="card-body">
+            <div class="fin-txn-list">
+              <div class="fin-txn">
+                <span class="fin-txn-icon success"><i class="ph ph-briefcase"></i></span>
+                <div class="fin-txn-info">
+                  <span class="fin-txn-name">Payment from Client ABC</span>
+                  <span class="fin-txn-meta">Invoice #INV-2024 &bull; Jan 24, 10:42 AM</span>
+                </div>
+                <span class="fin-txn-amount income">+$12,500.00</span>
+                <span class="fin-status-pill completed"><span class="fin-status-dot"></span> Completed</span>
+              </div>
+              <div class="fin-txn">
+                <span class="fin-txn-icon warning"><i class="ph ph-shopping-bag"></i></span>
+                <div class="fin-txn-info">
+                  <span class="fin-txn-name">Office Supplies</span>
+                  <span class="fin-txn-meta">Amazon Business &bull; Jan 23, 03:15 PM</span>
+                </div>
+                <span class="fin-txn-amount expense">-$842.50</span>
+                <span class="fin-status-pill completed"><span class="fin-status-dot"></span> Completed</span>
+              </div>
+              <div class="fin-txn">
+                <span class="fin-txn-icon accent"><i class="ph ph-app-window"></i></span>
+                <div class="fin-txn-info">
+                  <span class="fin-txn-name">Software Subscription</span>
+                  <span class="fin-txn-meta">Adobe Creative Cloud &bull; Jan 23, 11:20 AM</span>
+                </div>
+                <span class="fin-txn-amount expense">-$599.99</span>
+                <span class="fin-status-pill completed"><span class="fin-status-dot"></span> Completed</span>
+              </div>
+              <div class="fin-txn">
+                <span class="fin-txn-icon success"><i class="ph ph-buildings"></i></span>
+                <div class="fin-txn-info">
+                  <span class="fin-txn-name">Payment from Client XYZ</span>
+                  <span class="fin-txn-meta">Invoice #INV-2023 &bull; Jan 22, 02:45 PM</span>
+                </div>
+                <span class="fin-txn-amount income">+$8,750.00</span>
+                <span class="fin-status-pill pending"><span class="fin-status-dot"></span> Pending</span>
+              </div>
+              <div class="fin-txn">
+                <span class="fin-txn-icon danger"><i class="ph ph-megaphone"></i></span>
+                <div class="fin-txn-info">
+                  <span class="fin-txn-name">Marketing Campaign</span>
+                  <span class="fin-txn-meta">Google Ads &bull; Jan 22, 09:30 AM</span>
+                </div>
+                <span class="fin-txn-amount expense">-$2,150.00</span>
+                <span class="fin-status-pill completed"><span class="fin-status-dot"></span> Completed</span>
+              </div>
+              <div class="fin-txn">
+                <span class="fin-txn-icon info"><i class="ph ph-paint-brush"></i></span>
+                <div class="fin-txn-info">
+                  <span class="fin-txn-name">Freelancer Payment</span>
+                  <span class="fin-txn-meta">John Smith, Design Work &bull; Jan 21, 04:20 PM</span>
+                </div>
+                <span class="fin-txn-amount expense">-$1,500.00</span>
+                <span class="fin-status-pill completed"><span class="fin-status-dot"></span> Completed</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card fin-upcoming-card">
+          <div class="dash-card-header">
+            <div>
+              <h5 class="dash-card-title">Upcoming Payments</h5>
+              <span class="dash-card-subtitle">Scheduled for the next weeks</span>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="fin-upcoming-list">
+              <div class="fin-upcoming-item">
+                <span class="fin-date-pill"><span class="fin-date-day">30</span><span class="fin-date-month">Jan</span></span>
+                <div class="fin-upcoming-info">
+                  <span class="fin-upcoming-name">Office Rent</span>
+                  <span class="fin-upcoming-meta">Monthly lease</span>
+                </div>
+                <span class="fin-upcoming-amount">$4,200.00</span>
+              </div>
+              <div class="fin-upcoming-item">
+                <span class="fin-date-pill"><span class="fin-date-day">01</span><span class="fin-date-month">Feb</span></span>
+                <div class="fin-upcoming-info">
+                  <span class="fin-upcoming-name">Payroll Run</span>
+                  <span class="fin-upcoming-meta">14 employees</span>
+                </div>
+                <span class="fin-upcoming-amount">$22,400.00</span>
+              </div>
+              <div class="fin-upcoming-item">
+                <span class="fin-date-pill"><span class="fin-date-day">03</span><span class="fin-date-month">Feb</span></span>
+                <div class="fin-upcoming-info">
+                  <span class="fin-upcoming-name">Adobe Creative Cloud</span>
+                  <span class="fin-upcoming-meta">Subscription renewal</span>
+                </div>
+                <span class="fin-upcoming-amount">$599.99</span>
+              </div>
+              <div class="fin-upcoming-item">
+                <span class="fin-date-pill"><span class="fin-date-day">05</span><span class="fin-date-month">Feb</span></span>
+                <div class="fin-upcoming-info">
+                  <span class="fin-upcoming-name">Google Ads</span>
+                  <span class="fin-upcoming-meta">Campaign budget</span>
+                </div>
+                <span class="fin-upcoming-amount">$2,150.00</span>
+              </div>
+              <div class="fin-upcoming-item">
+                <span class="fin-date-pill"><span class="fin-date-day">08</span><span class="fin-date-month">Feb</span></span>
+                <div class="fin-upcoming-info">
+                  <span class="fin-upcoming-name">Business Insurance</span>
+                  <span class="fin-upcoming-meta">Quarterly premium</span>
+                </div>
+                <span class="fin-upcoming-amount">$1,180.00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <span class="footer-brand-mark"><i class="bi bi-lightning-charge-fill"></i></span>
+          <span class="footer-copyright">
+            &copy; 2026 <a href="#">TrendyAdmin</a>. All Rights Reserved.
+          </span>
+        </div>
+        <div class="footer-links">
+          <a href="#">About</a>
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Contact</a>
+        </div>
+        <div class="footer-credits">
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Back to Top -->
+  <a href="#" class="back-to-top">
+    <i class="ph ph-arrow-up"></i>
+  </a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="assets/vendor/chart.js/chart.umd.js"></script>
+  <script src="assets/vendor/echarts/echarts.min.js"></script>
+  <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="assets/vendor/quill/quill.js"></script>
+  <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+  <script src="assets/vendor/choices.js/choices.min.js"></script>
+  <script src="assets/vendor/flatpickr/flatpickr.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS Files -->
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <!-- App Sidebar Toggle (for app pages with sidebars) -->
+  <script src="assets/js/apps-sidebar-toggle.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const chartEl = document.querySelector('#cashFlowChart');
+      if (!chartEl || typeof ApexCharts === 'undefined') return;
+
+      function getChartColors() {
+        const style = getComputedStyle(document.documentElement);
+        return {
+          accent: style.getPropertyValue('--accent-color').trim(),
+          danger: style.getPropertyValue('--danger-color').trim(),
+          border: style.getPropertyValue('--border-color').trim(),
+          muted: style.getPropertyValue('--muted-color').trim()
+        };
+      }
+      let colors = getChartColors();
+      const cashFlowOptions = {
+        series: [{
+          name: 'Income',
+          data: [28500, 32100, 29800, 35600, 31200, 38900, 34500, 41200, 37800, 44500, 40100, 48200]
+        }, {
+          name: 'Expenses',
+          data: [12300, 14200, 13100, 15800, 14200, 16900, 15400, 18200, 16800, 19800, 18200, 21400]
+        }],
+        chart: {
+          type: 'bar',
+          height: 330,
+          fontFamily: 'inherit',
+          toolbar: {
+            show: false
+          },
+          zoom: {
+            enabled: false
+          }
+        },
+        colors: [colors.accent, colors.danger],
+        plotOptions: {
+          bar: {
+            columnWidth: '45%',
+            borderRadius: 5,
+            borderRadiusApplication: 'end'
+          }
+        },
+        dataLabels: {
+          enabled: false
+        },
+        stroke: {
+          show: true,
+          width: 3,
+          colors: ['transparent']
+        },
+        fill: {
+          opacity: 1
+        },
+        xaxis: {
+          categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+          axisBorder: {
+            show: false
+          },
+          axisTicks: {
+            show: false
+          },
+          labels: {
+            style: {
+              colors: colors.muted,
+              fontSize: '12px'
+            }
+          }
+        },
+        yaxis: {
+          labels: {
+            style: {
+              colors: colors.muted,
+              fontSize: '12px'
+            },
+            formatter: function(value) {
+              return '$' + (value / 1000).toFixed(0) + 'k';
+            }
+          }
+        },
+        grid: {
+          borderColor: colors.border,
+          strokeDashArray: 4,
+          xaxis: {
+            lines: {
+              show: false
+            }
+          }
+        },
+        legend: {
+          position: 'top',
+          horizontalAlign: 'right',
+          fontSize: '13px',
+          markers: {
+            width: 10,
+            height: 10,
+            radius: 10
+          },
+          itemMargin: {
+            horizontal: 12
+          }
+        },
+        tooltip: {
+          shared: true,
+          intersect: false,
+          y: {
+            formatter: function(value) {
+              return '$' + value.toLocaleString();
+            }
+          }
+        }
+      };
+      const cashFlowChart = new ApexCharts(chartEl, cashFlowOptions);
+      cashFlowChart.render();
+      // Re-theme chart on light/dark switch
+      document.addEventListener('themeChanged', function() {
+        colors = getChartColors();
+        cashFlowChart.updateOptions({
+          colors: [colors.accent, colors.danger],
+          grid: {
+            borderColor: colors.border
+          },
+          xaxis: {
+            labels: {
+              style: {
+                colors: colors.muted
+              }
+            }
+          },
+          yaxis: {
+            labels: {
+              style: {
+                colors: colors.muted
+              },
+              formatter: function(value) {
+                return '$' + (value / 1000).toFixed(0) + 'k';
+              }
+            }
+          }
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>

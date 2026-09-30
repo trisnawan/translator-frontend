@@ -1,0 +1,1482 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sales Dashboard - TrendyAdmin</title>
+  <meta name="description" content="TrendyAdmin - Bootstrap Admin Template">
+  <meta name="keywords" content="admin, dashboard, bootstrap">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts - Plus Jakarta Sans (body) + Outfit (headings) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="assets/vendor/phosphor-icons/phosphor-icons.css" rel="stylesheet">
+  <link href="assets/vendor/lucide-icons/lucide.css" rel="stylesheet">
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/choices.js/choices.min.css" rel="stylesheet">
+  <link href="assets/vendor/flatpickr/flatpickr.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+    * Template Name: TrendyAdmin - Bootstrap Admin Template
+    * Template URL: https://bootstrapmade.com/trendy-admin-bootstrap-dashboard-template/
+    * Updated: Jul 29 2026 with Bootstrap v5.3.8
+    * Author: BootstrapMade.com
+    * License: https://bootstrapmade.com/license/
+    ======================================================== -->
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-inner">
+      <!-- Header Left -->
+      <div class="header-left">
+        <button class="sidebar-toggle" title="Toggle Sidebar">
+          <i class="ph ph-list"></i>
+        </button>
+        <a href="index.html" class="header-logo">
+          <span class="header-logo-mark"><i class="bi bi-lightning-charge-fill"></i></span>
+          <span class="header-logo-text">TrendyAdmin</span>
+        </a>
+
+        <!-- Apps Quick Access -->
+        <div class="header-action dropdown apps-dropdown">
+          <button class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" title="Quick Access">
+            <i class="ph ph-dots-nine"></i>
+          </button>
+          <div class="dropdown-menu">
+            <div class="apps-menu-header">
+              <h6>Quick Access</h6>
+              <span>Jump straight into an app</span>
+            </div>
+            <div class="apps-grid">
+              <a href="apps-chat.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-chat-circle-dots"></i></span>
+                <span>Chat</span>
+              </a>
+              <a href="apps-email.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-envelope"></i></span>
+                <span>Email</span>
+              </a>
+              <a href="apps-calendar.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-calendar-blank"></i></span>
+                <span>Calendar</span>
+              </a>
+              <a href="apps-kanban.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-kanban"></i></span>
+                <span>Kanban</span>
+              </a>
+              <a href="apps-file-manager.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-folder-open"></i></span>
+                <span>Files</span>
+              </a>
+              <a href="apps-todo.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-check-square"></i></span>
+                <span>Todo</span>
+              </a>
+              <a href="apps-contacts.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-address-book"></i></span>
+                <span>Contacts</span>
+              </a>
+              <a href="apps-support.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-headset"></i></span>
+                <span>Support</span>
+              </a>
+              <a href="invoice-list.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-receipt"></i></span>
+                <span>Invoices</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Header Search (Desktop) -->
+      <div class="header-search">
+        <form class="search-form" action="search-results.html" method="GET">
+          <button type="submit"><i class="ph ph-magnifying-glass"></i></button>
+          <input type="search" name="q" placeholder="Search anything..." autocomplete="off">
+          <span class="search-hint">⌘K</span>
+        </form>
+      </div>
+
+      <!-- Header Right -->
+      <div class="header-right">
+        <!-- Desktop Actions (hidden on mobile, shown in mobile menu) -->
+        <div class="header-actions-desktop">
+          <!-- Quick Create -->
+          <div class="dropdown create-dropdown">
+            <button class="create-btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="ph ph-plus"></i>
+              <span>Create</span>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end create-menu">
+              <a class="dropdown-item" href="apps-kanban.html">
+                <span class="create-item-icon"><i class="ph ph-kanban"></i></span>
+                <span class="create-item-text">
+                  <span class="create-item-title">New Project</span>
+                  <span class="create-item-sub">Start a kanban board</span>
+                </span>
+              </a>
+              <a class="dropdown-item" href="apps-todo.html">
+                <span class="create-item-icon"><i class="ph ph-check-square"></i></span>
+                <span class="create-item-text">
+                  <span class="create-item-title">New Task</span>
+                  <span class="create-item-sub">Add to your todo list</span>
+                </span>
+              </a>
+              <a class="dropdown-item" href="apps-contacts.html">
+                <span class="create-item-icon"><i class="ph ph-user-plus"></i></span>
+                <span class="create-item-text">
+                  <span class="create-item-title">New Contact</span>
+                  <span class="create-item-sub">Save a new person</span>
+                </span>
+              </a>
+              <a class="dropdown-item" href="invoice-list.html">
+                <span class="create-item-icon"><i class="ph ph-receipt"></i></span>
+                <span class="create-item-text">
+                  <span class="create-item-title">New Invoice</span>
+                  <span class="create-item-sub">Bill a customer</span>
+                </span>
+              </a>
+            </div>
+          </div>
+
+          <div class="header-divider"></div>
+
+          <!-- Theme Toggle -->
+          <button class="header-action theme-toggle" title="Toggle Theme">
+            <i class="ph ph-moon icon-dark"></i>
+            <i class="ph ph-sun icon-light"></i>
+          </button>
+
+          <!-- Fullscreen Toggle -->
+          <button class="header-action fullscreen-toggle" onclick="toggleFullscreen()" title="Fullscreen">
+            <i class="ph ph-arrows-out icon-enter"></i>
+            <i class="ph ph-arrows-in icon-exit"></i>
+          </button>
+
+          <!-- Messages -->
+          <div class="header-action dropdown messages-dropdown">
+            <button class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" title="Messages">
+              <i class="ph ph-chat-teardrop-text"></i>
+              <span class="badge">2</span>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end">
+              <div class="messages-header">
+                <h6>Messages</h6>
+                <a href="apps-chat.html">View all</a>
+              </div>
+              <div class="messages-list">
+                <a href="apps-chat.html" class="message-item unread">
+                  <span class="message-avatar">
+                    <img src="assets/img/avatars/avatar-2.webp" alt="Sarah Johnson">
+                    <span class="message-status"></span>
+                  </span>
+                  <span class="message-content">
+                    <span class="message-name">Sarah Johnson</span>
+                    <span class="message-text">The new dashboard mockups look amazing! 🔥</span>
+                  </span>
+                  <span class="message-time">2m</span>
+                </a>
+                <a href="apps-chat.html" class="message-item unread">
+                  <span class="message-avatar">
+                    <img src="assets/img/avatars/avatar-3.webp" alt="Mike Chen">
+                  </span>
+                  <span class="message-content">
+                    <span class="message-name">Mike Chen</span>
+                    <span class="message-text">Can you review my PR when you get a chance?</span>
+                  </span>
+                  <span class="message-time">1h</span>
+                </a>
+                <a href="apps-chat.html" class="message-item">
+                  <span class="message-avatar">
+                    <img src="assets/img/avatars/avatar-4.webp" alt="Emma Davis">
+                  </span>
+                  <span class="message-content">
+                    <span class="message-name">Emma Davis</span>
+                    <span class="message-text">Meeting moved to 3pm tomorrow</span>
+                  </span>
+                  <span class="message-time">3h</span>
+                </a>
+              </div>
+              <div class="messages-footer">
+                <a href="apps-chat.html">Open chat <i class="ph ph-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Notifications -->
+          <div class="header-action dropdown notification-dropdown">
+            <button class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" title="Notifications">
+              <i class="ph ph-bell"></i>
+              <span class="badge">3</span>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end">
+              <div class="notification-header">
+                <h6>You have 3 new notifications</h6>
+                <a href="#" class="notification-mark-read" data-notification-action="mark-all-read" title="Mark all as read">
+                  <i class="ph ph-checks"></i>
+                </a>
+              </div>
+              <div class="notification-list">
+                <div class="notification-item unread">
+                  <span class="notification-icon success">
+                    <i class="ph ph-check-circle"></i>
+                  </span>
+                  <span class="notification-content">
+                    <span class="notification-title">Order Completed</span>
+                    <span class="notification-text">Your order #12345 has been delivered</span>
+                  </span>
+                  <span class="notification-meta">
+                    <span class="notification-time">5m</span>
+                    <span class="notification-dot"></span>
+                  </span>
+                </div>
+                <div class="notification-item unread">
+                  <span class="notification-icon warning">
+                    <i class="ph ph-warning"></i>
+                  </span>
+                  <span class="notification-content">
+                    <span class="notification-title">Low Storage</span>
+                    <span class="notification-text">Server storage is running low (85% used)</span>
+                  </span>
+                  <span class="notification-meta">
+                    <span class="notification-time">1h</span>
+                    <span class="notification-dot"></span>
+                  </span>
+                </div>
+                <div class="notification-item">
+                  <span class="notification-icon info">
+                    <i class="ph ph-info"></i>
+                  </span>
+                  <span class="notification-content">
+                    <span class="notification-title">New Feature</span>
+                    <span class="notification-text">Dark mode is now available</span>
+                  </span>
+                  <span class="notification-meta">
+                    <span class="notification-time">2h</span>
+                    <span class="notification-dot"></span>
+                  </span>
+                </div>
+              </div>
+              <div class="notification-footer">
+                <a href="notifications.html">View all</a>
+                <a href="settings.html">Settings</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="header-divider"></div>
+
+          <!-- User Dropdown -->
+          <div class="header-action dropdown user-dropdown">
+            <button class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="assets/img/profile-img.webp" alt="User" class="avatar">
+              <span class="user-name">John Doe</span>
+              <i class="ph ph-caret-down user-caret"></i>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end">
+              <div class="user-menu-card">
+                <span class="user-menu-avatar">
+                  <img src="assets/img/profile-img.webp" alt="User">
+                </span>
+                <span class="user-menu-name">John Doe</span>
+                <span class="user-menu-mail">john@trendyadmin.com</span>
+                <span class="user-menu-role">Administrator</span>
+              </div>
+              <div class="user-menu-body">
+                <a class="dropdown-item" href="profile.html">
+                  <span class="user-menu-item-icon"><i class="ph ph-user"></i></span>
+                  My Profile
+                  <i class="ph ph-caret-right user-menu-item-caret"></i>
+                </a>
+                <a class="dropdown-item" href="settings.html">
+                  <span class="user-menu-item-icon"><i class="ph ph-gear"></i></span>
+                  Settings
+                  <i class="ph ph-caret-right user-menu-item-caret"></i>
+                </a>
+                <a class="dropdown-item" href="activity.html">
+                  <span class="user-menu-item-icon"><i class="ph ph-pulse"></i></span>
+                  Activity Log
+                  <i class="ph ph-caret-right user-menu-item-caret"></i>
+                </a>
+                <a class="dropdown-item" href="invoice-list.html">
+                  <span class="user-menu-item-icon"><i class="ph ph-receipt"></i></span>
+                  Billing
+                  <i class="ph ph-caret-right user-menu-item-caret"></i>
+                </a>
+              </div>
+              <div class="user-menu-footer">
+                <a href="auth-login.html" class="user-menu-signout">
+                  <i class="ph ph-sign-out"></i> Sign Out
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile Actions (visible only on mobile) -->
+        <div class="header-actions-mobile">
+          <!-- Search Toggle (Mobile) -->
+          <button class="header-action search-toggle" title="Search">
+            <i class="ph ph-magnifying-glass"></i>
+          </button>
+
+          <!-- Mobile Menu Toggle -->
+          <button class="header-action mobile-menu-toggle" title="More">
+            <i class="ph ph-dots-three-vertical"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Search -->
+  <div class="mobile-search">
+    <form class="search-form" action="search-results.html" method="GET">
+      <input type="search" name="q" placeholder="Search anything..." autocomplete="off">
+      <button type="submit"><i class="ph ph-magnifying-glass"></i></button>
+    </form>
+  </div>
+
+  <!-- Mobile Header Menu -->
+  <div class="mobile-header-menu">
+    <div class="mobile-header-menu-content">
+      <!-- Theme Toggle -->
+      <button class="mobile-menu-item theme-toggle" title="Toggle Theme">
+        <i class="ph ph-moon icon-dark"></i>
+        <i class="ph ph-sun icon-light"></i>
+        <span class="mobile-menu-label">Theme</span>
+      </button>
+
+      <!-- Fullscreen Toggle -->
+      <button class="mobile-menu-item fullscreen-toggle" onclick="toggleFullscreen()" title="Fullscreen">
+        <i class="ph ph-arrows-out icon-enter"></i>
+        <i class="ph ph-arrows-in icon-exit"></i>
+        <span class="mobile-menu-label">Fullscreen</span>
+      </button>
+
+      <!-- Messages -->
+      <a href="apps-chat.html" class="mobile-menu-item">
+        <i class="ph ph-chat-teardrop-text"></i>
+        <span class="badge">2</span>
+        <span class="mobile-menu-label">Messages</span>
+      </a>
+
+      <!-- Notifications -->
+      <a href="notifications.html" class="mobile-menu-item">
+        <i class="ph ph-bell"></i>
+        <span class="badge">3</span>
+        <span class="mobile-menu-label">Notifications</span>
+      </a>
+
+      <!-- Profile -->
+      <a href="profile.html" class="mobile-menu-item">
+        <i class="ph ph-user"></i>
+        <span class="mobile-menu-label">Profile</span>
+      </a>
+
+      <!-- Sign Out -->
+      <a href="auth-login.html" class="mobile-menu-item mobile-menu-item-danger">
+        <i class="ph ph-sign-out"></i>
+        <span class="mobile-menu-label">Sign Out</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <!-- Sidebar Header -->
+    <div class="sidebar-header">
+      <a href="index.html" class="sidebar-logo">
+        <span class="sidebar-logo-mark"><i class="bi bi-lightning-charge-fill"></i></span>
+        <span class="sidebar-logo-text">TrendyAdmin</span>
+      </a>
+      <button class="sidebar-close">
+        <i class="ph ph-x"></i>
+      </button>
+    </div>
+
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar-nav">
+      <ul class="nav-menu">
+        <li class="nav-heading"><span>Overview</span></li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="index.html">
+            <span class="nav-icon"><i class="ph ph-house"></i></span>
+            <span class="nav-text">Home</span>
+          </a>
+        </li>
+
+        <!-- Dashboards Submenu -->
+        <li class="nav-item has-submenu open">
+          <a class="nav-link" href="#" aria-expanded="true">
+            <span class="nav-icon"><i class="ph ph-gauge"></i></span>
+            <span class="nav-text">Dashboards</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu show">
+            <li><a class="nav-link active" href="dashboard-sales.html">Sales</a></li>
+            <li><a class="nav-link " href="dashboard-analytics.html">Analytics</a></li>
+            <li><a class="nav-link " href="dashboard-crm.html">CRM</a></li>
+            <li><a class="nav-link " href="dashboard-marketing.html">Marketing</a></li>
+            <li><a class="nav-link " href="dashboard-projects.html">Projects</a></li>
+            <li><a class="nav-link " href="dashboard-finance.html">Finance</a></li>
+          </ul>
+        </li>
+
+        <!-- Users -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-users"></i></span>
+            <span class="nav-text">Users</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="users.html">Users List</a></li>
+            <li><a class="nav-link " href="users-view.html">User View</a></li>
+            <li><a class="nav-link " href="users-edit.html">User Edit</a></li>
+            <li><a class="nav-link " href="profile.html">Profile</a></li>
+            <!-- 3rd Level - Settings submenu -->
+            <li class="has-submenu ">
+              <a class="nav-link" href="#" aria-expanded="false">
+                Settings
+                <i class="ph ph-caret-right nav-arrow"></i>
+              </a>
+              <ul class="nav-submenu ">
+                <li><a class="nav-link " href="settings.html">Account</a></li>
+                <li><a class="nav-link " href="notifications.html">Notifications</a></li>
+                <li><a class="nav-link " href="activity.html">Activity</a></li>
+              </ul>
+            </li>
+            <li><a class="nav-link " href="roles.html">Roles & Permissions</a></li>
+          </ul>
+        </li>
+
+        <!-- Authentication -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-shield-check"></i></span>
+            <span class="nav-text">Authentication</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="auth-login.html">Login</a></li>
+            <li><a class="nav-link " href="auth-register.html">Register</a></li>
+            <li><a class="nav-link " href="auth-forgot-password.html">Forgot Password</a></li>
+            <li><a class="nav-link " href="auth-reset-password.html">Reset Password</a></li>
+            <li><a class="nav-link " href="auth-verify-email.html">Email Verification</a></li>
+            <li><a class="nav-link " href="auth-two-factor.html">Two Factor Auth</a></li>
+            <li><a class="nav-link " href="auth-lock-screen.html">Lock Screen</a></li>
+          </ul>
+        </li>
+
+        <!-- Apps Section -->
+        <li class="nav-heading"><span>Apps</span></li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-calendar.html">
+            <span class="nav-icon"><i class="ph ph-calendar-blank"></i></span>
+            <span class="nav-text">Calendar</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-kanban.html">
+            <span class="nav-icon"><i class="ph ph-kanban"></i></span>
+            <span class="nav-text">Kanban Board</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-chat.html">
+            <span class="nav-icon"><i class="ph ph-chat-circle-dots"></i></span>
+            <span class="nav-text">Chat</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-contacts.html">
+            <span class="nav-icon"><i class="ph ph-address-book"></i></span>
+            <span class="nav-text">Contacts</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-file-manager.html">
+            <span class="nav-icon"><i class="ph ph-folder-open"></i></span>
+            <span class="nav-text">File Manager</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-email.html">
+            <span class="nav-icon"><i class="ph ph-envelope"></i></span>
+            <span class="nav-text">Email</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-todo.html">
+            <span class="nav-icon"><i class="ph ph-check-square"></i></span>
+            <span class="nav-text">Todo List</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-support.html">
+            <span class="nav-icon"><i class="ph ph-headset"></i></span>
+            <span class="nav-text">Support Center</span>
+          </a>
+        </li>
+
+        <!-- UI Elements Section -->
+        <li class="nav-heading"><span>UI Elements</span></li>
+
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-puzzle-piece"></i></span>
+            <span class="nav-text">Components</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="components-alerts.html">Alerts</a></li>
+            <li><a class="nav-link " href="components-accordion.html">Accordion</a></li>
+            <li><a class="nav-link " href="components-badges.html">Badges</a></li>
+            <li><a class="nav-link " href="components-breadcrumbs.html">Breadcrumbs</a></li>
+            <li><a class="nav-link " href="components-buttons.html">Buttons</a></li>
+            <li><a class="nav-link " href="components-cards.html">Cards</a></li>
+            <li><a class="nav-link " href="components-carousel.html">Carousel</a></li>
+            <li><a class="nav-link " href="components-dropdowns.html">Dropdowns</a></li>
+            <li><a class="nav-link " href="components-list-group.html">List Group</a></li>
+            <li><a class="nav-link " href="components-modal.html">Modal</a></li>
+            <li><a class="nav-link " href="components-nav-tabs.html">Navs & Tabs</a></li>
+            <li><a class="nav-link " href="components-offcanvas.html">Offcanvas</a></li>
+            <li><a class="nav-link " href="components-pagination.html">Pagination</a></li>
+            <li><a class="nav-link " href="components-popovers.html">Popovers</a></li>
+            <li><a class="nav-link " href="components-progress.html">Progress</a></li>
+            <li><a class="nav-link " href="components-spinners.html">Spinners</a></li>
+            <li><a class="nav-link " href="components-toasts.html">Toasts</a></li>
+            <li><a class="nav-link " href="components-tooltips.html">Tooltips</a></li>
+          </ul>
+        </li>
+
+        <!-- Widgets -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-stack"></i></span>
+            <span class="nav-text">Widgets</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="widgets-cards.html">Cards</a></li>
+            <li><a class="nav-link " href="widgets-banners.html">Banners</a></li>
+            <li><a class="nav-link " href="widgets-charts.html">Charts</a></li>
+            <li><a class="nav-link " href="widgets-apps.html">Apps</a></li>
+            <li><a class="nav-link " href="widgets-data.html">Data</a></li>
+          </ul>
+        </li>
+
+        <!-- Forms Section -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-list-checks"></i></span>
+            <span class="nav-text">Forms</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="forms-elements.html">Form Elements</a></li>
+            <li><a class="nav-link " href="forms-layouts.html">Form Layouts</a></li>
+            <li><a class="nav-link " href="forms-validation.html">Validation</a></li>
+            <li><a class="nav-link " href="forms-wizard.html">Wizard</a></li>
+            <li><a class="nav-link " href="forms-editors.html">Rich Editors</a></li>
+            <li><a class="nav-link " href="forms-pickers.html">Date/Time Pickers</a></li>
+            <li><a class="nav-link " href="forms-select.html">Advanced Select</a></li>
+            <li><a class="nav-link " href="forms-upload.html">File Upload</a></li>
+          </ul>
+        </li>
+
+        <!-- Tables Section -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-table"></i></span>
+            <span class="nav-text">Tables</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="tables-basic.html">Basic Tables</a></li>
+            <li><a class="nav-link " href="tables-datatables.html">DataTables</a></li>
+            <li><a class="nav-link " href="tables-responsive.html">Responsive Tables</a></li>
+          </ul>
+        </li>
+
+        <!-- Charts Section -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-chart-bar"></i></span>
+            <span class="nav-text">Charts</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="charts-apexcharts.html">ApexCharts</a></li>
+            <li><a class="nav-link " href="charts-chartjs.html">Chart.js</a></li>
+            <li><a class="nav-link " href="charts-echarts.html">ECharts</a></li>
+          </ul>
+        </li>
+
+        <!-- Icons Section -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-diamond"></i></span>
+            <span class="nav-text">Icons</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="icons-bootstrap.html">Bootstrap Icons</a></li>
+            <li><a class="nav-link " href="icons-remixicon.html">Remix Icons</a></li>
+            <li><a class="nav-link " href="icons-fontawesome.html">Font Awesome</a></li>
+            <li><a class="nav-link " href="icons-phosphor.html">Phosphor Icons</a></li>
+            <li><a class="nav-link " href="icons-lucide.html">Lucide Icons</a></li>
+          </ul>
+        </li>
+
+        <!-- Pages Section -->
+        <li class="nav-heading"><span>Pages</span></li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="contact.html">
+            <span class="nav-icon"><i class="ph ph-envelope-simple"></i></span>
+            <span class="nav-text">Contact</span>
+          </a>
+        </li>
+
+        <!-- Invoices -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-receipt"></i></span>
+            <span class="nav-text">Invoices</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="invoice-list.html">Invoice List</a></li>
+            <li><a class="nav-link " href="invoice.html">Invoice View</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="pricing.html">
+            <span class="nav-icon"><i class="ph ph-tag"></i></span>
+            <span class="nav-text">Pricing</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="faq.html">
+            <span class="nav-icon"><i class="ph ph-question"></i></span>
+            <span class="nav-text">FAQ</span>
+          </a>
+        </li>
+
+        <!-- Error Pages -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-warning"></i></span>
+            <span class="nav-text">Error Pages</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="error-404.html">404 Not Found</a></li>
+            <li><a class="nav-link " href="error-403.html">403 Forbidden</a></li>
+            <li><a class="nav-link " href="error-500.html">500 Server Error</a></li>
+            <li><a class="nav-link " href="error-maintenance.html">Maintenance</a></li>
+            <li><a class="nav-link " href="error-coming-soon.html">Coming Soon</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="timeline.html">
+            <span class="nav-icon"><i class="ph ph-clock-counter-clockwise"></i></span>
+            <span class="nav-text">Timeline</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="search-results.html">
+            <span class="nav-icon"><i class="ph ph-magnifying-glass"></i></span>
+            <span class="nav-text">Search Results</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="blank.html">
+            <span class="nav-icon"><i class="ph ph-file"></i></span>
+            <span class="nav-text">Blank Page</span>
+          </a>
+        </li>
+
+      </ul>
+    </nav>
+
+    <!-- Sidebar Footer - User Card -->
+    <div class="sidebar-footer">
+      <div class="sidebar-user">
+        <a href="profile.html" class="sidebar-user-link">
+          <span class="sidebar-user-avatar">
+            <img src="assets/img/profile-img.webp" alt="User">
+            <span class="sidebar-user-status"></span>
+          </span>
+          <span class="sidebar-user-info">
+            <span class="sidebar-user-name">John Doe</span>
+            <span class="sidebar-user-role">Administrator</span>
+          </span>
+        </a>
+        <div class="sidebar-user-actions">
+          <a href="settings.html" class="sidebar-user-action" title="Settings">
+            <i class="ph ph-gear"></i>
+          </a>
+          <a href="auth-login.html" class="sidebar-user-action sidebar-user-logout" title="Logout">
+            <i class="ph ph-sign-out"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Sidebar Overlay (Mobile) -->
+  <div class="sidebar-overlay"></div>
+
+  <!-- Main Content -->
+  <main class="main">
+    <div class="main-content page-dashboard-sales">
+      <!-- Page Head -->
+      <div class="sales-head">
+        <div>
+          <h1 class="sales-head-title">Sales Dashboard</h1>
+          <p class="sales-head-sub">Track revenue, orders and performance across your store.</p>
+        </div>
+        <div class="sales-head-actions">
+          <button type="button" class="sales-btn-ghost">
+            <i class="ph ph-calendar-blank"></i> Last 30 days <i class="ph ph-caret-down"></i>
+          </button>
+          <button type="button" class="sales-btn-gradient">
+            <i class="ph ph-download-simple"></i> Export
+          </button>
+        </div>
+      </div>
+
+      <!-- KPI Row -->
+      <div class="dashboard-grid dashboard-grid-4 sales-kpi-row">
+        <!-- Revenue (dark anchor tile) -->
+        <div class="card sales-kpi sales-kpi-dark">
+          <div class="sales-kpi-top">
+            <span class="sales-kpi-icon"><i class="ph ph-currency-dollar"></i></span>
+            <span class="sales-kpi-trend up"><i class="ph ph-trend-up"></i> 18.2%</span>
+          </div>
+          <div class="sales-kpi-value">$124,563</div>
+          <div class="sales-kpi-label">Total Revenue</div>
+        </div>
+
+        <!-- Orders -->
+        <div class="card sales-kpi">
+          <div class="sales-kpi-top">
+            <span class="sales-kpi-icon tile-success"><i class="ph ph-bag"></i></span>
+            <span class="sales-kpi-trend up"><i class="ph ph-trend-up"></i> 12.5%</span>
+          </div>
+          <div class="sales-kpi-value">3,842</div>
+          <div class="sales-kpi-label">Total Orders</div>
+        </div>
+
+        <!-- Avg Order Value -->
+        <div class="card sales-kpi">
+          <div class="sales-kpi-top">
+            <span class="sales-kpi-icon tile-info"><i class="ph ph-receipt"></i></span>
+            <span class="sales-kpi-trend up"><i class="ph ph-trend-up"></i> 5.3%</span>
+          </div>
+          <div class="sales-kpi-value">$32.42</div>
+          <div class="sales-kpi-label">Avg Order Value</div>
+        </div>
+
+        <!-- Conversion Rate -->
+        <div class="card sales-kpi">
+          <div class="sales-kpi-top">
+            <span class="sales-kpi-icon tile-warning"><i class="ph ph-trend-up"></i></span>
+            <span class="sales-kpi-trend down"><i class="ph ph-trend-down"></i> 2.1%</span>
+          </div>
+          <div class="sales-kpi-value">4.28%</div>
+          <div class="sales-kpi-label">Conversion Rate</div>
+        </div>
+      </div>
+
+      <!-- Main Row: sales over time + category donut -->
+      <div class="sales-main">
+        <div class="card sales-chart-card">
+          <div class="dash-card-header">
+            <div>
+              <h5 class="dash-card-title">Sales Over Time</h5>
+              <span class="dash-card-subtitle">Revenue and order volume</span>
+            </div>
+            <div class="sales-seg" role="group" aria-label="Chart range">
+              <button class="sales-seg-btn" data-range="week">Week</button>
+              <button class="sales-seg-btn active" data-range="month">Month</button>
+              <button class="sales-seg-btn" data-range="year">Year</button>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="chart-container" id="salesOverTimeChart"></div>
+          </div>
+        </div>
+
+        <div class="card sales-category-card">
+          <div class="dash-card-header">
+            <div>
+              <h5 class="dash-card-title">Sales by Category</h5>
+              <span class="dash-card-subtitle">Revenue share this month</span>
+            </div>
+          </div>
+          <div class="card-body">
+            <div id="salesCategoryChart"></div>
+            <div class="sales-cat-legend">
+              <div class="sales-cat-row">
+                <span class="sales-cat-dot dot-accent"></span>
+                <span class="sales-cat-name">Electronics</span>
+                <span class="sales-cat-value">$569,220</span>
+                <span class="sales-cat-pct">71.1%</span>
+              </div>
+              <div class="sales-cat-row">
+                <span class="sales-cat-dot dot-success"></span>
+                <span class="sales-cat-name">Audio</span>
+                <span class="sales-cat-value">$127,488</span>
+                <span class="sales-cat-pct">15.9%</span>
+              </div>
+              <div class="sales-cat-row">
+                <span class="sales-cat-dot dot-warning"></span>
+                <span class="sales-cat-name">Wearables</span>
+                <span class="sales-cat-value">$74,214</span>
+                <span class="sales-cat-pct">9.3%</span>
+              </div>
+              <div class="sales-cat-row">
+                <span class="sales-cat-dot dot-info"></span>
+                <span class="sales-cat-name">Accessories</span>
+                <span class="sales-cat-value">$29,302</span>
+                <span class="sales-cat-pct">3.7%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Second Row: top products + recent orders + sales target -->
+      <div class="sales-bottom">
+        <div class="card">
+          <div class="dash-card-header">
+            <div>
+              <h5 class="dash-card-title">Top Products</h5>
+              <span class="dash-card-subtitle">Best sellers this month</span>
+            </div>
+            <a href="#" class="dash-link">View all <i class="ph ph-arrow-right"></i></a>
+          </div>
+          <div class="card-body">
+            <div class="sales-product">
+              <img src="assets/img/products/product-thumb-1.webp" alt="Wireless Headset" class="sales-product-img">
+              <div class="sales-product-info">
+                <div class="sales-product-row">
+                  <span class="sales-product-name">Wireless Headset</span>
+                  <span class="sales-product-sales">512 sold</span>
+                </div>
+                <div class="sales-product-bar"><span style="width: 92%"></span></div>
+              </div>
+            </div>
+            <div class="sales-product">
+              <img src="assets/img/products/product-thumb-2.webp" alt="Smart Watch Pro" class="sales-product-img">
+              <div class="sales-product-info">
+                <div class="sales-product-row">
+                  <span class="sales-product-name">Smart Watch Pro</span>
+                  <span class="sales-product-sales">238 sold</span>
+                </div>
+                <div class="sales-product-bar"><span style="width: 64%"></span></div>
+              </div>
+            </div>
+            <div class="sales-product">
+              <img src="assets/img/products/product-thumb-3.webp" alt="Studio Camera" class="sales-product-img">
+              <div class="sales-product-info">
+                <div class="sales-product-row">
+                  <span class="sales-product-name">Studio Camera</span>
+                  <span class="sales-product-sales">186 sold</span>
+                </div>
+                <div class="sales-product-bar"><span style="width: 46%"></span></div>
+              </div>
+            </div>
+            <div class="sales-product">
+              <img src="assets/img/products/product-thumb-4.webp" alt="Gaming Keyboard" class="sales-product-img">
+              <div class="sales-product-info">
+                <div class="sales-product-row">
+                  <span class="sales-product-name">Gaming Keyboard</span>
+                  <span class="sales-product-sales">142 sold</span>
+                </div>
+                <div class="sales-product-bar"><span style="width: 31%"></span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card sales-orders-card">
+          <div class="dash-card-header">
+            <div>
+              <h5 class="dash-card-title">Recent Orders</h5>
+              <span class="dash-card-subtitle">Latest transactions from your store</span>
+            </div>
+            <a href="invoice-list.html" class="dash-link">View all <i class="ph ph-arrow-right"></i></a>
+          </div>
+          <div class="card-body p-0">
+            <div class="table-responsive">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Order</th>
+                    <th>Customer</th>
+                    <th>Amount</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a href="#">#ORD-7352</a></td>
+                    <td>
+                      <div class="table-user">
+                        <img src="assets/img/avatars/avatar-1.webp" alt="" class="table-user-avatar">
+                        <div>
+                          <div class="table-user-name">John Doe</div>
+                          <div class="table-user-email">Credit Card</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>$1,999.00</td>
+                    <td><span class="sales-status status-success">Paid</span></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">#ORD-7351</a></td>
+                    <td>
+                      <div class="table-user">
+                        <img src="assets/img/avatars/avatar-2.webp" alt="" class="table-user-avatar">
+                        <div>
+                          <div class="table-user-name">Jane Smith</div>
+                          <div class="table-user-email">PayPal</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>$399.00</td>
+                    <td><span class="sales-status status-warning">Pending</span></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">#ORD-7350</a></td>
+                    <td>
+                      <div class="table-user">
+                        <img src="assets/img/avatars/avatar-3.webp" alt="" class="table-user-avatar">
+                        <div>
+                          <div class="table-user-name">Mike Johnson</div>
+                          <div class="table-user-email">Apple Pay</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>$2,398.00</td>
+                    <td><span class="sales-status status-success">Paid</span></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">#ORD-7349</a></td>
+                    <td>
+                      <div class="table-user">
+                        <img src="assets/img/avatars/avatar-4.webp" alt="" class="table-user-avatar">
+                        <div>
+                          <div class="table-user-name">Sarah Wilson</div>
+                          <div class="table-user-email">Credit Card</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>$249.00</td>
+                    <td><span class="sales-status status-danger">Refunded</span></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">#ORD-7348</a></td>
+                    <td>
+                      <div class="table-user">
+                        <img src="assets/img/avatars/avatar-5.webp" alt="" class="table-user-avatar">
+                        <div>
+                          <div class="table-user-name">Alex Brown</div>
+                          <div class="table-user-email">Credit Card</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>$598.00</td>
+                    <td><span class="sales-status status-info">Processing</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="card sales-target-card">
+          <div class="dash-card-header">
+            <div>
+              <h5 class="dash-card-title">Sales Target</h5>
+              <span class="dash-card-subtitle">Monthly goal progress</span>
+            </div>
+          </div>
+          <div class="card-body">
+            <div id="salesTargetChart"></div>
+            <div class="sales-target-stats">
+              <div class="sales-target-stat">
+                <span class="sales-target-stat-label">Target</span>
+                <span class="sales-target-stat-value">$160,000</span>
+              </div>
+              <div class="sales-target-divider"></div>
+              <div class="sales-target-stat">
+                <span class="sales-target-stat-label">Achieved</span>
+                <span class="sales-target-stat-value">$124,563</span>
+              </div>
+            </div>
+            <p class="sales-target-hint"><i class="ph ph-lightning"></i> $35.4k to go — you're ahead of last month's pace.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <span class="footer-brand-mark"><i class="bi bi-lightning-charge-fill"></i></span>
+          <span class="footer-copyright">
+            &copy; 2026 <a href="#">TrendyAdmin</a>. All Rights Reserved.
+          </span>
+        </div>
+        <div class="footer-links">
+          <a href="#">About</a>
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Contact</a>
+        </div>
+        <div class="footer-credits">
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Back to Top -->
+  <a href="#" class="back-to-top">
+    <i class="ph ph-arrow-up"></i>
+  </a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="assets/vendor/chart.js/chart.umd.js"></script>
+  <script src="assets/vendor/echarts/echarts.min.js"></script>
+  <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="assets/vendor/quill/quill.js"></script>
+  <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+  <script src="assets/vendor/choices.js/choices.min.js"></script>
+  <script src="assets/vendor/flatpickr/flatpickr.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS Files -->
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <!-- App Sidebar Toggle (for app pages with sidebars) -->
+  <script src="assets/js/apps-sidebar-toggle.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const styles = getComputedStyle(document.documentElement);
+      const accentColor = styles.getPropertyValue('--accent-color').trim();
+      const dangerColor = styles.getPropertyValue('--danger-color').trim();
+      const successColor = styles.getPropertyValue('--success-color').trim();
+      const warningColor = styles.getPropertyValue('--warning-color').trim();
+      const infoColor = styles.getPropertyValue('--info-color').trim();
+      const borderColor = styles.getPropertyValue('--border-color').trim();
+      const mutedColor = styles.getPropertyValue('--muted-color').trim();
+      const headingColor = styles.getPropertyValue('--heading-color').trim();
+      // Datasets for the segmented range toggle
+      const ranges = {
+        week: {
+          categories: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+          revenue: [4400, 5050, 4200, 5800, 4800, 6200, 5400],
+          orders: [44, 55, 41, 67, 45, 72, 58]
+        },
+        month: {
+          categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+          revenue: [44000, 50500, 42000, 58000, 48000, 62000, 54000, 68000, 52000, 72000, 61000, 84000],
+          orders: [440, 550, 410, 670, 450, 720, 580, 780, 520, 840, 620, 950]
+        },
+        year: {
+          categories: ['2020', '2021', '2022', '2023', '2024', '2025', '2026'],
+          revenue: [281000, 342000, 415000, 498000, 587000, 692000, 800000],
+          orders: [2900, 3400, 4100, 4900, 5800, 6900, 8200]
+        }
+      };
+      // Sales Over Time Chart
+      const salesOptions = {
+        series: [{
+            name: 'Revenue',
+            data: ranges.month.revenue
+          },
+          {
+            name: 'Orders',
+            data: ranges.month.orders
+          }
+        ],
+        chart: {
+          type: 'area',
+          height: 310,
+          fontFamily: 'inherit',
+          toolbar: {
+            show: false
+          },
+          zoom: {
+            enabled: false
+          }
+        },
+        colors: [accentColor, successColor],
+        dataLabels: {
+          enabled: false
+        },
+        stroke: {
+          curve: 'smooth',
+          width: 3
+        },
+        fill: {
+          type: 'gradient',
+          gradient: {
+            shadeIntensity: 1,
+            opacityFrom: 0.35,
+            opacityTo: 0.02,
+            stops: [0, 90, 100]
+          }
+        },
+        xaxis: {
+          categories: ranges.month.categories,
+          axisBorder: {
+            show: false
+          },
+          axisTicks: {
+            show: false
+          },
+          labels: {
+            style: {
+              colors: mutedColor,
+              fontSize: '12px'
+            }
+          }
+        },
+        yaxis: [{
+          labels: {
+            style: {
+              colors: mutedColor,
+              fontSize: '12px'
+            },
+            formatter: function(value) {
+              return '$' + (value / 1000).toFixed(0) + 'k';
+            }
+          }
+        }, {
+          opposite: true,
+          labels: {
+            style: {
+              colors: mutedColor,
+              fontSize: '12px'
+            }
+          }
+        }],
+        grid: {
+          borderColor: borderColor,
+          strokeDashArray: 4,
+          xaxis: {
+            lines: {
+              show: false
+            }
+          }
+        },
+        legend: {
+          position: 'top',
+          horizontalAlign: 'right',
+          fontSize: '13px',
+          labels: {
+            colors: mutedColor
+          },
+          markers: {
+            width: 10,
+            height: 10,
+            radius: 10
+          },
+          itemMargin: {
+            horizontal: 12
+          }
+        },
+        tooltip: {
+          shared: true,
+          intersect: false,
+          y: {
+            formatter: function(value, opts) {
+              return opts.seriesIndex === 0 ? '$' + value.toLocaleString() : value.toLocaleString() + ' orders';
+            }
+          }
+        }
+      };
+      const salesChart = new ApexCharts(document.querySelector('#salesOverTimeChart'), salesOptions);
+      salesChart.render();
+      // Segmented range toggle
+      const segButtons = document.querySelectorAll('.sales-seg-btn');
+      segButtons.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          segButtons.forEach(function(b) {
+            b.classList.remove('active');
+          });
+          this.classList.add('active');
+          const range = ranges[this.dataset.range];
+          salesChart.updateOptions({
+            xaxis: {
+              categories: range.categories
+            }
+          });
+          salesChart.updateSeries([{
+              name: 'Revenue',
+              data: range.revenue
+            },
+            {
+              name: 'Orders',
+              data: range.orders
+            }
+          ]);
+        });
+      });
+      // Sales by Category Donut
+      const categoryOptions = {
+        series: [569220, 127488, 74214, 29302],
+        chart: {
+          type: 'donut',
+          height: 210,
+          fontFamily: 'inherit'
+        },
+        colors: [accentColor, successColor, warningColor, infoColor],
+        labels: ['Electronics', 'Audio', 'Wearables', 'Accessories'],
+        plotOptions: {
+          pie: {
+            donut: {
+              size: '76%',
+              labels: {
+                show: true,
+                name: {
+                  show: true,
+                  fontSize: '12px',
+                  color: mutedColor
+                },
+                value: {
+                  fontSize: '22px',
+                  fontWeight: 700,
+                  color: headingColor,
+                  formatter: function(val) {
+                    return '$' + (parseInt(val, 10) / 1000).toFixed(0) + 'K';
+                  }
+                },
+                total: {
+                  show: true,
+                  label: 'Total',
+                  color: mutedColor,
+                  fontSize: '12px',
+                  formatter: function() {
+                    return '$800K';
+                  }
+                }
+              }
+            }
+          }
+        },
+        dataLabels: {
+          enabled: false
+        },
+        legend: {
+          show: false
+        },
+        stroke: {
+          width: 0
+        },
+        tooltip: {
+          y: {
+            formatter: function(value) {
+              return '$' + value.toLocaleString();
+            }
+          }
+        }
+      };
+      const categoryChart = new ApexCharts(document.querySelector('#salesCategoryChart'), categoryOptions);
+      categoryChart.render();
+      // Sales Target Gauge
+      const targetOptions = {
+        series: [78],
+        chart: {
+          type: 'radialBar',
+          height: 230,
+          fontFamily: 'inherit',
+          sparkline: {
+            enabled: true
+          }
+        },
+        colors: [accentColor],
+        plotOptions: {
+          radialBar: {
+            startAngle: -110,
+            endAngle: 110,
+            hollow: {
+              size: '68%'
+            },
+            track: {
+              background: borderColor,
+              strokeWidth: '100%'
+            },
+            dataLabels: {
+              name: {
+                show: true,
+                fontSize: '12px',
+                color: mutedColor,
+                offsetY: 24
+              },
+              value: {
+                fontSize: '30px',
+                fontWeight: 700,
+                color: headingColor,
+                offsetY: -12
+              }
+            }
+          }
+        },
+        fill: {
+          type: 'gradient',
+          gradient: {
+            shade: 'light',
+            type: 'horizontal',
+            gradientToColors: [dangerColor],
+            stops: [0, 100]
+          }
+        },
+        stroke: {
+          lineCap: 'round'
+        },
+        labels: ['of monthly target']
+      };
+      const targetChart = new ApexCharts(document.querySelector('#salesTargetChart'), targetOptions);
+      targetChart.render();
+      // Update charts on theme change
+      document.addEventListener('themeChanged', function() {
+        const s = getComputedStyle(document.documentElement);
+        const newAccent = s.getPropertyValue('--accent-color').trim();
+        const newDanger = s.getPropertyValue('--danger-color').trim();
+        const newSuccess = s.getPropertyValue('--success-color').trim();
+        const newWarning = s.getPropertyValue('--warning-color').trim();
+        const newInfo = s.getPropertyValue('--info-color').trim();
+        const newBorder = s.getPropertyValue('--border-color').trim();
+        const newMuted = s.getPropertyValue('--muted-color').trim();
+        const newHeading = s.getPropertyValue('--heading-color').trim();
+        salesChart.updateOptions({
+          colors: [newAccent, newSuccess],
+          grid: {
+            borderColor: newBorder
+          },
+          xaxis: {
+            labels: {
+              style: {
+                colors: newMuted
+              }
+            }
+          },
+          yaxis: [{
+            labels: {
+              style: {
+                colors: newMuted
+              },
+              formatter: function(value) {
+                return '$' + (value / 1000).toFixed(0) + 'k';
+              }
+            }
+          }, {
+            opposite: true,
+            labels: {
+              style: {
+                colors: newMuted
+              }
+            }
+          }],
+          legend: {
+            labels: {
+              colors: newMuted
+            }
+          }
+        });
+        categoryChart.updateOptions({
+          colors: [newAccent, newSuccess, newWarning, newInfo],
+          plotOptions: {
+            pie: {
+              donut: {
+                labels: {
+                  name: {
+                    color: newMuted
+                  },
+                  value: {
+                    color: newHeading
+                  },
+                  total: {
+                    color: newMuted
+                  }
+                }
+              }
+            }
+          }
+        });
+        targetChart.updateOptions({
+          colors: [newAccent],
+          plotOptions: {
+            radialBar: {
+              track: {
+                background: newBorder
+              },
+              dataLabels: {
+                name: {
+                  color: newMuted
+                },
+                value: {
+                  color: newHeading
+                }
+              }
+            }
+          },
+          fill: {
+            gradient: {
+              gradientToColors: [newDanger]
+            }
+          }
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>

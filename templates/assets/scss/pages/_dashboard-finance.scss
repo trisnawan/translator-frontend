@@ -1,0 +1,766 @@
+/*--------------------------------------------------------------
+# Finance Dashboard - TrendyAdmin
+# Plum total-balance hero with glow decor, KPI tiles, cash flow
+# chart, gradient budget bars, transactions & upcoming payments
+--------------------------------------------------------------*/
+
+.page-dashboard-finance {
+
+  /*------------------------------------------------------------
+  # Page Header
+  ------------------------------------------------------------*/
+  .fin-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .fin-header-title {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--heading-color);
+  }
+
+  .fin-header-subtitle {
+    margin: 2px 0 0;
+    font-size: 0.875rem;
+    color: var(--muted-color);
+  }
+
+  .fin-header-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    flex-wrap: wrap;
+  }
+
+  .fin-btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 18px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-full);
+    background: var(--surface-color);
+    color: var(--default-color);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    transition: border-color var(--transition-fast), color var(--transition-fast);
+
+    i {
+      font-size: 1rem;
+      color: var(--muted-color);
+    }
+
+    &:hover {
+      border-color: color-mix(in srgb, var(--accent-color), transparent 50%);
+      color: var(--accent-color);
+    }
+  }
+
+  .fin-btn-gradient {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: var(--radius-full);
+    background: linear-gradient(105deg, var(--accent-color), color-mix(in srgb, var(--accent-color), var(--danger-color) 42%));
+    color: var(--contrast-color);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    box-shadow: 0 8px 18px -6px color-mix(in srgb, var(--accent-color), transparent 40%);
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+
+    i {
+      font-size: 1rem;
+    }
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 24px -8px color-mix(in srgb, var(--accent-color), transparent 30%);
+    }
+  }
+
+  /*------------------------------------------------------------
+  # Balance Hero Row
+  ------------------------------------------------------------*/
+  .fin-hero-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1.9fr) minmax(0, 1fr);
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .fin-balance-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: var(--spacing-lg);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-2xl);
+    background: #171032;
+    box-shadow: 0 20px 40px -18px color-mix(in srgb, var(--accent-color), transparent 45%);
+    overflow: hidden;
+  }
+
+  .fin-balance-card::before,
+  .fin-balance-card::after {
+    content: "";
+    position: absolute;
+    border-radius: var(--radius-full);
+    pointer-events: none;
+    filter: blur(2px);
+  }
+
+  .fin-balance-card::before {
+    width: 260px;
+    height: 260px;
+    top: -130px;
+    right: -60px;
+    background: radial-gradient(circle, color-mix(in srgb, var(--accent-color), transparent 55%), transparent 70%);
+  }
+
+  .fin-balance-card::after {
+    width: 200px;
+    height: 200px;
+    bottom: -120px;
+    left: 30%;
+    background: radial-gradient(circle, color-mix(in srgb, var(--danger-color), transparent 72%), transparent 70%);
+  }
+
+  .fin-balance-top {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+  }
+
+  .fin-balance-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    flex-shrink: 0;
+    border-radius: var(--radius-lg);
+    background: linear-gradient(105deg, var(--accent-color), color-mix(in srgb, var(--accent-color), var(--danger-color) 42%));
+    color: var(--contrast-color);
+    font-size: 1.375rem;
+    box-shadow: 0 8px 18px -6px color-mix(in srgb, var(--accent-color), transparent 30%);
+  }
+
+  .fin-balance-heading {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 0;
+  }
+
+  .fin-balance-label {
+    font-family: var(--heading-font);
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: #cfc7e8;
+  }
+
+  .fin-balance-account {
+    font-size: 0.75rem;
+    color: #8c81b3;
+  }
+
+  .fin-balance-trend {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    margin-left: auto;
+    padding: 5px 12px;
+    border-radius: var(--radius-full);
+    background: color-mix(in srgb, var(--success-color), transparent 82%);
+    color: var(--success-color);
+    font-size: 0.75rem;
+    font-weight: 700;
+  }
+
+  .fin-balance-amount {
+    position: relative;
+    z-index: 1;
+    font-family: var(--heading-font);
+    font-size: 2.75rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1;
+    color: var(--contrast-color);
+
+    span {
+      font-size: 1.5rem;
+      color: #8c81b3;
+    }
+  }
+
+  .fin-balance-stats {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-lg);
+    flex-wrap: wrap;
+  }
+
+  .fin-balance-divider {
+    width: 1px;
+    height: 36px;
+    background: color-mix(in srgb, #cfc7e8, transparent 82%);
+  }
+
+  .fin-balance-stat {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+  }
+
+  .fin-balance-stat-arrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    flex-shrink: 0;
+    border-radius: var(--radius-full);
+    font-size: 1rem;
+
+    &.income {
+      background: color-mix(in srgb, var(--success-color), transparent 82%);
+      color: var(--success-color);
+    }
+
+    &.expense {
+      background: color-mix(in srgb, var(--danger-color), transparent 82%);
+      color: var(--danger-color);
+    }
+  }
+
+  .fin-balance-stat-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .fin-balance-stat-label {
+    font-size: 0.71875rem;
+    color: #8c81b3;
+  }
+
+  .fin-balance-stat-value {
+    font-family: var(--heading-font);
+    font-size: 1rem;
+    font-weight: 700;
+    color: #cfc7e8;
+  }
+
+  /*------------------------------------------------------------
+  # Side KPI Tiles
+  ------------------------------------------------------------*/
+  .fin-hero-side {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .fin-kpi {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--spacing-md);
+    margin-bottom: 0;
+    padding: var(--spacing-lg);
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 14px 28px -12px color-mix(in srgb, var(--accent-color), transparent 65%);
+    }
+  }
+
+  .fin-kpi-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    flex-shrink: 0;
+    border-radius: var(--radius-lg);
+    font-size: 1.375rem;
+
+    &.success {
+      background: color-mix(in srgb, var(--success-color), transparent 88%);
+      color: var(--success-color);
+    }
+
+    &.info {
+      background: color-mix(in srgb, var(--info-color), transparent 88%);
+      color: var(--info-color);
+    }
+  }
+
+  .fin-kpi-body {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 0;
+  }
+
+  .fin-kpi-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--muted-color);
+  }
+
+  .fin-kpi-value {
+    font-family: var(--heading-font);
+    font-size: 1.375rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--heading-color);
+  }
+
+  .fin-kpi-trend {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    margin-left: auto;
+    padding: 4px 10px;
+    border-radius: var(--radius-full);
+    font-size: 0.71875rem;
+    font-weight: 700;
+
+    &.up {
+      background: color-mix(in srgb, var(--success-color), transparent 88%);
+      color: var(--success-color);
+    }
+
+    &.down {
+      background: color-mix(in srgb, var(--danger-color), transparent 88%);
+      color: var(--danger-color);
+    }
+  }
+
+  /*------------------------------------------------------------
+  # Main Row: Chart + Budgets
+  ------------------------------------------------------------*/
+  .fin-main-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 360px;
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .fin-chart-card,
+  .fin-budgets-card {
+    margin-bottom: 0;
+  }
+
+  .fin-chart {
+    min-height: 330px;
+  }
+
+  .fin-seg {
+    display: inline-flex;
+    gap: 4px;
+    padding: 4px;
+    border-radius: var(--radius-full);
+    background: color-mix(in srgb, var(--accent-color), transparent 92%);
+  }
+
+  .fin-seg-btn {
+    padding: 5px 14px;
+    border: none;
+    border-radius: var(--radius-full);
+    background: transparent;
+    color: var(--muted-color);
+    font-size: 0.75rem;
+    font-weight: 600;
+    transition: color var(--transition-fast), background var(--transition-fast);
+
+    &:hover {
+      color: var(--accent-color);
+    }
+
+    &.active {
+      background: linear-gradient(105deg, var(--accent-color), color-mix(in srgb, var(--accent-color), var(--danger-color) 42%));
+      color: var(--contrast-color);
+      box-shadow: 0 4px 10px -3px color-mix(in srgb, var(--accent-color), transparent 40%);
+    }
+  }
+
+  /* Budgets */
+  .fin-budget-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+  }
+
+  .fin-budget-item {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-md);
+  }
+
+  .fin-budget-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: var(--radius-md);
+    font-size: 1.25rem;
+
+    &.accent {
+      background: color-mix(in srgb, var(--accent-color), transparent 88%);
+      color: var(--accent-color);
+    }
+
+    &.info {
+      background: color-mix(in srgb, var(--info-color), transparent 88%);
+      color: var(--info-color);
+    }
+
+    &.warning {
+      background: color-mix(in srgb, var(--warning-color), transparent 88%);
+      color: var(--warning-color);
+    }
+
+    &.success {
+      background: color-mix(in srgb, var(--success-color), transparent 88%);
+      color: var(--success-color);
+    }
+  }
+
+  .fin-budget-info {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .fin-budget-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: var(--spacing-sm);
+  }
+
+  .fin-budget-name {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--heading-color);
+  }
+
+  .fin-budget-pct {
+    font-family: var(--heading-font);
+    font-size: 0.8125rem;
+    font-weight: 700;
+    color: var(--accent-color);
+  }
+
+  .fin-budget-amounts {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.75rem;
+    color: var(--muted-color);
+  }
+
+  .fin-budget-track {
+    height: 6px;
+    border-radius: var(--radius-full);
+    background: color-mix(in srgb, var(--accent-color), transparent 92%);
+    overflow: hidden;
+  }
+
+  .fin-budget-fill {
+    height: 100%;
+    border-radius: var(--radius-full);
+    background: linear-gradient(105deg, var(--accent-color), color-mix(in srgb, var(--accent-color), var(--danger-color) 42%));
+  }
+
+  /* Over 80% of limit: warning tint */
+  .fin-budget-item.over .fin-budget-pct {
+    color: var(--warning-color);
+  }
+
+  .fin-budget-item.over .fin-budget-track {
+    background: color-mix(in srgb, var(--warning-color), transparent 88%);
+  }
+
+  .fin-budget-item.over .fin-budget-fill {
+    background: linear-gradient(105deg, var(--warning-color), color-mix(in srgb, var(--warning-color), var(--danger-color) 55%));
+  }
+
+  /*------------------------------------------------------------
+  # Bottom Row: Transactions + Upcoming Payments
+  ------------------------------------------------------------*/
+  .fin-bottom-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 360px;
+    gap: var(--spacing-lg);
+  }
+
+  .fin-transactions-card,
+  .fin-upcoming-card {
+    margin-bottom: 0;
+  }
+
+  .fin-txn-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .fin-txn {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    padding: 14px 0;
+    border-bottom: 1px solid var(--border-color-light);
+
+    &:first-child {
+      padding-top: 0;
+    }
+
+    &:last-child {
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+  }
+
+  .fin-txn-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    border-radius: var(--radius-lg);
+    font-size: 1.25rem;
+
+    &.accent {
+      background: color-mix(in srgb, var(--accent-color), transparent 88%);
+      color: var(--accent-color);
+    }
+
+    &.success {
+      background: color-mix(in srgb, var(--success-color), transparent 88%);
+      color: var(--success-color);
+    }
+
+    &.warning {
+      background: color-mix(in srgb, var(--warning-color), transparent 88%);
+      color: var(--warning-color);
+    }
+
+    &.danger {
+      background: color-mix(in srgb, var(--danger-color), transparent 88%);
+      color: var(--danger-color);
+    }
+
+    &.info {
+      background: color-mix(in srgb, var(--info-color), transparent 88%);
+      color: var(--info-color);
+    }
+  }
+
+  .fin-txn-info {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .fin-txn-name {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--heading-color);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .fin-txn-meta {
+    font-size: 0.75rem;
+    color: var(--muted-color);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .fin-txn-amount {
+    font-family: var(--heading-font);
+    font-size: 0.9375rem;
+    font-weight: 700;
+    white-space: nowrap;
+
+    &.income {
+      color: var(--success-color);
+    }
+
+    &.expense {
+      color: var(--danger-color);
+    }
+  }
+
+  /* Status pill with glowing dot */
+  .fin-status-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 12px;
+    border-radius: var(--radius-full);
+    font-size: 0.71875rem;
+    font-weight: 600;
+    white-space: nowrap;
+
+    &.completed {
+      background: color-mix(in srgb, var(--success-color), transparent 88%);
+      color: var(--success-color);
+    }
+
+    &.pending {
+      background: color-mix(in srgb, var(--warning-color), transparent 88%);
+      color: var(--warning-color);
+    }
+  }
+
+  .fin-status-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: var(--radius-full);
+    background: currentColor;
+    box-shadow: 0 0 0 3px color-mix(in srgb, currentColor, transparent 78%);
+  }
+
+  /* Upcoming payments */
+  .fin-upcoming-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .fin-upcoming-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border-color-light);
+
+    &:first-child {
+      padding-top: 0;
+    }
+
+    &:last-child {
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+  }
+
+  .fin-date-pill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 50px;
+    flex-shrink: 0;
+    border-radius: var(--radius-md);
+    background: color-mix(in srgb, var(--accent-color), transparent 92%);
+    border: 1px solid color-mix(in srgb, var(--accent-color), transparent 84%);
+  }
+
+  .fin-date-day {
+    font-family: var(--heading-font);
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.1;
+    color: var(--accent-color);
+  }
+
+  .fin-date-month {
+    font-size: 0.625rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--muted-color);
+  }
+
+  .fin-upcoming-info {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .fin-upcoming-name {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--heading-color);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .fin-upcoming-meta {
+    font-size: 0.71875rem;
+    color: var(--muted-color);
+  }
+
+  .fin-upcoming-amount {
+    font-family: var(--heading-font);
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--heading-color);
+    white-space: nowrap;
+  }
+
+  /*------------------------------------------------------------
+  # Responsive
+  ------------------------------------------------------------*/
+  @media (max-width: 1199px) {
+    .fin-main-row,
+    .fin-bottom-row {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 991px) {
+    .fin-hero-row {
+      grid-template-columns: 1fr;
+    }
+
+    .fin-hero-side {
+      grid-template-rows: none;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (max-width: 575px) {
+    .fin-hero-side {
+      grid-template-columns: 1fr;
+    }
+
+    .fin-balance-amount {
+      font-size: 2.125rem;
+    }
+
+    .fin-txn {
+      flex-wrap: wrap;
+    }
+
+    .fin-status-pill {
+      margin-left: 56px;
+    }
+  }
+}

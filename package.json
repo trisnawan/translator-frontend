@@ -3,10 +3,12 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "start": "npm run build:css && ng serve",
+    "build": "npm run build:css && ng build",
+    "watch": "npm run build:css && ng build --watch --configuration development",
+    "test": "ng test",
+    "build:css": "sass --no-source-map --style=compressed templates/assets/scss/main.scss public/assets/css/main.css",
+    "watch:css": "sass --no-source-map --watch --style=compressed templates/assets/scss/main.scss public/assets/css/main.css"
   },
   "private": true,
   "packageManager": "npm@12.0.2",
@@ -26,6 +28,7 @@
     "@angular/compiler-cli": "^21.2.0",
     "jsdom": "^28.0.0",
     "prettier": "^3.8.1",
+    "sass": "^1.97.3",
     "typescript": "~5.9.2",
     "vitest": "^4.0.8"
   }

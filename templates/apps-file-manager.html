@@ -1,0 +1,1435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>File Manager - TrendyAdmin</title>
+  <meta name="description" content="TrendyAdmin - Bootstrap Admin Template">
+  <meta name="keywords" content="admin, dashboard, bootstrap">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts - Plus Jakarta Sans (body) + Outfit (headings) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="assets/vendor/phosphor-icons/phosphor-icons.css" rel="stylesheet">
+  <link href="assets/vendor/lucide-icons/lucide.css" rel="stylesheet">
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/choices.js/choices.min.css" rel="stylesheet">
+  <link href="assets/vendor/flatpickr/flatpickr.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+    * Template Name: TrendyAdmin - Bootstrap Admin Template
+    * Template URL: https://bootstrapmade.com/trendy-admin-bootstrap-dashboard-template/
+    * Updated: Jul 29 2026 with Bootstrap v5.3.8
+    * Author: BootstrapMade.com
+    * License: https://bootstrapmade.com/license/
+    ======================================================== -->
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-inner">
+      <!-- Header Left -->
+      <div class="header-left">
+        <button class="sidebar-toggle" title="Toggle Sidebar">
+          <i class="ph ph-list"></i>
+        </button>
+        <a href="index.html" class="header-logo">
+          <span class="header-logo-mark"><i class="bi bi-lightning-charge-fill"></i></span>
+          <span class="header-logo-text">TrendyAdmin</span>
+        </a>
+
+        <!-- Apps Quick Access -->
+        <div class="header-action dropdown apps-dropdown">
+          <button class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" title="Quick Access">
+            <i class="ph ph-dots-nine"></i>
+          </button>
+          <div class="dropdown-menu">
+            <div class="apps-menu-header">
+              <h6>Quick Access</h6>
+              <span>Jump straight into an app</span>
+            </div>
+            <div class="apps-grid">
+              <a href="apps-chat.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-chat-circle-dots"></i></span>
+                <span>Chat</span>
+              </a>
+              <a href="apps-email.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-envelope"></i></span>
+                <span>Email</span>
+              </a>
+              <a href="apps-calendar.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-calendar-blank"></i></span>
+                <span>Calendar</span>
+              </a>
+              <a href="apps-kanban.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-kanban"></i></span>
+                <span>Kanban</span>
+              </a>
+              <a href="apps-file-manager.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-folder-open"></i></span>
+                <span>Files</span>
+              </a>
+              <a href="apps-todo.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-check-square"></i></span>
+                <span>Todo</span>
+              </a>
+              <a href="apps-contacts.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-address-book"></i></span>
+                <span>Contacts</span>
+              </a>
+              <a href="apps-support.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-headset"></i></span>
+                <span>Support</span>
+              </a>
+              <a href="invoice-list.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-receipt"></i></span>
+                <span>Invoices</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Header Search (Desktop) -->
+      <div class="header-search">
+        <form class="search-form" action="search-results.html" method="GET">
+          <button type="submit"><i class="ph ph-magnifying-glass"></i></button>
+          <input type="search" name="q" placeholder="Search anything..." autocomplete="off">
+          <span class="search-hint">⌘K</span>
+        </form>
+      </div>
+
+      <!-- Header Right -->
+      <div class="header-right">
+        <!-- Desktop Actions (hidden on mobile, shown in mobile menu) -->
+        <div class="header-actions-desktop">
+          <!-- Quick Create -->
+          <div class="dropdown create-dropdown">
+            <button class="create-btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="ph ph-plus"></i>
+              <span>Create</span>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end create-menu">
+              <a class="dropdown-item" href="apps-kanban.html">
+                <span class="create-item-icon"><i class="ph ph-kanban"></i></span>
+                <span class="create-item-text">
+                  <span class="create-item-title">New Project</span>
+                  <span class="create-item-sub">Start a kanban board</span>
+                </span>
+              </a>
+              <a class="dropdown-item" href="apps-todo.html">
+                <span class="create-item-icon"><i class="ph ph-check-square"></i></span>
+                <span class="create-item-text">
+                  <span class="create-item-title">New Task</span>
+                  <span class="create-item-sub">Add to your todo list</span>
+                </span>
+              </a>
+              <a class="dropdown-item" href="apps-contacts.html">
+                <span class="create-item-icon"><i class="ph ph-user-plus"></i></span>
+                <span class="create-item-text">
+                  <span class="create-item-title">New Contact</span>
+                  <span class="create-item-sub">Save a new person</span>
+                </span>
+              </a>
+              <a class="dropdown-item" href="invoice-list.html">
+                <span class="create-item-icon"><i class="ph ph-receipt"></i></span>
+                <span class="create-item-text">
+                  <span class="create-item-title">New Invoice</span>
+                  <span class="create-item-sub">Bill a customer</span>
+                </span>
+              </a>
+            </div>
+          </div>
+
+          <div class="header-divider"></div>
+
+          <!-- Theme Toggle -->
+          <button class="header-action theme-toggle" title="Toggle Theme">
+            <i class="ph ph-moon icon-dark"></i>
+            <i class="ph ph-sun icon-light"></i>
+          </button>
+
+          <!-- Fullscreen Toggle -->
+          <button class="header-action fullscreen-toggle" onclick="toggleFullscreen()" title="Fullscreen">
+            <i class="ph ph-arrows-out icon-enter"></i>
+            <i class="ph ph-arrows-in icon-exit"></i>
+          </button>
+
+          <!-- Messages -->
+          <div class="header-action dropdown messages-dropdown">
+            <button class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" title="Messages">
+              <i class="ph ph-chat-teardrop-text"></i>
+              <span class="badge">2</span>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end">
+              <div class="messages-header">
+                <h6>Messages</h6>
+                <a href="apps-chat.html">View all</a>
+              </div>
+              <div class="messages-list">
+                <a href="apps-chat.html" class="message-item unread">
+                  <span class="message-avatar">
+                    <img src="assets/img/avatars/avatar-2.webp" alt="Sarah Johnson">
+                    <span class="message-status"></span>
+                  </span>
+                  <span class="message-content">
+                    <span class="message-name">Sarah Johnson</span>
+                    <span class="message-text">The new dashboard mockups look amazing! 🔥</span>
+                  </span>
+                  <span class="message-time">2m</span>
+                </a>
+                <a href="apps-chat.html" class="message-item unread">
+                  <span class="message-avatar">
+                    <img src="assets/img/avatars/avatar-3.webp" alt="Mike Chen">
+                  </span>
+                  <span class="message-content">
+                    <span class="message-name">Mike Chen</span>
+                    <span class="message-text">Can you review my PR when you get a chance?</span>
+                  </span>
+                  <span class="message-time">1h</span>
+                </a>
+                <a href="apps-chat.html" class="message-item">
+                  <span class="message-avatar">
+                    <img src="assets/img/avatars/avatar-4.webp" alt="Emma Davis">
+                  </span>
+                  <span class="message-content">
+                    <span class="message-name">Emma Davis</span>
+                    <span class="message-text">Meeting moved to 3pm tomorrow</span>
+                  </span>
+                  <span class="message-time">3h</span>
+                </a>
+              </div>
+              <div class="messages-footer">
+                <a href="apps-chat.html">Open chat <i class="ph ph-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Notifications -->
+          <div class="header-action dropdown notification-dropdown">
+            <button class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" title="Notifications">
+              <i class="ph ph-bell"></i>
+              <span class="badge">3</span>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end">
+              <div class="notification-header">
+                <h6>You have 3 new notifications</h6>
+                <a href="#" class="notification-mark-read" data-notification-action="mark-all-read" title="Mark all as read">
+                  <i class="ph ph-checks"></i>
+                </a>
+              </div>
+              <div class="notification-list">
+                <div class="notification-item unread">
+                  <span class="notification-icon success">
+                    <i class="ph ph-check-circle"></i>
+                  </span>
+                  <span class="notification-content">
+                    <span class="notification-title">Order Completed</span>
+                    <span class="notification-text">Your order #12345 has been delivered</span>
+                  </span>
+                  <span class="notification-meta">
+                    <span class="notification-time">5m</span>
+                    <span class="notification-dot"></span>
+                  </span>
+                </div>
+                <div class="notification-item unread">
+                  <span class="notification-icon warning">
+                    <i class="ph ph-warning"></i>
+                  </span>
+                  <span class="notification-content">
+                    <span class="notification-title">Low Storage</span>
+                    <span class="notification-text">Server storage is running low (85% used)</span>
+                  </span>
+                  <span class="notification-meta">
+                    <span class="notification-time">1h</span>
+                    <span class="notification-dot"></span>
+                  </span>
+                </div>
+                <div class="notification-item">
+                  <span class="notification-icon info">
+                    <i class="ph ph-info"></i>
+                  </span>
+                  <span class="notification-content">
+                    <span class="notification-title">New Feature</span>
+                    <span class="notification-text">Dark mode is now available</span>
+                  </span>
+                  <span class="notification-meta">
+                    <span class="notification-time">2h</span>
+                    <span class="notification-dot"></span>
+                  </span>
+                </div>
+              </div>
+              <div class="notification-footer">
+                <a href="notifications.html">View all</a>
+                <a href="settings.html">Settings</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="header-divider"></div>
+
+          <!-- User Dropdown -->
+          <div class="header-action dropdown user-dropdown">
+            <button class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="assets/img/profile-img.webp" alt="User" class="avatar">
+              <span class="user-name">John Doe</span>
+              <i class="ph ph-caret-down user-caret"></i>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end">
+              <div class="user-menu-card">
+                <span class="user-menu-avatar">
+                  <img src="assets/img/profile-img.webp" alt="User">
+                </span>
+                <span class="user-menu-name">John Doe</span>
+                <span class="user-menu-mail">john@trendyadmin.com</span>
+                <span class="user-menu-role">Administrator</span>
+              </div>
+              <div class="user-menu-body">
+                <a class="dropdown-item" href="profile.html">
+                  <span class="user-menu-item-icon"><i class="ph ph-user"></i></span>
+                  My Profile
+                  <i class="ph ph-caret-right user-menu-item-caret"></i>
+                </a>
+                <a class="dropdown-item" href="settings.html">
+                  <span class="user-menu-item-icon"><i class="ph ph-gear"></i></span>
+                  Settings
+                  <i class="ph ph-caret-right user-menu-item-caret"></i>
+                </a>
+                <a class="dropdown-item" href="activity.html">
+                  <span class="user-menu-item-icon"><i class="ph ph-pulse"></i></span>
+                  Activity Log
+                  <i class="ph ph-caret-right user-menu-item-caret"></i>
+                </a>
+                <a class="dropdown-item" href="invoice-list.html">
+                  <span class="user-menu-item-icon"><i class="ph ph-receipt"></i></span>
+                  Billing
+                  <i class="ph ph-caret-right user-menu-item-caret"></i>
+                </a>
+              </div>
+              <div class="user-menu-footer">
+                <a href="auth-login.html" class="user-menu-signout">
+                  <i class="ph ph-sign-out"></i> Sign Out
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile Actions (visible only on mobile) -->
+        <div class="header-actions-mobile">
+          <!-- Search Toggle (Mobile) -->
+          <button class="header-action search-toggle" title="Search">
+            <i class="ph ph-magnifying-glass"></i>
+          </button>
+
+          <!-- Mobile Menu Toggle -->
+          <button class="header-action mobile-menu-toggle" title="More">
+            <i class="ph ph-dots-three-vertical"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Search -->
+  <div class="mobile-search">
+    <form class="search-form" action="search-results.html" method="GET">
+      <input type="search" name="q" placeholder="Search anything..." autocomplete="off">
+      <button type="submit"><i class="ph ph-magnifying-glass"></i></button>
+    </form>
+  </div>
+
+  <!-- Mobile Header Menu -->
+  <div class="mobile-header-menu">
+    <div class="mobile-header-menu-content">
+      <!-- Theme Toggle -->
+      <button class="mobile-menu-item theme-toggle" title="Toggle Theme">
+        <i class="ph ph-moon icon-dark"></i>
+        <i class="ph ph-sun icon-light"></i>
+        <span class="mobile-menu-label">Theme</span>
+      </button>
+
+      <!-- Fullscreen Toggle -->
+      <button class="mobile-menu-item fullscreen-toggle" onclick="toggleFullscreen()" title="Fullscreen">
+        <i class="ph ph-arrows-out icon-enter"></i>
+        <i class="ph ph-arrows-in icon-exit"></i>
+        <span class="mobile-menu-label">Fullscreen</span>
+      </button>
+
+      <!-- Messages -->
+      <a href="apps-chat.html" class="mobile-menu-item">
+        <i class="ph ph-chat-teardrop-text"></i>
+        <span class="badge">2</span>
+        <span class="mobile-menu-label">Messages</span>
+      </a>
+
+      <!-- Notifications -->
+      <a href="notifications.html" class="mobile-menu-item">
+        <i class="ph ph-bell"></i>
+        <span class="badge">3</span>
+        <span class="mobile-menu-label">Notifications</span>
+      </a>
+
+      <!-- Profile -->
+      <a href="profile.html" class="mobile-menu-item">
+        <i class="ph ph-user"></i>
+        <span class="mobile-menu-label">Profile</span>
+      </a>
+
+      <!-- Sign Out -->
+      <a href="auth-login.html" class="mobile-menu-item mobile-menu-item-danger">
+        <i class="ph ph-sign-out"></i>
+        <span class="mobile-menu-label">Sign Out</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <!-- Sidebar Header -->
+    <div class="sidebar-header">
+      <a href="index.html" class="sidebar-logo">
+        <span class="sidebar-logo-mark"><i class="bi bi-lightning-charge-fill"></i></span>
+        <span class="sidebar-logo-text">TrendyAdmin</span>
+      </a>
+      <button class="sidebar-close">
+        <i class="ph ph-x"></i>
+      </button>
+    </div>
+
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar-nav">
+      <ul class="nav-menu">
+        <li class="nav-heading"><span>Overview</span></li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="index.html">
+            <span class="nav-icon"><i class="ph ph-house"></i></span>
+            <span class="nav-text">Home</span>
+          </a>
+        </li>
+
+        <!-- Dashboards Submenu -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-gauge"></i></span>
+            <span class="nav-text">Dashboards</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="dashboard-sales.html">Sales</a></li>
+            <li><a class="nav-link " href="dashboard-analytics.html">Analytics</a></li>
+            <li><a class="nav-link " href="dashboard-crm.html">CRM</a></li>
+            <li><a class="nav-link " href="dashboard-marketing.html">Marketing</a></li>
+            <li><a class="nav-link " href="dashboard-projects.html">Projects</a></li>
+            <li><a class="nav-link " href="dashboard-finance.html">Finance</a></li>
+          </ul>
+        </li>
+
+        <!-- Users -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-users"></i></span>
+            <span class="nav-text">Users</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="users.html">Users List</a></li>
+            <li><a class="nav-link " href="users-view.html">User View</a></li>
+            <li><a class="nav-link " href="users-edit.html">User Edit</a></li>
+            <li><a class="nav-link " href="profile.html">Profile</a></li>
+            <!-- 3rd Level - Settings submenu -->
+            <li class="has-submenu ">
+              <a class="nav-link" href="#" aria-expanded="false">
+                Settings
+                <i class="ph ph-caret-right nav-arrow"></i>
+              </a>
+              <ul class="nav-submenu ">
+                <li><a class="nav-link " href="settings.html">Account</a></li>
+                <li><a class="nav-link " href="notifications.html">Notifications</a></li>
+                <li><a class="nav-link " href="activity.html">Activity</a></li>
+              </ul>
+            </li>
+            <li><a class="nav-link " href="roles.html">Roles & Permissions</a></li>
+          </ul>
+        </li>
+
+        <!-- Authentication -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-shield-check"></i></span>
+            <span class="nav-text">Authentication</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="auth-login.html">Login</a></li>
+            <li><a class="nav-link " href="auth-register.html">Register</a></li>
+            <li><a class="nav-link " href="auth-forgot-password.html">Forgot Password</a></li>
+            <li><a class="nav-link " href="auth-reset-password.html">Reset Password</a></li>
+            <li><a class="nav-link " href="auth-verify-email.html">Email Verification</a></li>
+            <li><a class="nav-link " href="auth-two-factor.html">Two Factor Auth</a></li>
+            <li><a class="nav-link " href="auth-lock-screen.html">Lock Screen</a></li>
+          </ul>
+        </li>
+
+        <!-- Apps Section -->
+        <li class="nav-heading"><span>Apps</span></li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-calendar.html">
+            <span class="nav-icon"><i class="ph ph-calendar-blank"></i></span>
+            <span class="nav-text">Calendar</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-kanban.html">
+            <span class="nav-icon"><i class="ph ph-kanban"></i></span>
+            <span class="nav-text">Kanban Board</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-chat.html">
+            <span class="nav-icon"><i class="ph ph-chat-circle-dots"></i></span>
+            <span class="nav-text">Chat</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-contacts.html">
+            <span class="nav-icon"><i class="ph ph-address-book"></i></span>
+            <span class="nav-text">Contacts</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link active" href="apps-file-manager.html">
+            <span class="nav-icon"><i class="ph ph-folder-open"></i></span>
+            <span class="nav-text">File Manager</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-email.html">
+            <span class="nav-icon"><i class="ph ph-envelope"></i></span>
+            <span class="nav-text">Email</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-todo.html">
+            <span class="nav-icon"><i class="ph ph-check-square"></i></span>
+            <span class="nav-text">Todo List</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-support.html">
+            <span class="nav-icon"><i class="ph ph-headset"></i></span>
+            <span class="nav-text">Support Center</span>
+          </a>
+        </li>
+
+        <!-- UI Elements Section -->
+        <li class="nav-heading"><span>UI Elements</span></li>
+
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-puzzle-piece"></i></span>
+            <span class="nav-text">Components</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="components-alerts.html">Alerts</a></li>
+            <li><a class="nav-link " href="components-accordion.html">Accordion</a></li>
+            <li><a class="nav-link " href="components-badges.html">Badges</a></li>
+            <li><a class="nav-link " href="components-breadcrumbs.html">Breadcrumbs</a></li>
+            <li><a class="nav-link " href="components-buttons.html">Buttons</a></li>
+            <li><a class="nav-link " href="components-cards.html">Cards</a></li>
+            <li><a class="nav-link " href="components-carousel.html">Carousel</a></li>
+            <li><a class="nav-link " href="components-dropdowns.html">Dropdowns</a></li>
+            <li><a class="nav-link " href="components-list-group.html">List Group</a></li>
+            <li><a class="nav-link " href="components-modal.html">Modal</a></li>
+            <li><a class="nav-link " href="components-nav-tabs.html">Navs & Tabs</a></li>
+            <li><a class="nav-link " href="components-offcanvas.html">Offcanvas</a></li>
+            <li><a class="nav-link " href="components-pagination.html">Pagination</a></li>
+            <li><a class="nav-link " href="components-popovers.html">Popovers</a></li>
+            <li><a class="nav-link " href="components-progress.html">Progress</a></li>
+            <li><a class="nav-link " href="components-spinners.html">Spinners</a></li>
+            <li><a class="nav-link " href="components-toasts.html">Toasts</a></li>
+            <li><a class="nav-link " href="components-tooltips.html">Tooltips</a></li>
+          </ul>
+        </li>
+
+        <!-- Widgets -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-stack"></i></span>
+            <span class="nav-text">Widgets</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="widgets-cards.html">Cards</a></li>
+            <li><a class="nav-link " href="widgets-banners.html">Banners</a></li>
+            <li><a class="nav-link " href="widgets-charts.html">Charts</a></li>
+            <li><a class="nav-link " href="widgets-apps.html">Apps</a></li>
+            <li><a class="nav-link " href="widgets-data.html">Data</a></li>
+          </ul>
+        </li>
+
+        <!-- Forms Section -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-list-checks"></i></span>
+            <span class="nav-text">Forms</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="forms-elements.html">Form Elements</a></li>
+            <li><a class="nav-link " href="forms-layouts.html">Form Layouts</a></li>
+            <li><a class="nav-link " href="forms-validation.html">Validation</a></li>
+            <li><a class="nav-link " href="forms-wizard.html">Wizard</a></li>
+            <li><a class="nav-link " href="forms-editors.html">Rich Editors</a></li>
+            <li><a class="nav-link " href="forms-pickers.html">Date/Time Pickers</a></li>
+            <li><a class="nav-link " href="forms-select.html">Advanced Select</a></li>
+            <li><a class="nav-link " href="forms-upload.html">File Upload</a></li>
+          </ul>
+        </li>
+
+        <!-- Tables Section -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-table"></i></span>
+            <span class="nav-text">Tables</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="tables-basic.html">Basic Tables</a></li>
+            <li><a class="nav-link " href="tables-datatables.html">DataTables</a></li>
+            <li><a class="nav-link " href="tables-responsive.html">Responsive Tables</a></li>
+          </ul>
+        </li>
+
+        <!-- Charts Section -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-chart-bar"></i></span>
+            <span class="nav-text">Charts</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="charts-apexcharts.html">ApexCharts</a></li>
+            <li><a class="nav-link " href="charts-chartjs.html">Chart.js</a></li>
+            <li><a class="nav-link " href="charts-echarts.html">ECharts</a></li>
+          </ul>
+        </li>
+
+        <!-- Icons Section -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-diamond"></i></span>
+            <span class="nav-text">Icons</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="icons-bootstrap.html">Bootstrap Icons</a></li>
+            <li><a class="nav-link " href="icons-remixicon.html">Remix Icons</a></li>
+            <li><a class="nav-link " href="icons-fontawesome.html">Font Awesome</a></li>
+            <li><a class="nav-link " href="icons-phosphor.html">Phosphor Icons</a></li>
+            <li><a class="nav-link " href="icons-lucide.html">Lucide Icons</a></li>
+          </ul>
+        </li>
+
+        <!-- Pages Section -->
+        <li class="nav-heading"><span>Pages</span></li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="contact.html">
+            <span class="nav-icon"><i class="ph ph-envelope-simple"></i></span>
+            <span class="nav-text">Contact</span>
+          </a>
+        </li>
+
+        <!-- Invoices -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-receipt"></i></span>
+            <span class="nav-text">Invoices</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="invoice-list.html">Invoice List</a></li>
+            <li><a class="nav-link " href="invoice.html">Invoice View</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="pricing.html">
+            <span class="nav-icon"><i class="ph ph-tag"></i></span>
+            <span class="nav-text">Pricing</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="faq.html">
+            <span class="nav-icon"><i class="ph ph-question"></i></span>
+            <span class="nav-text">FAQ</span>
+          </a>
+        </li>
+
+        <!-- Error Pages -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-warning"></i></span>
+            <span class="nav-text">Error Pages</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="error-404.html">404 Not Found</a></li>
+            <li><a class="nav-link " href="error-403.html">403 Forbidden</a></li>
+            <li><a class="nav-link " href="error-500.html">500 Server Error</a></li>
+            <li><a class="nav-link " href="error-maintenance.html">Maintenance</a></li>
+            <li><a class="nav-link " href="error-coming-soon.html">Coming Soon</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="timeline.html">
+            <span class="nav-icon"><i class="ph ph-clock-counter-clockwise"></i></span>
+            <span class="nav-text">Timeline</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="search-results.html">
+            <span class="nav-icon"><i class="ph ph-magnifying-glass"></i></span>
+            <span class="nav-text">Search Results</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="blank.html">
+            <span class="nav-icon"><i class="ph ph-file"></i></span>
+            <span class="nav-text">Blank Page</span>
+          </a>
+        </li>
+
+      </ul>
+    </nav>
+
+    <!-- Sidebar Footer - User Card -->
+    <div class="sidebar-footer">
+      <div class="sidebar-user">
+        <a href="profile.html" class="sidebar-user-link">
+          <span class="sidebar-user-avatar">
+            <img src="assets/img/profile-img.webp" alt="User">
+            <span class="sidebar-user-status"></span>
+          </span>
+          <span class="sidebar-user-info">
+            <span class="sidebar-user-name">John Doe</span>
+            <span class="sidebar-user-role">Administrator</span>
+          </span>
+        </a>
+        <div class="sidebar-user-actions">
+          <a href="settings.html" class="sidebar-user-action" title="Settings">
+            <i class="ph ph-gear"></i>
+          </a>
+          <a href="auth-login.html" class="sidebar-user-action sidebar-user-logout" title="Logout">
+            <i class="ph ph-sign-out"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Sidebar Overlay (Mobile) -->
+  <div class="sidebar-overlay"></div>
+
+  <!-- Main Content -->
+  <main class="main">
+    <div class="main-content page-file-manager">
+      <!-- Page Header -->
+      <div class="page-header">
+        <h1 class="page-title">File Manager</h1>
+        <nav class="breadcrumb">
+          <a href="index.html" class="breadcrumb-item">Home</a>
+          <a href="#" class="breadcrumb-item">Apps</a>
+          <span class="breadcrumb-item active">File Manager</span>
+        </nav>
+      </div>
+
+      <!-- File Manager -->
+      <div class="file-manager">
+        <!-- Mobile Sidebar Overlay -->
+        <div class="fm-sidebar-overlay" id="fmSidebarOverlay"></div>
+
+        <!-- Sidebar -->
+        <div class="fm-sidebar" id="fmSidebar">
+          <!-- Mobile Close Button -->
+          <button class="fm-sidebar-close" id="fmSidebarClose" aria-label="Close sidebar">
+            <i class="ph ph-x"></i>
+          </button>
+          <div class="fm-sidebar-header">
+            <button class="fm-upload-btn" data-bs-toggle="modal" data-bs-target="#uploadModal">
+              <i class="ph ph-cloud-arrow-up"></i>
+              <span>Upload Files</span>
+            </button>
+          </div>
+
+          <nav class="fm-nav">
+            <a class="fm-nav-item active">
+              <i class="ph ph-folder"></i>
+              <span>My Files</span>
+            </a>
+            <a class="fm-nav-item">
+              <i class="ph ph-star"></i>
+              <span>Starred</span>
+              <span class="badge bg-primary">5</span>
+            </a>
+            <a class="fm-nav-item">
+              <i class="ph ph-clock-counter-clockwise"></i>
+              <span>Recent</span>
+            </a>
+            <a class="fm-nav-item">
+              <i class="ph ph-users"></i>
+              <span>Shared</span>
+              <span class="badge bg-success">12</span>
+            </a>
+
+            <div class="fm-nav-title">Categories</div>
+            <a class="fm-nav-item">
+              <i class="ph ph-file-text"></i>
+              <span>Documents</span>
+            </a>
+            <a class="fm-nav-item">
+              <i class="ph ph-image"></i>
+              <span>Images</span>
+            </a>
+            <a class="fm-nav-item">
+              <i class="ph ph-film-strip"></i>
+              <span>Videos</span>
+            </a>
+            <a class="fm-nav-item">
+              <i class="ph ph-music-notes"></i>
+              <span>Audio</span>
+            </a>
+
+            <div class="fm-nav-title">Other</div>
+            <a class="fm-nav-item">
+              <i class="ph ph-trash"></i>
+              <span>Trash</span>
+            </a>
+          </nav>
+
+          <div class="fm-storage">
+            <div class="fm-storage-header">
+              <span class="fm-storage-label">Storage</span>
+              <span class="fm-storage-value">67.4 GB / 100 GB</span>
+            </div>
+            <div class="progress">
+              <div class="progress-bar" style="width: 67.4%"></div>
+            </div>
+            <span class="fm-storage-detail">32.6 GB free</span>
+          </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="fm-main">
+          <!-- Header -->
+          <div class="fm-header">
+            <!-- Mobile Sidebar Toggle -->
+            <button class="fm-sidebar-toggle" id="fmSidebarToggle" aria-label="Open folders">
+              <i class="ph ph-folder"></i>
+            </button>
+
+            <div class="fm-breadcrumb">
+              <a href="#"><i class="ph ph-house"></i></a>
+              <i class="ph ph-caret-right"></i>
+              <a href="#">My Files</a>
+              <i class="ph ph-caret-right"></i>
+              <span>Projects</span>
+            </div>
+
+            <div class="fm-actions">
+              <div class="fm-search">
+                <i class="ph ph-magnifying-glass fm-search-icon"></i>
+                <input type="text" class="form-control" placeholder="Search files...">
+              </div>
+
+              <div class="fm-view-toggle">
+                <button class="fm-view-btn active" data-view="grid" title="Grid View">
+                  <i class="ph ph-grid-nine"></i>
+                </button>
+                <button class="fm-view-btn" data-view="list" title="List View">
+                  <i class="ph ph-list-bullets"></i>
+                </button>
+              </div>
+
+              <div class="dropdown">
+                <button class="btn btn-light btn-sm dropdown-toggle" data-bs-toggle="dropdown">
+                  <i class="ph ph-sort-descending me-1"></i> Sort
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li><a class="dropdown-item active" href="#"><i class="ph ph-check me-2"></i> Name</a></li>
+                  <li><a class="dropdown-item" href="#">Date Modified</a></li>
+                  <li><a class="dropdown-item" href="#">Size</a></li>
+                  <li><a class="dropdown-item" href="#">Type</a></li>
+                </ul>
+              </div>
+
+              <button class="btn btn-primary btn-sm">
+                <i class="ph ph-folder-plus me-1"></i> New Folder
+              </button>
+            </div>
+          </div>
+
+          <!-- Content -->
+          <div class="fm-content">
+            <!-- Quick Access -->
+            <div class="fm-section-title">Quick Access</div>
+            <div class="fm-quick-access">
+              <div class="fm-quick-item">
+                <div class="fm-quick-icon documents">
+                  <i class="ph ph-file-text"></i>
+                </div>
+                <div class="fm-quick-info">
+                  <h6>Documents</h6>
+                  <span>1,234 files</span>
+                </div>
+              </div>
+              <div class="fm-quick-item">
+                <div class="fm-quick-icon images">
+                  <i class="ph ph-image"></i>
+                </div>
+                <div class="fm-quick-info">
+                  <h6>Images</h6>
+                  <span>5,678 files</span>
+                </div>
+              </div>
+              <div class="fm-quick-item">
+                <div class="fm-quick-icon videos">
+                  <i class="ph ph-film-strip"></i>
+                </div>
+                <div class="fm-quick-info">
+                  <h6>Videos</h6>
+                  <span>89 files</span>
+                </div>
+              </div>
+              <div class="fm-quick-item">
+                <div class="fm-quick-icon music">
+                  <i class="ph ph-music-notes"></i>
+                </div>
+                <div class="fm-quick-info">
+                  <h6>Music</h6>
+                  <span>456 files</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Folders -->
+            <div class="fm-section-title">Folders</div>
+            <div class="fm-grid active" id="foldersGrid">
+              <div class="fm-item" data-type="folder">
+                <input type="checkbox" class="form-check-input fm-item-checkbox">
+                <div class="fm-item-icon folder">
+                  <i class="ph-duotone ph-folder"></i>
+                </div>
+                <div class="fm-item-name">Design Assets</div>
+                <div class="fm-item-meta">24 items</div>
+              </div>
+              <div class="fm-item" data-type="folder">
+                <input type="checkbox" class="form-check-input fm-item-checkbox">
+                <div class="fm-item-icon folder">
+                  <i class="ph-duotone ph-folder"></i>
+                </div>
+                <div class="fm-item-name">Development</div>
+                <div class="fm-item-meta">156 items</div>
+              </div>
+              <div class="fm-item" data-type="folder">
+                <input type="checkbox" class="form-check-input fm-item-checkbox">
+                <div class="fm-item-icon folder">
+                  <i class="ph-duotone ph-folder"></i>
+                </div>
+                <div class="fm-item-name">Marketing</div>
+                <div class="fm-item-meta">42 items</div>
+              </div>
+              <div class="fm-item" data-type="folder">
+                <input type="checkbox" class="form-check-input fm-item-checkbox">
+                <div class="fm-item-icon folder">
+                  <i class="ph-duotone ph-folder"></i>
+                </div>
+                <div class="fm-item-name">Reports</div>
+                <div class="fm-item-meta">18 items</div>
+              </div>
+              <div class="fm-item" data-type="folder">
+                <input type="checkbox" class="form-check-input fm-item-checkbox">
+                <div class="fm-item-icon folder">
+                  <i class="ph-duotone ph-folder"></i>
+                </div>
+                <div class="fm-item-name">Archives</div>
+                <div class="fm-item-meta">89 items</div>
+              </div>
+            </div>
+
+            <!-- Files -->
+            <div class="fm-section-title">Files</div>
+            <div class="fm-grid active" id="filesGrid">
+              <div class="fm-item" data-type="image">
+                <input type="checkbox" class="form-check-input fm-item-checkbox">
+                <img src="assets/img/gallery/gallery-1.webp" alt="Image" class="fm-item-thumbnail">
+                <div class="fm-item-name">hero-banner.jpg</div>
+                <div class="fm-item-meta">2.4 MB</div>
+              </div>
+              <div class="fm-item" data-type="document">
+                <input type="checkbox" class="form-check-input fm-item-checkbox">
+                <div class="fm-item-icon document">
+                  <i class="ph ph-file-doc"></i>
+                </div>
+                <div class="fm-item-name">Project Brief.docx</div>
+                <div class="fm-item-meta">156 KB</div>
+              </div>
+              <div class="fm-item" data-type="pdf">
+                <input type="checkbox" class="form-check-input fm-item-checkbox">
+                <div class="fm-item-icon pdf">
+                  <i class="ph ph-file-pdf"></i>
+                </div>
+                <div class="fm-item-name">Annual Report.pdf</div>
+                <div class="fm-item-meta">4.8 MB</div>
+              </div>
+              <div class="fm-item" data-type="spreadsheet">
+                <input type="checkbox" class="form-check-input fm-item-checkbox">
+                <div class="fm-item-icon spreadsheet">
+                  <i class="ph ph-file-xls"></i>
+                </div>
+                <div class="fm-item-name">Budget 2024.xlsx</div>
+                <div class="fm-item-meta">89 KB</div>
+              </div>
+              <div class="fm-item" data-type="image">
+                <input type="checkbox" class="form-check-input fm-item-checkbox">
+                <img src="assets/img/gallery/gallery-2.webp" alt="Image" class="fm-item-thumbnail">
+                <div class="fm-item-name">team-photo.png</div>
+                <div class="fm-item-meta">1.8 MB</div>
+              </div>
+              <div class="fm-item" data-type="video">
+                <input type="checkbox" class="form-check-input fm-item-checkbox">
+                <div class="fm-item-icon video">
+                  <i class="ph ph-file-video"></i>
+                </div>
+                <div class="fm-item-name">product-demo.mp4</div>
+                <div class="fm-item-meta">156 MB</div>
+              </div>
+              <div class="fm-item" data-type="archive">
+                <input type="checkbox" class="form-check-input fm-item-checkbox">
+                <div class="fm-item-icon archive">
+                  <i class="ph ph-file-zip"></i>
+                </div>
+                <div class="fm-item-name">assets-v2.zip</div>
+                <div class="fm-item-meta">45.2 MB</div>
+              </div>
+              <div class="fm-item" data-type="code">
+                <input type="checkbox" class="form-check-input fm-item-checkbox">
+                <div class="fm-item-icon code">
+                  <i class="ph ph-file-code"></i>
+                </div>
+                <div class="fm-item-name">script.js</div>
+                <div class="fm-item-meta">12 KB</div>
+              </div>
+              <div class="fm-item" data-type="audio">
+                <input type="checkbox" class="form-check-input fm-item-checkbox">
+                <div class="fm-item-icon audio">
+                  <i class="ph ph-file-audio"></i>
+                </div>
+                <div class="fm-item-name">podcast-ep12.mp3</div>
+                <div class="fm-item-meta">28.5 MB</div>
+              </div>
+              <div class="fm-item" data-type="document">
+                <input type="checkbox" class="form-check-input fm-item-checkbox">
+                <div class="fm-item-icon document">
+                  <i class="ph ph-file-text"></i>
+                </div>
+                <div class="fm-item-name">meeting-notes.txt</div>
+                <div class="fm-item-meta">4 KB</div>
+              </div>
+            </div>
+
+            <!-- List View (Hidden by default) -->
+            <div class="fm-list" id="filesList">
+              <table class="fm-list-table">
+                <thead>
+                  <tr>
+                    <th style="width: 40px;">
+                      <input type="checkbox" class="form-check-input">
+                    </th>
+                    <th class="sortable">Name <i class="ph ph-caret-up-down"></i></th>
+                    <th class="sortable" style="width: 120px;">Size</th>
+                    <th class="sortable" style="width: 150px;">Modified</th>
+                    <th style="width: 100px;"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><input type="checkbox" class="form-check-input"></td>
+                    <td>
+                      <div class="fm-list-item">
+                        <i class="ph-duotone ph-folder fm-list-icon" style="color: #fbbf24;"></i>
+                        <span class="fm-list-name">Design Assets</span>
+                      </div>
+                    </td>
+                    <td class="text-muted">24 items</td>
+                    <td class="text-muted">Jan 15, 2024</td>
+                    <td>
+                      <div class="fm-list-actions">
+                        <button class="fm-list-action-btn" title="Share"><i class="ph ph-share-network"></i></button>
+                        <button class="fm-list-action-btn" title="Star"><i class="ph ph-star"></i></button>
+                        <button class="fm-list-action-btn" title="More"><i class="ph ph-dots-three"></i></button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" class="form-check-input"></td>
+                    <td>
+                      <div class="fm-list-item">
+                        <i class="ph-duotone ph-folder fm-list-icon" style="color: #fbbf24;"></i>
+                        <span class="fm-list-name">Development</span>
+                      </div>
+                    </td>
+                    <td class="text-muted">156 items</td>
+                    <td class="text-muted">Jan 18, 2024</td>
+                    <td>
+                      <div class="fm-list-actions">
+                        <button class="fm-list-action-btn" title="Share"><i class="ph ph-share-network"></i></button>
+                        <button class="fm-list-action-btn" title="Star"><i class="ph ph-star"></i></button>
+                        <button class="fm-list-action-btn" title="More"><i class="ph ph-dots-three"></i></button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" class="form-check-input"></td>
+                    <td>
+                      <div class="fm-list-item">
+                        <i class="ph ph-file-pdf fm-list-icon" style="color: var(--danger-color);"></i>
+                        <span class="fm-list-name">Annual Report.pdf</span>
+                      </div>
+                    </td>
+                    <td class="text-muted">4.8 MB</td>
+                    <td class="text-muted">Jan 10, 2024</td>
+                    <td>
+                      <div class="fm-list-actions">
+                        <button class="fm-list-action-btn" title="Download"><i class="ph ph-download-simple"></i></button>
+                        <button class="fm-list-action-btn" title="Share"><i class="ph ph-share-network"></i></button>
+                        <button class="fm-list-action-btn" title="More"><i class="ph ph-dots-three"></i></button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" class="form-check-input"></td>
+                    <td>
+                      <div class="fm-list-item">
+                        <i class="ph ph-file-doc fm-list-icon" style="color: var(--accent-color);"></i>
+                        <span class="fm-list-name">Project Brief.docx</span>
+                      </div>
+                    </td>
+                    <td class="text-muted">156 KB</td>
+                    <td class="text-muted">Jan 12, 2024</td>
+                    <td>
+                      <div class="fm-list-actions">
+                        <button class="fm-list-action-btn" title="Download"><i class="ph ph-download-simple"></i></button>
+                        <button class="fm-list-action-btn" title="Share"><i class="ph ph-share-network"></i></button>
+                        <button class="fm-list-action-btn" title="More"><i class="ph ph-dots-three"></i></button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" class="form-check-input"></td>
+                    <td>
+                      <div class="fm-list-item">
+                        <i class="ph ph-file-xls fm-list-icon" style="color: var(--success-color);"></i>
+                        <span class="fm-list-name">Budget 2024.xlsx</span>
+                      </div>
+                    </td>
+                    <td class="text-muted">89 KB</td>
+                    <td class="text-muted">Jan 8, 2024</td>
+                    <td>
+                      <div class="fm-list-actions">
+                        <button class="fm-list-action-btn" title="Download"><i class="ph ph-download-simple"></i></button>
+                        <button class="fm-list-action-btn" title="Share"><i class="ph ph-share-network"></i></button>
+                        <button class="fm-list-action-btn" title="More"><i class="ph ph-dots-three"></i></button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" class="form-check-input"></td>
+                    <td>
+                      <div class="fm-list-item">
+                        <i class="ph ph-file-video fm-list-icon" style="color: var(--info-color);"></i>
+                        <span class="fm-list-name">product-demo.mp4</span>
+                      </div>
+                    </td>
+                    <td class="text-muted">156 MB</td>
+                    <td class="text-muted">Jan 5, 2024</td>
+                    <td>
+                      <div class="fm-list-actions">
+                        <button class="fm-list-action-btn" title="Download"><i class="ph ph-download-simple"></i></button>
+                        <button class="fm-list-action-btn" title="Share"><i class="ph ph-share-network"></i></button>
+                        <button class="fm-list-action-btn" title="More"><i class="ph ph-dots-three"></i></button>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Context Menu -->
+      <div class="fm-context-menu" id="contextMenu">
+        <div class="fm-context-item"><i class="ph ph-folder-open"></i> Open</div>
+        <div class="fm-context-item"><i class="ph ph-download-simple"></i> Download</div>
+        <div class="fm-context-item"><i class="ph ph-share-network"></i> Share</div>
+        <div class="fm-context-divider"></div>
+        <div class="fm-context-item"><i class="ph ph-star"></i> Add to Starred</div>
+        <div class="fm-context-item"><i class="ph ph-pencil-simple"></i> Rename</div>
+        <div class="fm-context-item"><i class="ph ph-files"></i> Copy</div>
+        <div class="fm-context-item"><i class="ph ph-arrows-out-cardinal"></i> Move</div>
+        <div class="fm-context-divider"></div>
+        <div class="fm-context-item"><i class="ph ph-info"></i> Details</div>
+        <div class="fm-context-item danger"><i class="ph ph-trash"></i> Delete</div>
+      </div>
+
+      <!-- Upload Modal -->
+      <div class="modal fade" id="uploadModal" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Upload Files</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+              <div class="upload-area text-center p-4 border border-2 border-dashed rounded-3" id="uploadArea">
+                <i class="ph ph-cloud-arrow-up display-4 text-muted"></i>
+                <h5 class="mt-3">Drag & drop files here</h5>
+                <p class="text-muted mb-3">or click to browse</p>
+                <input type="file" class="d-none" id="fileInput" multiple>
+                <button class="btn btn-primary" onclick="document.getElementById('fileInput').click()">
+                  Browse Files
+                </button>
+              </div>
+              <div class="upload-list mt-3" id="uploadList" style="display: none;">
+                <div class="upload-item d-flex align-items-center gap-3 p-2 bg-light rounded mb-2">
+                  <i class="ph ph-file text-primary fs-4"></i>
+                  <div class="flex-grow-1">
+                    <div class="fw-medium">example-file.pdf</div>
+                    <div class="progress" style="height: 4px;">
+                      <div class="progress-bar" style="width: 75%"></div>
+                    </div>
+                  </div>
+                  <span class="text-muted small">2.4 MB</span>
+                  <button class="btn btn-sm btn-link text-danger p-0"><i class="ph ph-x"></i></button>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cancel</button>
+              <button type="button" class="btn btn-primary">Upload</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <span class="footer-brand-mark"><i class="bi bi-lightning-charge-fill"></i></span>
+          <span class="footer-copyright">
+            &copy; 2026 <a href="#">TrendyAdmin</a>. All Rights Reserved.
+          </span>
+        </div>
+        <div class="footer-links">
+          <a href="#">About</a>
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Contact</a>
+        </div>
+        <div class="footer-credits">
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Back to Top -->
+  <a href="#" class="back-to-top">
+    <i class="ph ph-arrow-up"></i>
+  </a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="assets/vendor/chart.js/chart.umd.js"></script>
+  <script src="assets/vendor/echarts/echarts.min.js"></script>
+  <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="assets/vendor/quill/quill.js"></script>
+  <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+  <script src="assets/vendor/choices.js/choices.min.js"></script>
+  <script src="assets/vendor/flatpickr/flatpickr.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS Files -->
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <!-- App Sidebar Toggle (for app pages with sidebars) -->
+  <script src="assets/js/apps-sidebar-toggle.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const viewBtns = document.querySelectorAll('.fm-view-btn');
+      const foldersGrid = document.getElementById('foldersGrid');
+      const filesGrid = document.getElementById('filesGrid');
+      const filesList = document.getElementById('filesList');
+      const contextMenu = document.getElementById('contextMenu');
+      const fmItems = document.querySelectorAll('.fm-item');
+      const navItems = document.querySelectorAll('.fm-nav-item');
+      // View toggle
+      viewBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+          viewBtns.forEach(b => b.classList.remove('active'));
+          this.classList.add('active');
+          const view = this.dataset.view;
+          if (view === 'grid') {
+            foldersGrid.classList.add('active');
+            filesGrid.classList.add('active');
+            filesList.classList.remove('active');
+          } else {
+            foldersGrid.classList.remove('active');
+            filesGrid.classList.remove('active');
+            filesList.classList.add('active');
+          }
+        });
+      });
+      // Nav item click
+      navItems.forEach(item => {
+        item.addEventListener('click', function(e) {
+          e.preventDefault();
+          navItems.forEach(i => i.classList.remove('active'));
+          this.classList.add('active');
+        });
+      });
+      // Item selection
+      fmItems.forEach(item => {
+        item.addEventListener('click', function(e) {
+          if (e.target.type === 'checkbox') return;
+          if (e.ctrlKey || e.metaKey) {
+            this.classList.toggle('selected');
+          } else {
+            fmItems.forEach(i => i.classList.remove('selected'));
+            this.classList.add('selected');
+          }
+          // Update checkbox state
+          const checkbox = this.querySelector('.fm-item-checkbox');
+          if (checkbox) {
+            checkbox.checked = this.classList.contains('selected');
+          }
+        });
+        // Double-click to open
+        item.addEventListener('dblclick', function() {
+          const type = this.dataset.type;
+          if (type === 'folder') {
+            // Navigate to folder (demo)
+            alert('Opening folder: ' + this.querySelector('.fm-item-name').textContent);
+          } else {
+            // Open file preview (demo)
+            alert('Opening file: ' + this.querySelector('.fm-item-name').textContent);
+          }
+        });
+        // Context menu
+        item.addEventListener('contextmenu', function(e) {
+          e.preventDefault();
+          // Select the item
+          fmItems.forEach(i => i.classList.remove('selected'));
+          this.classList.add('selected');
+          // Position and show context menu
+          contextMenu.style.left = e.pageX + 'px';
+          contextMenu.style.top = e.pageY + 'px';
+          contextMenu.classList.add('show');
+        });
+      });
+      // Checkbox click handler
+      document.querySelectorAll('.fm-item-checkbox').forEach(checkbox => {
+        checkbox.addEventListener('click', function(e) {
+          e.stopPropagation();
+          const item = this.closest('.fm-item');
+          if (this.checked) {
+            item.classList.add('selected');
+          } else {
+            item.classList.remove('selected');
+          }
+        });
+      });
+      // Hide context menu on click outside
+      document.addEventListener('click', function(e) {
+        if (!contextMenu.contains(e.target)) {
+          contextMenu.classList.remove('show');
+        }
+      });
+      // Context menu item click
+      document.querySelectorAll('.fm-context-item').forEach(item => {
+        item.addEventListener('click', function() {
+          const action = this.textContent.trim();
+          const selectedItem = document.querySelector('.fm-item.selected');
+          const fileName = selectedItem ? selectedItem.querySelector('.fm-item-name').textContent : '';
+          alert(action + ': ' + fileName);
+          contextMenu.classList.remove('show');
+        });
+      });
+      // Upload area drag & drop
+      const uploadArea = document.getElementById('uploadArea');
+      uploadArea.addEventListener('dragover', function(e) {
+        e.preventDefault();
+        this.classList.add('border-primary');
+      });
+      uploadArea.addEventListener('dragleave', function(e) {
+        e.preventDefault();
+        this.classList.remove('border-primary');
+      });
+      uploadArea.addEventListener('drop', function(e) {
+        e.preventDefault();
+        this.classList.remove('border-primary');
+        const files = e.dataTransfer.files;
+        if (files.length > 0) {
+          // Show upload list (demo)
+          document.getElementById('uploadList').style.display = 'block';
+        }
+      });
+      // File input change
+      document.getElementById('fileInput').addEventListener('change', function() {
+        if (this.files.length > 0) {
+          document.getElementById('uploadList').style.display = 'block';
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>

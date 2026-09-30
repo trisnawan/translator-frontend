@@ -1,0 +1,476 @@
+/*--------------------------------------------------------------
+# Dashboard Widgets - Analytics
+--------------------------------------------------------------*/
+
+/* Traffic Sources Widget */
+.traffic-source-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-sm) 0;
+}
+
+.traffic-source-icon {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  font-size: 1rem;
+}
+
+.traffic-source-info {
+  flex: 1;
+}
+
+.traffic-source-name {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--heading-color);
+}
+
+.traffic-source-value {
+  font-size: 0.75rem;
+  color: var(--muted-color);
+}
+
+.traffic-source-percent {
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+/* Region List Widget */
+.region-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.region-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-md);
+}
+
+.region-info {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  min-width: 140px;
+}
+
+.region-flag {
+  font-size: 1.25rem;
+}
+
+.region-name {
+  font-size: 0.875rem;
+  color: var(--default-color);
+}
+
+.region-stats {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  flex: 1;
+}
+
+.region-value {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--heading-color);
+  min-width: 70px;
+  text-align: right;
+}
+
+.region-progress {
+  flex: 1;
+  height: 6px;
+}
+
+/* Device List Widget */
+.device-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.device-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.device-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  background: var(--background-color);
+  color: var(--muted-color);
+  font-size: 1.125rem;
+  flex-shrink: 0;
+}
+
+.device-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.device-name {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--heading-color);
+  margin-bottom: var(--spacing-xs);
+}
+
+.device-progress {
+  height: 6px;
+}
+
+.device-stats {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  min-width: 70px;
+}
+
+.device-percent {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--heading-color);
+}
+
+.device-count {
+  font-size: 0.75rem;
+  color: var(--muted-color);
+}
+
+/* Browser List Widget */
+.browser-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.browser-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-sm) 0;
+}
+
+.browser-item:not(:last-child) {
+  border-bottom: 1px solid var(--border-color-light);
+}
+
+.browser-info {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.browser-info i {
+  font-size: 1.25rem;
+}
+
+.browser-name {
+  font-size: 0.875rem;
+  color: var(--default-color);
+}
+
+.browser-stats {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.browser-percent {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--heading-color);
+  min-width: 50px;
+  text-align: right;
+}
+
+/* Real-time Stats Widget */
+.realtime-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: var(--success-color);
+  border-radius: var(--radius-full);
+  margin-right: var(--spacing-sm);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--success-color), transparent 30%);
+  }
+  70% {
+    box-shadow: 0 0 0 8px color-mix(in srgb, var(--success-color), transparent 100%);
+  }
+  100% {
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--success-color), transparent 100%);
+  }
+}
+
+.realtime-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-lg);
+  text-align: center;
+}
+
+.realtime-stat {
+  padding: var(--spacing-md);
+  background: var(--background-color);
+  border-radius: var(--radius-md);
+}
+
+.realtime-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--heading-color);
+  line-height: 1.2;
+}
+
+.realtime-label {
+  font-size: 0.75rem;
+  color: var(--muted-color);
+  margin-top: var(--spacing-xs);
+}
+
+@media (max-width: 767px) {
+  .realtime-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Social Stats Widget */
+.social-stats-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.social-stats-item {
+  display: flex;
+  align-items: center;
+  padding: var(--spacing-md);
+  gap: var(--spacing-md);
+}
+
+.social-stats-item:not(:last-child) {
+  border-bottom: 1px solid var(--border-color-light);
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  font-size: 1.125rem;
+  flex-shrink: 0;
+}
+
+.social-icon.facebook {
+  background: rgba(24, 119, 242, 0.1);
+  color: #1877f2;
+}
+
+.social-icon.twitter {
+  background: color-mix(in srgb, var(--default-color), transparent 90%);
+  color: var(--default-color);
+}
+
+[data-bs-theme="dark"] .social-icon.twitter {
+  background: color-mix(in srgb, var(--contrast-color), transparent 90%);
+  color: var(--contrast-color);
+}
+
+.social-icon.instagram {
+  background: linear-gradient(45deg, rgba(253, 29, 29, 0.1), rgba(131, 58, 180, 0.1));
+  color: #e1306c;
+}
+
+.social-icon.linkedin {
+  background: rgba(10, 102, 194, 0.1);
+  color: #0a66c2;
+}
+
+.social-icon.youtube {
+  background: rgba(255, 0, 0, 0.1);
+  color: #ff0000;
+}
+
+.social-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.social-name {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--heading-color);
+}
+
+.social-followers {
+  font-size: 0.75rem;
+  color: var(--muted-color);
+}
+
+.social-engagement {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  min-width: 70px;
+}
+
+.engagement-value {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--success-color);
+}
+
+.engagement-label {
+  font-size: 0.6875rem;
+  color: var(--muted-color);
+  text-transform: uppercase;
+}
+
+/* Funnel Chart Widget */
+.funnel-chart {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md) 0;
+}
+
+.funnel-stage {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.funnel-bar {
+  height: 32px;
+  width: var(--funnel-width, 100%);
+  border-radius: var(--radius-sm);
+  transition: width var(--transition-base);
+}
+
+.funnel-bar.primary {
+  background: var(--accent-color);
+}
+
+.funnel-bar.info {
+  background: var(--info-color);
+}
+
+.funnel-bar.warning {
+  background: var(--warning-color);
+}
+
+.funnel-bar.success {
+  background: var(--success-color);
+}
+
+.funnel-bar.danger {
+  background: var(--danger-color);
+}
+
+.funnel-info {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  min-width: 180px;
+  flex-shrink: 0;
+}
+
+.funnel-name {
+  font-size: 0.875rem;
+  color: var(--default-color);
+  min-width: 80px;
+}
+
+.funnel-value {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--heading-color);
+}
+
+.funnel-rate {
+  font-size: 0.75rem;
+  color: var(--muted-color);
+}
+
+@media (max-width: 767px) {
+  .funnel-info {
+    min-width: 120px;
+  }
+}
+
+/* Pipeline Stages Widget */
+.pipeline-stages {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.pipeline-stage {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.pipeline-stage-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pipeline-stage-name {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--default-color);
+}
+
+.pipeline-stage-count {
+  font-size: 0.75rem;
+  color: var(--muted-color);
+  background: var(--background-color);
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+}
+
+.pipeline-stage-bar {
+  height: 8px;
+  background: var(--background-color);
+  border-radius: var(--radius-full);
+  position: relative;
+  overflow: hidden;
+}
+
+.pipeline-stage-bar::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: var(--stage-width, 100%);
+  background: var(--stage-color, var(--accent-color));
+  border-radius: var(--radius-full);
+  transition: width var(--transition-base);
+}
+
+.pipeline-stage-value {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--heading-color);
+}

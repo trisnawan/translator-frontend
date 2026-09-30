@@ -1,0 +1,259 @@
+/*--------------------------------------------------------------
+# Settings Page - TrendyAdmin
+# Vertical settings nav + theme picker tiles + segmented radios
+# (shares ue-* section/toggle/danger styles from _users.scss)
+--------------------------------------------------------------*/
+
+.page-settings,
+.page-notifications,
+.page-activity {
+
+  /* Layout with side nav */
+  .st-layout {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: var(--spacing-lg);
+    align-items: start;
+  }
+
+  .st-nav-card {
+    margin-bottom: 0;
+    position: sticky;
+    top: calc(var(--header-height) + var(--spacing-md));
+    overflow: hidden;
+  }
+
+  .st-main {
+    min-width: 0;
+  }
+
+  .st-main > form > .card,
+  .st-main > .card {
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .st-main > form > .card:last-child,
+  .st-main > .card:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Settings nav */
+  .st-nav {
+    display: flex;
+    flex-direction: column;
+    padding: var(--spacing-sm);
+  }
+
+  .st-nav-link {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: 10px 12px;
+    border-radius: var(--radius-lg);
+    text-decoration: none;
+    transition: background-color var(--transition-fast);
+  }
+
+  .st-nav-link:hover {
+    background: var(--background-color);
+  }
+
+  .st-nav-link.active {
+    background: color-mix(in srgb, var(--accent-color), transparent 92%);
+  }
+
+  .st-nav-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+    border-radius: var(--radius-md);
+    background: var(--background-color);
+    color: var(--muted-color);
+    font-size: 1.125rem;
+    transition: background-color var(--transition-fast), color var(--transition-fast);
+  }
+
+  .st-nav-link.active .st-nav-icon {
+    background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), var(--danger-color) 45%));
+    color: var(--contrast-color);
+  }
+
+  .st-nav-text {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .st-nav-title {
+    display: block;
+    font-size: 0.8437rem;
+    font-weight: 600;
+    color: var(--heading-color);
+  }
+
+  .st-nav-link.active .st-nav-title {
+    color: var(--accent-color);
+  }
+
+  .st-nav-sub {
+    display: block;
+    font-size: 0.7187rem;
+    color: var(--muted-color);
+  }
+
+  .st-nav-caret {
+    font-size: 0.75rem;
+    color: var(--light-color);
+    opacity: 0;
+    transform: translateX(-4px);
+    transition: opacity var(--transition-fast), transform var(--transition-fast);
+  }
+
+  .st-nav-link:hover .st-nav-caret,
+  .st-nav-link.active .st-nav-caret {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  /* Theme mode picker tiles */
+  .st-theme-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-sm);
+    max-width: 420px;
+  }
+
+  .st-theme-option {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    margin: 0;
+  }
+
+  .st-theme-option input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .st-theme-preview {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 64px;
+    border-radius: var(--radius-lg);
+    border: 2px solid var(--border-color);
+    font-size: 1.375rem;
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  }
+
+  .st-theme-preview.light {
+    background: #f5f3fa;
+    color: #7c3aed;
+  }
+
+  .st-theme-preview.dark {
+    background: #171032;
+    color: #cfc7e8;
+  }
+
+  .st-theme-preview.system {
+    background: linear-gradient(105deg, #f5f3fa 50%, #171032 50%);
+    color: var(--accent-color);
+  }
+
+  .st-theme-option input:checked ~ .st-theme-preview {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 3px var(--input-focus-ring);
+  }
+
+  .st-theme-name {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--muted-color);
+  }
+
+  .st-theme-option input:checked ~ .st-theme-name {
+    color: var(--accent-color);
+  }
+
+  /* Segmented radio pills */
+  .st-seg {
+    display: flex;
+    gap: 2px;
+    padding: 3px;
+    background: var(--background-color);
+    border-radius: var(--radius-full);
+    width: fit-content;
+  }
+
+  .st-seg-option {
+    position: relative;
+    margin: 0;
+    cursor: pointer;
+  }
+
+  .st-seg-option input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .st-seg-option span {
+    display: block;
+    padding: 6px 18px;
+    border-radius: var(--radius-full);
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--muted-color);
+    transition: background-color var(--transition-fast), color var(--transition-fast), box-shadow var(--transition-fast);
+  }
+
+  .st-seg-option:hover span {
+    color: var(--heading-color);
+  }
+
+  .st-seg-option input:checked ~ span {
+    color: var(--accent-color);
+    background: var(--surface-color);
+    box-shadow: var(--shadow-sm);
+  }
+
+  /* Subtitle link */
+  .dash-card-subtitle a {
+    color: var(--accent-color);
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .dash-card-subtitle a:hover {
+    text-decoration: underline;
+  }
+
+  /* Responsive */
+  @media (max-width: 1199px) {
+    .st-layout {
+      grid-template-columns: 1fr;
+    }
+
+    .st-nav-card {
+      position: static;
+    }
+
+    .st-nav {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    .st-nav-link {
+      flex: 1;
+      min-width: 200px;
+    }
+  }
+}

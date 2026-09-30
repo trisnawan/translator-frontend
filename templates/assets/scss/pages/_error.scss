@@ -1,0 +1,384 @@
+/*--------------------------------------------------------------
+# Error / Status Pages (404, 403, 500, Maintenance, Coming Soon)
+# Rendered inside the auth layout (.auth-content-inner) - the
+# layout adds no .page-X class, so everything is scoped under
+# the .error-page wrapper placed in the markup.
+--------------------------------------------------------------*/
+
+@keyframes error-progress-slide {
+  0% {
+    left: -45%;
+  }
+
+  100% {
+    left: 100%;
+  }
+}
+
+.error-page {
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  max-width: 560px;
+  margin: 0 auto;
+  padding: var(--spacing-xl) var(--spacing-md);
+  text-align: center;
+
+  /* Decorative blurred glow orbs */
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    border-radius: 50%;
+    filter: blur(90px);
+    pointer-events: none;
+  }
+
+  &::before {
+    top: -60px;
+    left: -80px;
+    width: 280px;
+    height: 280px;
+    background: color-mix(in srgb, var(--accent-color), transparent 72%);
+  }
+
+  &::after {
+    right: -70px;
+    bottom: -40px;
+    width: 240px;
+    height: 240px;
+    background: color-mix(in srgb, var(--danger-color), transparent 78%);
+  }
+
+  /* Giant gradient status code */
+  .error-code {
+    margin-bottom: var(--spacing-lg);
+    font-family: var(--heading-font);
+    font-size: clamp(4.5rem, 18vw, 7rem);
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.04em;
+    background: linear-gradient(105deg, var(--accent-color), color-mix(in srgb, var(--accent-color), var(--danger-color) 42%));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  /* Gradient icon tile (maintenance / coming soon) */
+  .error-tile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 88px;
+    height: 88px;
+    margin: 0 auto var(--spacing-xl);
+    font-size: 2.5rem;
+    color: var(--contrast-color);
+    border-radius: var(--radius-2xl);
+    background: linear-gradient(105deg, var(--accent-color), color-mix(in srgb, var(--accent-color), var(--danger-color) 42%));
+    box-shadow: 0 18px 36px -12px color-mix(in srgb, var(--accent-color), transparent 35%);
+  }
+
+  /* Small status chip (403 lock) */
+  .error-chip {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    margin-bottom: var(--spacing-lg);
+    font-size: 1.5rem;
+    color: var(--warning-color);
+    background: var(--warning-color-light);
+    border: 1px solid color-mix(in srgb, var(--warning-color), transparent 72%);
+    border-radius: var(--radius-lg);
+  }
+
+  .error-title {
+    margin-bottom: var(--spacing-md);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--heading-color);
+  }
+
+  .error-text {
+    max-width: 46ch;
+    margin: 0 auto var(--spacing-xl);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--muted-color);
+  }
+
+  /* Muted reference chip (500) */
+  .error-ref {
+    display: inline-block;
+    margin-bottom: var(--spacing-xl);
+    padding: 0.35rem 1rem;
+    font-family: var(--mono-font);
+    font-size: 0.75rem;
+    color: var(--muted-color);
+    background: var(--surface-color);
+    border: 1px dashed var(--border-color-dark);
+    border-radius: var(--radius-full);
+  }
+
+  /* Pill search field (404) */
+  .error-search {
+    position: relative;
+    max-width: 380px;
+    margin: 0 auto var(--spacing-xl);
+  }
+
+  .error-search i {
+    position: absolute;
+    top: 50%;
+    left: 1.1rem;
+    transform: translateY(-50%);
+    font-size: 1.05rem;
+    color: var(--muted-color);
+    pointer-events: none;
+  }
+
+  .error-search input {
+    width: 100%;
+    padding: 0.75rem 1.25rem 0.75rem 2.9rem;
+    font-size: 0.9rem;
+    color: var(--default-color);
+    background: var(--input-bg);
+    border: 1px solid var(--input-border);
+    border-radius: var(--radius-full);
+    outline: none;
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  }
+
+  .error-search input::placeholder {
+    color: var(--light-color);
+  }
+
+  .error-search input:focus {
+    border-color: var(--input-focus-border);
+    box-shadow: 0 0 0 4px var(--input-focus-ring);
+  }
+
+  /* Action buttons */
+  .error-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-md);
+  }
+
+  .error-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.7rem 1.6rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--contrast-color);
+    background: linear-gradient(105deg, var(--accent-color), color-mix(in srgb, var(--accent-color), var(--danger-color) 42%));
+    border: 0;
+    border-radius: var(--radius-full);
+    box-shadow: 0 10px 24px -8px color-mix(in srgb, var(--accent-color), transparent 40%);
+    transition: all var(--transition-fast);
+  }
+
+  .error-btn i {
+    font-size: 1.05rem;
+  }
+
+  .error-btn:hover {
+    transform: translateY(-1px);
+    color: var(--contrast-color);
+    box-shadow: 0 14px 30px -8px color-mix(in srgb, var(--accent-color), transparent 28%);
+  }
+
+  .error-btn.ghost {
+    color: var(--default-color);
+    background: var(--surface-color);
+    border: 1px solid var(--border-color);
+    box-shadow: none;
+  }
+
+  .error-btn.ghost:hover {
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+    box-shadow: none;
+  }
+
+  /* Indeterminate progress strip (maintenance) */
+  .error-progress {
+    position: relative;
+    max-width: 320px;
+    height: 8px;
+    margin: 0 auto;
+    overflow: hidden;
+    background: color-mix(in srgb, var(--accent-color), transparent 88%);
+    border-radius: var(--radius-full);
+  }
+
+  .error-progress-bar {
+    position: absolute;
+    top: 0;
+    left: -45%;
+    width: 40%;
+    height: 100%;
+    background: linear-gradient(105deg, var(--accent-color), color-mix(in srgb, var(--accent-color), var(--danger-color) 42%));
+    border-radius: var(--radius-full);
+    animation: error-progress-slide 1.6s ease-in-out infinite;
+  }
+
+  .error-eta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: var(--spacing-lg);
+    font-size: 0.875rem;
+    color: var(--muted-color);
+  }
+
+  .error-eta i {
+    font-size: 1rem;
+    color: var(--accent-color);
+  }
+
+  /* Countdown tiles (coming soon) */
+  .error-countdown {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .countdown-tile {
+    flex: 1;
+    min-width: 0;
+    max-width: 108px;
+    padding: var(--spacing-md) var(--spacing-sm);
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--card-shadow);
+  }
+
+  .countdown-value {
+    display: block;
+    font-family: var(--heading-font);
+    font-size: 1.875rem;
+    font-weight: 800;
+    line-height: 1.2;
+    color: var(--heading-color);
+  }
+
+  .countdown-label {
+    display: block;
+    margin-top: 2px;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted-color);
+  }
+
+  /* Notify form (coming soon) */
+  .error-notify {
+    display: flex;
+    gap: var(--spacing-sm);
+    max-width: 420px;
+    margin: 0 auto;
+  }
+
+  .error-notify input {
+    flex: 1;
+    min-width: 0;
+    padding: 0.7rem 1.4rem;
+    font-size: 0.9rem;
+    color: var(--default-color);
+    background: var(--input-bg);
+    border: 1px solid var(--input-border);
+    border-radius: var(--radius-full);
+    outline: none;
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  }
+
+  .error-notify input::placeholder {
+    color: var(--light-color);
+  }
+
+  .error-notify input:focus {
+    border-color: var(--input-focus-border);
+    box-shadow: 0 0 0 4px var(--input-focus-ring);
+  }
+
+  .error-notify .error-btn {
+    flex-shrink: 0;
+  }
+}
+
+/*--------------------------------------------------------------
+# Per-page gradient tints
+--------------------------------------------------------------*/
+
+/* 403 - gradient tinted toward warning */
+.error-page.error-403 {
+  &::after {
+    background: color-mix(in srgb, var(--warning-color), transparent 76%);
+  }
+
+  .error-code {
+    background: linear-gradient(105deg, var(--accent-color), color-mix(in srgb, var(--accent-color), var(--warning-color) 42%));
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+}
+
+/* 500 - gradient tinted deeper toward danger */
+.error-page.error-500 {
+  &::after {
+    background: color-mix(in srgb, var(--danger-color), transparent 70%);
+  }
+
+  .error-code {
+    background: linear-gradient(105deg, var(--accent-color), color-mix(in srgb, var(--accent-color), var(--danger-color) 65%));
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+}
+
+/*--------------------------------------------------------------
+# Responsive
+--------------------------------------------------------------*/
+
+@media (max-width: 575.98px) {
+  .error-page {
+    .error-actions {
+      flex-direction: column;
+    }
+
+    .error-actions .error-btn {
+      width: 100%;
+    }
+
+    .error-countdown {
+      gap: var(--spacing-sm);
+    }
+
+    .countdown-value {
+      font-size: 1.5rem;
+    }
+
+    .error-notify {
+      flex-direction: column;
+    }
+
+    .error-notify .error-btn {
+      width: 100%;
+    }
+  }
+}

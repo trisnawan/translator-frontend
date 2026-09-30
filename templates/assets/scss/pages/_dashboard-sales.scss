@@ -1,0 +1,502 @@
+/*--------------------------------------------------------------
+# Sales Dashboard Page - TrendyAdmin
+# Pill page-head actions, dark plum anchor KPI, segmented
+# range toggle, category donut legend, gradient product bars,
+# glowing status pills, radial sales target
+--------------------------------------------------------------*/
+
+.page-dashboard-sales {
+
+  /* ---------- Page head ---------- */
+  .sales-head {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .sales-head-title {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--heading-color);
+  }
+
+  .sales-head-sub {
+    margin: 4px 0 0;
+    font-size: 0.875rem;
+    color: var(--muted-color);
+  }
+
+  .sales-head-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+  }
+
+  .sales-btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 18px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-full);
+    background: var(--surface-color);
+    color: var(--default-color);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: border-color var(--transition-fast), color var(--transition-fast), box-shadow var(--transition-fast);
+
+    i {
+      font-size: 1rem;
+      color: var(--muted-color);
+    }
+
+    &:hover {
+      border-color: color-mix(in srgb, var(--accent-color), transparent 50%);
+      color: var(--accent-color);
+      box-shadow: var(--shadow-sm);
+    }
+  }
+
+  .sales-btn-gradient {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: var(--radius-full);
+    background: linear-gradient(105deg, var(--accent-color), color-mix(in srgb, var(--accent-color), var(--danger-color) 42%));
+    color: var(--contrast-color);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 8px 18px -6px color-mix(in srgb, var(--accent-color), transparent 55%);
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+
+    i {
+      font-size: 1rem;
+    }
+
+    &:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 12px 24px -6px color-mix(in srgb, var(--accent-color), transparent 45%);
+    }
+  }
+
+  /* ---------- KPI tiles ---------- */
+  .sales-kpi {
+    padding: var(--spacing-lg);
+    margin-bottom: 0;
+  }
+
+  .sales-kpi-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .sales-kpi-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius-lg);
+    background: color-mix(in srgb, var(--accent-color), transparent 88%);
+    color: var(--accent-color);
+    font-size: 1.35rem;
+  }
+
+  .tile-success {
+    background: color-mix(in srgb, var(--success-color), transparent 88%);
+    color: var(--success-color);
+  }
+
+  .tile-warning {
+    background: color-mix(in srgb, var(--warning-color), transparent 86%);
+    color: var(--warning-color);
+  }
+
+  .tile-info {
+    background: color-mix(in srgb, var(--info-color), transparent 88%);
+    color: var(--info-color);
+  }
+
+  .sales-kpi-trend {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 10px;
+    border-radius: var(--radius-full);
+    font-size: 0.75rem;
+    font-weight: 700;
+
+    &.up {
+      background: color-mix(in srgb, var(--success-color), transparent 88%);
+      color: var(--success-color);
+    }
+
+    &.down {
+      background: color-mix(in srgb, var(--danger-color), transparent 88%);
+      color: var(--danger-color);
+    }
+  }
+
+  .sales-kpi-value {
+    font-family: var(--heading-font);
+    font-size: 1.65rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+    color: var(--heading-color);
+  }
+
+  .sales-kpi-label {
+    margin-top: 2px;
+    font-size: 0.8125rem;
+    color: var(--muted-color);
+  }
+
+  /* Dark plum anchor tile */
+  .sales-kpi-dark {
+    background: #171032;
+    border-color: transparent;
+    box-shadow: 0 16px 32px -12px color-mix(in srgb, var(--accent-color), transparent 55%);
+
+    .sales-kpi-icon {
+      background: linear-gradient(105deg, var(--accent-color), color-mix(in srgb, var(--accent-color), var(--danger-color) 42%));
+      color: var(--contrast-color);
+    }
+
+    .sales-kpi-trend.up {
+      background: color-mix(in srgb, var(--success-color), transparent 75%);
+      color: #cfc7e8;
+    }
+
+    .sales-kpi-value {
+      color: var(--contrast-color);
+    }
+
+    .sales-kpi-label {
+      color: #8c81b3;
+    }
+  }
+
+  /* ---------- Main row ---------- */
+  .sales-main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .sales-chart-card,
+  .sales-category-card {
+    margin-bottom: 0;
+  }
+
+  /* Segmented pill toggle */
+  .sales-seg {
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+    padding: 3px;
+    border-radius: var(--radius-full);
+    background: var(--background-color);
+  }
+
+  .sales-seg-btn {
+    padding: 6px 16px;
+    border: none;
+    border-radius: var(--radius-full);
+    background: transparent;
+    color: var(--muted-color);
+    font-size: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: color var(--transition-fast), background-color var(--transition-fast);
+
+    &:hover {
+      color: var(--heading-color);
+    }
+
+    &.active {
+      background: var(--surface-color);
+      color: var(--accent-color);
+      box-shadow: var(--shadow-sm);
+    }
+  }
+
+  /* Category legend */
+  .sales-cat-legend {
+    margin-top: var(--spacing-lg);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sales-cat-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+
+    & + .sales-cat-row {
+      border-top: 1px dashed var(--border-color-light);
+    }
+  }
+
+  .sales-cat-dot {
+    flex-shrink: 0;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+  }
+
+  .dot-accent {
+    background: var(--accent-color);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent-color), transparent 82%);
+  }
+
+  .dot-success {
+    background: var(--success-color);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--success-color), transparent 82%);
+  }
+
+  .dot-warning {
+    background: var(--warning-color);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--warning-color), transparent 82%);
+  }
+
+  .dot-info {
+    background: var(--info-color);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--info-color), transparent 82%);
+  }
+
+  .sales-cat-name {
+    flex: 1;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: var(--default-color);
+  }
+
+  .sales-cat-value {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--heading-color);
+  }
+
+  .sales-cat-pct {
+    min-width: 48px;
+    text-align: center;
+    padding: 3px 8px;
+    border-radius: var(--radius-full);
+    background: var(--background-color);
+    font-size: 0.6875rem;
+    font-weight: 700;
+    color: var(--muted-color);
+  }
+
+  /* ---------- Bottom row ---------- */
+  .sales-bottom {
+    display: grid;
+    grid-template-columns: 1.1fr 1.6fr 1fr;
+    gap: var(--spacing-lg);
+
+    > .card {
+      margin-bottom: 0;
+    }
+  }
+
+  /* Top products */
+  .sales-product {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    padding: var(--spacing-sm) 0;
+
+    & + .sales-product {
+      margin-top: var(--spacing-sm);
+    }
+  }
+
+  .sales-product-img {
+    flex-shrink: 0;
+    width: 46px;
+    height: 46px;
+    object-fit: cover;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .sales-product-info {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .sales-product-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-sm);
+    margin-bottom: 8px;
+  }
+
+  .sales-product-name {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--heading-color);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .sales-product-sales {
+    flex-shrink: 0;
+    font-size: 0.75rem;
+    color: var(--muted-color);
+  }
+
+  .sales-product-bar {
+    height: 6px;
+    border-radius: var(--radius-full);
+    background: var(--background-color);
+    overflow: hidden;
+
+    span {
+      display: block;
+      height: 100%;
+      border-radius: var(--radius-full);
+      background: linear-gradient(105deg, var(--accent-color), color-mix(in srgb, var(--accent-color), var(--danger-color) 42%));
+    }
+  }
+
+  /* Status pills with glowing dot */
+  .sales-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 4px 12px;
+    border-radius: var(--radius-full);
+    font-size: 0.6875rem;
+    font-weight: 700;
+    white-space: nowrap;
+
+    &::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: currentColor;
+      box-shadow: 0 0 6px 1px currentColor;
+    }
+  }
+
+  .status-success {
+    background: color-mix(in srgb, var(--success-color), transparent 88%);
+    color: var(--success-color);
+  }
+
+  .status-warning {
+    background: color-mix(in srgb, var(--warning-color), transparent 86%);
+    color: color-mix(in srgb, var(--warning-color), black 12%);
+  }
+
+  .status-danger {
+    background: color-mix(in srgb, var(--danger-color), transparent 88%);
+    color: var(--danger-color);
+  }
+
+  .status-info {
+    background: color-mix(in srgb, var(--info-color), transparent 88%);
+    color: var(--info-color);
+  }
+
+  /* Sales target */
+  .sales-target-stats {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-md);
+  }
+
+  .sales-target-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+  }
+
+  .sales-target-stat-label {
+    font-size: 0.6875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--muted-color);
+  }
+
+  .sales-target-stat-value {
+    font-family: var(--heading-font);
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--heading-color);
+  }
+
+  .sales-target-divider {
+    width: 1px;
+    height: 34px;
+    background: var(--border-color);
+  }
+
+  .sales-target-hint {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin: var(--spacing-md) 0 0;
+    padding: 10px 14px;
+    border-radius: var(--radius-md);
+    background: color-mix(in srgb, var(--accent-color), transparent 93%);
+    font-size: 0.75rem;
+    color: var(--default-color);
+
+    i {
+      flex-shrink: 0;
+      margin-top: 1px;
+      font-size: 0.9rem;
+      color: var(--accent-color);
+    }
+  }
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1400px) {
+  .page-dashboard-sales .sales-bottom {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .page-dashboard-sales .sales-target-card {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 1200px) {
+  .page-dashboard-sales .sales-main {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-dashboard-sales .sales-bottom {
+    grid-template-columns: 1fr;
+  }
+
+  .page-dashboard-sales .sales-head-actions {
+    width: 100%;
+  }
+}

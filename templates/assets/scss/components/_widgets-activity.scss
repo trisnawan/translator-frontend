@@ -1,0 +1,94 @@
+/*--------------------------------------------------------------
+# Dashboard Widgets - Activity
+--------------------------------------------------------------*/
+
+/* Activity Widget */
+.widget-activity .activity-item {
+  display: flex;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md) 0;
+  position: relative;
+}
+
+.widget-activity .activity-item:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  left: 18px;
+  top: 48px;
+  bottom: 0;
+  width: 2px;
+  background: var(--border-color);
+}
+
+.activity-icon {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-full);
+  flex-shrink: 0;
+  font-size: 0.875rem;
+}
+
+.activity-icon.primary {
+  background: color-mix(in srgb, var(--accent-color), transparent 90%);
+  color: var(--accent-color);
+}
+
+.activity-icon.success {
+  background: var(--success-color-light);
+  color: var(--success-color);
+}
+
+.activity-icon.warning {
+  background: var(--warning-color-light);
+  color: var(--warning-color);
+}
+
+.activity-icon.danger {
+  background: var(--danger-color-light);
+  color: var(--danger-color);
+}
+
+.activity-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.activity-title {
+  font-size: 0.875rem;
+  color: var(--heading-color);
+  margin-bottom: 2px;
+}
+
+.activity-title a {
+  font-weight: 500;
+  color: var(--accent-color);
+}
+
+.activity-text {
+  font-size: 0.8125rem;
+  color: var(--muted-color);
+}
+
+.activity-time {
+  font-size: 0.75rem;
+  color: var(--light-color);
+  margin-top: var(--spacing-xs);
+}
+
+/* Badge Dot */
+.badge-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: var(--radius-full);
+  flex-shrink: 0;
+}
+
+/* Activity Icon Info Variant */
+.activity-icon.info {
+  background: var(--info-color-light);
+  color: var(--info-color);
+}

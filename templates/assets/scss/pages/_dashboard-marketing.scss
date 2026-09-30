@@ -1,0 +1,683 @@
+/*--------------------------------------------------------------
+# Marketing Dashboard Page - TrendyAdmin
+# Campaign performance chart, dark plum budget card, vertical
+# conversion funnel, channels table + top campaigns list
+--------------------------------------------------------------*/
+
+.page-dashboard-marketing {
+
+  /*------------------------------------------------------------
+  # Page Head
+  ------------------------------------------------------------*/
+  .mkt-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .mkt-head-title {
+    margin: 0 0 2px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--heading-color);
+  }
+
+  .mkt-head-subtitle {
+    margin: 0;
+    font-size: 0.875rem;
+    color: var(--muted-color);
+  }
+
+  .mkt-head-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+  }
+
+  .mkt-btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 9px 16px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-full);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--default-color);
+    background: var(--surface-color);
+    cursor: pointer;
+    transition: border-color var(--transition-fast), color var(--transition-fast), box-shadow var(--transition-fast);
+  }
+
+  .mkt-btn-ghost:hover {
+    border-color: color-mix(in srgb, var(--accent-color), transparent 55%);
+    color: var(--accent-color);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .mkt-btn-gradient {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 9px 18px;
+    border: none;
+    border-radius: var(--radius-full);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--contrast-color);
+    background: linear-gradient(105deg, var(--accent-color), color-mix(in srgb, var(--accent-color), var(--danger-color) 42%));
+    box-shadow: 0 8px 18px -8px color-mix(in srgb, var(--accent-color), transparent 35%);
+    cursor: pointer;
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  }
+
+  .mkt-btn-gradient:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px -8px color-mix(in srgb, var(--accent-color), transparent 25%);
+  }
+
+  /*------------------------------------------------------------
+  # KPI Row
+  ------------------------------------------------------------*/
+  .mkt-kpis {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .mkt-kpi {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    padding: var(--spacing-lg);
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--card-shadow);
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  }
+
+  .mkt-kpi:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .mkt-kpi-tile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    border-radius: var(--radius-lg);
+    font-size: 1.375rem;
+  }
+
+  .mkt-kpi-meta {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    flex: 1;
+  }
+
+  .mkt-kpi-value {
+    font-family: var(--heading-font);
+    font-size: 1.375rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    color: var(--heading-color);
+  }
+
+  .mkt-kpi-label {
+    font-size: 0.75rem;
+    color: var(--muted-color);
+    white-space: nowrap;
+  }
+
+  .mkt-kpi-trend {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    align-self: flex-start;
+    padding: 3px 9px;
+    font-size: 0.6875rem;
+    font-weight: 700;
+    border-radius: var(--radius-full);
+  }
+
+  .mkt-kpi-trend.up {
+    color: var(--success-color);
+    background: var(--success-color-light);
+  }
+
+  .mkt-kpi-trend.down {
+    color: var(--danger-color);
+    background: var(--danger-color-light);
+  }
+
+  /* Icon tile variants (KPIs + channel tiles) */
+  .tile-accent {
+    background: color-mix(in srgb, var(--accent-color), transparent 88%);
+    color: var(--accent-color);
+  }
+
+  .tile-info {
+    background: var(--info-color-light);
+    color: var(--info-color);
+  }
+
+  .tile-success {
+    background: var(--success-color-light);
+    color: var(--success-color);
+  }
+
+  .tile-warning {
+    background: var(--warning-color-light);
+    color: var(--warning-color);
+  }
+
+  .tile-danger {
+    background: var(--danger-color-light);
+    color: var(--danger-color);
+  }
+
+  /*------------------------------------------------------------
+  # Main Row - Performance Chart + Budget Card
+  ------------------------------------------------------------*/
+  .mkt-main {
+    display: grid;
+    grid-template-columns: 1.9fr 1fr;
+    gap: var(--spacing-lg);
+    align-items: stretch;
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .mkt-main > .card {
+    margin-bottom: 0;
+  }
+
+  /* Dark plum budget card */
+  .mkt-budget {
+    display: flex;
+    flex-direction: column;
+    padding: var(--spacing-lg);
+    background: #171032;
+    border-radius: var(--radius-xl);
+    box-shadow: 0 16px 32px -16px color-mix(in srgb, #171032, transparent 30%);
+  }
+
+  .mkt-budget-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .mkt-budget-eyebrow {
+    font-size: 0.6875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #8c81b3;
+  }
+
+  .mkt-budget-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 3px 10px;
+    font-size: 0.6875rem;
+    font-weight: 700;
+    color: #cfc7e8;
+    background: color-mix(in srgb, #cfc7e8, transparent 88%);
+    border-radius: var(--radius-full);
+  }
+
+  .mkt-budget-total {
+    font-family: var(--heading-font);
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+    color: var(--contrast-color);
+  }
+
+  .mkt-budget-note {
+    font-size: 0.75rem;
+    color: #8c81b3;
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .mkt-budget-bar {
+    height: 7px;
+    border-radius: var(--radius-full);
+    background: color-mix(in srgb, #cfc7e8, transparent 88%);
+    overflow: hidden;
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .mkt-budget-bar span {
+    display: block;
+    height: 100%;
+    border-radius: var(--radius-full);
+    background: linear-gradient(105deg, var(--accent-color), color-mix(in srgb, var(--accent-color), var(--danger-color) 42%));
+    box-shadow: 0 0 12px color-mix(in srgb, var(--accent-color), transparent 40%);
+  }
+
+  .mkt-budget-split {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-sm);
+    padding-bottom: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+    border-bottom: 1px dashed color-mix(in srgb, #cfc7e8, transparent 82%);
+  }
+
+  .mkt-budget-cell {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mkt-budget-cell.align-end {
+    align-items: flex-end;
+  }
+
+  .mkt-budget-cell-label {
+    font-size: 0.7187rem;
+    color: #8c81b3;
+  }
+
+  .mkt-budget-cell-value {
+    font-family: var(--heading-font);
+    font-size: 1.0625rem;
+    font-weight: 700;
+    color: #cfc7e8;
+  }
+
+  .mkt-budget-rows {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    margin-top: auto;
+  }
+
+  .mkt-budget-row {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-size: 0.8125rem;
+  }
+
+  .mkt-budget-dot {
+    width: 9px;
+    height: 9px;
+    flex-shrink: 0;
+    border-radius: var(--radius-full);
+  }
+
+  .mkt-budget-dot.dot-accent { background: var(--accent-color); }
+  .mkt-budget-dot.dot-success { background: var(--success-color); }
+  .mkt-budget-dot.dot-warning { background: var(--warning-color); }
+  .mkt-budget-dot.dot-info { background: var(--info-color); }
+
+  .mkt-budget-row-name {
+    flex: 1;
+    color: #cfc7e8;
+  }
+
+  .mkt-budget-row-share {
+    font-size: 0.7187rem;
+    font-weight: 600;
+    color: #8c81b3;
+  }
+
+  .mkt-budget-row-value {
+    font-weight: 700;
+    color: #cfc7e8;
+  }
+
+  /*------------------------------------------------------------
+  # Conversion Funnel
+  ------------------------------------------------------------*/
+  .mkt-funnel-card {
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .mkt-funnel-summary {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 13px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    background: color-mix(in srgb, var(--accent-color), transparent 90%);
+    border-radius: var(--radius-full);
+    white-space: nowrap;
+  }
+
+  .mkt-funnel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 580px;
+    margin: 0 auto;
+  }
+
+  .mkt-funnel-stage {
+    --stage-color: var(--accent-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-sm);
+    min-width: 220px;
+    padding: 12px 20px;
+    border-radius: var(--radius-full);
+    background: color-mix(in srgb, var(--stage-color), transparent 88%);
+    border: 1px solid color-mix(in srgb, var(--stage-color), transparent 72%);
+    transition: transform var(--transition-fast);
+  }
+
+  .mkt-funnel-stage:hover {
+    transform: scale(1.02);
+  }
+
+  .mkt-funnel-stage.stage-info { --stage-color: var(--info-color); }
+  .mkt-funnel-stage.stage-warning { --stage-color: var(--warning-color); }
+  .mkt-funnel-stage.stage-success { --stage-color: var(--success-color); }
+
+  .mkt-funnel-stage.stage-first {
+    background: linear-gradient(105deg, var(--accent-color), color-mix(in srgb, var(--accent-color), var(--danger-color) 42%));
+    border: none;
+    box-shadow: 0 10px 22px -10px color-mix(in srgb, var(--accent-color), transparent 35%);
+  }
+
+  .mkt-funnel-label {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--heading-color);
+  }
+
+  .mkt-funnel-count {
+    font-family: var(--heading-font);
+    font-size: 0.9375rem;
+    font-weight: 700;
+    color: var(--stage-color);
+  }
+
+  .mkt-funnel-stage.stage-first .mkt-funnel-label,
+  .mkt-funnel-stage.stage-first .mkt-funnel-count {
+    color: var(--contrast-color);
+  }
+
+  .mkt-funnel-conv {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    margin: 8px 0;
+    padding: 3px 11px;
+    font-size: 0.6875rem;
+    font-weight: 700;
+    color: var(--muted-color);
+    background: var(--background-color);
+    border-radius: var(--radius-full);
+  }
+
+  .mkt-funnel-conv i {
+    color: var(--accent-color);
+  }
+
+  /*------------------------------------------------------------
+  # Bottom Row - Channels Table + Top Campaigns
+  ------------------------------------------------------------*/
+  .mkt-bottom {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    gap: var(--spacing-lg);
+    align-items: start;
+  }
+
+  .mkt-bottom > .card {
+    margin-bottom: 0;
+  }
+
+  /* Channels table */
+  .mkt-table-wrap {
+    overflow-x: auto;
+  }
+
+  .mkt-table {
+    width: 100%;
+    min-width: 540px;
+    border-collapse: collapse;
+    font-size: 0.8437rem;
+  }
+
+  .mkt-table th {
+    padding: 10px 12px;
+    font-size: 0.6875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    text-align: left;
+    color: var(--muted-color);
+    background: var(--table-header-bg);
+    white-space: nowrap;
+  }
+
+  .mkt-table th:first-child {
+    border-radius: var(--radius-md) 0 0 var(--radius-md);
+  }
+
+  .mkt-table th:last-child {
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  }
+
+  .mkt-table td {
+    padding: 12px;
+    border-bottom: 1px solid var(--border-color-light);
+    vertical-align: middle;
+    white-space: nowrap;
+    color: var(--default-color);
+  }
+
+  .mkt-table tr:last-child td {
+    border-bottom: none;
+  }
+
+  .mkt-table tbody tr {
+    transition: background-color var(--transition-fast);
+  }
+
+  .mkt-table tbody tr:hover {
+    background: var(--table-hover-bg);
+  }
+
+  .mkt-cell-strong {
+    font-family: var(--heading-font);
+    font-weight: 700;
+    color: var(--heading-color);
+  }
+
+  .mkt-channel {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .mkt-channel-tile {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+    border-radius: var(--radius-md);
+    font-size: 1.125rem;
+  }
+
+  .mkt-channel-info {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+  }
+
+  .mkt-channel-name {
+    font-weight: 600;
+    color: var(--heading-color);
+  }
+
+  .mkt-channel-meta {
+    font-size: 0.7187rem;
+    color: var(--muted-color);
+  }
+
+  /* Trend chips */
+  .mkt-trend {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 3px 9px;
+    font-size: 0.6875rem;
+    font-weight: 700;
+    border-radius: var(--radius-full);
+  }
+
+  .mkt-trend.up {
+    color: var(--success-color);
+    background: var(--success-color-light);
+  }
+
+  .mkt-trend.down {
+    color: var(--danger-color);
+    background: var(--danger-color-light);
+  }
+
+  /*------------------------------------------------------------
+  # Top Campaigns List
+  ------------------------------------------------------------*/
+  .mkt-campaign + .mkt-campaign {
+    margin-top: var(--spacing-md);
+    padding-top: var(--spacing-md);
+    border-top: 1px dashed var(--border-color-light);
+  }
+
+  .mkt-campaign-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: var(--spacing-sm);
+    margin-bottom: 8px;
+  }
+
+  .mkt-campaign-info {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+  }
+
+  .mkt-campaign-name {
+    font-size: 0.8437rem;
+    font-weight: 600;
+    color: var(--heading-color);
+  }
+
+  .mkt-campaign-meta {
+    font-size: 0.7187rem;
+    color: var(--muted-color);
+  }
+
+  .mkt-campaign-bar {
+    height: 6px;
+    border-radius: var(--radius-full);
+    background: var(--background-color);
+    overflow: hidden;
+    margin-bottom: 5px;
+  }
+
+  .mkt-campaign-bar span {
+    display: block;
+    height: 100%;
+    border-radius: var(--radius-full);
+    background: linear-gradient(105deg, var(--accent-color), color-mix(in srgb, var(--accent-color), var(--danger-color) 42%));
+  }
+
+  .mkt-campaign-pct {
+    font-size: 0.7187rem;
+    color: var(--light-color);
+  }
+
+  /* Status pills with glowing dot */
+  .mkt-pill {
+    --pill-color: var(--accent-color);
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 4px 11px;
+    flex-shrink: 0;
+    font-size: 0.6875rem;
+    font-weight: 700;
+    color: var(--pill-color);
+    background: color-mix(in srgb, var(--pill-color), transparent 88%);
+    border-radius: var(--radius-full);
+    white-space: nowrap;
+  }
+
+  .mkt-pill-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: var(--radius-full);
+    background: var(--pill-color);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--pill-color), transparent 78%);
+  }
+
+  .mkt-pill.pill-success { --pill-color: var(--success-color); }
+  .mkt-pill.pill-warning { --pill-color: var(--warning-color); }
+  .mkt-pill.pill-danger { --pill-color: var(--danger-color); }
+
+  /*------------------------------------------------------------
+  # Responsive
+  ------------------------------------------------------------*/
+  @media (max-width: 1399px) {
+    .mkt-kpis {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 1199px) {
+    .mkt-main {
+      grid-template-columns: 1fr;
+    }
+
+    .mkt-bottom {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 575px) {
+    .mkt-kpis {
+      grid-template-columns: 1fr;
+    }
+
+    .mkt-head-actions {
+      width: 100%;
+    }
+
+    .mkt-funnel-stage {
+      min-width: 180px;
+      padding: 10px 14px;
+    }
+
+    .dash-card-header {
+      flex-wrap: wrap;
+    }
+  }
+}

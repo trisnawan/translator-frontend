@@ -1,0 +1,643 @@
+/*--------------------------------------------------------------
+# Sidebar - TrendyAdmin
+# Deep plum-ink panel with pill nav items, icon tiles,
+# gradient active states and rail-style submenus
+--------------------------------------------------------------*/
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: var(--sidebar-width);
+  background: linear-gradient(180deg, color-mix(in srgb, var(--sidebar-bg), var(--accent-color) 7%), var(--sidebar-bg) 320px);
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  transition: width var(--transition-base), transform var(--transition-base);
+  overflow: hidden;
+}
+
+/* Mobile: Hidden by default */
+@media (max-width: 1199px) {
+  .sidebar {
+    transform: translateX(-100%);
+  }
+
+  .sidebar-open .sidebar {
+    transform: translateX(0);
+  }
+}
+
+/* Sidebar Collapsed State (Desktop) */
+@media (min-width: 1200px) {
+  .sidebar-collapsed .sidebar {
+    width: var(--sidebar-collapsed-width);
+    overflow: visible;
+  }
+
+  .sidebar-collapsed .sidebar-nav {
+    overflow: visible;
+  }
+}
+
+/*--------------------------------------------------------------
+# Sidebar Header / Logo
+--------------------------------------------------------------*/
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--header-height);
+  padding: 0 var(--spacing-md);
+  flex-shrink: 0;
+}
+
+.sidebar-collapsed .sidebar-header {
+  justify-content: center;
+  padding: 0 var(--spacing-xs);
+}
+
+.sidebar-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  min-width: 0;
+}
+
+.sidebar-logo-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  font-size: 1.125rem;
+  color: var(--contrast-color);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), var(--danger-color) 45%));
+  box-shadow: 0 6px 14px -4px color-mix(in srgb, var(--accent-color), transparent 40%);
+}
+
+.sidebar-logo-text {
+  font-family: var(--heading-font);
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--contrast-color);
+  white-space: nowrap;
+  transition: opacity var(--transition-fast), width var(--transition-fast);
+}
+
+.sidebar-collapsed .sidebar-logo {
+  gap: 0;
+  justify-content: center;
+}
+
+.sidebar-collapsed .sidebar-logo-text {
+  opacity: 0;
+  width: 0;
+  overflow: hidden;
+}
+
+.sidebar-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-md);
+  color: var(--sidebar-muted-color);
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.sidebar-close:hover {
+  background-color: var(--sidebar-hover-bg);
+  color: var(--contrast-color);
+}
+
+@media (min-width: 1200px) {
+  .sidebar-close {
+    display: none;
+  }
+}
+
+/*--------------------------------------------------------------
+# Sidebar Navigation
+--------------------------------------------------------------*/
+
+.sidebar-nav {
+  flex: 1;
+  padding: var(--spacing-sm) var(--spacing-md) var(--spacing-md);
+  overflow-y: auto;
+  overflow-x: hidden;
+  /* Dark scrollbar in BOTH themes - the sidebar panel is always dark.
+     The standard property overrides the global light scrollbar-color
+     set in _base.scss (and disables ::-webkit-scrollbar styling in
+     modern browsers, so it is the one that counts). */
+  scrollbar-width: thin;
+  scrollbar-color: color-mix(in srgb, var(--contrast-color), transparent 55%) transparent;
+}
+
+/* Scrollbar styling */
+.sidebar-nav::-webkit-scrollbar {
+  width: 4px;
+}
+
+.sidebar-nav::-webkit-scrollbar-thumb {
+  background: color-mix(in srgb, var(--contrast-color), transparent 55%);
+  border-radius: 4px;
+}
+
+.sidebar-nav::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Nav Menu - Reset list styles */
+.sidebar .nav-menu,
+.sidebar .nav-submenu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar .nav-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+/*--------------------------------------------------------------
+# Nav Heading (Section Eyebrow)
+--------------------------------------------------------------*/
+
+.sidebar .nav-heading {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-lg) 4px var(--spacing-xs);
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--sidebar-muted-color);
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.sidebar .nav-heading::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, var(--sidebar-border), transparent);
+}
+
+.sidebar-collapsed .sidebar .nav-heading {
+  padding: var(--spacing-lg) var(--spacing-xs) var(--spacing-xs);
+  justify-content: center;
+}
+
+.sidebar-collapsed .sidebar .nav-heading span {
+  display: none;
+}
+
+.sidebar-collapsed .sidebar .nav-heading::after {
+  flex: 0 0 24px;
+  background: var(--sidebar-border);
+}
+
+/*--------------------------------------------------------------
+# Nav Item & Nav Link (Top Level)
+--------------------------------------------------------------*/
+
+.sidebar .nav-item {
+  position: relative;
+}
+
+.sidebar .nav-item > .nav-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 10px 5px 5px;
+  border-radius: var(--radius-lg);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--sidebar-color);
+  text-decoration: none;
+  transition: background-color var(--transition-fast), color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+/* Icon tile */
+.sidebar .nav-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  font-size: 1rem;
+  border-radius: var(--radius-md);
+  background: color-mix(in srgb, var(--contrast-color), transparent 95%);
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+/* Label */
+.sidebar .nav-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Submenu arrow (chevron-right, rotates down when open) */
+.sidebar .nav-arrow {
+  font-size: 0.65rem;
+  margin-left: auto;
+  opacity: 0.6;
+  transition: transform var(--transition-fast);
+}
+
+.sidebar .nav-link[aria-expanded="true"] > .nav-arrow,
+.sidebar .has-submenu.open > .nav-link > .nav-arrow {
+  transform: rotate(90deg);
+}
+
+/* Hover state */
+.sidebar .nav-item > .nav-link:hover {
+  background-color: var(--sidebar-hover-bg);
+  color: var(--contrast-color);
+}
+
+.sidebar .nav-item > .nav-link:hover .nav-icon {
+  background: color-mix(in srgb, var(--contrast-color), transparent 88%);
+}
+
+/* Open submenu parent - lifted but not gradient */
+.sidebar .nav-item.has-submenu.open > .nav-link {
+  background-color: var(--sidebar-hover-bg);
+  color: var(--contrast-color);
+}
+
+.sidebar .nav-item.has-submenu.open > .nav-link .nav-icon {
+  background: color-mix(in srgb, var(--sidebar-active-bg), transparent 70%);
+  color: var(--contrast-color);
+}
+
+/* Active state - gradient pill with glow */
+.sidebar .nav-item > .nav-link.active {
+  background: linear-gradient(105deg, var(--sidebar-active-bg), color-mix(in srgb, var(--sidebar-active-bg), var(--danger-color) 42%));
+  color: var(--sidebar-active-color);
+  box-shadow: 0 8px 18px -6px color-mix(in srgb, var(--sidebar-active-bg), transparent 40%);
+}
+
+.sidebar .nav-item > .nav-link.active .nav-icon {
+  background: color-mix(in srgb, var(--contrast-color), transparent 80%);
+  color: var(--sidebar-active-color);
+}
+
+/* Badge in nav */
+.sidebar .nav-badge {
+  padding: 2px 8px;
+  font-size: 0.625rem;
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+/*--------------------------------------------------------------
+# Collapsed Sidebar State
+--------------------------------------------------------------*/
+
+@media (min-width: 1200px) {
+  .sidebar-collapsed .sidebar-nav {
+    padding-left: var(--spacing-sm);
+    padding-right: var(--spacing-sm);
+  }
+
+  .sidebar-collapsed .sidebar .nav-item > .nav-link {
+    justify-content: center;
+    padding: 5px;
+  }
+
+  .sidebar-collapsed .sidebar .nav-item > .nav-link .nav-text,
+  .sidebar-collapsed .sidebar .nav-arrow,
+  .sidebar-collapsed .sidebar .nav-badge {
+    display: none;
+  }
+}
+
+/*--------------------------------------------------------------
+# Submenu (2nd Level) - Rail Style
+--------------------------------------------------------------*/
+
+.sidebar .nav-submenu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--transition-base);
+}
+
+/* Open state - via JS (.open on parent) or Jinja (.show on submenu) */
+.sidebar .has-submenu.open > .nav-submenu,
+.sidebar .nav-submenu.show {
+  max-height: none;
+  margin-top: 2px;
+}
+
+/* Submenu items - hang off a vertical rail aligned under the icon tile */
+.sidebar .nav-submenu > li > .nav-link {
+  display: flex;
+  align-items: center;
+  margin-left: 21px;
+  padding: 7px 10px 7px 16px;
+  border-left: 1px solid color-mix(in srgb, var(--contrast-color), transparent 88%);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  font-size: 0.8125rem;
+  font-weight: 400;
+  color: var(--sidebar-muted-color);
+  text-decoration: none;
+  position: relative;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+/* Marker dot that sits on the rail */
+.sidebar .nav-submenu > li > .nav-link::before {
+  content: "";
+  position: absolute;
+  left: -3px;
+  top: 50%;
+  transform: translateY(-50%) scale(0);
+  width: 5px;
+  height: 5px;
+  background-color: var(--accent-color);
+  border-radius: var(--radius-full);
+  box-shadow: 0 0 6px color-mix(in srgb, var(--accent-color), transparent 30%);
+  transition: transform var(--transition-fast);
+}
+
+.sidebar .nav-submenu > li > .nav-link:hover {
+  color: var(--contrast-color);
+  background-color: var(--sidebar-hover-bg);
+}
+
+.sidebar .nav-submenu > li > .nav-link:hover::before {
+  transform: translateY(-50%) scale(1);
+}
+
+.sidebar .nav-submenu > li > .nav-link.active {
+  color: var(--contrast-color);
+  background-color: color-mix(in srgb, var(--sidebar-active-bg), transparent 82%);
+  border-left-color: var(--accent-color);
+}
+
+.sidebar .nav-submenu > li > .nav-link.active::before {
+  transform: translateY(-50%) scale(1);
+}
+
+/*--------------------------------------------------------------
+# Nested Submenu (3rd Level)
+--------------------------------------------------------------*/
+
+.sidebar .nav-submenu .has-submenu {
+  position: relative;
+}
+
+.sidebar .nav-submenu .has-submenu > .nav-link > .nav-arrow {
+  font-size: 0.6rem;
+}
+
+/* 3rd level submenu - inherits max-height: 0 from .nav-submenu */
+.sidebar .nav-submenu .has-submenu.open > .nav-submenu {
+  margin-top: 2px;
+}
+
+.sidebar .nav-submenu .nav-submenu > li > .nav-link {
+  margin-left: 38px;
+}
+
+/*--------------------------------------------------------------
+# Collapsed Sidebar - Flyout Submenus
+--------------------------------------------------------------*/
+
+@media (min-width: 1200px) {
+  .sidebar-collapsed .sidebar .nav-submenu {
+    display: none !important;
+    max-height: none !important;
+  }
+
+  /* Show submenu on hover for collapsed sidebar */
+  .sidebar-collapsed .sidebar .nav-item.has-submenu:hover > .nav-submenu {
+    display: block !important;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    min-width: 210px;
+    max-height: none !important;
+    padding: var(--spacing-sm);
+    margin: 0 0 0 var(--spacing-xs);
+    background: var(--sidebar-bg);
+    border: 1px solid var(--sidebar-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-xl);
+    z-index: 1000;
+  }
+
+  .sidebar-collapsed .sidebar .nav-item.has-submenu:hover > .nav-submenu > li > .nav-link {
+    margin-left: 0;
+    border-left: none;
+    border-radius: var(--radius-md);
+    padding-left: 14px;
+  }
+
+  .sidebar-collapsed .sidebar .nav-item.has-submenu:hover > .nav-submenu > li > .nav-link::before {
+    display: none;
+  }
+}
+
+/*--------------------------------------------------------------
+# Sidebar Footer - User Card
+--------------------------------------------------------------*/
+
+.sidebar-footer {
+  padding: var(--spacing-md);
+  flex-shrink: 0;
+}
+
+.sidebar-user {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: 10px;
+  border-radius: var(--radius-xl);
+  background: color-mix(in srgb, var(--contrast-color), transparent 95%);
+  border: 1px solid color-mix(in srgb, var(--contrast-color), transparent 92%);
+}
+
+.sidebar-user-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  min-width: 0;
+  text-decoration: none;
+  transition: opacity var(--transition-fast);
+}
+
+.sidebar-user-link:hover {
+  opacity: 0.85;
+}
+
+.sidebar-user-avatar {
+  position: relative;
+  flex-shrink: 0;
+  display: block;
+  width: 38px;
+  height: 38px;
+}
+
+.sidebar-user-avatar img {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-full);
+  object-fit: cover;
+  border: 2px solid color-mix(in srgb, var(--accent-color), transparent 30%);
+}
+
+.sidebar-user-status {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: var(--radius-full);
+  background: var(--success-color);
+  border: 2px solid var(--sidebar-bg);
+}
+
+.sidebar-user-info {
+  display: block;
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.sidebar-user-name {
+  display: block;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--contrast-color);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.3;
+}
+
+.sidebar-user-role {
+  display: block;
+  font-size: 0.65rem;
+  font-weight: 500;
+  color: var(--sidebar-muted-color);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sidebar-user-actions {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  flex-shrink: 0;
+}
+
+.sidebar-user-action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-md);
+  color: var(--sidebar-muted-color);
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.sidebar-user-action:hover {
+  background-color: var(--sidebar-hover-bg);
+  color: var(--contrast-color);
+}
+
+.sidebar-user-logout:hover {
+  background-color: color-mix(in srgb, var(--danger-color), transparent 85%);
+  color: var(--danger-color);
+}
+
+/* Collapsed state */
+@media (min-width: 1200px) {
+  .sidebar-collapsed .sidebar-footer {
+    padding: var(--spacing-sm);
+  }
+
+  .sidebar-collapsed .sidebar-user {
+    flex-direction: column;
+    padding: var(--spacing-xs);
+    gap: var(--spacing-xs);
+  }
+
+  .sidebar-collapsed .sidebar-user-link {
+    justify-content: center;
+  }
+
+  .sidebar-collapsed .sidebar-user-info {
+    display: none;
+  }
+
+  .sidebar-collapsed .sidebar-user-avatar {
+    width: 34px;
+    height: 34px;
+  }
+
+  .sidebar-collapsed .sidebar-user-actions {
+    width: 100%;
+    justify-content: center;
+    border-top: 1px solid color-mix(in srgb, var(--contrast-color), transparent 92%);
+    padding-top: var(--spacing-xs);
+  }
+}
+
+/*--------------------------------------------------------------
+# Sidebar Overlay (Mobile)
+--------------------------------------------------------------*/
+
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: color-mix(in srgb, var(--sidebar-bg), transparent 40%);
+  backdrop-filter: blur(2px);
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--transition-base), visibility var(--transition-base);
+}
+
+.sidebar-open .sidebar-overlay {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media (min-width: 1200px) {
+  .sidebar-overlay {
+    display: none;
+  }
+}

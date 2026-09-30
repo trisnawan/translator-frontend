@@ -1,0 +1,41 @@
+// =============================================================================
+// FAQ Accordion Component
+// Shared FAQ/accordion styles used across FAQ and Pricing pages
+// =============================================================================
+
+.faq-accordion {
+  .accordion-item {
+    border: none;
+    border-bottom: 1px solid var(--border-color);
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  .accordion-button {
+    padding: 1rem 0;
+    font-weight: 500;
+    background: transparent;
+    box-shadow: none;
+
+    &:not(.collapsed) {
+      color: var(--accent-color);
+      background: transparent;
+    }
+
+    &:focus {
+      box-shadow: none;
+    }
+
+    &::after {
+      width: 1rem;
+      height: 1rem;
+      background-size: 1rem;
+    }
+  }
+
+  .accordion-body {
+    padding: 0 0 1rem 0;
+  }
+}

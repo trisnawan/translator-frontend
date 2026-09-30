@@ -1,0 +1,135 @@
+/*--------------------------------------------------------------
+# Footer - TrendyAdmin
+# Floating pill bar matching the header: brand mark + copyright
+# left, quick links center, credits right
+--------------------------------------------------------------*/
+
+.footer {
+  padding: 0 var(--spacing-md) var(--spacing-md);
+  margin-top: auto;
+  background: transparent;
+}
+
+@media (min-width: 576px) {
+  .footer {
+    padding: 0 var(--spacing-lg) var(--spacing-lg);
+  }
+}
+
+/* The floating pill itself */
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm) var(--spacing-lg);
+  padding: var(--spacing-md) var(--spacing-lg);
+  background: var(--surface-color);
+  border: 1px solid var(--border-color-light);
+  border-radius: var(--radius-2xl);
+  box-shadow: var(--card-shadow);
+}
+
+@media (min-width: 768px) {
+  .footer-content {
+    border-radius: var(--radius-full);
+    /* Reserve room on the right so the back-to-top button never covers the credits */
+    padding-right: 88px;
+  }
+}
+
+/* Brand + copyright */
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  min-width: 0;
+}
+
+.footer-brand-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  font-size: 0.75rem;
+  color: var(--contrast-color);
+  border-radius: var(--radius-full);
+  background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), var(--danger-color) 45%));
+}
+
+.footer-copyright {
+  font-size: 0.8125rem;
+  color: var(--muted-color);
+}
+
+.footer-copyright a {
+  font-weight: 600;
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+.footer-copyright a:hover {
+  text-decoration: underline;
+}
+
+/* Quick links */
+.footer-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+}
+
+.footer-links a {
+  position: relative;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--muted-color);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.footer-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 100%;
+  bottom: -3px;
+  height: 2px;
+  border-radius: var(--radius-full);
+  background: var(--accent-color);
+  transition: right var(--transition-base);
+}
+
+.footer-links a:hover {
+  color: var(--accent-color);
+}
+
+.footer-links a:hover::after {
+  right: 0;
+}
+
+/* Credits */
+.footer-credits {
+  font-size: 0.8125rem;
+  color: var(--muted-color);
+}
+
+.footer-credits a {
+  color: var(--accent-color);
+}
+
+/* Responsive - stack centered on small screens */
+@media (max-width: 767px) {
+  .footer-content {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .footer-links {
+    justify-content: center;
+  }
+}

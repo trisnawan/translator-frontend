@@ -1,0 +1,1376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat - TrendyAdmin</title>
+  <meta name="description" content="TrendyAdmin - Bootstrap Admin Template">
+  <meta name="keywords" content="admin, dashboard, bootstrap">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts - Plus Jakarta Sans (body) + Outfit (headings) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="assets/vendor/phosphor-icons/phosphor-icons.css" rel="stylesheet">
+  <link href="assets/vendor/lucide-icons/lucide.css" rel="stylesheet">
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/choices.js/choices.min.css" rel="stylesheet">
+  <link href="assets/vendor/flatpickr/flatpickr.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+    * Template Name: TrendyAdmin - Bootstrap Admin Template
+    * Template URL: https://bootstrapmade.com/trendy-admin-bootstrap-dashboard-template/
+    * Updated: Jul 29 2026 with Bootstrap v5.3.8
+    * Author: BootstrapMade.com
+    * License: https://bootstrapmade.com/license/
+    ======================================================== -->
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-inner">
+      <!-- Header Left -->
+      <div class="header-left">
+        <button class="sidebar-toggle" title="Toggle Sidebar">
+          <i class="ph ph-list"></i>
+        </button>
+        <a href="index.html" class="header-logo">
+          <span class="header-logo-mark"><i class="bi bi-lightning-charge-fill"></i></span>
+          <span class="header-logo-text">TrendyAdmin</span>
+        </a>
+
+        <!-- Apps Quick Access -->
+        <div class="header-action dropdown apps-dropdown">
+          <button class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" title="Quick Access">
+            <i class="ph ph-dots-nine"></i>
+          </button>
+          <div class="dropdown-menu">
+            <div class="apps-menu-header">
+              <h6>Quick Access</h6>
+              <span>Jump straight into an app</span>
+            </div>
+            <div class="apps-grid">
+              <a href="apps-chat.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-chat-circle-dots"></i></span>
+                <span>Chat</span>
+              </a>
+              <a href="apps-email.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-envelope"></i></span>
+                <span>Email</span>
+              </a>
+              <a href="apps-calendar.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-calendar-blank"></i></span>
+                <span>Calendar</span>
+              </a>
+              <a href="apps-kanban.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-kanban"></i></span>
+                <span>Kanban</span>
+              </a>
+              <a href="apps-file-manager.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-folder-open"></i></span>
+                <span>Files</span>
+              </a>
+              <a href="apps-todo.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-check-square"></i></span>
+                <span>Todo</span>
+              </a>
+              <a href="apps-contacts.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-address-book"></i></span>
+                <span>Contacts</span>
+              </a>
+              <a href="apps-support.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-headset"></i></span>
+                <span>Support</span>
+              </a>
+              <a href="invoice-list.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-receipt"></i></span>
+                <span>Invoices</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Header Search (Desktop) -->
+      <div class="header-search">
+        <form class="search-form" action="search-results.html" method="GET">
+          <button type="submit"><i class="ph ph-magnifying-glass"></i></button>
+          <input type="search" name="q" placeholder="Search anything..." autocomplete="off">
+          <span class="search-hint">⌘K</span>
+        </form>
+      </div>
+
+      <!-- Header Right -->
+      <div class="header-right">
+        <!-- Desktop Actions (hidden on mobile, shown in mobile menu) -->
+        <div class="header-actions-desktop">
+          <!-- Quick Create -->
+          <div class="dropdown create-dropdown">
+            <button class="create-btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="ph ph-plus"></i>
+              <span>Create</span>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end create-menu">
+              <a class="dropdown-item" href="apps-kanban.html">
+                <span class="create-item-icon"><i class="ph ph-kanban"></i></span>
+                <span class="create-item-text">
+                  <span class="create-item-title">New Project</span>
+                  <span class="create-item-sub">Start a kanban board</span>
+                </span>
+              </a>
+              <a class="dropdown-item" href="apps-todo.html">
+                <span class="create-item-icon"><i class="ph ph-check-square"></i></span>
+                <span class="create-item-text">
+                  <span class="create-item-title">New Task</span>
+                  <span class="create-item-sub">Add to your todo list</span>
+                </span>
+              </a>
+              <a class="dropdown-item" href="apps-contacts.html">
+                <span class="create-item-icon"><i class="ph ph-user-plus"></i></span>
+                <span class="create-item-text">
+                  <span class="create-item-title">New Contact</span>
+                  <span class="create-item-sub">Save a new person</span>
+                </span>
+              </a>
+              <a class="dropdown-item" href="invoice-list.html">
+                <span class="create-item-icon"><i class="ph ph-receipt"></i></span>
+                <span class="create-item-text">
+                  <span class="create-item-title">New Invoice</span>
+                  <span class="create-item-sub">Bill a customer</span>
+                </span>
+              </a>
+            </div>
+          </div>
+
+          <div class="header-divider"></div>
+
+          <!-- Theme Toggle -->
+          <button class="header-action theme-toggle" title="Toggle Theme">
+            <i class="ph ph-moon icon-dark"></i>
+            <i class="ph ph-sun icon-light"></i>
+          </button>
+
+          <!-- Fullscreen Toggle -->
+          <button class="header-action fullscreen-toggle" onclick="toggleFullscreen()" title="Fullscreen">
+            <i class="ph ph-arrows-out icon-enter"></i>
+            <i class="ph ph-arrows-in icon-exit"></i>
+          </button>
+
+          <!-- Messages -->
+          <div class="header-action dropdown messages-dropdown">
+            <button class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" title="Messages">
+              <i class="ph ph-chat-teardrop-text"></i>
+              <span class="badge">2</span>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end">
+              <div class="messages-header">
+                <h6>Messages</h6>
+                <a href="apps-chat.html">View all</a>
+              </div>
+              <div class="messages-list">
+                <a href="apps-chat.html" class="message-item unread">
+                  <span class="message-avatar">
+                    <img src="assets/img/avatars/avatar-2.webp" alt="Sarah Johnson">
+                    <span class="message-status"></span>
+                  </span>
+                  <span class="message-content">
+                    <span class="message-name">Sarah Johnson</span>
+                    <span class="message-text">The new dashboard mockups look amazing! 🔥</span>
+                  </span>
+                  <span class="message-time">2m</span>
+                </a>
+                <a href="apps-chat.html" class="message-item unread">
+                  <span class="message-avatar">
+                    <img src="assets/img/avatars/avatar-3.webp" alt="Mike Chen">
+                  </span>
+                  <span class="message-content">
+                    <span class="message-name">Mike Chen</span>
+                    <span class="message-text">Can you review my PR when you get a chance?</span>
+                  </span>
+                  <span class="message-time">1h</span>
+                </a>
+                <a href="apps-chat.html" class="message-item">
+                  <span class="message-avatar">
+                    <img src="assets/img/avatars/avatar-4.webp" alt="Emma Davis">
+                  </span>
+                  <span class="message-content">
+                    <span class="message-name">Emma Davis</span>
+                    <span class="message-text">Meeting moved to 3pm tomorrow</span>
+                  </span>
+                  <span class="message-time">3h</span>
+                </a>
+              </div>
+              <div class="messages-footer">
+                <a href="apps-chat.html">Open chat <i class="ph ph-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Notifications -->
+          <div class="header-action dropdown notification-dropdown">
+            <button class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" title="Notifications">
+              <i class="ph ph-bell"></i>
+              <span class="badge">3</span>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end">
+              <div class="notification-header">
+                <h6>You have 3 new notifications</h6>
+                <a href="#" class="notification-mark-read" data-notification-action="mark-all-read" title="Mark all as read">
+                  <i class="ph ph-checks"></i>
+                </a>
+              </div>
+              <div class="notification-list">
+                <div class="notification-item unread">
+                  <span class="notification-icon success">
+                    <i class="ph ph-check-circle"></i>
+                  </span>
+                  <span class="notification-content">
+                    <span class="notification-title">Order Completed</span>
+                    <span class="notification-text">Your order #12345 has been delivered</span>
+                  </span>
+                  <span class="notification-meta">
+                    <span class="notification-time">5m</span>
+                    <span class="notification-dot"></span>
+                  </span>
+                </div>
+                <div class="notification-item unread">
+                  <span class="notification-icon warning">
+                    <i class="ph ph-warning"></i>
+                  </span>
+                  <span class="notification-content">
+                    <span class="notification-title">Low Storage</span>
+                    <span class="notification-text">Server storage is running low (85% used)</span>
+                  </span>
+                  <span class="notification-meta">
+                    <span class="notification-time">1h</span>
+                    <span class="notification-dot"></span>
+                  </span>
+                </div>
+                <div class="notification-item">
+                  <span class="notification-icon info">
+                    <i class="ph ph-info"></i>
+                  </span>
+                  <span class="notification-content">
+                    <span class="notification-title">New Feature</span>
+                    <span class="notification-text">Dark mode is now available</span>
+                  </span>
+                  <span class="notification-meta">
+                    <span class="notification-time">2h</span>
+                    <span class="notification-dot"></span>
+                  </span>
+                </div>
+              </div>
+              <div class="notification-footer">
+                <a href="notifications.html">View all</a>
+                <a href="settings.html">Settings</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="header-divider"></div>
+
+          <!-- User Dropdown -->
+          <div class="header-action dropdown user-dropdown">
+            <button class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="assets/img/profile-img.webp" alt="User" class="avatar">
+              <span class="user-name">John Doe</span>
+              <i class="ph ph-caret-down user-caret"></i>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end">
+              <div class="user-menu-card">
+                <span class="user-menu-avatar">
+                  <img src="assets/img/profile-img.webp" alt="User">
+                </span>
+                <span class="user-menu-name">John Doe</span>
+                <span class="user-menu-mail">john@trendyadmin.com</span>
+                <span class="user-menu-role">Administrator</span>
+              </div>
+              <div class="user-menu-body">
+                <a class="dropdown-item" href="profile.html">
+                  <span class="user-menu-item-icon"><i class="ph ph-user"></i></span>
+                  My Profile
+                  <i class="ph ph-caret-right user-menu-item-caret"></i>
+                </a>
+                <a class="dropdown-item" href="settings.html">
+                  <span class="user-menu-item-icon"><i class="ph ph-gear"></i></span>
+                  Settings
+                  <i class="ph ph-caret-right user-menu-item-caret"></i>
+                </a>
+                <a class="dropdown-item" href="activity.html">
+                  <span class="user-menu-item-icon"><i class="ph ph-pulse"></i></span>
+                  Activity Log
+                  <i class="ph ph-caret-right user-menu-item-caret"></i>
+                </a>
+                <a class="dropdown-item" href="invoice-list.html">
+                  <span class="user-menu-item-icon"><i class="ph ph-receipt"></i></span>
+                  Billing
+                  <i class="ph ph-caret-right user-menu-item-caret"></i>
+                </a>
+              </div>
+              <div class="user-menu-footer">
+                <a href="auth-login.html" class="user-menu-signout">
+                  <i class="ph ph-sign-out"></i> Sign Out
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile Actions (visible only on mobile) -->
+        <div class="header-actions-mobile">
+          <!-- Search Toggle (Mobile) -->
+          <button class="header-action search-toggle" title="Search">
+            <i class="ph ph-magnifying-glass"></i>
+          </button>
+
+          <!-- Mobile Menu Toggle -->
+          <button class="header-action mobile-menu-toggle" title="More">
+            <i class="ph ph-dots-three-vertical"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Search -->
+  <div class="mobile-search">
+    <form class="search-form" action="search-results.html" method="GET">
+      <input type="search" name="q" placeholder="Search anything..." autocomplete="off">
+      <button type="submit"><i class="ph ph-magnifying-glass"></i></button>
+    </form>
+  </div>
+
+  <!-- Mobile Header Menu -->
+  <div class="mobile-header-menu">
+    <div class="mobile-header-menu-content">
+      <!-- Theme Toggle -->
+      <button class="mobile-menu-item theme-toggle" title="Toggle Theme">
+        <i class="ph ph-moon icon-dark"></i>
+        <i class="ph ph-sun icon-light"></i>
+        <span class="mobile-menu-label">Theme</span>
+      </button>
+
+      <!-- Fullscreen Toggle -->
+      <button class="mobile-menu-item fullscreen-toggle" onclick="toggleFullscreen()" title="Fullscreen">
+        <i class="ph ph-arrows-out icon-enter"></i>
+        <i class="ph ph-arrows-in icon-exit"></i>
+        <span class="mobile-menu-label">Fullscreen</span>
+      </button>
+
+      <!-- Messages -->
+      <a href="apps-chat.html" class="mobile-menu-item">
+        <i class="ph ph-chat-teardrop-text"></i>
+        <span class="badge">2</span>
+        <span class="mobile-menu-label">Messages</span>
+      </a>
+
+      <!-- Notifications -->
+      <a href="notifications.html" class="mobile-menu-item">
+        <i class="ph ph-bell"></i>
+        <span class="badge">3</span>
+        <span class="mobile-menu-label">Notifications</span>
+      </a>
+
+      <!-- Profile -->
+      <a href="profile.html" class="mobile-menu-item">
+        <i class="ph ph-user"></i>
+        <span class="mobile-menu-label">Profile</span>
+      </a>
+
+      <!-- Sign Out -->
+      <a href="auth-login.html" class="mobile-menu-item mobile-menu-item-danger">
+        <i class="ph ph-sign-out"></i>
+        <span class="mobile-menu-label">Sign Out</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <!-- Sidebar Header -->
+    <div class="sidebar-header">
+      <a href="index.html" class="sidebar-logo">
+        <span class="sidebar-logo-mark"><i class="bi bi-lightning-charge-fill"></i></span>
+        <span class="sidebar-logo-text">TrendyAdmin</span>
+      </a>
+      <button class="sidebar-close">
+        <i class="ph ph-x"></i>
+      </button>
+    </div>
+
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar-nav">
+      <ul class="nav-menu">
+        <li class="nav-heading"><span>Overview</span></li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="index.html">
+            <span class="nav-icon"><i class="ph ph-house"></i></span>
+            <span class="nav-text">Home</span>
+          </a>
+        </li>
+
+        <!-- Dashboards Submenu -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-gauge"></i></span>
+            <span class="nav-text">Dashboards</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="dashboard-sales.html">Sales</a></li>
+            <li><a class="nav-link " href="dashboard-analytics.html">Analytics</a></li>
+            <li><a class="nav-link " href="dashboard-crm.html">CRM</a></li>
+            <li><a class="nav-link " href="dashboard-marketing.html">Marketing</a></li>
+            <li><a class="nav-link " href="dashboard-projects.html">Projects</a></li>
+            <li><a class="nav-link " href="dashboard-finance.html">Finance</a></li>
+          </ul>
+        </li>
+
+        <!-- Users -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-users"></i></span>
+            <span class="nav-text">Users</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="users.html">Users List</a></li>
+            <li><a class="nav-link " href="users-view.html">User View</a></li>
+            <li><a class="nav-link " href="users-edit.html">User Edit</a></li>
+            <li><a class="nav-link " href="profile.html">Profile</a></li>
+            <!-- 3rd Level - Settings submenu -->
+            <li class="has-submenu ">
+              <a class="nav-link" href="#" aria-expanded="false">
+                Settings
+                <i class="ph ph-caret-right nav-arrow"></i>
+              </a>
+              <ul class="nav-submenu ">
+                <li><a class="nav-link " href="settings.html">Account</a></li>
+                <li><a class="nav-link " href="notifications.html">Notifications</a></li>
+                <li><a class="nav-link " href="activity.html">Activity</a></li>
+              </ul>
+            </li>
+            <li><a class="nav-link " href="roles.html">Roles & Permissions</a></li>
+          </ul>
+        </li>
+
+        <!-- Authentication -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-shield-check"></i></span>
+            <span class="nav-text">Authentication</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="auth-login.html">Login</a></li>
+            <li><a class="nav-link " href="auth-register.html">Register</a></li>
+            <li><a class="nav-link " href="auth-forgot-password.html">Forgot Password</a></li>
+            <li><a class="nav-link " href="auth-reset-password.html">Reset Password</a></li>
+            <li><a class="nav-link " href="auth-verify-email.html">Email Verification</a></li>
+            <li><a class="nav-link " href="auth-two-factor.html">Two Factor Auth</a></li>
+            <li><a class="nav-link " href="auth-lock-screen.html">Lock Screen</a></li>
+          </ul>
+        </li>
+
+        <!-- Apps Section -->
+        <li class="nav-heading"><span>Apps</span></li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-calendar.html">
+            <span class="nav-icon"><i class="ph ph-calendar-blank"></i></span>
+            <span class="nav-text">Calendar</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-kanban.html">
+            <span class="nav-icon"><i class="ph ph-kanban"></i></span>
+            <span class="nav-text">Kanban Board</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link active" href="apps-chat.html">
+            <span class="nav-icon"><i class="ph ph-chat-circle-dots"></i></span>
+            <span class="nav-text">Chat</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-contacts.html">
+            <span class="nav-icon"><i class="ph ph-address-book"></i></span>
+            <span class="nav-text">Contacts</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-file-manager.html">
+            <span class="nav-icon"><i class="ph ph-folder-open"></i></span>
+            <span class="nav-text">File Manager</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-email.html">
+            <span class="nav-icon"><i class="ph ph-envelope"></i></span>
+            <span class="nav-text">Email</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-todo.html">
+            <span class="nav-icon"><i class="ph ph-check-square"></i></span>
+            <span class="nav-text">Todo List</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-support.html">
+            <span class="nav-icon"><i class="ph ph-headset"></i></span>
+            <span class="nav-text">Support Center</span>
+          </a>
+        </li>
+
+        <!-- UI Elements Section -->
+        <li class="nav-heading"><span>UI Elements</span></li>
+
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-puzzle-piece"></i></span>
+            <span class="nav-text">Components</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="components-alerts.html">Alerts</a></li>
+            <li><a class="nav-link " href="components-accordion.html">Accordion</a></li>
+            <li><a class="nav-link " href="components-badges.html">Badges</a></li>
+            <li><a class="nav-link " href="components-breadcrumbs.html">Breadcrumbs</a></li>
+            <li><a class="nav-link " href="components-buttons.html">Buttons</a></li>
+            <li><a class="nav-link " href="components-cards.html">Cards</a></li>
+            <li><a class="nav-link " href="components-carousel.html">Carousel</a></li>
+            <li><a class="nav-link " href="components-dropdowns.html">Dropdowns</a></li>
+            <li><a class="nav-link " href="components-list-group.html">List Group</a></li>
+            <li><a class="nav-link " href="components-modal.html">Modal</a></li>
+            <li><a class="nav-link " href="components-nav-tabs.html">Navs & Tabs</a></li>
+            <li><a class="nav-link " href="components-offcanvas.html">Offcanvas</a></li>
+            <li><a class="nav-link " href="components-pagination.html">Pagination</a></li>
+            <li><a class="nav-link " href="components-popovers.html">Popovers</a></li>
+            <li><a class="nav-link " href="components-progress.html">Progress</a></li>
+            <li><a class="nav-link " href="components-spinners.html">Spinners</a></li>
+            <li><a class="nav-link " href="components-toasts.html">Toasts</a></li>
+            <li><a class="nav-link " href="components-tooltips.html">Tooltips</a></li>
+          </ul>
+        </li>
+
+        <!-- Widgets -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-stack"></i></span>
+            <span class="nav-text">Widgets</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="widgets-cards.html">Cards</a></li>
+            <li><a class="nav-link " href="widgets-banners.html">Banners</a></li>
+            <li><a class="nav-link " href="widgets-charts.html">Charts</a></li>
+            <li><a class="nav-link " href="widgets-apps.html">Apps</a></li>
+            <li><a class="nav-link " href="widgets-data.html">Data</a></li>
+          </ul>
+        </li>
+
+        <!-- Forms Section -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-list-checks"></i></span>
+            <span class="nav-text">Forms</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="forms-elements.html">Form Elements</a></li>
+            <li><a class="nav-link " href="forms-layouts.html">Form Layouts</a></li>
+            <li><a class="nav-link " href="forms-validation.html">Validation</a></li>
+            <li><a class="nav-link " href="forms-wizard.html">Wizard</a></li>
+            <li><a class="nav-link " href="forms-editors.html">Rich Editors</a></li>
+            <li><a class="nav-link " href="forms-pickers.html">Date/Time Pickers</a></li>
+            <li><a class="nav-link " href="forms-select.html">Advanced Select</a></li>
+            <li><a class="nav-link " href="forms-upload.html">File Upload</a></li>
+          </ul>
+        </li>
+
+        <!-- Tables Section -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-table"></i></span>
+            <span class="nav-text">Tables</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="tables-basic.html">Basic Tables</a></li>
+            <li><a class="nav-link " href="tables-datatables.html">DataTables</a></li>
+            <li><a class="nav-link " href="tables-responsive.html">Responsive Tables</a></li>
+          </ul>
+        </li>
+
+        <!-- Charts Section -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-chart-bar"></i></span>
+            <span class="nav-text">Charts</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="charts-apexcharts.html">ApexCharts</a></li>
+            <li><a class="nav-link " href="charts-chartjs.html">Chart.js</a></li>
+            <li><a class="nav-link " href="charts-echarts.html">ECharts</a></li>
+          </ul>
+        </li>
+
+        <!-- Icons Section -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-diamond"></i></span>
+            <span class="nav-text">Icons</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="icons-bootstrap.html">Bootstrap Icons</a></li>
+            <li><a class="nav-link " href="icons-remixicon.html">Remix Icons</a></li>
+            <li><a class="nav-link " href="icons-fontawesome.html">Font Awesome</a></li>
+            <li><a class="nav-link " href="icons-phosphor.html">Phosphor Icons</a></li>
+            <li><a class="nav-link " href="icons-lucide.html">Lucide Icons</a></li>
+          </ul>
+        </li>
+
+        <!-- Pages Section -->
+        <li class="nav-heading"><span>Pages</span></li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="contact.html">
+            <span class="nav-icon"><i class="ph ph-envelope-simple"></i></span>
+            <span class="nav-text">Contact</span>
+          </a>
+        </li>
+
+        <!-- Invoices -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-receipt"></i></span>
+            <span class="nav-text">Invoices</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="invoice-list.html">Invoice List</a></li>
+            <li><a class="nav-link " href="invoice.html">Invoice View</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="pricing.html">
+            <span class="nav-icon"><i class="ph ph-tag"></i></span>
+            <span class="nav-text">Pricing</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="faq.html">
+            <span class="nav-icon"><i class="ph ph-question"></i></span>
+            <span class="nav-text">FAQ</span>
+          </a>
+        </li>
+
+        <!-- Error Pages -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-warning"></i></span>
+            <span class="nav-text">Error Pages</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="error-404.html">404 Not Found</a></li>
+            <li><a class="nav-link " href="error-403.html">403 Forbidden</a></li>
+            <li><a class="nav-link " href="error-500.html">500 Server Error</a></li>
+            <li><a class="nav-link " href="error-maintenance.html">Maintenance</a></li>
+            <li><a class="nav-link " href="error-coming-soon.html">Coming Soon</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="timeline.html">
+            <span class="nav-icon"><i class="ph ph-clock-counter-clockwise"></i></span>
+            <span class="nav-text">Timeline</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="search-results.html">
+            <span class="nav-icon"><i class="ph ph-magnifying-glass"></i></span>
+            <span class="nav-text">Search Results</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="blank.html">
+            <span class="nav-icon"><i class="ph ph-file"></i></span>
+            <span class="nav-text">Blank Page</span>
+          </a>
+        </li>
+
+      </ul>
+    </nav>
+
+    <!-- Sidebar Footer - User Card -->
+    <div class="sidebar-footer">
+      <div class="sidebar-user">
+        <a href="profile.html" class="sidebar-user-link">
+          <span class="sidebar-user-avatar">
+            <img src="assets/img/profile-img.webp" alt="User">
+            <span class="sidebar-user-status"></span>
+          </span>
+          <span class="sidebar-user-info">
+            <span class="sidebar-user-name">John Doe</span>
+            <span class="sidebar-user-role">Administrator</span>
+          </span>
+        </a>
+        <div class="sidebar-user-actions">
+          <a href="settings.html" class="sidebar-user-action" title="Settings">
+            <i class="ph ph-gear"></i>
+          </a>
+          <a href="auth-login.html" class="sidebar-user-action sidebar-user-logout" title="Logout">
+            <i class="ph ph-sign-out"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Sidebar Overlay (Mobile) -->
+  <div class="sidebar-overlay"></div>
+
+  <!-- Main Content -->
+  <main class="main">
+    <div class="main-content page-chat">
+      <!-- Page Header -->
+      <div class="page-header">
+        <h1 class="page-title">Chat</h1>
+        <nav class="breadcrumb">
+          <a href="index.html" class="breadcrumb-item">Home</a>
+          <a href="#" class="breadcrumb-item">Apps</a>
+          <span class="breadcrumb-item active">Chat</span>
+        </nav>
+      </div>
+
+      <!-- Chat Container -->
+      <div class="chat-container">
+        <!-- Mobile Sidebar Overlay -->
+        <div class="chat-sidebar-overlay" id="chatSidebarOverlay"></div>
+
+        <!-- Chat Sidebar -->
+        <div class="chat-sidebar" id="chatSidebar">
+          <!-- Mobile Close Button -->
+          <button class="chat-sidebar-close" id="chatSidebarClose" aria-label="Close sidebar">
+            <i class="ph ph-x"></i>
+          </button>
+
+          <div class="chat-sidebar-header">
+            <h2 class="chat-sidebar-title">Messages</h2>
+            <div class="chat-search">
+              <i class="ph ph-magnifying-glass chat-search-icon"></i>
+              <input type="text" class="form-control" placeholder="Search conversations...">
+            </div>
+          </div>
+
+          <div class="chat-tabs">
+            <button class="chat-tab active">All</button>
+            <button class="chat-tab">Unread <span class="badge bg-primary">3</span></button>
+            <button class="chat-tab">Groups</button>
+          </div>
+
+          <div class="chat-list">
+            <!-- Chat Item 1 - Active -->
+            <div class="chat-item active" data-chat="1">
+              <div class="chat-item-avatar">
+                <img src="assets/img/avatars/avatar-1.webp" alt="Sarah Wilson">
+                <span class="chat-item-status online"></span>
+              </div>
+              <div class="chat-item-content">
+                <div class="chat-item-header">
+                  <span class="chat-item-name">Sarah Wilson</span>
+                  <span class="chat-item-time">2m ago</span>
+                </div>
+                <div class="chat-item-message">
+                  <span class="chat-item-message-text">Sure, I'll send the files right away!</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Chat Item 2 -->
+            <div class="chat-item" data-chat="2">
+              <div class="chat-item-avatar">
+                <img src="assets/img/avatars/avatar-2.webp" alt="Mike Johnson">
+                <span class="chat-item-status away"></span>
+              </div>
+              <div class="chat-item-content">
+                <div class="chat-item-header">
+                  <span class="chat-item-name">Mike Johnson</span>
+                  <span class="chat-item-time">15m ago</span>
+                </div>
+                <div class="chat-item-message">
+                  <span class="chat-item-message-text">The meeting has been rescheduled to 3 PM</span>
+                  <span class="chat-item-unread">2</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Chat Item 3 -->
+            <div class="chat-item" data-chat="3">
+              <div class="chat-item-avatar">
+                <img src="assets/img/avatars/avatar-3.webp" alt="Emily Davis">
+                <span class="chat-item-status online"></span>
+              </div>
+              <div class="chat-item-content">
+                <div class="chat-item-header">
+                  <span class="chat-item-name">Emily Davis</span>
+                  <span class="chat-item-time">1h ago</span>
+                </div>
+                <div class="chat-item-message">
+                  <span class="chat-item-message-text">Did you see the latest design updates?</span>
+                  <span class="chat-item-unread">1</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Chat Item 4 -->
+            <div class="chat-item" data-chat="4">
+              <div class="chat-item-avatar">
+                <img src="assets/img/avatars/avatar-4.webp" alt="Design Team">
+                <span class="chat-item-status online"></span>
+              </div>
+              <div class="chat-item-content">
+                <div class="chat-item-header">
+                  <span class="chat-item-name">Design Team</span>
+                  <span class="chat-item-time">2h ago</span>
+                </div>
+                <div class="chat-item-message">
+                  <span class="chat-item-message-text">Alex: Great work on the mockups everyone!</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Chat Item 5 -->
+            <div class="chat-item" data-chat="5">
+              <div class="chat-item-avatar">
+                <img src="assets/img/avatars/avatar-5.webp" alt="David Brown">
+                <span class="chat-item-status offline"></span>
+              </div>
+              <div class="chat-item-content">
+                <div class="chat-item-header">
+                  <span class="chat-item-name">David Brown</span>
+                  <span class="chat-item-time">Yesterday</span>
+                </div>
+                <div class="chat-item-message">
+                  <span class="chat-item-message-text">Thanks for your help with the project!</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Chat Item 6 -->
+            <div class="chat-item" data-chat="6">
+              <div class="chat-item-avatar">
+                <img src="assets/img/avatars/avatar-6.webp" alt="Lisa Anderson">
+                <span class="chat-item-status busy"></span>
+              </div>
+              <div class="chat-item-content">
+                <div class="chat-item-header">
+                  <span class="chat-item-name">Lisa Anderson</span>
+                  <span class="chat-item-time">Yesterday</span>
+                </div>
+                <div class="chat-item-message">
+                  <span class="chat-item-message-text">I'll review the document and get back to you</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Chat Item 7 -->
+            <div class="chat-item" data-chat="7">
+              <div class="chat-item-avatar">
+                <img src="assets/img/avatars/avatar-7.webp" alt="Product Team">
+                <span class="chat-item-status online"></span>
+              </div>
+              <div class="chat-item-content">
+                <div class="chat-item-header">
+                  <span class="chat-item-name">Product Team</span>
+                  <span class="chat-item-time">2 days ago</span>
+                </div>
+                <div class="chat-item-message">
+                  <span class="chat-item-message-text">Sprint planning starts at 10 AM tomorrow</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Chat Item 8 -->
+            <div class="chat-item" data-chat="8">
+              <div class="chat-item-avatar">
+                <img src="assets/img/avatars/avatar-8.webp" alt="James Wilson">
+                <span class="chat-item-status offline"></span>
+              </div>
+              <div class="chat-item-content">
+                <div class="chat-item-header">
+                  <span class="chat-item-name">James Wilson</span>
+                  <span class="chat-item-time">3 days ago</span>
+                </div>
+                <div class="chat-item-message">
+                  <span class="chat-item-message-text">Let me know when you're free for a call</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Chat Main -->
+        <div class="chat-main" id="chatMain">
+          <!-- Chat Header -->
+          <div class="chat-header">
+            <!-- Mobile Sidebar Toggle -->
+            <button class="chat-sidebar-toggle" id="chatSidebarToggle" aria-label="Open conversations">
+              <i class="ph ph-chat-text"></i>
+            </button>
+
+            <div class="chat-header-user">
+              <div class="chat-header-avatar">
+                <img src="assets/img/avatars/avatar-1.webp" alt="Sarah Wilson">
+              </div>
+              <div class="chat-header-info">
+                <h5>Sarah Wilson</h5>
+                <span><i class="ph-duotone ph-circle me-1" style="font-size: 0.5rem;"></i> Online</span>
+              </div>
+            </div>
+            <div class="chat-header-actions">
+              <button class="chat-header-btn" title="Voice Call">
+                <i class="ph ph-phone"></i>
+              </button>
+              <button class="chat-header-btn" title="Video Call">
+                <i class="ph ph-video-camera"></i>
+              </button>
+              <button class="chat-header-btn" title="User Info" id="toggleInfoBtn">
+                <i class="ph ph-info"></i>
+              </button>
+              <div class="dropdown">
+                <button class="chat-header-btn" data-bs-toggle="dropdown" data-bs-strategy="fixed">
+                  <i class="ph ph-dots-three-vertical"></i>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li><a class="dropdown-item" href="#"><i class="ph ph-magnifying-glass me-2"></i> Search Messages</a></li>
+                  <li><a class="dropdown-item" href="#"><i class="ph ph-bell-slash me-2"></i> Mute Notifications</a></li>
+                  <li><a class="dropdown-item" href="#"><i class="ph ph-push-pin me-2"></i> Pin Conversation</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="#"><i class="ph ph-archive me-2"></i> Archive Chat</a></li>
+                  <li><a class="dropdown-item text-danger" href="#"><i class="ph ph-trash me-2"></i> Delete Chat</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Chat Messages -->
+          <div class="chat-messages" id="chatMessages">
+            <!-- Date Divider -->
+            <div class="message-date-divider">
+              <span>Today</span>
+            </div>
+
+            <!-- Received Message -->
+            <div class="message-group received">
+              <div class="message-avatar">
+                <img src="assets/img/avatars/avatar-1.webp" alt="Sarah Wilson">
+              </div>
+              <div class="message-content">
+                <div class="message-bubble">Hi there! How's the project going?</div>
+                <span class="message-time">9:30 AM</span>
+              </div>
+            </div>
+
+            <!-- Sent Message -->
+            <div class="message-group sent">
+              <div class="message-content">
+                <div class="message-bubble">Hey Sarah! It's going well. Just finished the dashboard design.</div>
+                <span class="message-status seen"><i class="ph ph-checks"></i> Seen</span>
+              </div>
+            </div>
+
+            <!-- Received Message -->
+            <div class="message-group received">
+              <div class="message-avatar">
+                <img src="assets/img/avatars/avatar-1.webp" alt="Sarah Wilson">
+              </div>
+              <div class="message-content">
+                <div class="message-bubble">That's great! Can you share the latest mockups?</div>
+                <span class="message-time">9:35 AM</span>
+              </div>
+            </div>
+
+            <!-- Sent Message with File -->
+            <div class="message-group sent">
+              <div class="message-content">
+                <div class="message-bubble">Sure thing! Here are the files:</div>
+                <div class="message-file">
+                  <div class="message-file-icon">
+                    <i class="ph ph-file-pdf"></i>
+                  </div>
+                  <div class="message-file-info">
+                    <div class="message-file-name">Dashboard-Design-v2.pdf</div>
+                    <div class="message-file-size">2.4 MB</div>
+                  </div>
+                  <button class="message-file-download">
+                    <i class="ph ph-download-simple"></i>
+                  </button>
+                </div>
+                <span class="message-status seen"><i class="ph ph-checks"></i> Seen</span>
+              </div>
+            </div>
+
+            <!-- Received Message -->
+            <div class="message-group received">
+              <div class="message-avatar">
+                <img src="assets/img/avatars/avatar-1.webp" alt="Sarah Wilson">
+              </div>
+              <div class="message-content">
+                <div class="message-bubble">Perfect! Let me take a look at these.</div>
+                <span class="message-time">9:42 AM</span>
+              </div>
+            </div>
+
+            <!-- Received Message with multiple bubbles -->
+            <div class="message-group received">
+              <div class="message-avatar">
+                <img src="assets/img/avatars/avatar-1.webp" alt="Sarah Wilson">
+              </div>
+              <div class="message-content">
+                <div class="message-bubble">The design looks amazing! I love the new color scheme.</div>
+                <div class="message-bubble">Just a few minor suggestions:</div>
+                <div class="message-bubble">1. Could we make the sidebar a bit narrower?<br>2. The charts could use more contrast<br>3. Maybe add some icons to the navigation</div>
+                <span class="message-time">10:15 AM</span>
+              </div>
+            </div>
+
+            <!-- Sent Message -->
+            <div class="message-group sent">
+              <div class="message-content">
+                <div class="message-bubble">Great feedback! I'll work on those changes today.</div>
+                <span class="message-status seen"><i class="ph ph-checks"></i> Seen</span>
+              </div>
+            </div>
+
+            <!-- Received Message -->
+            <div class="message-group received">
+              <div class="message-avatar">
+                <img src="assets/img/avatars/avatar-1.webp" alt="Sarah Wilson">
+              </div>
+              <div class="message-content">
+                <div class="message-bubble">Sure, I'll send the files right away!</div>
+                <span class="message-time">10:28 AM</span>
+              </div>
+            </div>
+
+            <!-- Typing Indicator -->
+            <div class="typing-indicator" id="typingIndicator" style="display: none;">
+              <img src="assets/img/avatars/avatar-1.webp" alt="Sarah Wilson">
+              <div class="typing-dots">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Chat Input -->
+          <div class="chat-input">
+            <div class="chat-input-wrapper">
+              <div class="chat-input-actions">
+                <button class="chat-input-btn" title="Attach File">
+                  <i class="ph ph-paperclip"></i>
+                </button>
+                <button class="chat-input-btn" title="Send Image">
+                  <i class="ph ph-image"></i>
+                </button>
+              </div>
+              <div class="chat-input-field">
+                <textarea id="messageInput" rows="1" placeholder="Type a message..."></textarea>
+              </div>
+              <div class="chat-input-actions">
+                <button class="chat-input-btn" title="Emoji">
+                  <i class="ph ph-smiley"></i>
+                </button>
+              </div>
+              <button class="chat-send-btn" id="sendBtn" title="Send Message">
+                <i class="ph ph-paper-plane-tilt"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Chat Info Panel -->
+        <div class="chat-info" id="chatInfo">
+          <div class="chat-info-header">
+            <h6>Contact Info</h6>
+            <button class="chat-info-close" id="closeInfoBtn">
+              <i class="ph ph-x"></i>
+            </button>
+          </div>
+          <div class="chat-info-body">
+            <div class="chat-info-profile">
+              <img src="assets/img/avatars/avatar-1.webp" alt="Sarah Wilson">
+              <h5>Sarah Wilson</h5>
+              <span>UI/UX Designer</span>
+            </div>
+
+            <div class="chat-info-section">
+              <div class="chat-info-section-title">Contact Details</div>
+              <div class="chat-info-item">
+                <i class="ph ph-envelope"></i>
+                <span>sarah.wilson@example.com</span>
+              </div>
+              <div class="chat-info-item">
+                <i class="ph ph-phone"></i>
+                <span>+1 (555) 123-4567</span>
+              </div>
+              <div class="chat-info-item">
+                <i class="ph ph-map-pin"></i>
+                <span>San Francisco, CA</span>
+              </div>
+            </div>
+
+            <div class="chat-info-section">
+              <div class="chat-info-section-title">Shared Media</div>
+              <div class="chat-info-media">
+                <img src="assets/img/gallery/gallery-thumb-1.webp" alt="Shared media">
+                <img src="assets/img/gallery/gallery-thumb-2.webp" alt="Shared media">
+                <img src="assets/img/gallery/gallery-thumb-3.webp" alt="Shared media">
+                <img src="assets/img/gallery/gallery-thumb-4.webp" alt="Shared media">
+                <img src="assets/img/gallery/gallery-thumb-5.webp" alt="Shared media">
+                <img src="assets/img/gallery/gallery-thumb-6.webp" alt="Shared media">
+              </div>
+            </div>
+
+            <div class="chat-info-section">
+              <div class="chat-info-section-title">Shared Files</div>
+              <div class="message-file">
+                <div class="message-file-icon">
+                  <i class="ph ph-file-pdf"></i>
+                </div>
+                <div class="message-file-info">
+                  <div class="message-file-name">Dashboard-Design.pdf</div>
+                  <div class="message-file-size">2.4 MB</div>
+                </div>
+                <button class="message-file-download">
+                  <i class="ph ph-download-simple"></i>
+                </button>
+              </div>
+              <div class="message-file mt-2">
+                <div class="message-file-icon">
+                  <i class="ph ph-file-zip"></i>
+                </div>
+                <div class="message-file-info">
+                  <div class="message-file-name">Assets.zip</div>
+                  <div class="message-file-size">15.8 MB</div>
+                </div>
+                <button class="message-file-download">
+                  <i class="ph ph-download-simple"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <span class="footer-brand-mark"><i class="bi bi-lightning-charge-fill"></i></span>
+          <span class="footer-copyright">
+            &copy; 2026 <a href="#">TrendyAdmin</a>. All Rights Reserved.
+          </span>
+        </div>
+        <div class="footer-links">
+          <a href="#">About</a>
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Contact</a>
+        </div>
+        <div class="footer-credits">
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Back to Top -->
+  <a href="#" class="back-to-top">
+    <i class="ph ph-arrow-up"></i>
+  </a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="assets/vendor/chart.js/chart.umd.js"></script>
+  <script src="assets/vendor/echarts/echarts.min.js"></script>
+  <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="assets/vendor/quill/quill.js"></script>
+  <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+  <script src="assets/vendor/choices.js/choices.min.js"></script>
+  <script src="assets/vendor/flatpickr/flatpickr.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS Files -->
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <!-- App Sidebar Toggle (for app pages with sidebars) -->
+  <script src="assets/js/apps-sidebar-toggle.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const chatItems = document.querySelectorAll('.chat-item');
+      const messageInput = document.getElementById('messageInput');
+      const sendBtn = document.getElementById('sendBtn');
+      const chatMessages = document.getElementById('chatMessages');
+      const toggleInfoBtn = document.getElementById('toggleInfoBtn');
+      const closeInfoBtn = document.getElementById('closeInfoBtn');
+      const chatInfo = document.getElementById('chatInfo');
+      const typingIndicator = document.getElementById('typingIndicator');
+      // Chat item click handler
+      chatItems.forEach(item => {
+        item.addEventListener('click', function() {
+          chatItems.forEach(i => i.classList.remove('active'));
+          this.classList.add('active');
+          // Remove unread badge
+          const unreadBadge = this.querySelector('.chat-item-unread');
+          if (unreadBadge) {
+            unreadBadge.remove();
+          }
+        });
+      });
+      // Auto-resize textarea
+      messageInput.addEventListener('input', function() {
+        this.style.height = 'auto';
+        this.style.height = Math.min(this.scrollHeight, 120) + 'px';
+        // Enable/disable send button
+        sendBtn.disabled = !this.value.trim();
+      });
+      // Send message
+      function sendMessage() {
+        const message = messageInput.value.trim();
+        if (!message) return;
+        // Create message element
+        const messageGroup = document.createElement('div');
+        messageGroup.className = 'message-group sent';
+        messageGroup.innerHTML = `
+      <div class="message-content">
+        <div class="message-bubble">${escapeHtml(message)}</div>
+        <span class="message-status"><i class="ph ph-check"></i> Sent</span>
+      </div>
+    `;
+        // Insert before typing indicator or at end
+        if (typingIndicator.style.display !== 'none') {
+          chatMessages.insertBefore(messageGroup, typingIndicator);
+        } else {
+          chatMessages.appendChild(messageGroup);
+        }
+        // Clear input
+        messageInput.value = '';
+        messageInput.style.height = 'auto';
+        sendBtn.disabled = true;
+        // Scroll to bottom
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+        // Simulate typing response
+        setTimeout(() => {
+          typingIndicator.style.display = 'flex';
+          chatMessages.scrollTop = chatMessages.scrollHeight;
+          // Simulate received message after typing
+          setTimeout(() => {
+            typingIndicator.style.display = 'none';
+            const responses = [
+              "Got it! I'll take a look.",
+              "Thanks for the update!",
+              "Sounds good to me.",
+              "I'll get back to you shortly.",
+              "Perfect, thanks for letting me know!"
+            ];
+            const responseGroup = document.createElement('div');
+            responseGroup.className = 'message-group received';
+            responseGroup.innerHTML = `
+          <div class="message-avatar">
+            <img src="assets/img/avatars/avatar-1.webp" alt="Sarah Wilson">
+          </div>
+          <div class="message-content">
+            <div class="message-bubble">${responses[Math.floor(Math.random() * responses.length)]}</div>
+            <span class="message-time">Just now</span>
+          </div>
+        `;
+            chatMessages.appendChild(responseGroup);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+            // Update message status to seen
+            const lastSent = chatMessages.querySelector('.message-group.sent:last-of-type .message-status');
+            if (lastSent) {
+              lastSent.innerHTML = '<i class="ph ph-checks"></i> Seen';
+              lastSent.classList.add('seen');
+            }
+          }, 1500 + Math.random() * 1000);
+        }, 500);
+      }
+      // Send button click
+      sendBtn.addEventListener('click', sendMessage);
+      // Enter key to send
+      messageInput.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' && !e.shiftKey) {
+          e.preventDefault();
+          sendMessage();
+        }
+      });
+      // Toggle info panel
+      toggleInfoBtn.addEventListener('click', function() {
+        chatInfo.classList.toggle('show');
+      });
+      closeInfoBtn.addEventListener('click', function() {
+        chatInfo.classList.remove('show');
+      });
+      // Tab switching
+      const chatTabs = document.querySelectorAll('.chat-tab');
+      chatTabs.forEach(tab => {
+        tab.addEventListener('click', function() {
+          chatTabs.forEach(t => t.classList.remove('active'));
+          this.classList.add('active');
+        });
+      });
+      // Scroll to bottom on load
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+      // Helper function to escape HTML
+      function escapeHtml(text) {
+        const div = document.createElement('div');
+        div.textContent = text;
+        return div.innerHTML;
+      }
+    });
+  </script>
+</body>
+
+</html>

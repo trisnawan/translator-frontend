@@ -1,0 +1,1679 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced Select - TrendyAdmin</title>
+  <meta name="description" content="TrendyAdmin - Bootstrap Admin Template">
+  <meta name="keywords" content="admin, dashboard, bootstrap">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts - Plus Jakarta Sans (body) + Outfit (headings) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="assets/vendor/phosphor-icons/phosphor-icons.css" rel="stylesheet">
+  <link href="assets/vendor/lucide-icons/lucide.css" rel="stylesheet">
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/choices.js/choices.min.css" rel="stylesheet">
+  <link href="assets/vendor/flatpickr/flatpickr.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+    * Template Name: TrendyAdmin - Bootstrap Admin Template
+    * Template URL: https://bootstrapmade.com/trendy-admin-bootstrap-dashboard-template/
+    * Updated: Jul 29 2026 with Bootstrap v5.3.8
+    * Author: BootstrapMade.com
+    * License: https://bootstrapmade.com/license/
+    ======================================================== -->
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-inner">
+      <!-- Header Left -->
+      <div class="header-left">
+        <button class="sidebar-toggle" title="Toggle Sidebar">
+          <i class="ph ph-list"></i>
+        </button>
+        <a href="index.html" class="header-logo">
+          <span class="header-logo-mark"><i class="bi bi-lightning-charge-fill"></i></span>
+          <span class="header-logo-text">TrendyAdmin</span>
+        </a>
+
+        <!-- Apps Quick Access -->
+        <div class="header-action dropdown apps-dropdown">
+          <button class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" title="Quick Access">
+            <i class="ph ph-dots-nine"></i>
+          </button>
+          <div class="dropdown-menu">
+            <div class="apps-menu-header">
+              <h6>Quick Access</h6>
+              <span>Jump straight into an app</span>
+            </div>
+            <div class="apps-grid">
+              <a href="apps-chat.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-chat-circle-dots"></i></span>
+                <span>Chat</span>
+              </a>
+              <a href="apps-email.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-envelope"></i></span>
+                <span>Email</span>
+              </a>
+              <a href="apps-calendar.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-calendar-blank"></i></span>
+                <span>Calendar</span>
+              </a>
+              <a href="apps-kanban.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-kanban"></i></span>
+                <span>Kanban</span>
+              </a>
+              <a href="apps-file-manager.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-folder-open"></i></span>
+                <span>Files</span>
+              </a>
+              <a href="apps-todo.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-check-square"></i></span>
+                <span>Todo</span>
+              </a>
+              <a href="apps-contacts.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-address-book"></i></span>
+                <span>Contacts</span>
+              </a>
+              <a href="apps-support.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-headset"></i></span>
+                <span>Support</span>
+              </a>
+              <a href="invoice-list.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-receipt"></i></span>
+                <span>Invoices</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Header Search (Desktop) -->
+      <div class="header-search">
+        <form class="search-form" action="search-results.html" method="GET">
+          <button type="submit"><i class="ph ph-magnifying-glass"></i></button>
+          <input type="search" name="q" placeholder="Search anything..." autocomplete="off">
+          <span class="search-hint">⌘K</span>
+        </form>
+      </div>
+
+      <!-- Header Right -->
+      <div class="header-right">
+        <!-- Desktop Actions (hidden on mobile, shown in mobile menu) -->
+        <div class="header-actions-desktop">
+          <!-- Quick Create -->
+          <div class="dropdown create-dropdown">
+            <button class="create-btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="ph ph-plus"></i>
+              <span>Create</span>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end create-menu">
+              <a class="dropdown-item" href="apps-kanban.html">
+                <span class="create-item-icon"><i class="ph ph-kanban"></i></span>
+                <span class="create-item-text">
+                  <span class="create-item-title">New Project</span>
+                  <span class="create-item-sub">Start a kanban board</span>
+                </span>
+              </a>
+              <a class="dropdown-item" href="apps-todo.html">
+                <span class="create-item-icon"><i class="ph ph-check-square"></i></span>
+                <span class="create-item-text">
+                  <span class="create-item-title">New Task</span>
+                  <span class="create-item-sub">Add to your todo list</span>
+                </span>
+              </a>
+              <a class="dropdown-item" href="apps-contacts.html">
+                <span class="create-item-icon"><i class="ph ph-user-plus"></i></span>
+                <span class="create-item-text">
+                  <span class="create-item-title">New Contact</span>
+                  <span class="create-item-sub">Save a new person</span>
+                </span>
+              </a>
+              <a class="dropdown-item" href="invoice-list.html">
+                <span class="create-item-icon"><i class="ph ph-receipt"></i></span>
+                <span class="create-item-text">
+                  <span class="create-item-title">New Invoice</span>
+                  <span class="create-item-sub">Bill a customer</span>
+                </span>
+              </a>
+            </div>
+          </div>
+
+          <div class="header-divider"></div>
+
+          <!-- Theme Toggle -->
+          <button class="header-action theme-toggle" title="Toggle Theme">
+            <i class="ph ph-moon icon-dark"></i>
+            <i class="ph ph-sun icon-light"></i>
+          </button>
+
+          <!-- Fullscreen Toggle -->
+          <button class="header-action fullscreen-toggle" onclick="toggleFullscreen()" title="Fullscreen">
+            <i class="ph ph-arrows-out icon-enter"></i>
+            <i class="ph ph-arrows-in icon-exit"></i>
+          </button>
+
+          <!-- Messages -->
+          <div class="header-action dropdown messages-dropdown">
+            <button class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" title="Messages">
+              <i class="ph ph-chat-teardrop-text"></i>
+              <span class="badge">2</span>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end">
+              <div class="messages-header">
+                <h6>Messages</h6>
+                <a href="apps-chat.html">View all</a>
+              </div>
+              <div class="messages-list">
+                <a href="apps-chat.html" class="message-item unread">
+                  <span class="message-avatar">
+                    <img src="assets/img/avatars/avatar-2.webp" alt="Sarah Johnson">
+                    <span class="message-status"></span>
+                  </span>
+                  <span class="message-content">
+                    <span class="message-name">Sarah Johnson</span>
+                    <span class="message-text">The new dashboard mockups look amazing! 🔥</span>
+                  </span>
+                  <span class="message-time">2m</span>
+                </a>
+                <a href="apps-chat.html" class="message-item unread">
+                  <span class="message-avatar">
+                    <img src="assets/img/avatars/avatar-3.webp" alt="Mike Chen">
+                  </span>
+                  <span class="message-content">
+                    <span class="message-name">Mike Chen</span>
+                    <span class="message-text">Can you review my PR when you get a chance?</span>
+                  </span>
+                  <span class="message-time">1h</span>
+                </a>
+                <a href="apps-chat.html" class="message-item">
+                  <span class="message-avatar">
+                    <img src="assets/img/avatars/avatar-4.webp" alt="Emma Davis">
+                  </span>
+                  <span class="message-content">
+                    <span class="message-name">Emma Davis</span>
+                    <span class="message-text">Meeting moved to 3pm tomorrow</span>
+                  </span>
+                  <span class="message-time">3h</span>
+                </a>
+              </div>
+              <div class="messages-footer">
+                <a href="apps-chat.html">Open chat <i class="ph ph-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Notifications -->
+          <div class="header-action dropdown notification-dropdown">
+            <button class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" title="Notifications">
+              <i class="ph ph-bell"></i>
+              <span class="badge">3</span>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end">
+              <div class="notification-header">
+                <h6>You have 3 new notifications</h6>
+                <a href="#" class="notification-mark-read" data-notification-action="mark-all-read" title="Mark all as read">
+                  <i class="ph ph-checks"></i>
+                </a>
+              </div>
+              <div class="notification-list">
+                <div class="notification-item unread">
+                  <span class="notification-icon success">
+                    <i class="ph ph-check-circle"></i>
+                  </span>
+                  <span class="notification-content">
+                    <span class="notification-title">Order Completed</span>
+                    <span class="notification-text">Your order #12345 has been delivered</span>
+                  </span>
+                  <span class="notification-meta">
+                    <span class="notification-time">5m</span>
+                    <span class="notification-dot"></span>
+                  </span>
+                </div>
+                <div class="notification-item unread">
+                  <span class="notification-icon warning">
+                    <i class="ph ph-warning"></i>
+                  </span>
+                  <span class="notification-content">
+                    <span class="notification-title">Low Storage</span>
+                    <span class="notification-text">Server storage is running low (85% used)</span>
+                  </span>
+                  <span class="notification-meta">
+                    <span class="notification-time">1h</span>
+                    <span class="notification-dot"></span>
+                  </span>
+                </div>
+                <div class="notification-item">
+                  <span class="notification-icon info">
+                    <i class="ph ph-info"></i>
+                  </span>
+                  <span class="notification-content">
+                    <span class="notification-title">New Feature</span>
+                    <span class="notification-text">Dark mode is now available</span>
+                  </span>
+                  <span class="notification-meta">
+                    <span class="notification-time">2h</span>
+                    <span class="notification-dot"></span>
+                  </span>
+                </div>
+              </div>
+              <div class="notification-footer">
+                <a href="notifications.html">View all</a>
+                <a href="settings.html">Settings</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="header-divider"></div>
+
+          <!-- User Dropdown -->
+          <div class="header-action dropdown user-dropdown">
+            <button class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="assets/img/profile-img.webp" alt="User" class="avatar">
+              <span class="user-name">John Doe</span>
+              <i class="ph ph-caret-down user-caret"></i>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end">
+              <div class="user-menu-card">
+                <span class="user-menu-avatar">
+                  <img src="assets/img/profile-img.webp" alt="User">
+                </span>
+                <span class="user-menu-name">John Doe</span>
+                <span class="user-menu-mail">john@trendyadmin.com</span>
+                <span class="user-menu-role">Administrator</span>
+              </div>
+              <div class="user-menu-body">
+                <a class="dropdown-item" href="profile.html">
+                  <span class="user-menu-item-icon"><i class="ph ph-user"></i></span>
+                  My Profile
+                  <i class="ph ph-caret-right user-menu-item-caret"></i>
+                </a>
+                <a class="dropdown-item" href="settings.html">
+                  <span class="user-menu-item-icon"><i class="ph ph-gear"></i></span>
+                  Settings
+                  <i class="ph ph-caret-right user-menu-item-caret"></i>
+                </a>
+                <a class="dropdown-item" href="activity.html">
+                  <span class="user-menu-item-icon"><i class="ph ph-pulse"></i></span>
+                  Activity Log
+                  <i class="ph ph-caret-right user-menu-item-caret"></i>
+                </a>
+                <a class="dropdown-item" href="invoice-list.html">
+                  <span class="user-menu-item-icon"><i class="ph ph-receipt"></i></span>
+                  Billing
+                  <i class="ph ph-caret-right user-menu-item-caret"></i>
+                </a>
+              </div>
+              <div class="user-menu-footer">
+                <a href="auth-login.html" class="user-menu-signout">
+                  <i class="ph ph-sign-out"></i> Sign Out
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile Actions (visible only on mobile) -->
+        <div class="header-actions-mobile">
+          <!-- Search Toggle (Mobile) -->
+          <button class="header-action search-toggle" title="Search">
+            <i class="ph ph-magnifying-glass"></i>
+          </button>
+
+          <!-- Mobile Menu Toggle -->
+          <button class="header-action mobile-menu-toggle" title="More">
+            <i class="ph ph-dots-three-vertical"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Search -->
+  <div class="mobile-search">
+    <form class="search-form" action="search-results.html" method="GET">
+      <input type="search" name="q" placeholder="Search anything..." autocomplete="off">
+      <button type="submit"><i class="ph ph-magnifying-glass"></i></button>
+    </form>
+  </div>
+
+  <!-- Mobile Header Menu -->
+  <div class="mobile-header-menu">
+    <div class="mobile-header-menu-content">
+      <!-- Theme Toggle -->
+      <button class="mobile-menu-item theme-toggle" title="Toggle Theme">
+        <i class="ph ph-moon icon-dark"></i>
+        <i class="ph ph-sun icon-light"></i>
+        <span class="mobile-menu-label">Theme</span>
+      </button>
+
+      <!-- Fullscreen Toggle -->
+      <button class="mobile-menu-item fullscreen-toggle" onclick="toggleFullscreen()" title="Fullscreen">
+        <i class="ph ph-arrows-out icon-enter"></i>
+        <i class="ph ph-arrows-in icon-exit"></i>
+        <span class="mobile-menu-label">Fullscreen</span>
+      </button>
+
+      <!-- Messages -->
+      <a href="apps-chat.html" class="mobile-menu-item">
+        <i class="ph ph-chat-teardrop-text"></i>
+        <span class="badge">2</span>
+        <span class="mobile-menu-label">Messages</span>
+      </a>
+
+      <!-- Notifications -->
+      <a href="notifications.html" class="mobile-menu-item">
+        <i class="ph ph-bell"></i>
+        <span class="badge">3</span>
+        <span class="mobile-menu-label">Notifications</span>
+      </a>
+
+      <!-- Profile -->
+      <a href="profile.html" class="mobile-menu-item">
+        <i class="ph ph-user"></i>
+        <span class="mobile-menu-label">Profile</span>
+      </a>
+
+      <!-- Sign Out -->
+      <a href="auth-login.html" class="mobile-menu-item mobile-menu-item-danger">
+        <i class="ph ph-sign-out"></i>
+        <span class="mobile-menu-label">Sign Out</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <!-- Sidebar Header -->
+    <div class="sidebar-header">
+      <a href="index.html" class="sidebar-logo">
+        <span class="sidebar-logo-mark"><i class="bi bi-lightning-charge-fill"></i></span>
+        <span class="sidebar-logo-text">TrendyAdmin</span>
+      </a>
+      <button class="sidebar-close">
+        <i class="ph ph-x"></i>
+      </button>
+    </div>
+
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar-nav">
+      <ul class="nav-menu">
+        <li class="nav-heading"><span>Overview</span></li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="index.html">
+            <span class="nav-icon"><i class="ph ph-house"></i></span>
+            <span class="nav-text">Home</span>
+          </a>
+        </li>
+
+        <!-- Dashboards Submenu -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-gauge"></i></span>
+            <span class="nav-text">Dashboards</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="dashboard-sales.html">Sales</a></li>
+            <li><a class="nav-link " href="dashboard-analytics.html">Analytics</a></li>
+            <li><a class="nav-link " href="dashboard-crm.html">CRM</a></li>
+            <li><a class="nav-link " href="dashboard-marketing.html">Marketing</a></li>
+            <li><a class="nav-link " href="dashboard-projects.html">Projects</a></li>
+            <li><a class="nav-link " href="dashboard-finance.html">Finance</a></li>
+          </ul>
+        </li>
+
+        <!-- Users -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-users"></i></span>
+            <span class="nav-text">Users</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="users.html">Users List</a></li>
+            <li><a class="nav-link " href="users-view.html">User View</a></li>
+            <li><a class="nav-link " href="users-edit.html">User Edit</a></li>
+            <li><a class="nav-link " href="profile.html">Profile</a></li>
+            <!-- 3rd Level - Settings submenu -->
+            <li class="has-submenu ">
+              <a class="nav-link" href="#" aria-expanded="false">
+                Settings
+                <i class="ph ph-caret-right nav-arrow"></i>
+              </a>
+              <ul class="nav-submenu ">
+                <li><a class="nav-link " href="settings.html">Account</a></li>
+                <li><a class="nav-link " href="notifications.html">Notifications</a></li>
+                <li><a class="nav-link " href="activity.html">Activity</a></li>
+              </ul>
+            </li>
+            <li><a class="nav-link " href="roles.html">Roles & Permissions</a></li>
+          </ul>
+        </li>
+
+        <!-- Authentication -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-shield-check"></i></span>
+            <span class="nav-text">Authentication</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="auth-login.html">Login</a></li>
+            <li><a class="nav-link " href="auth-register.html">Register</a></li>
+            <li><a class="nav-link " href="auth-forgot-password.html">Forgot Password</a></li>
+            <li><a class="nav-link " href="auth-reset-password.html">Reset Password</a></li>
+            <li><a class="nav-link " href="auth-verify-email.html">Email Verification</a></li>
+            <li><a class="nav-link " href="auth-two-factor.html">Two Factor Auth</a></li>
+            <li><a class="nav-link " href="auth-lock-screen.html">Lock Screen</a></li>
+          </ul>
+        </li>
+
+        <!-- Apps Section -->
+        <li class="nav-heading"><span>Apps</span></li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-calendar.html">
+            <span class="nav-icon"><i class="ph ph-calendar-blank"></i></span>
+            <span class="nav-text">Calendar</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-kanban.html">
+            <span class="nav-icon"><i class="ph ph-kanban"></i></span>
+            <span class="nav-text">Kanban Board</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-chat.html">
+            <span class="nav-icon"><i class="ph ph-chat-circle-dots"></i></span>
+            <span class="nav-text">Chat</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-contacts.html">
+            <span class="nav-icon"><i class="ph ph-address-book"></i></span>
+            <span class="nav-text">Contacts</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-file-manager.html">
+            <span class="nav-icon"><i class="ph ph-folder-open"></i></span>
+            <span class="nav-text">File Manager</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-email.html">
+            <span class="nav-icon"><i class="ph ph-envelope"></i></span>
+            <span class="nav-text">Email</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-todo.html">
+            <span class="nav-icon"><i class="ph ph-check-square"></i></span>
+            <span class="nav-text">Todo List</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-support.html">
+            <span class="nav-icon"><i class="ph ph-headset"></i></span>
+            <span class="nav-text">Support Center</span>
+          </a>
+        </li>
+
+        <!-- UI Elements Section -->
+        <li class="nav-heading"><span>UI Elements</span></li>
+
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-puzzle-piece"></i></span>
+            <span class="nav-text">Components</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="components-alerts.html">Alerts</a></li>
+            <li><a class="nav-link " href="components-accordion.html">Accordion</a></li>
+            <li><a class="nav-link " href="components-badges.html">Badges</a></li>
+            <li><a class="nav-link " href="components-breadcrumbs.html">Breadcrumbs</a></li>
+            <li><a class="nav-link " href="components-buttons.html">Buttons</a></li>
+            <li><a class="nav-link " href="components-cards.html">Cards</a></li>
+            <li><a class="nav-link " href="components-carousel.html">Carousel</a></li>
+            <li><a class="nav-link " href="components-dropdowns.html">Dropdowns</a></li>
+            <li><a class="nav-link " href="components-list-group.html">List Group</a></li>
+            <li><a class="nav-link " href="components-modal.html">Modal</a></li>
+            <li><a class="nav-link " href="components-nav-tabs.html">Navs & Tabs</a></li>
+            <li><a class="nav-link " href="components-offcanvas.html">Offcanvas</a></li>
+            <li><a class="nav-link " href="components-pagination.html">Pagination</a></li>
+            <li><a class="nav-link " href="components-popovers.html">Popovers</a></li>
+            <li><a class="nav-link " href="components-progress.html">Progress</a></li>
+            <li><a class="nav-link " href="components-spinners.html">Spinners</a></li>
+            <li><a class="nav-link " href="components-toasts.html">Toasts</a></li>
+            <li><a class="nav-link " href="components-tooltips.html">Tooltips</a></li>
+          </ul>
+        </li>
+
+        <!-- Widgets -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-stack"></i></span>
+            <span class="nav-text">Widgets</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="widgets-cards.html">Cards</a></li>
+            <li><a class="nav-link " href="widgets-banners.html">Banners</a></li>
+            <li><a class="nav-link " href="widgets-charts.html">Charts</a></li>
+            <li><a class="nav-link " href="widgets-apps.html">Apps</a></li>
+            <li><a class="nav-link " href="widgets-data.html">Data</a></li>
+          </ul>
+        </li>
+
+        <!-- Forms Section -->
+        <li class="nav-item has-submenu open">
+          <a class="nav-link" href="#" aria-expanded="true">
+            <span class="nav-icon"><i class="ph ph-list-checks"></i></span>
+            <span class="nav-text">Forms</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu show">
+            <li><a class="nav-link " href="forms-elements.html">Form Elements</a></li>
+            <li><a class="nav-link " href="forms-layouts.html">Form Layouts</a></li>
+            <li><a class="nav-link " href="forms-validation.html">Validation</a></li>
+            <li><a class="nav-link " href="forms-wizard.html">Wizard</a></li>
+            <li><a class="nav-link " href="forms-editors.html">Rich Editors</a></li>
+            <li><a class="nav-link " href="forms-pickers.html">Date/Time Pickers</a></li>
+            <li><a class="nav-link active" href="forms-select.html">Advanced Select</a></li>
+            <li><a class="nav-link " href="forms-upload.html">File Upload</a></li>
+          </ul>
+        </li>
+
+        <!-- Tables Section -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-table"></i></span>
+            <span class="nav-text">Tables</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="tables-basic.html">Basic Tables</a></li>
+            <li><a class="nav-link " href="tables-datatables.html">DataTables</a></li>
+            <li><a class="nav-link " href="tables-responsive.html">Responsive Tables</a></li>
+          </ul>
+        </li>
+
+        <!-- Charts Section -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-chart-bar"></i></span>
+            <span class="nav-text">Charts</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="charts-apexcharts.html">ApexCharts</a></li>
+            <li><a class="nav-link " href="charts-chartjs.html">Chart.js</a></li>
+            <li><a class="nav-link " href="charts-echarts.html">ECharts</a></li>
+          </ul>
+        </li>
+
+        <!-- Icons Section -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-diamond"></i></span>
+            <span class="nav-text">Icons</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="icons-bootstrap.html">Bootstrap Icons</a></li>
+            <li><a class="nav-link " href="icons-remixicon.html">Remix Icons</a></li>
+            <li><a class="nav-link " href="icons-fontawesome.html">Font Awesome</a></li>
+            <li><a class="nav-link " href="icons-phosphor.html">Phosphor Icons</a></li>
+            <li><a class="nav-link " href="icons-lucide.html">Lucide Icons</a></li>
+          </ul>
+        </li>
+
+        <!-- Pages Section -->
+        <li class="nav-heading"><span>Pages</span></li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="contact.html">
+            <span class="nav-icon"><i class="ph ph-envelope-simple"></i></span>
+            <span class="nav-text">Contact</span>
+          </a>
+        </li>
+
+        <!-- Invoices -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-receipt"></i></span>
+            <span class="nav-text">Invoices</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="invoice-list.html">Invoice List</a></li>
+            <li><a class="nav-link " href="invoice.html">Invoice View</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="pricing.html">
+            <span class="nav-icon"><i class="ph ph-tag"></i></span>
+            <span class="nav-text">Pricing</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="faq.html">
+            <span class="nav-icon"><i class="ph ph-question"></i></span>
+            <span class="nav-text">FAQ</span>
+          </a>
+        </li>
+
+        <!-- Error Pages -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-warning"></i></span>
+            <span class="nav-text">Error Pages</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="error-404.html">404 Not Found</a></li>
+            <li><a class="nav-link " href="error-403.html">403 Forbidden</a></li>
+            <li><a class="nav-link " href="error-500.html">500 Server Error</a></li>
+            <li><a class="nav-link " href="error-maintenance.html">Maintenance</a></li>
+            <li><a class="nav-link " href="error-coming-soon.html">Coming Soon</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="timeline.html">
+            <span class="nav-icon"><i class="ph ph-clock-counter-clockwise"></i></span>
+            <span class="nav-text">Timeline</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="search-results.html">
+            <span class="nav-icon"><i class="ph ph-magnifying-glass"></i></span>
+            <span class="nav-text">Search Results</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="blank.html">
+            <span class="nav-icon"><i class="ph ph-file"></i></span>
+            <span class="nav-text">Blank Page</span>
+          </a>
+        </li>
+
+      </ul>
+    </nav>
+
+    <!-- Sidebar Footer - User Card -->
+    <div class="sidebar-footer">
+      <div class="sidebar-user">
+        <a href="profile.html" class="sidebar-user-link">
+          <span class="sidebar-user-avatar">
+            <img src="assets/img/profile-img.webp" alt="User">
+            <span class="sidebar-user-status"></span>
+          </span>
+          <span class="sidebar-user-info">
+            <span class="sidebar-user-name">John Doe</span>
+            <span class="sidebar-user-role">Administrator</span>
+          </span>
+        </a>
+        <div class="sidebar-user-actions">
+          <a href="settings.html" class="sidebar-user-action" title="Settings">
+            <i class="ph ph-gear"></i>
+          </a>
+          <a href="auth-login.html" class="sidebar-user-action sidebar-user-logout" title="Logout">
+            <i class="ph ph-sign-out"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Sidebar Overlay (Mobile) -->
+  <div class="sidebar-overlay"></div>
+
+  <!-- Main Content -->
+  <main class="main">
+    <div class="main-content page-forms-select">
+      <!-- Page Header -->
+      <div class="page-header">
+        <h1 class="page-title">Advanced Select</h1>
+        <nav class="breadcrumb">
+          <a href="index.html" class="breadcrumb-item">Home</a>
+          <a href="#" class="breadcrumb-item">Forms</a>
+          <span class="breadcrumb-item active">Advanced Select</span>
+        </nav>
+      </div>
+
+      <!-- Basic Select -->
+      <section class="section">
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Basic Select</h5>
+                <p class="card-subtitle">Simple enhanced select dropdown</p>
+              </div>
+              <div class="card-body">
+                <div class="mb-3">
+                  <label for="basicSelect" class="form-label">Single Select</label>
+                  <select class="form-select" id="basicSelect" data-choices>
+                    <option value="">Select an option...</option>
+                    <option value="option1">Option 1</option>
+                    <option value="option2">Option 2</option>
+                    <option value="option3">Option 3</option>
+                    <option value="option4">Option 4</option>
+                    <option value="option5">Option 5</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label for="preselectedSelect" class="form-label">Preselected Value</label>
+                  <select class="form-select" id="preselectedSelect" data-choices>
+                    <option value="">Select an option...</option>
+                    <option value="option1">Option 1</option>
+                    <option value="option2" selected>Option 2 (Selected)</option>
+                    <option value="option3">Option 3</option>
+                    <option value="option4">Option 4</option>
+                  </select>
+                </div>
+                <div class="mb-0">
+                  <label for="disabledSelect" class="form-label">Disabled Select</label>
+                  <select class="form-select" id="disabledSelect" data-choices disabled>
+                    <option value="">Disabled select</option>
+                    <option value="option1">Option 1</option>
+                    <option value="option2">Option 2</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Multiple Select</h5>
+                <p class="card-subtitle">Select multiple values at once</p>
+              </div>
+              <div class="card-body">
+                <div class="mb-3">
+                  <label for="multipleSelect" class="form-label">Multiple Selection</label>
+                  <select class="form-select" id="multipleSelect" data-choices multiple>
+                    <option value="html">HTML</option>
+                    <option value="css">CSS</option>
+                    <option value="javascript">JavaScript</option>
+                    <option value="typescript">TypeScript</option>
+                    <option value="react">React</option>
+                    <option value="vue">Vue.js</option>
+                    <option value="angular">Angular</option>
+                    <option value="svelte">Svelte</option>
+                  </select>
+                  <div class="form-text">Hold Ctrl/Cmd to select multiple</div>
+                </div>
+                <div class="mb-0">
+                  <label for="multiplePreselected" class="form-label">With Preselected Values</label>
+                  <select class="form-select" id="multiplePreselected" data-choices multiple>
+                    <option value="html" selected>HTML</option>
+                    <option value="css" selected>CSS</option>
+                    <option value="javascript" selected>JavaScript</option>
+                    <option value="typescript">TypeScript</option>
+                    <option value="react">React</option>
+                    <option value="vue">Vue.js</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Searchable & Groups -->
+      <section class="section">
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Searchable Select</h5>
+                <p class="card-subtitle">Type to filter options</p>
+              </div>
+              <div class="card-body">
+                <div class="mb-3">
+                  <label for="searchableSelect" class="form-label">Search Countries</label>
+                  <select class="form-select" id="searchableSelect" data-choices data-choices-search="true">
+                    <option value="">Select a country...</option>
+                    <option value="us">United States</option>
+                    <option value="ca">Canada</option>
+                    <option value="uk">United Kingdom</option>
+                    <option value="au">Australia</option>
+                    <option value="de">Germany</option>
+                    <option value="fr">France</option>
+                    <option value="jp">Japan</option>
+                    <option value="cn">China</option>
+                    <option value="br">Brazil</option>
+                    <option value="in">India</option>
+                    <option value="mx">Mexico</option>
+                    <option value="es">Spain</option>
+                    <option value="it">Italy</option>
+                    <option value="nl">Netherlands</option>
+                    <option value="se">Sweden</option>
+                    <option value="no">Norway</option>
+                    <option value="dk">Denmark</option>
+                    <option value="fi">Finland</option>
+                    <option value="pl">Poland</option>
+                    <option value="at">Austria</option>
+                  </select>
+                </div>
+                <div class="mb-0">
+                  <label for="searchableMultiple" class="form-label">Search & Multi-select</label>
+                  <select class="form-select" id="searchableMultiple" data-choices data-choices-search="true" multiple>
+                    <option value="react">React</option>
+                    <option value="vue">Vue.js</option>
+                    <option value="angular">Angular</option>
+                    <option value="svelte">Svelte</option>
+                    <option value="nextjs">Next.js</option>
+                    <option value="nuxt">Nuxt</option>
+                    <option value="gatsby">Gatsby</option>
+                    <option value="remix">Remix</option>
+                    <option value="astro">Astro</option>
+                    <option value="solidjs">SolidJS</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Option Groups</h5>
+                <p class="card-subtitle">Organize options into groups</p>
+              </div>
+              <div class="card-body">
+                <div class="mb-3">
+                  <label for="groupedSelect" class="form-label">Grouped Options</label>
+                  <select class="form-select" id="groupedSelect" data-choices>
+                    <option value="">Select a city...</option>
+                    <optgroup label="North America">
+                      <option value="nyc">New York</option>
+                      <option value="la">Los Angeles</option>
+                      <option value="chi">Chicago</option>
+                      <option value="tor">Toronto</option>
+                      <option value="van">Vancouver</option>
+                    </optgroup>
+                    <optgroup label="Europe">
+                      <option value="lon">London</option>
+                      <option value="par">Paris</option>
+                      <option value="ber">Berlin</option>
+                      <option value="ams">Amsterdam</option>
+                      <option value="rom">Rome</option>
+                    </optgroup>
+                    <optgroup label="Asia">
+                      <option value="tok">Tokyo</option>
+                      <option value="sha">Shanghai</option>
+                      <option value="sin">Singapore</option>
+                      <option value="hk">Hong Kong</option>
+                      <option value="mum">Mumbai</option>
+                    </optgroup>
+                  </select>
+                </div>
+                <div class="mb-0">
+                  <label for="groupedMultiple" class="form-label">Multi-select with Groups</label>
+                  <select class="form-select" id="groupedMultiple" data-choices multiple>
+                    <optgroup label="Frontend">
+                      <option value="html">HTML</option>
+                      <option value="css">CSS</option>
+                      <option value="js">JavaScript</option>
+                      <option value="ts">TypeScript</option>
+                    </optgroup>
+                    <optgroup label="Backend">
+                      <option value="python">Python</option>
+                      <option value="node">Node.js</option>
+                      <option value="php">PHP</option>
+                      <option value="ruby">Ruby</option>
+                    </optgroup>
+                    <optgroup label="Database">
+                      <option value="mysql">MySQL</option>
+                      <option value="postgres">PostgreSQL</option>
+                      <option value="mongodb">MongoDB</option>
+                      <option value="redis">Redis</option>
+                    </optgroup>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Remove Button & Placeholder -->
+      <section class="section">
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Removable Items</h5>
+                <p class="card-subtitle">Allow removing selected items</p>
+              </div>
+              <div class="card-body">
+                <div class="mb-3">
+                  <label for="removableSingle" class="form-label">Single with Remove Button</label>
+                  <select class="form-select" id="removableSingle" data-choices data-choices-removeitem="true">
+                    <option value="">Select a color...</option>
+                    <option value="red">Red</option>
+                    <option value="blue">Blue</option>
+                    <option value="green">Green</option>
+                    <option value="yellow">Yellow</option>
+                    <option value="purple">Purple</option>
+                  </select>
+                </div>
+                <div class="mb-0">
+                  <label for="removableMultiple" class="form-label">Multiple with Remove Buttons</label>
+                  <select class="form-select" id="removableMultiple" data-choices data-choices-removeitem="true" multiple>
+                    <option value="tag1" selected>JavaScript</option>
+                    <option value="tag2" selected>React</option>
+                    <option value="tag3" selected>Node.js</option>
+                    <option value="tag4">Python</option>
+                    <option value="tag5">Ruby</option>
+                    <option value="tag6">Go</option>
+                    <option value="tag7">Rust</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Custom Placeholders</h5>
+                <p class="card-subtitle">Personalized placeholder text</p>
+              </div>
+              <div class="card-body">
+                <div class="mb-3">
+                  <label for="customPlaceholder" class="form-label">Custom Placeholder</label>
+                  <select class="form-select" id="customPlaceholder" data-choices data-choices-placeholder="Choose your favorite fruit...">
+                    <option value="">Choose your favorite fruit...</option>
+                    <option value="apple">Apple</option>
+                    <option value="banana">Banana</option>
+                    <option value="orange">Orange</option>
+                    <option value="grape">Grape</option>
+                    <option value="mango">Mango</option>
+                  </select>
+                </div>
+                <div class="mb-0">
+                  <label for="customPlaceholderMulti" class="form-label">Multi-select Placeholder</label>
+                  <select class="form-select" id="customPlaceholderMulti" data-choices data-choices-placeholder="Pick your hobbies..." multiple>
+                    <option value="reading">Reading</option>
+                    <option value="gaming">Gaming</option>
+                    <option value="cooking">Cooking</option>
+                    <option value="sports">Sports</option>
+                    <option value="music">Music</option>
+                    <option value="travel">Travel</option>
+                    <option value="photography">Photography</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Limited Selection & Sorting -->
+      <section class="section">
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Limited Selection</h5>
+                <p class="card-subtitle">Restrict number of selections</p>
+              </div>
+              <div class="card-body">
+                <div class="mb-3">
+                  <label for="maxItems3" class="form-label">Max 3 Items</label>
+                  <select class="form-select" id="maxItems3" data-choices data-choices-maxitems="3" multiple>
+                    <option value="skill1">Leadership</option>
+                    <option value="skill2">Communication</option>
+                    <option value="skill3">Problem Solving</option>
+                    <option value="skill4">Teamwork</option>
+                    <option value="skill5">Creativity</option>
+                    <option value="skill6">Time Management</option>
+                    <option value="skill7">Critical Thinking</option>
+                  </select>
+                  <div class="form-text">Select up to 3 skills</div>
+                </div>
+                <div class="mb-0">
+                  <label for="maxItems5" class="form-label">Max 5 Items</label>
+                  <select class="form-select" id="maxItems5" data-choices data-choices-maxitems="5" multiple>
+                    <option value="mon">Monday</option>
+                    <option value="tue">Tuesday</option>
+                    <option value="wed">Wednesday</option>
+                    <option value="thu">Thursday</option>
+                    <option value="fri">Friday</option>
+                    <option value="sat">Saturday</option>
+                    <option value="sun">Sunday</option>
+                  </select>
+                  <div class="form-text">Select your preferred working days (max 5)</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Sorting Options</h5>
+                <p class="card-subtitle">Control sorting behavior</p>
+              </div>
+              <div class="card-body">
+                <div class="mb-3">
+                  <label for="sortedAlpha" class="form-label">Alphabetically Sorted</label>
+                  <select class="form-select" id="sortedAlpha" data-choices data-choices-sort="true">
+                    <option value="">Select a name...</option>
+                    <option value="david">David</option>
+                    <option value="alice">Alice</option>
+                    <option value="charlie">Charlie</option>
+                    <option value="bob">Bob</option>
+                    <option value="eve">Eve</option>
+                    <option value="frank">Frank</option>
+                  </select>
+                </div>
+                <div class="mb-0">
+                  <label for="noSort" class="form-label">Original Order (No Sorting)</label>
+                  <select class="form-select" id="noSort" data-choices data-choices-sort="false">
+                    <option value="">Select priority...</option>
+                    <option value="critical">Critical</option>
+                    <option value="high">High</option>
+                    <option value="medium">Medium</option>
+                    <option value="low">Low</option>
+                    <option value="none">None</option>
+                  </select>
+                  <div class="form-text">Options maintain their original order</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Text Input & Email -->
+      <section class="section">
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Text Input (Tags)</h5>
+                <p class="card-subtitle">Add custom values as tags</p>
+              </div>
+              <div class="card-body">
+                <div class="mb-3">
+                  <label for="tagsInput" class="form-label">Add Tags</label>
+                  <input type="text" class="form-control" id="tagsInput" data-choices data-choices-text="true" placeholder="Type and press Enter">
+                  <div class="form-text">Type a value and press Enter to add</div>
+                </div>
+                <div class="mb-3">
+                  <label for="tagsPreset" class="form-label">Tags with Preset Values</label>
+                  <input type="text" class="form-control" id="tagsPreset" data-choices data-choices-text="true" value="Design, Development, Marketing" placeholder="Add more tags...">
+                </div>
+                <div class="mb-0">
+                  <label for="tagsUnique" class="form-label">Unique Tags Only</label>
+                  <input type="text" class="form-control" id="tagsUnique" data-choices data-choices-text="true" data-choices-unique="true" placeholder="Duplicates not allowed">
+                  <div class="form-text">Duplicate entries will be prevented</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Email Input</h5>
+                <p class="card-subtitle">Email address with validation</p>
+              </div>
+              <div class="card-body">
+                <div class="mb-3">
+                  <label for="emailInput" class="form-label">Email Recipients</label>
+                  <input type="text" class="form-control" id="emailInput" data-choices data-choices-text="true" data-choices-email="true" placeholder="Enter email addresses...">
+                  <div class="form-text">Enter valid email addresses</div>
+                </div>
+                <div class="mb-0">
+                  <label for="emailPreset" class="form-label">With Preset Emails</label>
+                  <input type="text" class="form-control" id="emailPreset" data-choices data-choices-text="true" data-choices-email="true" value="john@example.com, jane@example.com" placeholder="Add more recipients...">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Disabled Options & Loading -->
+      <section class="section">
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Disabled Options</h5>
+                <p class="card-subtitle">Some options are not selectable</p>
+              </div>
+              <div class="card-body">
+                <div class="mb-3">
+                  <label for="disabledOptions" class="form-label">Select with Disabled Options</label>
+                  <select class="form-select" id="disabledOptions" data-choices>
+                    <option value="">Select a plan...</option>
+                    <option value="free">Free Plan</option>
+                    <option value="basic">Basic Plan</option>
+                    <option value="pro">Pro Plan</option>
+                    <option value="enterprise" disabled>Enterprise (Coming Soon)</option>
+                    <option value="custom" disabled>Custom (Contact Sales)</option>
+                  </select>
+                </div>
+                <div class="mb-0">
+                  <label for="disabledGroupOptions" class="form-label">Grouped with Disabled</label>
+                  <select class="form-select" id="disabledGroupOptions" data-choices>
+                    <option value="">Select a product...</option>
+                    <optgroup label="Available">
+                      <option value="laptop">Laptop Pro</option>
+                      <option value="tablet">Tablet Air</option>
+                      <option value="phone">Phone Max</option>
+                    </optgroup>
+                    <optgroup label="Out of Stock">
+                      <option value="watch" disabled>Smart Watch</option>
+                      <option value="earbuds" disabled>Wireless Earbuds</option>
+                    </optgroup>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Loading State</h5>
+                <p class="card-subtitle">Show loading indicator</p>
+              </div>
+              <div class="card-body">
+                <div class="mb-3">
+                  <label for="loadingSelect" class="form-label">Loading Example</label>
+                  <select class="form-select" id="loadingSelect" data-choices data-choices-loading="true">
+                    <option value="">Loading options...</option>
+                  </select>
+                  <div class="form-text">Simulates async data loading</div>
+                </div>
+                <div class="mb-0">
+                  <label class="form-label">Reload Data</label>
+                  <div class="d-flex gap-2">
+                    <button type="button" class="btn btn-outline-primary btn-sm" id="loadDataBtn">
+                      <i class="ph ph-arrow-clockwise me-1"></i> Load Data
+                    </button>
+                    <button type="button" class="btn btn-outline-secondary btn-sm" id="clearDataBtn">
+                      <i class="ph ph-x me-1"></i> Clear
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sizing & Validation -->
+      <section class="section">
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Sizing Variants</h5>
+                <p class="card-subtitle">Small, default, and large sizes</p>
+              </div>
+              <div class="card-body">
+                <div class="mb-3">
+                  <label for="selectSm" class="form-label">Small Select</label>
+                  <select class="form-select form-select-sm" id="selectSm" data-choices>
+                    <option value="">Small select...</option>
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                    <option value="3">Option 3</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label for="selectDefault" class="form-label">Default Select</label>
+                  <select class="form-select" id="selectDefault" data-choices>
+                    <option value="">Default select...</option>
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                    <option value="3">Option 3</option>
+                  </select>
+                </div>
+                <div class="mb-0">
+                  <label for="selectLg" class="form-label">Large Select</label>
+                  <select class="form-select form-select-lg" id="selectLg" data-choices>
+                    <option value="">Large select...</option>
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                    <option value="3">Option 3</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Validation States</h5>
+                <p class="card-subtitle">Valid and invalid feedback</p>
+              </div>
+              <div class="card-body">
+                <form class="needs-validation" novalidate>
+                  <div class="mb-3">
+                    <label for="validSelect" class="form-label">Valid Selection</label>
+                    <select class="form-select is-valid" id="validSelect" data-choices>
+                      <option value="">Select...</option>
+                      <option value="1" selected>Valid Option</option>
+                      <option value="2">Option 2</option>
+                    </select>
+                    <div class="valid-feedback">Great choice!</div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="invalidSelect" class="form-label">Invalid Selection</label>
+                    <select class="form-select is-invalid" id="invalidSelect" data-choices>
+                      <option value="">Please select...</option>
+                      <option value="1">Option 1</option>
+                      <option value="2">Option 2</option>
+                    </select>
+                    <div class="invalid-feedback">Please select an option.</div>
+                  </div>
+                  <div class="mb-0">
+                    <label for="requiredSelect" class="form-label">Required Field <span class="text-danger">*</span></label>
+                    <select class="form-select" id="requiredSelect" data-choices required>
+                      <option value="">Select a department...</option>
+                      <option value="sales">Sales</option>
+                      <option value="marketing">Marketing</option>
+                      <option value="engineering">Engineering</option>
+                      <option value="hr">Human Resources</option>
+                    </select>
+                    <div class="invalid-feedback">This field is required.</div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Real-World Examples -->
+      <section class="section">
+        <div class="card">
+          <div class="card-header">
+            <h5 class="card-title">Real-World Examples</h5>
+            <p class="card-subtitle">Practical form implementations</p>
+          </div>
+          <div class="card-body">
+            <form>
+              <div class="row g-4">
+                <!-- Country & Timezone -->
+                <div class="col-md-6">
+                  <label for="countrySelect" class="form-label">Country</label>
+                  <select class="form-select" id="countrySelect" data-choices data-choices-search="true">
+                    <option value="">Select your country...</option>
+                    <option value="us">🇺🇸 United States</option>
+                    <option value="ca">🇨🇦 Canada</option>
+                    <option value="uk">🇬🇧 United Kingdom</option>
+                    <option value="au">🇦🇺 Australia</option>
+                    <option value="de">🇩🇪 Germany</option>
+                    <option value="fr">🇫🇷 France</option>
+                    <option value="jp">🇯🇵 Japan</option>
+                    <option value="cn">🇨🇳 China</option>
+                    <option value="br">🇧🇷 Brazil</option>
+                    <option value="in">🇮🇳 India</option>
+                    <option value="mx">🇲🇽 Mexico</option>
+                    <option value="es">🇪🇸 Spain</option>
+                    <option value="it">🇮🇹 Italy</option>
+                    <option value="kr">🇰🇷 South Korea</option>
+                    <option value="nl">🇳🇱 Netherlands</option>
+                  </select>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="timezoneSelect" class="form-label">Timezone</label>
+                  <select class="form-select" id="timezoneSelect" data-choices data-choices-search="true">
+                    <option value="">Select timezone...</option>
+                    <optgroup label="Americas">
+                      <option value="est">Eastern Time (ET)</option>
+                      <option value="cst">Central Time (CT)</option>
+                      <option value="mst">Mountain Time (MT)</option>
+                      <option value="pst">Pacific Time (PT)</option>
+                      <option value="akst">Alaska Time (AKT)</option>
+                      <option value="hst">Hawaii Time (HT)</option>
+                    </optgroup>
+                    <optgroup label="Europe">
+                      <option value="gmt">Greenwich Mean Time (GMT)</option>
+                      <option value="cet">Central European Time (CET)</option>
+                      <option value="eet">Eastern European Time (EET)</option>
+                    </optgroup>
+                    <optgroup label="Asia">
+                      <option value="ist">India Standard Time (IST)</option>
+                      <option value="cst-cn">China Standard Time (CST)</option>
+                      <option value="jst">Japan Standard Time (JST)</option>
+                      <option value="kst">Korea Standard Time (KST)</option>
+                    </optgroup>
+                  </select>
+                </div>
+
+                <!-- Languages & Skills -->
+                <div class="col-md-6">
+                  <label for="languagesSelect" class="form-label">Languages Spoken</label>
+                  <select class="form-select" id="languagesSelect" data-choices data-choices-removeitem="true" multiple>
+                    <option value="en" selected>English</option>
+                    <option value="es">Spanish</option>
+                    <option value="fr">French</option>
+                    <option value="de">German</option>
+                    <option value="zh">Chinese</option>
+                    <option value="ja">Japanese</option>
+                    <option value="ko">Korean</option>
+                    <option value="pt">Portuguese</option>
+                    <option value="ar">Arabic</option>
+                    <option value="hi">Hindi</option>
+                    <option value="ru">Russian</option>
+                    <option value="it">Italian</option>
+                  </select>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="skillsSelect" class="form-label">Technical Skills (Max 5)</label>
+                  <select class="form-select" id="skillsSelect" data-choices data-choices-removeitem="true" data-choices-maxitems="5" multiple>
+                    <optgroup label="Frontend">
+                      <option value="html">HTML/CSS</option>
+                      <option value="js">JavaScript</option>
+                      <option value="ts">TypeScript</option>
+                      <option value="react">React</option>
+                      <option value="vue">Vue.js</option>
+                      <option value="angular">Angular</option>
+                    </optgroup>
+                    <optgroup label="Backend">
+                      <option value="node">Node.js</option>
+                      <option value="python">Python</option>
+                      <option value="java">Java</option>
+                      <option value="csharp">C#</option>
+                      <option value="go">Go</option>
+                      <option value="rust">Rust</option>
+                    </optgroup>
+                    <optgroup label="Database">
+                      <option value="sql">SQL</option>
+                      <option value="mongodb">MongoDB</option>
+                      <option value="redis">Redis</option>
+                    </optgroup>
+                    <optgroup label="DevOps">
+                      <option value="docker">Docker</option>
+                      <option value="k8s">Kubernetes</option>
+                      <option value="aws">AWS</option>
+                    </optgroup>
+                  </select>
+                </div>
+
+                <!-- Categories & Priority -->
+                <div class="col-md-6">
+                  <label for="categorySelect" class="form-label">Category</label>
+                  <select class="form-select" id="categorySelect" data-choices>
+                    <option value="">Select category...</option>
+                    <option value="bug">🐛 Bug Report</option>
+                    <option value="feature">✨ Feature Request</option>
+                    <option value="docs">📚 Documentation</option>
+                    <option value="question">❓ Question</option>
+                    <option value="enhancement">🚀 Enhancement</option>
+                  </select>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="prioritySelect" class="form-label">Priority</label>
+                  <select class="form-select" id="prioritySelect" data-choices>
+                    <option value="">Set priority...</option>
+                    <option value="critical">🔴 Critical</option>
+                    <option value="high">🟠 High</option>
+                    <option value="medium">🟡 Medium</option>
+                    <option value="low">🟢 Low</option>
+                  </select>
+                </div>
+
+                <!-- Assignees -->
+                <div class="col-12">
+                  <label for="assigneesSelect" class="form-label">Assign Team Members</label>
+                  <select class="form-select" id="assigneesSelect" data-choices data-choices-removeitem="true" data-choices-search="true" multiple>
+                    <option value="john">John Doe - Frontend Lead</option>
+                    <option value="jane">Jane Smith - Backend Developer</option>
+                    <option value="mike">Mike Johnson - DevOps Engineer</option>
+                    <option value="sarah">Sarah Williams - UX Designer</option>
+                    <option value="david">David Brown - Project Manager</option>
+                    <option value="emily">Emily Davis - QA Engineer</option>
+                    <option value="chris">Chris Wilson - Full Stack Developer</option>
+                    <option value="lisa">Lisa Anderson - Product Owner</option>
+                  </select>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <span class="footer-brand-mark"><i class="bi bi-lightning-charge-fill"></i></span>
+          <span class="footer-copyright">
+            &copy; 2026 <a href="#">TrendyAdmin</a>. All Rights Reserved.
+          </span>
+        </div>
+        <div class="footer-links">
+          <a href="#">About</a>
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Contact</a>
+        </div>
+        <div class="footer-credits">
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Back to Top -->
+  <a href="#" class="back-to-top">
+    <i class="ph ph-arrow-up"></i>
+  </a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="assets/vendor/chart.js/chart.umd.js"></script>
+  <script src="assets/vendor/echarts/echarts.min.js"></script>
+  <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="assets/vendor/quill/quill.js"></script>
+  <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+  <script src="assets/vendor/choices.js/choices.min.js"></script>
+  <script src="assets/vendor/flatpickr/flatpickr.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS Files -->
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <!-- App Sidebar Toggle (for app pages with sidebars) -->
+  <script src="assets/js/apps-sidebar-toggle.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Initialize all Choices.js instances
+      const selectElements = document.querySelectorAll('[data-choices]');
+      selectElements.forEach(function(el) {
+        // Skip if already initialized or is the loading example
+        if (el.id === 'loadingSelect') return;
+        const config = {
+          removeItemButton: el.dataset.choicesRemoveitem === 'true',
+          searchEnabled: el.dataset.choicesSearch === 'true',
+          shouldSort: el.dataset.choicesSort !== 'false',
+          placeholderValue: el.dataset.choicesPlaceholder || null,
+          maxItemCount: el.dataset.choicesMaxitems ? parseInt(el.dataset.choicesMaxitems) : -1,
+          duplicateItemsAllowed: el.dataset.choicesUnique !== 'true',
+          editItems: el.dataset.choicesText === 'true',
+          addItems: el.dataset.choicesText === 'true',
+          searchPlaceholderValue: 'Search...',
+          itemSelectText: '',
+          classNames: {
+            containerOuter: 'choices',
+            containerInner: 'choices__inner',
+            input: 'choices__input',
+            inputCloned: 'choices__input--cloned',
+            list: 'choices__list',
+            listItems: 'choices__list--multiple',
+            listSingle: 'choices__list--single',
+            listDropdown: 'choices__list--dropdown',
+            item: 'choices__item',
+            itemSelectable: 'choices__item--selectable',
+            itemDisabled: 'choices__item--disabled',
+            itemChoice: 'choices__item--choice',
+            placeholder: 'choices__placeholder',
+            group: 'choices__group',
+            groupHeading: 'choices__heading',
+            button: 'choices__button',
+            activeState: 'is-active',
+            focusState: 'is-focused',
+            openState: 'is-open',
+            disabledState: 'is-disabled',
+            highlightedState: 'is-highlighted',
+            selectedState: 'is-selected',
+            flippedState: 'is-flipped',
+            loadingState: 'is-loading',
+          }
+        };
+        // Handle text/email input differently
+        if (el.tagName === 'INPUT') {
+          config.delimiter = ',';
+          config.editItems = true;
+          config.addItems = true;
+          config.removeItemButton = true;
+          if (el.dataset.choicesEmail === 'true') {
+            config.addItemFilter = function(value) {
+              if (!value) return false;
+              const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+              return regex.test(value);
+            };
+          }
+        }
+        new Choices(el, config);
+      });
+      // Loading example
+      const loadingSelect = document.getElementById('loadingSelect');
+      let loadingChoices = null;
+      if (loadingSelect) {
+        loadingChoices = new Choices(loadingSelect, {
+          searchEnabled: false,
+          itemSelectText: '',
+        });
+        // Simulate loading data
+        setTimeout(function() {
+          loadingChoices.setChoices([{
+              value: 'option1',
+              label: 'Loaded Option 1'
+            },
+            {
+              value: 'option2',
+              label: 'Loaded Option 2'
+            },
+            {
+              value: 'option3',
+              label: 'Loaded Option 3'
+            },
+            {
+              value: 'option4',
+              label: 'Loaded Option 4'
+            },
+          ], 'value', 'label', true);
+        }, 2000);
+        // Load/Clear buttons
+        const loadBtn = document.getElementById('loadDataBtn');
+        const clearBtn = document.getElementById('clearDataBtn');
+        if (loadBtn) {
+          loadBtn.addEventListener('click', function() {
+            loadingChoices.clearStore();
+            loadingChoices.setChoices([{
+              value: '',
+              label: 'Loading...',
+              disabled: true
+            }, ], 'value', 'label', true);
+            setTimeout(function() {
+              loadingChoices.setChoices([{
+                  value: 'new1',
+                  label: 'Fresh Option 1'
+                },
+                {
+                  value: 'new2',
+                  label: 'Fresh Option 2'
+                },
+                {
+                  value: 'new3',
+                  label: 'Fresh Option 3'
+                },
+              ], 'value', 'label', true);
+            }, 1500);
+          });
+        }
+        if (clearBtn) {
+          clearBtn.addEventListener('click', function() {
+            loadingChoices.clearStore();
+            loadingChoices.setChoices([{
+              value: '',
+              label: 'Select an option...',
+              placeholder: true
+            }, ], 'value', 'label', true);
+          });
+        }
+      }
+      // Form validation example
+      const forms = document.querySelectorAll('.needs-validation');
+      forms.forEach(function(form) {
+        form.addEventListener('submit', function(event) {
+          if (!form.checkValidity()) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+          form.classList.add('was-validated');
+        }, false);
+      });
+    });
+  </script>
+</body>
+
+</html>

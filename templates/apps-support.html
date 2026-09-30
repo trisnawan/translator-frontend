@@ -1,0 +1,1685 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support Center - TrendyAdmin</title>
+  <meta name="description" content="TrendyAdmin - Bootstrap Admin Template">
+  <meta name="keywords" content="admin, dashboard, bootstrap">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts - Plus Jakarta Sans (body) + Outfit (headings) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="assets/vendor/phosphor-icons/phosphor-icons.css" rel="stylesheet">
+  <link href="assets/vendor/lucide-icons/lucide.css" rel="stylesheet">
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/choices.js/choices.min.css" rel="stylesheet">
+  <link href="assets/vendor/flatpickr/flatpickr.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+    * Template Name: TrendyAdmin - Bootstrap Admin Template
+    * Template URL: https://bootstrapmade.com/trendy-admin-bootstrap-dashboard-template/
+    * Updated: Jul 29 2026 with Bootstrap v5.3.8
+    * Author: BootstrapMade.com
+    * License: https://bootstrapmade.com/license/
+    ======================================================== -->
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-inner">
+      <!-- Header Left -->
+      <div class="header-left">
+        <button class="sidebar-toggle" title="Toggle Sidebar">
+          <i class="ph ph-list"></i>
+        </button>
+        <a href="index.html" class="header-logo">
+          <span class="header-logo-mark"><i class="bi bi-lightning-charge-fill"></i></span>
+          <span class="header-logo-text">TrendyAdmin</span>
+        </a>
+
+        <!-- Apps Quick Access -->
+        <div class="header-action dropdown apps-dropdown">
+          <button class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" title="Quick Access">
+            <i class="ph ph-dots-nine"></i>
+          </button>
+          <div class="dropdown-menu">
+            <div class="apps-menu-header">
+              <h6>Quick Access</h6>
+              <span>Jump straight into an app</span>
+            </div>
+            <div class="apps-grid">
+              <a href="apps-chat.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-chat-circle-dots"></i></span>
+                <span>Chat</span>
+              </a>
+              <a href="apps-email.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-envelope"></i></span>
+                <span>Email</span>
+              </a>
+              <a href="apps-calendar.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-calendar-blank"></i></span>
+                <span>Calendar</span>
+              </a>
+              <a href="apps-kanban.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-kanban"></i></span>
+                <span>Kanban</span>
+              </a>
+              <a href="apps-file-manager.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-folder-open"></i></span>
+                <span>Files</span>
+              </a>
+              <a href="apps-todo.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-check-square"></i></span>
+                <span>Todo</span>
+              </a>
+              <a href="apps-contacts.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-address-book"></i></span>
+                <span>Contacts</span>
+              </a>
+              <a href="apps-support.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-headset"></i></span>
+                <span>Support</span>
+              </a>
+              <a href="invoice-list.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-receipt"></i></span>
+                <span>Invoices</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Header Search (Desktop) -->
+      <div class="header-search">
+        <form class="search-form" action="search-results.html" method="GET">
+          <button type="submit"><i class="ph ph-magnifying-glass"></i></button>
+          <input type="search" name="q" placeholder="Search anything..." autocomplete="off">
+          <span class="search-hint">⌘K</span>
+        </form>
+      </div>
+
+      <!-- Header Right -->
+      <div class="header-right">
+        <!-- Desktop Actions (hidden on mobile, shown in mobile menu) -->
+        <div class="header-actions-desktop">
+          <!-- Quick Create -->
+          <div class="dropdown create-dropdown">
+            <button class="create-btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="ph ph-plus"></i>
+              <span>Create</span>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end create-menu">
+              <a class="dropdown-item" href="apps-kanban.html">
+                <span class="create-item-icon"><i class="ph ph-kanban"></i></span>
+                <span class="create-item-text">
+                  <span class="create-item-title">New Project</span>
+                  <span class="create-item-sub">Start a kanban board</span>
+                </span>
+              </a>
+              <a class="dropdown-item" href="apps-todo.html">
+                <span class="create-item-icon"><i class="ph ph-check-square"></i></span>
+                <span class="create-item-text">
+                  <span class="create-item-title">New Task</span>
+                  <span class="create-item-sub">Add to your todo list</span>
+                </span>
+              </a>
+              <a class="dropdown-item" href="apps-contacts.html">
+                <span class="create-item-icon"><i class="ph ph-user-plus"></i></span>
+                <span class="create-item-text">
+                  <span class="create-item-title">New Contact</span>
+                  <span class="create-item-sub">Save a new person</span>
+                </span>
+              </a>
+              <a class="dropdown-item" href="invoice-list.html">
+                <span class="create-item-icon"><i class="ph ph-receipt"></i></span>
+                <span class="create-item-text">
+                  <span class="create-item-title">New Invoice</span>
+                  <span class="create-item-sub">Bill a customer</span>
+                </span>
+              </a>
+            </div>
+          </div>
+
+          <div class="header-divider"></div>
+
+          <!-- Theme Toggle -->
+          <button class="header-action theme-toggle" title="Toggle Theme">
+            <i class="ph ph-moon icon-dark"></i>
+            <i class="ph ph-sun icon-light"></i>
+          </button>
+
+          <!-- Fullscreen Toggle -->
+          <button class="header-action fullscreen-toggle" onclick="toggleFullscreen()" title="Fullscreen">
+            <i class="ph ph-arrows-out icon-enter"></i>
+            <i class="ph ph-arrows-in icon-exit"></i>
+          </button>
+
+          <!-- Messages -->
+          <div class="header-action dropdown messages-dropdown">
+            <button class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" title="Messages">
+              <i class="ph ph-chat-teardrop-text"></i>
+              <span class="badge">2</span>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end">
+              <div class="messages-header">
+                <h6>Messages</h6>
+                <a href="apps-chat.html">View all</a>
+              </div>
+              <div class="messages-list">
+                <a href="apps-chat.html" class="message-item unread">
+                  <span class="message-avatar">
+                    <img src="assets/img/avatars/avatar-2.webp" alt="Sarah Johnson">
+                    <span class="message-status"></span>
+                  </span>
+                  <span class="message-content">
+                    <span class="message-name">Sarah Johnson</span>
+                    <span class="message-text">The new dashboard mockups look amazing! 🔥</span>
+                  </span>
+                  <span class="message-time">2m</span>
+                </a>
+                <a href="apps-chat.html" class="message-item unread">
+                  <span class="message-avatar">
+                    <img src="assets/img/avatars/avatar-3.webp" alt="Mike Chen">
+                  </span>
+                  <span class="message-content">
+                    <span class="message-name">Mike Chen</span>
+                    <span class="message-text">Can you review my PR when you get a chance?</span>
+                  </span>
+                  <span class="message-time">1h</span>
+                </a>
+                <a href="apps-chat.html" class="message-item">
+                  <span class="message-avatar">
+                    <img src="assets/img/avatars/avatar-4.webp" alt="Emma Davis">
+                  </span>
+                  <span class="message-content">
+                    <span class="message-name">Emma Davis</span>
+                    <span class="message-text">Meeting moved to 3pm tomorrow</span>
+                  </span>
+                  <span class="message-time">3h</span>
+                </a>
+              </div>
+              <div class="messages-footer">
+                <a href="apps-chat.html">Open chat <i class="ph ph-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Notifications -->
+          <div class="header-action dropdown notification-dropdown">
+            <button class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" title="Notifications">
+              <i class="ph ph-bell"></i>
+              <span class="badge">3</span>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end">
+              <div class="notification-header">
+                <h6>You have 3 new notifications</h6>
+                <a href="#" class="notification-mark-read" data-notification-action="mark-all-read" title="Mark all as read">
+                  <i class="ph ph-checks"></i>
+                </a>
+              </div>
+              <div class="notification-list">
+                <div class="notification-item unread">
+                  <span class="notification-icon success">
+                    <i class="ph ph-check-circle"></i>
+                  </span>
+                  <span class="notification-content">
+                    <span class="notification-title">Order Completed</span>
+                    <span class="notification-text">Your order #12345 has been delivered</span>
+                  </span>
+                  <span class="notification-meta">
+                    <span class="notification-time">5m</span>
+                    <span class="notification-dot"></span>
+                  </span>
+                </div>
+                <div class="notification-item unread">
+                  <span class="notification-icon warning">
+                    <i class="ph ph-warning"></i>
+                  </span>
+                  <span class="notification-content">
+                    <span class="notification-title">Low Storage</span>
+                    <span class="notification-text">Server storage is running low (85% used)</span>
+                  </span>
+                  <span class="notification-meta">
+                    <span class="notification-time">1h</span>
+                    <span class="notification-dot"></span>
+                  </span>
+                </div>
+                <div class="notification-item">
+                  <span class="notification-icon info">
+                    <i class="ph ph-info"></i>
+                  </span>
+                  <span class="notification-content">
+                    <span class="notification-title">New Feature</span>
+                    <span class="notification-text">Dark mode is now available</span>
+                  </span>
+                  <span class="notification-meta">
+                    <span class="notification-time">2h</span>
+                    <span class="notification-dot"></span>
+                  </span>
+                </div>
+              </div>
+              <div class="notification-footer">
+                <a href="notifications.html">View all</a>
+                <a href="settings.html">Settings</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="header-divider"></div>
+
+          <!-- User Dropdown -->
+          <div class="header-action dropdown user-dropdown">
+            <button class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="assets/img/profile-img.webp" alt="User" class="avatar">
+              <span class="user-name">John Doe</span>
+              <i class="ph ph-caret-down user-caret"></i>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end">
+              <div class="user-menu-card">
+                <span class="user-menu-avatar">
+                  <img src="assets/img/profile-img.webp" alt="User">
+                </span>
+                <span class="user-menu-name">John Doe</span>
+                <span class="user-menu-mail">john@trendyadmin.com</span>
+                <span class="user-menu-role">Administrator</span>
+              </div>
+              <div class="user-menu-body">
+                <a class="dropdown-item" href="profile.html">
+                  <span class="user-menu-item-icon"><i class="ph ph-user"></i></span>
+                  My Profile
+                  <i class="ph ph-caret-right user-menu-item-caret"></i>
+                </a>
+                <a class="dropdown-item" href="settings.html">
+                  <span class="user-menu-item-icon"><i class="ph ph-gear"></i></span>
+                  Settings
+                  <i class="ph ph-caret-right user-menu-item-caret"></i>
+                </a>
+                <a class="dropdown-item" href="activity.html">
+                  <span class="user-menu-item-icon"><i class="ph ph-pulse"></i></span>
+                  Activity Log
+                  <i class="ph ph-caret-right user-menu-item-caret"></i>
+                </a>
+                <a class="dropdown-item" href="invoice-list.html">
+                  <span class="user-menu-item-icon"><i class="ph ph-receipt"></i></span>
+                  Billing
+                  <i class="ph ph-caret-right user-menu-item-caret"></i>
+                </a>
+              </div>
+              <div class="user-menu-footer">
+                <a href="auth-login.html" class="user-menu-signout">
+                  <i class="ph ph-sign-out"></i> Sign Out
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile Actions (visible only on mobile) -->
+        <div class="header-actions-mobile">
+          <!-- Search Toggle (Mobile) -->
+          <button class="header-action search-toggle" title="Search">
+            <i class="ph ph-magnifying-glass"></i>
+          </button>
+
+          <!-- Mobile Menu Toggle -->
+          <button class="header-action mobile-menu-toggle" title="More">
+            <i class="ph ph-dots-three-vertical"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Search -->
+  <div class="mobile-search">
+    <form class="search-form" action="search-results.html" method="GET">
+      <input type="search" name="q" placeholder="Search anything..." autocomplete="off">
+      <button type="submit"><i class="ph ph-magnifying-glass"></i></button>
+    </form>
+  </div>
+
+  <!-- Mobile Header Menu -->
+  <div class="mobile-header-menu">
+    <div class="mobile-header-menu-content">
+      <!-- Theme Toggle -->
+      <button class="mobile-menu-item theme-toggle" title="Toggle Theme">
+        <i class="ph ph-moon icon-dark"></i>
+        <i class="ph ph-sun icon-light"></i>
+        <span class="mobile-menu-label">Theme</span>
+      </button>
+
+      <!-- Fullscreen Toggle -->
+      <button class="mobile-menu-item fullscreen-toggle" onclick="toggleFullscreen()" title="Fullscreen">
+        <i class="ph ph-arrows-out icon-enter"></i>
+        <i class="ph ph-arrows-in icon-exit"></i>
+        <span class="mobile-menu-label">Fullscreen</span>
+      </button>
+
+      <!-- Messages -->
+      <a href="apps-chat.html" class="mobile-menu-item">
+        <i class="ph ph-chat-teardrop-text"></i>
+        <span class="badge">2</span>
+        <span class="mobile-menu-label">Messages</span>
+      </a>
+
+      <!-- Notifications -->
+      <a href="notifications.html" class="mobile-menu-item">
+        <i class="ph ph-bell"></i>
+        <span class="badge">3</span>
+        <span class="mobile-menu-label">Notifications</span>
+      </a>
+
+      <!-- Profile -->
+      <a href="profile.html" class="mobile-menu-item">
+        <i class="ph ph-user"></i>
+        <span class="mobile-menu-label">Profile</span>
+      </a>
+
+      <!-- Sign Out -->
+      <a href="auth-login.html" class="mobile-menu-item mobile-menu-item-danger">
+        <i class="ph ph-sign-out"></i>
+        <span class="mobile-menu-label">Sign Out</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <!-- Sidebar Header -->
+    <div class="sidebar-header">
+      <a href="index.html" class="sidebar-logo">
+        <span class="sidebar-logo-mark"><i class="bi bi-lightning-charge-fill"></i></span>
+        <span class="sidebar-logo-text">TrendyAdmin</span>
+      </a>
+      <button class="sidebar-close">
+        <i class="ph ph-x"></i>
+      </button>
+    </div>
+
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar-nav">
+      <ul class="nav-menu">
+        <li class="nav-heading"><span>Overview</span></li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="index.html">
+            <span class="nav-icon"><i class="ph ph-house"></i></span>
+            <span class="nav-text">Home</span>
+          </a>
+        </li>
+
+        <!-- Dashboards Submenu -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-gauge"></i></span>
+            <span class="nav-text">Dashboards</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="dashboard-sales.html">Sales</a></li>
+            <li><a class="nav-link " href="dashboard-analytics.html">Analytics</a></li>
+            <li><a class="nav-link " href="dashboard-crm.html">CRM</a></li>
+            <li><a class="nav-link " href="dashboard-marketing.html">Marketing</a></li>
+            <li><a class="nav-link " href="dashboard-projects.html">Projects</a></li>
+            <li><a class="nav-link " href="dashboard-finance.html">Finance</a></li>
+          </ul>
+        </li>
+
+        <!-- Users -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-users"></i></span>
+            <span class="nav-text">Users</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="users.html">Users List</a></li>
+            <li><a class="nav-link " href="users-view.html">User View</a></li>
+            <li><a class="nav-link " href="users-edit.html">User Edit</a></li>
+            <li><a class="nav-link " href="profile.html">Profile</a></li>
+            <!-- 3rd Level - Settings submenu -->
+            <li class="has-submenu ">
+              <a class="nav-link" href="#" aria-expanded="false">
+                Settings
+                <i class="ph ph-caret-right nav-arrow"></i>
+              </a>
+              <ul class="nav-submenu ">
+                <li><a class="nav-link " href="settings.html">Account</a></li>
+                <li><a class="nav-link " href="notifications.html">Notifications</a></li>
+                <li><a class="nav-link " href="activity.html">Activity</a></li>
+              </ul>
+            </li>
+            <li><a class="nav-link " href="roles.html">Roles & Permissions</a></li>
+          </ul>
+        </li>
+
+        <!-- Authentication -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-shield-check"></i></span>
+            <span class="nav-text">Authentication</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="auth-login.html">Login</a></li>
+            <li><a class="nav-link " href="auth-register.html">Register</a></li>
+            <li><a class="nav-link " href="auth-forgot-password.html">Forgot Password</a></li>
+            <li><a class="nav-link " href="auth-reset-password.html">Reset Password</a></li>
+            <li><a class="nav-link " href="auth-verify-email.html">Email Verification</a></li>
+            <li><a class="nav-link " href="auth-two-factor.html">Two Factor Auth</a></li>
+            <li><a class="nav-link " href="auth-lock-screen.html">Lock Screen</a></li>
+          </ul>
+        </li>
+
+        <!-- Apps Section -->
+        <li class="nav-heading"><span>Apps</span></li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-calendar.html">
+            <span class="nav-icon"><i class="ph ph-calendar-blank"></i></span>
+            <span class="nav-text">Calendar</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-kanban.html">
+            <span class="nav-icon"><i class="ph ph-kanban"></i></span>
+            <span class="nav-text">Kanban Board</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-chat.html">
+            <span class="nav-icon"><i class="ph ph-chat-circle-dots"></i></span>
+            <span class="nav-text">Chat</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-contacts.html">
+            <span class="nav-icon"><i class="ph ph-address-book"></i></span>
+            <span class="nav-text">Contacts</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-file-manager.html">
+            <span class="nav-icon"><i class="ph ph-folder-open"></i></span>
+            <span class="nav-text">File Manager</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-email.html">
+            <span class="nav-icon"><i class="ph ph-envelope"></i></span>
+            <span class="nav-text">Email</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-todo.html">
+            <span class="nav-icon"><i class="ph ph-check-square"></i></span>
+            <span class="nav-text">Todo List</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link active" href="apps-support.html">
+            <span class="nav-icon"><i class="ph ph-headset"></i></span>
+            <span class="nav-text">Support Center</span>
+          </a>
+        </li>
+
+        <!-- UI Elements Section -->
+        <li class="nav-heading"><span>UI Elements</span></li>
+
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-puzzle-piece"></i></span>
+            <span class="nav-text">Components</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="components-alerts.html">Alerts</a></li>
+            <li><a class="nav-link " href="components-accordion.html">Accordion</a></li>
+            <li><a class="nav-link " href="components-badges.html">Badges</a></li>
+            <li><a class="nav-link " href="components-breadcrumbs.html">Breadcrumbs</a></li>
+            <li><a class="nav-link " href="components-buttons.html">Buttons</a></li>
+            <li><a class="nav-link " href="components-cards.html">Cards</a></li>
+            <li><a class="nav-link " href="components-carousel.html">Carousel</a></li>
+            <li><a class="nav-link " href="components-dropdowns.html">Dropdowns</a></li>
+            <li><a class="nav-link " href="components-list-group.html">List Group</a></li>
+            <li><a class="nav-link " href="components-modal.html">Modal</a></li>
+            <li><a class="nav-link " href="components-nav-tabs.html">Navs & Tabs</a></li>
+            <li><a class="nav-link " href="components-offcanvas.html">Offcanvas</a></li>
+            <li><a class="nav-link " href="components-pagination.html">Pagination</a></li>
+            <li><a class="nav-link " href="components-popovers.html">Popovers</a></li>
+            <li><a class="nav-link " href="components-progress.html">Progress</a></li>
+            <li><a class="nav-link " href="components-spinners.html">Spinners</a></li>
+            <li><a class="nav-link " href="components-toasts.html">Toasts</a></li>
+            <li><a class="nav-link " href="components-tooltips.html">Tooltips</a></li>
+          </ul>
+        </li>
+
+        <!-- Widgets -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-stack"></i></span>
+            <span class="nav-text">Widgets</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="widgets-cards.html">Cards</a></li>
+            <li><a class="nav-link " href="widgets-banners.html">Banners</a></li>
+            <li><a class="nav-link " href="widgets-charts.html">Charts</a></li>
+            <li><a class="nav-link " href="widgets-apps.html">Apps</a></li>
+            <li><a class="nav-link " href="widgets-data.html">Data</a></li>
+          </ul>
+        </li>
+
+        <!-- Forms Section -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-list-checks"></i></span>
+            <span class="nav-text">Forms</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="forms-elements.html">Form Elements</a></li>
+            <li><a class="nav-link " href="forms-layouts.html">Form Layouts</a></li>
+            <li><a class="nav-link " href="forms-validation.html">Validation</a></li>
+            <li><a class="nav-link " href="forms-wizard.html">Wizard</a></li>
+            <li><a class="nav-link " href="forms-editors.html">Rich Editors</a></li>
+            <li><a class="nav-link " href="forms-pickers.html">Date/Time Pickers</a></li>
+            <li><a class="nav-link " href="forms-select.html">Advanced Select</a></li>
+            <li><a class="nav-link " href="forms-upload.html">File Upload</a></li>
+          </ul>
+        </li>
+
+        <!-- Tables Section -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-table"></i></span>
+            <span class="nav-text">Tables</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="tables-basic.html">Basic Tables</a></li>
+            <li><a class="nav-link " href="tables-datatables.html">DataTables</a></li>
+            <li><a class="nav-link " href="tables-responsive.html">Responsive Tables</a></li>
+          </ul>
+        </li>
+
+        <!-- Charts Section -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-chart-bar"></i></span>
+            <span class="nav-text">Charts</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="charts-apexcharts.html">ApexCharts</a></li>
+            <li><a class="nav-link " href="charts-chartjs.html">Chart.js</a></li>
+            <li><a class="nav-link " href="charts-echarts.html">ECharts</a></li>
+          </ul>
+        </li>
+
+        <!-- Icons Section -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-diamond"></i></span>
+            <span class="nav-text">Icons</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="icons-bootstrap.html">Bootstrap Icons</a></li>
+            <li><a class="nav-link " href="icons-remixicon.html">Remix Icons</a></li>
+            <li><a class="nav-link " href="icons-fontawesome.html">Font Awesome</a></li>
+            <li><a class="nav-link " href="icons-phosphor.html">Phosphor Icons</a></li>
+            <li><a class="nav-link " href="icons-lucide.html">Lucide Icons</a></li>
+          </ul>
+        </li>
+
+        <!-- Pages Section -->
+        <li class="nav-heading"><span>Pages</span></li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="contact.html">
+            <span class="nav-icon"><i class="ph ph-envelope-simple"></i></span>
+            <span class="nav-text">Contact</span>
+          </a>
+        </li>
+
+        <!-- Invoices -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-receipt"></i></span>
+            <span class="nav-text">Invoices</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="invoice-list.html">Invoice List</a></li>
+            <li><a class="nav-link " href="invoice.html">Invoice View</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="pricing.html">
+            <span class="nav-icon"><i class="ph ph-tag"></i></span>
+            <span class="nav-text">Pricing</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="faq.html">
+            <span class="nav-icon"><i class="ph ph-question"></i></span>
+            <span class="nav-text">FAQ</span>
+          </a>
+        </li>
+
+        <!-- Error Pages -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-warning"></i></span>
+            <span class="nav-text">Error Pages</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="error-404.html">404 Not Found</a></li>
+            <li><a class="nav-link " href="error-403.html">403 Forbidden</a></li>
+            <li><a class="nav-link " href="error-500.html">500 Server Error</a></li>
+            <li><a class="nav-link " href="error-maintenance.html">Maintenance</a></li>
+            <li><a class="nav-link " href="error-coming-soon.html">Coming Soon</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="timeline.html">
+            <span class="nav-icon"><i class="ph ph-clock-counter-clockwise"></i></span>
+            <span class="nav-text">Timeline</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="search-results.html">
+            <span class="nav-icon"><i class="ph ph-magnifying-glass"></i></span>
+            <span class="nav-text">Search Results</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="blank.html">
+            <span class="nav-icon"><i class="ph ph-file"></i></span>
+            <span class="nav-text">Blank Page</span>
+          </a>
+        </li>
+
+      </ul>
+    </nav>
+
+    <!-- Sidebar Footer - User Card -->
+    <div class="sidebar-footer">
+      <div class="sidebar-user">
+        <a href="profile.html" class="sidebar-user-link">
+          <span class="sidebar-user-avatar">
+            <img src="assets/img/profile-img.webp" alt="User">
+            <span class="sidebar-user-status"></span>
+          </span>
+          <span class="sidebar-user-info">
+            <span class="sidebar-user-name">John Doe</span>
+            <span class="sidebar-user-role">Administrator</span>
+          </span>
+        </a>
+        <div class="sidebar-user-actions">
+          <a href="settings.html" class="sidebar-user-action" title="Settings">
+            <i class="ph ph-gear"></i>
+          </a>
+          <a href="auth-login.html" class="sidebar-user-action sidebar-user-logout" title="Logout">
+            <i class="ph ph-sign-out"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Sidebar Overlay (Mobile) -->
+  <div class="sidebar-overlay"></div>
+
+  <!-- Main Content -->
+  <main class="main">
+    <div class="main-content page-support">
+      <!-- Page Header -->
+      <div class="page-header">
+        <h1 class="page-title">Support Center</h1>
+        <nav class="breadcrumb">
+          <a href="index.html" class="breadcrumb-item">Home</a>
+          <a href="#" class="breadcrumb-item">Apps</a>
+          <span class="breadcrumb-item active">Support Center</span>
+        </nav>
+      </div>
+
+      <!-- Support Container -->
+      <div class="support-container">
+        <!-- Mobile Sidebar Overlay -->
+        <div class="support-sidebar-overlay" id="supportSidebarOverlay"></div>
+
+        <!-- Support Sidebar -->
+        <div class="support-sidebar" id="supportSidebar">
+          <!-- Mobile Close Button -->
+          <button class="support-sidebar-close" id="supportSidebarClose" aria-label="Close sidebar">
+            <i class="ph ph-x"></i>
+          </button>
+          <div class="support-sidebar-header">
+            <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#newTicketModal">
+              <i class="ph ph-plus me-2"></i>New Ticket
+            </button>
+          </div>
+
+          <div class="support-nav">
+            <a href="#" class="support-nav-item active" data-filter="all">
+              <i class="ph ph-ticket"></i>
+              <span>All Tickets</span>
+              <span class="badge">24</span>
+            </a>
+            <a href="#" class="support-nav-item" data-filter="my-tickets">
+              <i class="ph ph-user"></i>
+              <span>My Tickets</span>
+              <span class="badge">8</span>
+            </a>
+            <a href="#" class="support-nav-item" data-filter="assigned">
+              <i class="ph ph-user-check"></i>
+              <span>Assigned to Me</span>
+              <span class="badge">5</span>
+            </a>
+            <a href="#" class="support-nav-item" data-filter="unassigned">
+              <i class="ph ph-user-minus"></i>
+              <span>Unassigned</span>
+              <span class="badge">3</span>
+            </a>
+          </div>
+
+          <div class="support-status-nav">
+            <div class="support-nav-header">
+              <span>By Status</span>
+            </div>
+            <a href="#" class="support-nav-item" data-filter="open">
+              <span class="support-status-dot open"></span>
+              <span>Open</span>
+              <span class="badge">12</span>
+            </a>
+            <a href="#" class="support-nav-item" data-filter="in-progress">
+              <span class="support-status-dot in-progress"></span>
+              <span>In Progress</span>
+              <span class="badge">6</span>
+            </a>
+            <a href="#" class="support-nav-item" data-filter="pending">
+              <span class="support-status-dot pending"></span>
+              <span>Pending</span>
+              <span class="badge">3</span>
+            </a>
+            <a href="#" class="support-nav-item" data-filter="resolved">
+              <span class="support-status-dot resolved"></span>
+              <span>Resolved</span>
+              <span class="badge">2</span>
+            </a>
+            <a href="#" class="support-nav-item" data-filter="closed">
+              <span class="support-status-dot closed"></span>
+              <span>Closed</span>
+              <span class="badge">1</span>
+            </a>
+          </div>
+
+          <div class="support-categories">
+            <div class="support-nav-header">
+              <span>Categories</span>
+              <button class="support-nav-add" title="Add Category">
+                <i class="ph ph-plus"></i>
+              </button>
+            </div>
+            <a href="#" class="support-nav-item" data-filter="technical">
+              <i class="ph ph-gear"></i>
+              <span>Technical</span>
+              <span class="badge">10</span>
+            </a>
+            <a href="#" class="support-nav-item" data-filter="billing">
+              <i class="ph ph-credit-card"></i>
+              <span>Billing</span>
+              <span class="badge">5</span>
+            </a>
+            <a href="#" class="support-nav-item" data-filter="general">
+              <i class="ph ph-chat-circle-dots"></i>
+              <span>General</span>
+              <span class="badge">4</span>
+            </a>
+            <a href="#" class="support-nav-item" data-filter="feature-request">
+              <i class="ph ph-lightbulb"></i>
+              <span>Feature Request</span>
+              <span class="badge">3</span>
+            </a>
+            <a href="#" class="support-nav-item" data-filter="bug-report">
+              <i class="ph ph-bug"></i>
+              <span>Bug Report</span>
+              <span class="badge">2</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Support Main -->
+        <div class="support-main">
+          <!-- Support Header -->
+          <div class="support-header">
+            <!-- Mobile Sidebar Toggle -->
+            <button class="support-sidebar-toggle" id="supportSidebarToggle" aria-label="Open categories">
+              <i class="ph ph-funnel"></i>
+            </button>
+
+            <div class="support-search">
+              <i class="ph ph-magnifying-glass"></i>
+              <input type="text" class="form-control" placeholder="Search tickets..." id="ticketSearch">
+            </div>
+            <div class="support-header-actions">
+              <div class="dropdown">
+                <button class="btn btn-outline-secondary btn-sm dropdown-toggle" data-bs-toggle="dropdown">
+                  <i class="ph ph-sort-descending me-1"></i>Sort
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li><a class="dropdown-item active" href="#">Newest First</a></li>
+                  <li><a class="dropdown-item" href="#">Oldest First</a></li>
+                  <li><a class="dropdown-item" href="#">Priority (High to Low)</a></li>
+                  <li><a class="dropdown-item" href="#">Recently Updated</a></li>
+                </ul>
+              </div>
+              <div class="dropdown">
+                <button class="btn btn-outline-secondary btn-sm dropdown-toggle" data-bs-toggle="dropdown">
+                  <i class="ph ph-funnel me-1"></i>Filter
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li><a class="dropdown-item" href="#">All Priorities</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="#"><span class="priority-badge urgent">Urgent</span></a></li>
+                  <li><a class="dropdown-item" href="#"><span class="priority-badge high">High</span></a></li>
+                  <li><a class="dropdown-item" href="#"><span class="priority-badge medium">Medium</span></a></li>
+                  <li><a class="dropdown-item" href="#"><span class="priority-badge low">Low</span></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tickets List -->
+          <div class="support-tickets">
+            <!-- Ticket Item 1 -->
+            <div class="ticket-item" data-ticket-id="TKT-001" data-bs-toggle="modal" data-bs-target="#ticketDetailModal">
+              <div class="ticket-checkbox">
+                <input type="checkbox" class="form-check-input" onclick="event.stopPropagation()">
+              </div>
+              <div class="ticket-content">
+                <div class="ticket-header">
+                  <span class="ticket-id">#TKT-001</span>
+                  <span class="priority-badge urgent">Urgent</span>
+                  <span class="ticket-status open">Open</span>
+                </div>
+                <h5 class="ticket-title">Unable to login after password reset</h5>
+                <p class="ticket-excerpt">I've tried resetting my password multiple times but I still can't log into my account. The error message says "Invalid credentials" even though...</p>
+                <div class="ticket-meta">
+                  <div class="ticket-user">
+                    <img src="assets/img/avatars/avatar-1.webp" alt="Sarah Wilson">
+                    <span>Sarah Wilson</span>
+                  </div>
+                  <span class="ticket-category">
+                    <i class="ph ph-gear"></i>Technical
+                  </span>
+                  <span class="ticket-time">
+                    <i class="ph ph-clock"></i>2 hours ago
+                  </span>
+                  <span class="ticket-replies">
+                    <i class="ph ph-chat-circle-dots"></i>3 replies
+                  </span>
+                </div>
+              </div>
+              <div class="ticket-assignee" title="Assigned to Mike Johnson">
+                <img src="assets/img/avatars/avatar-2.webp" alt="Mike Johnson">
+              </div>
+            </div>
+
+            <!-- Ticket Item 2 -->
+            <div class="ticket-item" data-ticket-id="TKT-002" data-bs-toggle="modal" data-bs-target="#ticketDetailModal">
+              <div class="ticket-checkbox">
+                <input type="checkbox" class="form-check-input" onclick="event.stopPropagation()">
+              </div>
+              <div class="ticket-content">
+                <div class="ticket-header">
+                  <span class="ticket-id">#TKT-002</span>
+                  <span class="priority-badge high">High</span>
+                  <span class="ticket-status in-progress">In Progress</span>
+                </div>
+                <h5 class="ticket-title">Payment failed but amount deducted</h5>
+                <p class="ticket-excerpt">My payment for the annual subscription failed but the amount has been deducted from my bank account. Transaction ID: TXN-789456...</p>
+                <div class="ticket-meta">
+                  <div class="ticket-user">
+                    <img src="assets/img/avatars/avatar-3.webp" alt="Emily Davis">
+                    <span>Emily Davis</span>
+                  </div>
+                  <span class="ticket-category">
+                    <i class="ph ph-credit-card"></i>Billing
+                  </span>
+                  <span class="ticket-time">
+                    <i class="ph ph-clock"></i>5 hours ago
+                  </span>
+                  <span class="ticket-replies">
+                    <i class="ph ph-chat-circle-dots"></i>5 replies
+                  </span>
+                </div>
+              </div>
+              <div class="ticket-assignee" title="Assigned to Lisa Anderson">
+                <img src="assets/img/avatars/avatar-5.webp" alt="Lisa Anderson">
+              </div>
+            </div>
+
+            <!-- Ticket Item 3 -->
+            <div class="ticket-item" data-ticket-id="TKT-003" data-bs-toggle="modal" data-bs-target="#ticketDetailModal">
+              <div class="ticket-checkbox">
+                <input type="checkbox" class="form-check-input" onclick="event.stopPropagation()">
+              </div>
+              <div class="ticket-content">
+                <div class="ticket-header">
+                  <span class="ticket-id">#TKT-003</span>
+                  <span class="priority-badge medium">Medium</span>
+                  <span class="ticket-status pending">Pending</span>
+                </div>
+                <h5 class="ticket-title">Feature Request: Dark mode for mobile app</h5>
+                <p class="ticket-excerpt">It would be great if you could add a dark mode option to the mobile app. The current light theme is too bright when using at night...</p>
+                <div class="ticket-meta">
+                  <div class="ticket-user">
+                    <img src="assets/img/avatars/avatar-4.webp" alt="David Brown">
+                    <span>David Brown</span>
+                  </div>
+                  <span class="ticket-category">
+                    <i class="ph ph-lightbulb"></i>Feature Request
+                  </span>
+                  <span class="ticket-time">
+                    <i class="ph ph-clock"></i>1 day ago
+                  </span>
+                  <span class="ticket-replies">
+                    <i class="ph ph-chat-circle-dots"></i>2 replies
+                  </span>
+                </div>
+              </div>
+              <div class="ticket-assignee unassigned" title="Unassigned">
+                <i class="ph ph-user-plus"></i>
+              </div>
+            </div>
+
+            <!-- Ticket Item 4 -->
+            <div class="ticket-item" data-ticket-id="TKT-004" data-bs-toggle="modal" data-bs-target="#ticketDetailModal">
+              <div class="ticket-checkbox">
+                <input type="checkbox" class="form-check-input" onclick="event.stopPropagation()">
+              </div>
+              <div class="ticket-content">
+                <div class="ticket-header">
+                  <span class="ticket-id">#TKT-004</span>
+                  <span class="priority-badge high">High</span>
+                  <span class="ticket-status open">Open</span>
+                </div>
+                <h5 class="ticket-title">Dashboard charts not loading properly</h5>
+                <p class="ticket-excerpt">The analytics dashboard charts are showing "No data available" even though I have data in my account. This started happening after...</p>
+                <div class="ticket-meta">
+                  <div class="ticket-user">
+                    <img src="assets/img/avatars/avatar-6.webp" alt="James Wilson">
+                    <span>James Wilson</span>
+                  </div>
+                  <span class="ticket-category">
+                    <i class="ph ph-bug"></i>Bug Report
+                  </span>
+                  <span class="ticket-time">
+                    <i class="ph ph-clock"></i>1 day ago
+                  </span>
+                  <span class="ticket-replies">
+                    <i class="ph ph-chat-circle-dots"></i>1 reply
+                  </span>
+                </div>
+              </div>
+              <div class="ticket-assignee" title="Assigned to Robert Garcia">
+                <img src="assets/img/avatars/avatar-8.webp" alt="Robert Garcia">
+              </div>
+            </div>
+
+            <!-- Ticket Item 5 -->
+            <div class="ticket-item" data-ticket-id="TKT-005" data-bs-toggle="modal" data-bs-target="#ticketDetailModal">
+              <div class="ticket-checkbox">
+                <input type="checkbox" class="form-check-input" onclick="event.stopPropagation()">
+              </div>
+              <div class="ticket-content">
+                <div class="ticket-header">
+                  <span class="ticket-id">#TKT-005</span>
+                  <span class="priority-badge low">Low</span>
+                  <span class="ticket-status resolved">Resolved</span>
+                </div>
+                <h5 class="ticket-title">How to export data to CSV format?</h5>
+                <p class="ticket-excerpt">I need to export my project data to a CSV file for reporting purposes. I couldn't find the export option in the settings...</p>
+                <div class="ticket-meta">
+                  <div class="ticket-user">
+                    <img src="assets/img/avatars/avatar-7.webp" alt="Emma Thompson">
+                    <span>Emma Thompson</span>
+                  </div>
+                  <span class="ticket-category">
+                    <i class="ph ph-chat-circle-dots"></i>General
+                  </span>
+                  <span class="ticket-time">
+                    <i class="ph ph-clock"></i>2 days ago
+                  </span>
+                  <span class="ticket-replies">
+                    <i class="ph ph-chat-circle-dots"></i>4 replies
+                  </span>
+                </div>
+              </div>
+              <div class="ticket-assignee" title="Assigned to Mike Johnson">
+                <img src="assets/img/avatars/avatar-2.webp" alt="Mike Johnson">
+              </div>
+            </div>
+
+            <!-- Ticket Item 6 -->
+            <div class="ticket-item" data-ticket-id="TKT-006" data-bs-toggle="modal" data-bs-target="#ticketDetailModal">
+              <div class="ticket-checkbox">
+                <input type="checkbox" class="form-check-input" onclick="event.stopPropagation()">
+              </div>
+              <div class="ticket-content">
+                <div class="ticket-header">
+                  <span class="ticket-id">#TKT-006</span>
+                  <span class="priority-badge medium">Medium</span>
+                  <span class="ticket-status open">Open</span>
+                </div>
+                <h5 class="ticket-title">API rate limiting questions</h5>
+                <p class="ticket-excerpt">We're developing an integration and wanted to understand the API rate limits better. The documentation mentions 100 requests per minute but...</p>
+                <div class="ticket-meta">
+                  <div class="ticket-user">
+                    <div class="ticket-user-initial bg-info-light text-info">AT</div>
+                    <span>Alex Turner</span>
+                  </div>
+                  <span class="ticket-category">
+                    <i class="ph ph-gear"></i>Technical
+                  </span>
+                  <span class="ticket-time">
+                    <i class="ph ph-clock"></i>3 days ago
+                  </span>
+                  <span class="ticket-replies">
+                    <i class="ph ph-chat-circle-dots"></i>6 replies
+                  </span>
+                </div>
+              </div>
+              <div class="ticket-assignee unassigned" title="Unassigned">
+                <i class="ph ph-user-plus"></i>
+              </div>
+            </div>
+
+            <!-- Ticket Item 7 -->
+            <div class="ticket-item" data-ticket-id="TKT-007" data-bs-toggle="modal" data-bs-target="#ticketDetailModal">
+              <div class="ticket-checkbox">
+                <input type="checkbox" class="form-check-input" onclick="event.stopPropagation()">
+              </div>
+              <div class="ticket-content">
+                <div class="ticket-header">
+                  <span class="ticket-id">#TKT-007</span>
+                  <span class="priority-badge low">Low</span>
+                  <span class="ticket-status closed">Closed</span>
+                </div>
+                <h5 class="ticket-title">Invoice address change request</h5>
+                <p class="ticket-excerpt">Our company has moved to a new address. Please update the billing address for our account. New address: 123 Business Park...</p>
+                <div class="ticket-meta">
+                  <div class="ticket-user">
+                    <img src="assets/img/avatars/avatar-9.webp" alt="Olivia Scott">
+                    <span>Olivia Scott</span>
+                  </div>
+                  <span class="ticket-category">
+                    <i class="ph ph-credit-card"></i>Billing
+                  </span>
+                  <span class="ticket-time">
+                    <i class="ph ph-clock"></i>5 days ago
+                  </span>
+                  <span class="ticket-replies">
+                    <i class="ph ph-chat-circle-dots"></i>2 replies
+                  </span>
+                </div>
+              </div>
+              <div class="ticket-assignee" title="Assigned to Lisa Anderson">
+                <img src="assets/img/avatars/avatar-5.webp" alt="Lisa Anderson">
+              </div>
+            </div>
+
+            <!-- Ticket Item 8 -->
+            <div class="ticket-item" data-ticket-id="TKT-008" data-bs-toggle="modal" data-bs-target="#ticketDetailModal">
+              <div class="ticket-checkbox">
+                <input type="checkbox" class="form-check-input" onclick="event.stopPropagation()">
+              </div>
+              <div class="ticket-content">
+                <div class="ticket-header">
+                  <span class="ticket-id">#TKT-008</span>
+                  <span class="priority-badge urgent">Urgent</span>
+                  <span class="ticket-status in-progress">In Progress</span>
+                </div>
+                <h5 class="ticket-title">Data sync issues between devices</h5>
+                <p class="ticket-excerpt">Changes I make on my desktop are not syncing to my mobile device and vice versa. I've tried logging out and back in but the issue persists...</p>
+                <div class="ticket-meta">
+                  <div class="ticket-user">
+                    <div class="ticket-user-initial bg-warning-light text-warning">NH</div>
+                    <span>Nina Harris</span>
+                  </div>
+                  <span class="ticket-category">
+                    <i class="ph ph-bug"></i>Bug Report
+                  </span>
+                  <span class="ticket-time">
+                    <i class="ph ph-clock"></i>6 hours ago
+                  </span>
+                  <span class="ticket-replies">
+                    <i class="ph ph-chat-circle-dots"></i>8 replies
+                  </span>
+                </div>
+              </div>
+              <div class="ticket-assignee" title="Assigned to Robert Garcia">
+                <img src="assets/img/avatars/avatar-8.webp" alt="Robert Garcia">
+              </div>
+            </div>
+          </div>
+
+          <!-- Pagination -->
+          <div class="support-pagination">
+            <div class="support-pagination-info">
+              Showing <strong>1-8</strong> of <strong>24</strong> tickets
+            </div>
+            <nav>
+              <ul class="pagination pagination-sm mb-0">
+                <li class="page-item disabled">
+                  <a class="page-link" href="#"><i class="ph ph-caret-left"></i></a>
+                </li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                  <a class="page-link" href="#"><i class="ph ph-caret-right"></i></a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+
+      <!-- New Ticket Modal -->
+      <div class="modal fade" id="newTicketModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Create New Ticket</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+              <form id="newTicketForm">
+                <div class="row g-3">
+                  <div class="col-12">
+                    <label class="form-label">Subject <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" placeholder="Brief description of your issue" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Category <span class="text-danger">*</span></label>
+                    <select class="form-select" required>
+                      <option value="">Select a category</option>
+                      <option value="technical">Technical Support</option>
+                      <option value="billing">Billing</option>
+                      <option value="general">General Inquiry</option>
+                      <option value="feature-request">Feature Request</option>
+                      <option value="bug-report">Bug Report</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Priority <span class="text-danger">*</span></label>
+                    <select class="form-select" required>
+                      <option value="">Select priority</option>
+                      <option value="low">Low</option>
+                      <option value="medium">Medium</option>
+                      <option value="high">High</option>
+                      <option value="urgent">Urgent</option>
+                    </select>
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label">Description <span class="text-danger">*</span></label>
+                    <textarea class="form-control" rows="6" placeholder="Please provide as much detail as possible about your issue or request..." required></textarea>
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label">Attachments</label>
+                    <div class="support-attachment-zone">
+                      <input type="file" id="ticketAttachments" multiple hidden>
+                      <label for="ticketAttachments" class="support-attachment-label">
+                        <i class="ph ph-cloud-arrow-up"></i>
+                        <span>Drop files here or click to upload</span>
+                        <small>Max file size: 10MB. Supported: JPG, PNG, PDF, DOC</small>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+              <button type="button" class="btn btn-primary">
+                <i class="ph ph-paper-plane-tilt me-1"></i>Submit Ticket
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ticket Detail Modal -->
+      <div class="modal fade" id="ticketDetailModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+          <div class="modal-content">
+            <div class="modal-header border-0 pb-0">
+              <div class="ticket-detail-header-info">
+                <span class="ticket-id">#TKT-001</span>
+                <span class="priority-badge urgent">Urgent</span>
+                <span class="ticket-status open">Open</span>
+              </div>
+              <div class="d-flex gap-2 align-items-center">
+                <div class="dropdown">
+                  <button class="btn btn-outline-secondary btn-sm dropdown-toggle" data-bs-toggle="dropdown">
+                    Change Status
+                  </button>
+                  <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a class="dropdown-item" href="#"><span class="support-status-dot open"></span>Open</a></li>
+                    <li><a class="dropdown-item" href="#"><span class="support-status-dot in-progress"></span>In Progress</a></li>
+                    <li><a class="dropdown-item" href="#"><span class="support-status-dot pending"></span>Pending</a></li>
+                    <li><a class="dropdown-item" href="#"><span class="support-status-dot resolved"></span>Resolved</a></li>
+                    <li><a class="dropdown-item" href="#"><span class="support-status-dot closed"></span>Closed</a></li>
+                  </ul>
+                </div>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
+            </div>
+            <div class="modal-body pt-2">
+              <div class="ticket-detail">
+                <div class="row g-4">
+                  <!-- Main Content -->
+                  <div class="col-lg-8">
+                    <h4 class="ticket-detail-title">Unable to login after password reset</h4>
+
+                    <!-- Original Message -->
+                    <div class="ticket-message original">
+                      <div class="ticket-message-header">
+                        <div class="ticket-message-user">
+                          <img src="assets/img/avatars/avatar-1.webp" alt="Sarah Wilson">
+                          <div>
+                            <strong>Sarah Wilson</strong>
+                            <span class="ticket-message-time">2 hours ago</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="ticket-message-body">
+                        <p>Hi Support Team,</p>
+                        <p>I've tried resetting my password multiple times but I still can't log into my account. The error message says "Invalid credentials" even though I'm 100% sure I'm entering the correct new password.</p>
+                        <p>I've tried the following:</p>
+                        <ul>
+                          <li>Clearing browser cache and cookies</li>
+                          <li>Using a different browser (Chrome, Firefox, Safari)</li>
+                          <li>Resetting the password again</li>
+                          <li>Waiting 24 hours before trying again</li>
+                        </ul>
+                        <p>Nothing seems to work. This is urgent as I need to access my account for an important project deadline.</p>
+                        <p>My account email: sarah.wilson@example.com</p>
+                        <p>Please help!</p>
+                      </div>
+                      <div class="ticket-message-attachments">
+                        <div class="ticket-attachment">
+                          <i class="ph ph-file-image"></i>
+                          <span>error-screenshot.png</span>
+                          <small>245 KB</small>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Reply 1 -->
+                    <div class="ticket-message reply staff">
+                      <div class="ticket-message-header">
+                        <div class="ticket-message-user">
+                          <img src="assets/img/avatars/avatar-2.webp" alt="Mike Johnson">
+                          <div>
+                            <strong>Mike Johnson</strong>
+                            <span class="badge bg-primary-light text-primary">Support Agent</span>
+                            <span class="ticket-message-time">1 hour ago</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="ticket-message-body">
+                        <p>Hi Sarah,</p>
+                        <p>Thank you for reaching out and providing detailed information about the issue.</p>
+                        <p>I've looked into your account and found that there might be a session caching issue. I've cleared the cached sessions on our end. Could you please try the following:</p>
+                        <ol>
+                          <li>Go to the login page in an incognito/private window</li>
+                          <li>Click on "Forgot Password" to generate a new reset link</li>
+                          <li>Set a new password (different from any previous passwords)</li>
+                          <li>Try logging in with the new password</li>
+                        </ol>
+                        <p>Let me know if this resolves the issue. If not, I'll escalate this to our technical team for further investigation.</p>
+                      </div>
+                    </div>
+
+                    <!-- Reply 2 -->
+                    <div class="ticket-message reply">
+                      <div class="ticket-message-header">
+                        <div class="ticket-message-user">
+                          <img src="assets/img/avatars/avatar-1.webp" alt="Sarah Wilson">
+                          <div>
+                            <strong>Sarah Wilson</strong>
+                            <span class="ticket-message-time">45 minutes ago</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="ticket-message-body">
+                        <p>Hi Mike,</p>
+                        <p>Thank you for the quick response! I followed your steps and unfortunately still getting the same error. I've attached a new screenshot showing the exact error message.</p>
+                        <p>Is there anything else I can try?</p>
+                      </div>
+                      <div class="ticket-message-attachments">
+                        <div class="ticket-attachment">
+                          <i class="ph ph-file-image"></i>
+                          <span>new-error-screenshot.png</span>
+                          <small>312 KB</small>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Reply 3 -->
+                    <div class="ticket-message reply staff">
+                      <div class="ticket-message-header">
+                        <div class="ticket-message-user">
+                          <img src="assets/img/avatars/avatar-2.webp" alt="Mike Johnson">
+                          <div>
+                            <strong>Mike Johnson</strong>
+                            <span class="badge bg-primary-light text-primary">Support Agent</span>
+                            <span class="ticket-message-time">30 minutes ago</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="ticket-message-body">
+                        <p>Hi Sarah,</p>
+                        <p>I apologize for the inconvenience. I've escalated this to our technical team and they're looking into it now. Given the urgency, I've marked this as a priority case.</p>
+                        <p>In the meantime, I've created a temporary access link for you that will be valid for the next 24 hours. You should receive it via email shortly.</p>
+                        <p>Our team is actively investigating the root cause and we'll update you as soon as we have more information.</p>
+                      </div>
+                    </div>
+
+                    <!-- Reply Form -->
+                    <div class="ticket-reply-form">
+                      <h6>Add Reply</h6>
+                      <div class="ticket-reply-editor">
+                        <textarea class="form-control" rows="4" placeholder="Type your reply here..."></textarea>
+                        <div class="ticket-reply-actions">
+                          <div class="ticket-reply-attachments">
+                            <button class="btn btn-outline-secondary btn-sm">
+                              <i class="ph ph-paperclip"></i>
+                            </button>
+                            <button class="btn btn-outline-secondary btn-sm">
+                              <i class="ph ph-image"></i>
+                            </button>
+                          </div>
+                          <div class="d-flex gap-2">
+                            <button class="btn btn-outline-secondary btn-sm">Save Draft</button>
+                            <button class="btn btn-primary btn-sm">
+                              <i class="ph ph-paper-plane-tilt me-1"></i>Send Reply
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Sidebar Info -->
+                  <div class="col-lg-4">
+                    <div class="ticket-detail-sidebar">
+                      <!-- Requester Info -->
+                      <div class="ticket-detail-section">
+                        <h6 class="ticket-detail-section-title">Requester</h6>
+                        <div class="ticket-detail-requester">
+                          <img src="assets/img/avatars/avatar-1.webp" alt="Sarah Wilson">
+                          <div>
+                            <strong>Sarah Wilson</strong>
+                            <span>sarah.wilson@example.com</span>
+                          </div>
+                        </div>
+                        <div class="ticket-detail-requester-stats">
+                          <div class="stat">
+                            <span class="stat-value">12</span>
+                            <span class="stat-label">Total Tickets</span>
+                          </div>
+                          <div class="stat">
+                            <span class="stat-value">10</span>
+                            <span class="stat-label">Resolved</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Assignee -->
+                      <div class="ticket-detail-section">
+                        <h6 class="ticket-detail-section-title">Assignee</h6>
+                        <div class="ticket-detail-assignee">
+                          <img src="assets/img/avatars/avatar-2.webp" alt="Mike Johnson">
+                          <div>
+                            <strong>Mike Johnson</strong>
+                            <span>Support Agent</span>
+                          </div>
+                          <button class="btn btn-link btn-sm">Change</button>
+                        </div>
+                      </div>
+
+                      <!-- Details -->
+                      <div class="ticket-detail-section">
+                        <h6 class="ticket-detail-section-title">Details</h6>
+                        <div class="ticket-detail-info-list">
+                          <div class="ticket-detail-info-item">
+                            <span class="label">Category</span>
+                            <span class="value"><i class="ph ph-gear me-1"></i>Technical</span>
+                          </div>
+                          <div class="ticket-detail-info-item">
+                            <span class="label">Priority</span>
+                            <span class="value"><span class="priority-badge urgent">Urgent</span></span>
+                          </div>
+                          <div class="ticket-detail-info-item">
+                            <span class="label">Created</span>
+                            <span class="value">Jan 21, 2026 at 10:30 AM</span>
+                          </div>
+                          <div class="ticket-detail-info-item">
+                            <span class="label">Last Updated</span>
+                            <span class="value">Jan 21, 2026 at 12:15 PM</span>
+                          </div>
+                          <div class="ticket-detail-info-item">
+                            <span class="label">Response Time</span>
+                            <span class="value text-success">45 min (SLA: 2 hrs)</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Tags -->
+                      <div class="ticket-detail-section">
+                        <h6 class="ticket-detail-section-title">Tags</h6>
+                        <div class="ticket-detail-tags">
+                          <span class="ticket-tag">login-issue</span>
+                          <span class="ticket-tag">password-reset</span>
+                          <span class="ticket-tag">urgent</span>
+                          <button class="ticket-tag-add"><i class="ph ph-plus"></i></button>
+                        </div>
+                      </div>
+
+                      <!-- Activity Log -->
+                      <div class="ticket-detail-section">
+                        <h6 class="ticket-detail-section-title">Activity</h6>
+                        <div class="ticket-activity">
+                          <div class="ticket-activity-item">
+                            <i class="ph ph-arrow-circle-up text-info"></i>
+                            <div>
+                              <span>Priority changed to <strong>Urgent</strong></span>
+                              <small>30 min ago by Mike Johnson</small>
+                            </div>
+                          </div>
+                          <div class="ticket-activity-item">
+                            <i class="ph ph-user-check text-success"></i>
+                            <div>
+                              <span>Assigned to <strong>Mike Johnson</strong></span>
+                              <small>1 hour ago</small>
+                            </div>
+                          </div>
+                          <div class="ticket-activity-item">
+                            <i class="ph ph-plus-circle text-primary"></i>
+                            <div>
+                              <span>Ticket created</span>
+                              <small>2 hours ago by Sarah Wilson</small>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <span class="footer-brand-mark"><i class="bi bi-lightning-charge-fill"></i></span>
+          <span class="footer-copyright">
+            &copy; 2026 <a href="#">TrendyAdmin</a>. All Rights Reserved.
+          </span>
+        </div>
+        <div class="footer-links">
+          <a href="#">About</a>
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Contact</a>
+        </div>
+        <div class="footer-credits">
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Back to Top -->
+  <a href="#" class="back-to-top">
+    <i class="ph ph-arrow-up"></i>
+  </a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="assets/vendor/chart.js/chart.umd.js"></script>
+  <script src="assets/vendor/echarts/echarts.min.js"></script>
+  <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="assets/vendor/quill/quill.js"></script>
+  <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+  <script src="assets/vendor/choices.js/choices.min.js"></script>
+  <script src="assets/vendor/flatpickr/flatpickr.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS Files -->
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <!-- App Sidebar Toggle (for app pages with sidebars) -->
+  <script src="assets/js/apps-sidebar-toggle.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Sidebar nav active state
+      const navItems = document.querySelectorAll('.support-nav-item');
+      navItems.forEach(item => {
+        item.addEventListener('click', function(e) {
+          e.preventDefault();
+          // Remove active from all nav items
+          document.querySelectorAll('.support-nav-item').forEach(n => n.classList.remove('active'));
+          this.classList.add('active');
+        });
+      });
+      // Search functionality
+      const searchInput = document.getElementById('ticketSearch');
+      const ticketItems = document.querySelectorAll('.ticket-item');
+      if (searchInput) {
+        searchInput.addEventListener('input', function() {
+          const searchTerm = this.value.toLowerCase();
+          ticketItems.forEach(item => {
+            const title = item.querySelector('.ticket-title').textContent.toLowerCase();
+            const excerpt = item.querySelector('.ticket-excerpt').textContent.toLowerCase();
+            const ticketId = item.querySelector('.ticket-id').textContent.toLowerCase();
+            if (title.includes(searchTerm) || excerpt.includes(searchTerm) || ticketId.includes(searchTerm)) {
+              item.style.display = '';
+            } else {
+              item.style.display = 'none';
+            }
+          });
+        });
+      }
+      // Select all checkbox
+      const ticketCheckboxes = document.querySelectorAll('.ticket-checkbox input');
+      let selectAllMode = false;
+      // File upload drag and drop
+      const attachmentZone = document.querySelector('.support-attachment-zone');
+      if (attachmentZone) {
+        ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+          attachmentZone.addEventListener(eventName, preventDefaults, false);
+        });
+
+        function preventDefaults(e) {
+          e.preventDefault();
+          e.stopPropagation();
+        }
+        ['dragenter', 'dragover'].forEach(eventName => {
+          attachmentZone.addEventListener(eventName, () => {
+            attachmentZone.classList.add('highlight');
+          });
+        });
+        ['dragleave', 'drop'].forEach(eventName => {
+          attachmentZone.addEventListener(eventName, () => {
+            attachmentZone.classList.remove('highlight');
+          });
+        });
+        attachmentZone.addEventListener('drop', handleDrop);
+
+        function handleDrop(e) {
+          const dt = e.dataTransfer;
+          const files = dt.files;
+          // Handle files - in a real app, you would upload these
+          console.log('Files dropped:', files);
+        }
+      }
+      // Reset new ticket modal on close
+      const newTicketModal = document.getElementById('newTicketModal');
+      if (newTicketModal) {
+        newTicketModal.addEventListener('hidden.bs.modal', function() {
+          document.getElementById('newTicketForm').reset();
+        });
+      }
+    });
+  </script>
+</body>
+
+</html>

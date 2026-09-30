@@ -1,0 +1,643 @@
+// Pricing Page - TrendyAdmin "Electric Violet / Soft UI"
+
+.page-pricing {
+
+  // ---------------------------------------------------------------
+  // Hero
+  // ---------------------------------------------------------------
+  .pricing-hero {
+    max-width: 620px;
+    margin: 0 auto 3rem;
+    padding-top: 1rem;
+    text-align: center;
+  }
+
+  .pricing-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    padding: 0.375rem 1rem;
+    border-radius: var(--radius-full);
+    background: color-mix(in srgb, var(--accent-color), transparent 90%);
+    color: var(--accent-color);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+    i {
+      font-size: 0.9375rem;
+    }
+  }
+
+  .pricing-hero-title {
+    margin: 1rem 0 0.625rem;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--heading-color);
+  }
+
+  .pricing-hero-sub {
+    margin: 0 0 1.75rem;
+    font-size: 0.9375rem;
+    color: var(--muted-color);
+  }
+
+  // Segmented pill toggle
+  .billing-switch {
+    display: inline-flex;
+    align-items: center;
+    padding: 3px;
+    border-radius: var(--radius-full);
+    background: var(--background-color);
+    border: 1px solid var(--border-color-light);
+  }
+
+  .billing-switch-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    padding: 0.5rem 1.375rem;
+    border: none;
+    border-radius: var(--radius-full);
+    background: transparent;
+    color: var(--default-color);
+    font-size: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+
+    &:hover:not(.active) {
+      color: var(--accent-color);
+    }
+
+    &.active {
+      background: var(--surface-color);
+      color: var(--accent-color);
+      box-shadow: var(--shadow-sm);
+    }
+  }
+
+  .save-chip {
+    padding: 0.125rem 0.5rem;
+    border-radius: var(--radius-full);
+    background: var(--success-color-light);
+    color: var(--success-color);
+    font-size: 0.6875rem;
+    font-weight: 700;
+  }
+
+  // ---------------------------------------------------------------
+  // Plan cards
+  // ---------------------------------------------------------------
+  .plans-row {
+    max-width: 1080px;
+    margin-inline: auto;
+  }
+
+  .plan-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 2rem;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius-2xl);
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+  }
+
+  .plan-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    margin-bottom: 1.25rem;
+    border-radius: var(--radius-lg);
+    background: color-mix(in srgb, var(--accent-color), transparent 88%);
+    color: var(--accent-color);
+    font-size: 1.5rem;
+  }
+
+  .plan-icon-warning {
+    background: var(--warning-color-light);
+    color: var(--warning-color);
+  }
+
+  .plan-name {
+    margin: 0 0 0.25rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--heading-color);
+  }
+
+  .plan-desc {
+    margin: 0 0 1.5rem;
+    font-size: 0.875rem;
+    color: var(--muted-color);
+  }
+
+  .plan-price {
+    display: flex;
+    align-items: baseline;
+    gap: 0.125rem;
+  }
+
+  .plan-currency {
+    font-family: var(--heading-font);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--heading-color);
+    align-self: flex-start;
+    margin-top: 0.25rem;
+  }
+
+  .plan-amount {
+    font-family: var(--heading-font);
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 1;
+    color: var(--heading-color);
+    transition: transform 0.15s ease, opacity 0.15s ease;
+
+    &.is-swapping {
+      transform: translateY(6px) scale(0.9);
+      opacity: 0;
+    }
+  }
+
+  .plan-period {
+    font-size: 0.875rem;
+    color: var(--muted-color);
+  }
+
+  .plan-billed-note {
+    display: none;
+    margin: 0.5rem 0 0;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--success-color);
+
+    &.show {
+      display: block;
+    }
+  }
+
+  .plan-features {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0 2rem;
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: 0.625rem;
+      padding: 0.4375rem 0;
+      font-size: 0.9rem;
+      color: var(--default-color);
+    }
+
+    li i {
+      flex-shrink: 0;
+      font-size: 1.125rem;
+      color: var(--accent-color);
+    }
+
+    .is-missing {
+      color: var(--muted-color);
+    }
+
+    .is-missing i {
+      color: var(--muted-color);
+      opacity: 0.7;
+    }
+  }
+
+  // CTA buttons
+  .plan-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    margin-top: auto;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius-full);
+    font-size: 0.9375rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+
+    i {
+      font-size: 1.0625rem;
+    }
+  }
+
+  .plan-cta-ghost {
+    background: transparent;
+    border: 1.5px solid var(--border-color);
+    color: var(--heading-color);
+
+    &:hover {
+      border-color: var(--accent-color);
+      color: var(--accent-color);
+      background: color-mix(in srgb, var(--accent-color), transparent 94%);
+    }
+  }
+
+  .plan-cta-gradient {
+    border: none;
+    background: linear-gradient(105deg, var(--accent-color), color-mix(in srgb, var(--accent-color), var(--danger-color) 42%));
+    color: var(--contrast-color);
+    box-shadow: 0 8px 20px color-mix(in srgb, var(--accent-color), transparent 55%);
+
+    &:hover {
+      color: var(--contrast-color);
+      transform: translateY(-1px);
+      box-shadow: 0 12px 26px color-mix(in srgb, var(--accent-color), transparent 45%);
+    }
+  }
+
+  // ---------------------------------------------------------------
+  // Featured plan (dark plum panel)
+  // ---------------------------------------------------------------
+  .plan-card-featured {
+    padding-top: 3.25rem;
+    background: #171032;
+    border-color: transparent;
+    overflow: hidden;
+    box-shadow: 0 24px 48px -12px color-mix(in srgb, var(--accent-color), transparent 60%);
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -90px;
+      right: -70px;
+      width: 240px;
+      height: 240px;
+      border-radius: 50%;
+      background: radial-gradient(circle, color-mix(in srgb, var(--accent-color), transparent 40%), transparent 70%);
+      opacity: 0.55;
+      pointer-events: none;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -110px;
+      left: -80px;
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      background: radial-gradient(circle, color-mix(in srgb, var(--accent-color), var(--danger-color) 42%), transparent 68%);
+      opacity: 0.25;
+      pointer-events: none;
+    }
+
+    &:hover {
+      box-shadow: 0 30px 56px -12px color-mix(in srgb, var(--accent-color), transparent 50%);
+    }
+
+    .plan-icon {
+      background: linear-gradient(105deg, var(--accent-color), color-mix(in srgb, var(--accent-color), var(--danger-color) 42%));
+      color: var(--contrast-color);
+      box-shadow: 0 8px 18px color-mix(in srgb, var(--accent-color), transparent 55%);
+    }
+
+    .plan-name,
+    .plan-currency,
+    .plan-amount {
+      color: var(--contrast-color);
+    }
+
+    .plan-desc,
+    .plan-period {
+      color: #8c81b3;
+    }
+
+    .plan-features li {
+      color: #cfc7e8;
+    }
+
+    .plan-features li i {
+      color: color-mix(in srgb, var(--accent-color), #cfc7e8 55%);
+    }
+
+    .plan-features .is-missing {
+      color: #8c81b3;
+    }
+
+    .plan-features .is-missing i {
+      color: #8c81b3;
+    }
+
+    .plan-billed-note {
+      color: color-mix(in srgb, var(--success-color), #cfc7e8 35%);
+    }
+  }
+
+  .plan-popular-chip {
+    position: absolute;
+    top: 1.125rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    padding: 0.3125rem 1rem;
+    border-radius: var(--radius-full);
+    background: linear-gradient(105deg, var(--accent-color), color-mix(in srgb, var(--accent-color), var(--danger-color) 42%));
+    color: var(--contrast-color);
+    font-size: 0.6875rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    box-shadow: 0 6px 14px color-mix(in srgb, var(--accent-color), transparent 50%);
+  }
+
+  // Lift the featured card on desktop
+  @media (min-width: 992px) {
+    .plan-card-featured {
+      transform: translateY(-8px);
+
+      &:hover {
+        transform: translateY(-12px);
+      }
+    }
+  }
+
+  // ---------------------------------------------------------------
+  // Trust strip
+  // ---------------------------------------------------------------
+  .pricing-trust {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem 2rem;
+    margin-top: 2.25rem;
+    font-size: 0.875rem;
+    color: var(--muted-color);
+
+    span {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    i {
+      font-size: 1.125rem;
+      color: var(--accent-color);
+    }
+  }
+
+  // ---------------------------------------------------------------
+  // Comparison table
+  // ---------------------------------------------------------------
+  .compare-card {
+    margin-top: 3rem;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--card-shadow);
+    overflow: hidden;
+  }
+
+  .compare-card-header {
+    padding: 1.5rem 1.75rem;
+    border-bottom: 1px solid var(--border-color-light);
+
+    h2 {
+      margin: 0 0 0.25rem;
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: var(--heading-color);
+    }
+
+    p {
+      margin: 0;
+      font-size: 0.8125rem;
+      color: var(--muted-color);
+    }
+  }
+
+  .compare-table {
+    th {
+      padding: 0.875rem 1.25rem;
+      background: var(--table-header-bg);
+      border-bottom: 1px solid var(--border-color-light);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--muted-color);
+    }
+
+    td {
+      padding: 0.875rem 1.25rem;
+      border-bottom: 1px solid var(--border-color-light);
+      font-size: 0.875rem;
+      color: var(--default-color);
+    }
+
+    th.col-featured {
+      color: var(--accent-color);
+    }
+
+    .col-featured {
+      background: color-mix(in srgb, var(--accent-color), transparent 94%);
+    }
+
+    .compare-feature-col {
+      width: 40%;
+    }
+
+    .compare-feature {
+      font-weight: 600;
+      color: var(--heading-color);
+    }
+
+    .compare-yes {
+      font-size: 1.125rem;
+      color: var(--accent-color);
+    }
+
+    .compare-no {
+      font-size: 1rem;
+      color: var(--muted-color);
+      opacity: 0.7;
+    }
+  }
+
+  // ---------------------------------------------------------------
+  // Mini FAQ
+  // ---------------------------------------------------------------
+  .pricing-faq {
+    max-width: 1080px;
+    margin: 3.5rem auto 0;
+  }
+
+  .pricing-section-title {
+    margin: 0 0 1.75rem;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--heading-color);
+  }
+
+  .faq-tile {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    height: 100%;
+    padding: 1.5rem 1.75rem;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--card-shadow);
+
+    h3 {
+      margin: 0 0 0.375rem;
+      font-size: 0.9375rem;
+      font-weight: 700;
+      color: var(--heading-color);
+    }
+
+    p {
+      margin: 0;
+      font-size: 0.875rem;
+      line-height: 1.6;
+      color: var(--muted-color);
+    }
+  }
+
+  .faq-tile-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 42px;
+    height: 42px;
+    border-radius: var(--radius-md);
+    background: color-mix(in srgb, var(--accent-color), transparent 90%);
+    color: var(--accent-color);
+    font-size: 1.25rem;
+  }
+
+  // ---------------------------------------------------------------
+  // Sales CTA band (dark plum)
+  // ---------------------------------------------------------------
+  .pricing-cta {
+    position: relative;
+    overflow: hidden;
+    margin-top: 3rem;
+    padding: 2.75rem 2rem;
+    text-align: center;
+    background: #171032;
+    border-radius: var(--radius-2xl);
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -120px;
+      left: 15%;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: radial-gradient(circle, color-mix(in srgb, var(--accent-color), transparent 35%), transparent 70%);
+      opacity: 0.45;
+      pointer-events: none;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -140px;
+      right: 10%;
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+      background: radial-gradient(circle, color-mix(in srgb, var(--accent-color), var(--danger-color) 42%), transparent 68%);
+      opacity: 0.22;
+      pointer-events: none;
+    }
+
+    h2 {
+      position: relative;
+      z-index: 1;
+      margin: 0 0 0.5rem;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--contrast-color);
+    }
+
+    p {
+      position: relative;
+      z-index: 1;
+      max-width: 520px;
+      margin: 0 auto 1.5rem;
+      font-size: 0.9375rem;
+      color: #8c81b3;
+    }
+  }
+
+  .pricing-cta-btn {
+    position: relative;
+    z-index: 1;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.75rem;
+    border-radius: var(--radius-full);
+    background: linear-gradient(105deg, var(--accent-color), color-mix(in srgb, var(--accent-color), var(--danger-color) 42%));
+    color: var(--contrast-color);
+    font-size: 0.9375rem;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 10px 24px color-mix(in srgb, var(--accent-color), transparent 45%);
+    transition: all 0.25s ease;
+
+    i {
+      font-size: 1.125rem;
+    }
+
+    &:hover {
+      color: var(--contrast-color);
+      transform: translateY(-2px);
+      box-shadow: 0 14px 30px color-mix(in srgb, var(--accent-color), transparent 35%);
+    }
+  }
+
+  // ---------------------------------------------------------------
+  // Responsive
+  // ---------------------------------------------------------------
+  @media (max-width: 991px) {
+    .plans-row > div:has(.plan-card-featured) {
+      order: -1;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .pricing-hero-title {
+      font-size: 1.625rem;
+    }
+
+    .plan-card {
+      padding: 1.5rem;
+    }
+
+    .plan-card-featured {
+      padding-top: 3rem;
+    }
+
+    .pricing-cta {
+      padding: 2.25rem 1.5rem;
+    }
+  }
+}

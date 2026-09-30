@@ -1,0 +1,1497 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tooltips - TrendyAdmin</title>
+  <meta name="description" content="TrendyAdmin - Bootstrap Admin Template">
+  <meta name="keywords" content="admin, dashboard, bootstrap">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts - Plus Jakarta Sans (body) + Outfit (headings) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="assets/vendor/phosphor-icons/phosphor-icons.css" rel="stylesheet">
+  <link href="assets/vendor/lucide-icons/lucide.css" rel="stylesheet">
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/choices.js/choices.min.css" rel="stylesheet">
+  <link href="assets/vendor/flatpickr/flatpickr.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+    * Template Name: TrendyAdmin - Bootstrap Admin Template
+    * Template URL: https://bootstrapmade.com/trendy-admin-bootstrap-dashboard-template/
+    * Updated: Jul 29 2026 with Bootstrap v5.3.8
+    * Author: BootstrapMade.com
+    * License: https://bootstrapmade.com/license/
+    ======================================================== -->
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-inner">
+      <!-- Header Left -->
+      <div class="header-left">
+        <button class="sidebar-toggle" title="Toggle Sidebar">
+          <i class="ph ph-list"></i>
+        </button>
+        <a href="index.html" class="header-logo">
+          <span class="header-logo-mark"><i class="bi bi-lightning-charge-fill"></i></span>
+          <span class="header-logo-text">TrendyAdmin</span>
+        </a>
+
+        <!-- Apps Quick Access -->
+        <div class="header-action dropdown apps-dropdown">
+          <button class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" title="Quick Access">
+            <i class="ph ph-dots-nine"></i>
+          </button>
+          <div class="dropdown-menu">
+            <div class="apps-menu-header">
+              <h6>Quick Access</h6>
+              <span>Jump straight into an app</span>
+            </div>
+            <div class="apps-grid">
+              <a href="apps-chat.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-chat-circle-dots"></i></span>
+                <span>Chat</span>
+              </a>
+              <a href="apps-email.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-envelope"></i></span>
+                <span>Email</span>
+              </a>
+              <a href="apps-calendar.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-calendar-blank"></i></span>
+                <span>Calendar</span>
+              </a>
+              <a href="apps-kanban.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-kanban"></i></span>
+                <span>Kanban</span>
+              </a>
+              <a href="apps-file-manager.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-folder-open"></i></span>
+                <span>Files</span>
+              </a>
+              <a href="apps-todo.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-check-square"></i></span>
+                <span>Todo</span>
+              </a>
+              <a href="apps-contacts.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-address-book"></i></span>
+                <span>Contacts</span>
+              </a>
+              <a href="apps-support.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-headset"></i></span>
+                <span>Support</span>
+              </a>
+              <a href="invoice-list.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-receipt"></i></span>
+                <span>Invoices</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Header Search (Desktop) -->
+      <div class="header-search">
+        <form class="search-form" action="search-results.html" method="GET">
+          <button type="submit"><i class="ph ph-magnifying-glass"></i></button>
+          <input type="search" name="q" placeholder="Search anything..." autocomplete="off">
+          <span class="search-hint">⌘K</span>
+        </form>
+      </div>
+
+      <!-- Header Right -->
+      <div class="header-right">
+        <!-- Desktop Actions (hidden on mobile, shown in mobile menu) -->
+        <div class="header-actions-desktop">
+          <!-- Quick Create -->
+          <div class="dropdown create-dropdown">
+            <button class="create-btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="ph ph-plus"></i>
+              <span>Create</span>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end create-menu">
+              <a class="dropdown-item" href="apps-kanban.html">
+                <span class="create-item-icon"><i class="ph ph-kanban"></i></span>
+                <span class="create-item-text">
+                  <span class="create-item-title">New Project</span>
+                  <span class="create-item-sub">Start a kanban board</span>
+                </span>
+              </a>
+              <a class="dropdown-item" href="apps-todo.html">
+                <span class="create-item-icon"><i class="ph ph-check-square"></i></span>
+                <span class="create-item-text">
+                  <span class="create-item-title">New Task</span>
+                  <span class="create-item-sub">Add to your todo list</span>
+                </span>
+              </a>
+              <a class="dropdown-item" href="apps-contacts.html">
+                <span class="create-item-icon"><i class="ph ph-user-plus"></i></span>
+                <span class="create-item-text">
+                  <span class="create-item-title">New Contact</span>
+                  <span class="create-item-sub">Save a new person</span>
+                </span>
+              </a>
+              <a class="dropdown-item" href="invoice-list.html">
+                <span class="create-item-icon"><i class="ph ph-receipt"></i></span>
+                <span class="create-item-text">
+                  <span class="create-item-title">New Invoice</span>
+                  <span class="create-item-sub">Bill a customer</span>
+                </span>
+              </a>
+            </div>
+          </div>
+
+          <div class="header-divider"></div>
+
+          <!-- Theme Toggle -->
+          <button class="header-action theme-toggle" title="Toggle Theme">
+            <i class="ph ph-moon icon-dark"></i>
+            <i class="ph ph-sun icon-light"></i>
+          </button>
+
+          <!-- Fullscreen Toggle -->
+          <button class="header-action fullscreen-toggle" onclick="toggleFullscreen()" title="Fullscreen">
+            <i class="ph ph-arrows-out icon-enter"></i>
+            <i class="ph ph-arrows-in icon-exit"></i>
+          </button>
+
+          <!-- Messages -->
+          <div class="header-action dropdown messages-dropdown">
+            <button class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" title="Messages">
+              <i class="ph ph-chat-teardrop-text"></i>
+              <span class="badge">2</span>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end">
+              <div class="messages-header">
+                <h6>Messages</h6>
+                <a href="apps-chat.html">View all</a>
+              </div>
+              <div class="messages-list">
+                <a href="apps-chat.html" class="message-item unread">
+                  <span class="message-avatar">
+                    <img src="assets/img/avatars/avatar-2.webp" alt="Sarah Johnson">
+                    <span class="message-status"></span>
+                  </span>
+                  <span class="message-content">
+                    <span class="message-name">Sarah Johnson</span>
+                    <span class="message-text">The new dashboard mockups look amazing! 🔥</span>
+                  </span>
+                  <span class="message-time">2m</span>
+                </a>
+                <a href="apps-chat.html" class="message-item unread">
+                  <span class="message-avatar">
+                    <img src="assets/img/avatars/avatar-3.webp" alt="Mike Chen">
+                  </span>
+                  <span class="message-content">
+                    <span class="message-name">Mike Chen</span>
+                    <span class="message-text">Can you review my PR when you get a chance?</span>
+                  </span>
+                  <span class="message-time">1h</span>
+                </a>
+                <a href="apps-chat.html" class="message-item">
+                  <span class="message-avatar">
+                    <img src="assets/img/avatars/avatar-4.webp" alt="Emma Davis">
+                  </span>
+                  <span class="message-content">
+                    <span class="message-name">Emma Davis</span>
+                    <span class="message-text">Meeting moved to 3pm tomorrow</span>
+                  </span>
+                  <span class="message-time">3h</span>
+                </a>
+              </div>
+              <div class="messages-footer">
+                <a href="apps-chat.html">Open chat <i class="ph ph-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Notifications -->
+          <div class="header-action dropdown notification-dropdown">
+            <button class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" title="Notifications">
+              <i class="ph ph-bell"></i>
+              <span class="badge">3</span>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end">
+              <div class="notification-header">
+                <h6>You have 3 new notifications</h6>
+                <a href="#" class="notification-mark-read" data-notification-action="mark-all-read" title="Mark all as read">
+                  <i class="ph ph-checks"></i>
+                </a>
+              </div>
+              <div class="notification-list">
+                <div class="notification-item unread">
+                  <span class="notification-icon success">
+                    <i class="ph ph-check-circle"></i>
+                  </span>
+                  <span class="notification-content">
+                    <span class="notification-title">Order Completed</span>
+                    <span class="notification-text">Your order #12345 has been delivered</span>
+                  </span>
+                  <span class="notification-meta">
+                    <span class="notification-time">5m</span>
+                    <span class="notification-dot"></span>
+                  </span>
+                </div>
+                <div class="notification-item unread">
+                  <span class="notification-icon warning">
+                    <i class="ph ph-warning"></i>
+                  </span>
+                  <span class="notification-content">
+                    <span class="notification-title">Low Storage</span>
+                    <span class="notification-text">Server storage is running low (85% used)</span>
+                  </span>
+                  <span class="notification-meta">
+                    <span class="notification-time">1h</span>
+                    <span class="notification-dot"></span>
+                  </span>
+                </div>
+                <div class="notification-item">
+                  <span class="notification-icon info">
+                    <i class="ph ph-info"></i>
+                  </span>
+                  <span class="notification-content">
+                    <span class="notification-title">New Feature</span>
+                    <span class="notification-text">Dark mode is now available</span>
+                  </span>
+                  <span class="notification-meta">
+                    <span class="notification-time">2h</span>
+                    <span class="notification-dot"></span>
+                  </span>
+                </div>
+              </div>
+              <div class="notification-footer">
+                <a href="notifications.html">View all</a>
+                <a href="settings.html">Settings</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="header-divider"></div>
+
+          <!-- User Dropdown -->
+          <div class="header-action dropdown user-dropdown">
+            <button class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="assets/img/profile-img.webp" alt="User" class="avatar">
+              <span class="user-name">John Doe</span>
+              <i class="ph ph-caret-down user-caret"></i>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end">
+              <div class="user-menu-card">
+                <span class="user-menu-avatar">
+                  <img src="assets/img/profile-img.webp" alt="User">
+                </span>
+                <span class="user-menu-name">John Doe</span>
+                <span class="user-menu-mail">john@trendyadmin.com</span>
+                <span class="user-menu-role">Administrator</span>
+              </div>
+              <div class="user-menu-body">
+                <a class="dropdown-item" href="profile.html">
+                  <span class="user-menu-item-icon"><i class="ph ph-user"></i></span>
+                  My Profile
+                  <i class="ph ph-caret-right user-menu-item-caret"></i>
+                </a>
+                <a class="dropdown-item" href="settings.html">
+                  <span class="user-menu-item-icon"><i class="ph ph-gear"></i></span>
+                  Settings
+                  <i class="ph ph-caret-right user-menu-item-caret"></i>
+                </a>
+                <a class="dropdown-item" href="activity.html">
+                  <span class="user-menu-item-icon"><i class="ph ph-pulse"></i></span>
+                  Activity Log
+                  <i class="ph ph-caret-right user-menu-item-caret"></i>
+                </a>
+                <a class="dropdown-item" href="invoice-list.html">
+                  <span class="user-menu-item-icon"><i class="ph ph-receipt"></i></span>
+                  Billing
+                  <i class="ph ph-caret-right user-menu-item-caret"></i>
+                </a>
+              </div>
+              <div class="user-menu-footer">
+                <a href="auth-login.html" class="user-menu-signout">
+                  <i class="ph ph-sign-out"></i> Sign Out
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile Actions (visible only on mobile) -->
+        <div class="header-actions-mobile">
+          <!-- Search Toggle (Mobile) -->
+          <button class="header-action search-toggle" title="Search">
+            <i class="ph ph-magnifying-glass"></i>
+          </button>
+
+          <!-- Mobile Menu Toggle -->
+          <button class="header-action mobile-menu-toggle" title="More">
+            <i class="ph ph-dots-three-vertical"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Search -->
+  <div class="mobile-search">
+    <form class="search-form" action="search-results.html" method="GET">
+      <input type="search" name="q" placeholder="Search anything..." autocomplete="off">
+      <button type="submit"><i class="ph ph-magnifying-glass"></i></button>
+    </form>
+  </div>
+
+  <!-- Mobile Header Menu -->
+  <div class="mobile-header-menu">
+    <div class="mobile-header-menu-content">
+      <!-- Theme Toggle -->
+      <button class="mobile-menu-item theme-toggle" title="Toggle Theme">
+        <i class="ph ph-moon icon-dark"></i>
+        <i class="ph ph-sun icon-light"></i>
+        <span class="mobile-menu-label">Theme</span>
+      </button>
+
+      <!-- Fullscreen Toggle -->
+      <button class="mobile-menu-item fullscreen-toggle" onclick="toggleFullscreen()" title="Fullscreen">
+        <i class="ph ph-arrows-out icon-enter"></i>
+        <i class="ph ph-arrows-in icon-exit"></i>
+        <span class="mobile-menu-label">Fullscreen</span>
+      </button>
+
+      <!-- Messages -->
+      <a href="apps-chat.html" class="mobile-menu-item">
+        <i class="ph ph-chat-teardrop-text"></i>
+        <span class="badge">2</span>
+        <span class="mobile-menu-label">Messages</span>
+      </a>
+
+      <!-- Notifications -->
+      <a href="notifications.html" class="mobile-menu-item">
+        <i class="ph ph-bell"></i>
+        <span class="badge">3</span>
+        <span class="mobile-menu-label">Notifications</span>
+      </a>
+
+      <!-- Profile -->
+      <a href="profile.html" class="mobile-menu-item">
+        <i class="ph ph-user"></i>
+        <span class="mobile-menu-label">Profile</span>
+      </a>
+
+      <!-- Sign Out -->
+      <a href="auth-login.html" class="mobile-menu-item mobile-menu-item-danger">
+        <i class="ph ph-sign-out"></i>
+        <span class="mobile-menu-label">Sign Out</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <!-- Sidebar Header -->
+    <div class="sidebar-header">
+      <a href="index.html" class="sidebar-logo">
+        <span class="sidebar-logo-mark"><i class="bi bi-lightning-charge-fill"></i></span>
+        <span class="sidebar-logo-text">TrendyAdmin</span>
+      </a>
+      <button class="sidebar-close">
+        <i class="ph ph-x"></i>
+      </button>
+    </div>
+
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar-nav">
+      <ul class="nav-menu">
+        <li class="nav-heading"><span>Overview</span></li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="index.html">
+            <span class="nav-icon"><i class="ph ph-house"></i></span>
+            <span class="nav-text">Home</span>
+          </a>
+        </li>
+
+        <!-- Dashboards Submenu -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-gauge"></i></span>
+            <span class="nav-text">Dashboards</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="dashboard-sales.html">Sales</a></li>
+            <li><a class="nav-link " href="dashboard-analytics.html">Analytics</a></li>
+            <li><a class="nav-link " href="dashboard-crm.html">CRM</a></li>
+            <li><a class="nav-link " href="dashboard-marketing.html">Marketing</a></li>
+            <li><a class="nav-link " href="dashboard-projects.html">Projects</a></li>
+            <li><a class="nav-link " href="dashboard-finance.html">Finance</a></li>
+          </ul>
+        </li>
+
+        <!-- Users -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-users"></i></span>
+            <span class="nav-text">Users</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="users.html">Users List</a></li>
+            <li><a class="nav-link " href="users-view.html">User View</a></li>
+            <li><a class="nav-link " href="users-edit.html">User Edit</a></li>
+            <li><a class="nav-link " href="profile.html">Profile</a></li>
+            <!-- 3rd Level - Settings submenu -->
+            <li class="has-submenu ">
+              <a class="nav-link" href="#" aria-expanded="false">
+                Settings
+                <i class="ph ph-caret-right nav-arrow"></i>
+              </a>
+              <ul class="nav-submenu ">
+                <li><a class="nav-link " href="settings.html">Account</a></li>
+                <li><a class="nav-link " href="notifications.html">Notifications</a></li>
+                <li><a class="nav-link " href="activity.html">Activity</a></li>
+              </ul>
+            </li>
+            <li><a class="nav-link " href="roles.html">Roles & Permissions</a></li>
+          </ul>
+        </li>
+
+        <!-- Authentication -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-shield-check"></i></span>
+            <span class="nav-text">Authentication</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="auth-login.html">Login</a></li>
+            <li><a class="nav-link " href="auth-register.html">Register</a></li>
+            <li><a class="nav-link " href="auth-forgot-password.html">Forgot Password</a></li>
+            <li><a class="nav-link " href="auth-reset-password.html">Reset Password</a></li>
+            <li><a class="nav-link " href="auth-verify-email.html">Email Verification</a></li>
+            <li><a class="nav-link " href="auth-two-factor.html">Two Factor Auth</a></li>
+            <li><a class="nav-link " href="auth-lock-screen.html">Lock Screen</a></li>
+          </ul>
+        </li>
+
+        <!-- Apps Section -->
+        <li class="nav-heading"><span>Apps</span></li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-calendar.html">
+            <span class="nav-icon"><i class="ph ph-calendar-blank"></i></span>
+            <span class="nav-text">Calendar</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-kanban.html">
+            <span class="nav-icon"><i class="ph ph-kanban"></i></span>
+            <span class="nav-text">Kanban Board</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-chat.html">
+            <span class="nav-icon"><i class="ph ph-chat-circle-dots"></i></span>
+            <span class="nav-text">Chat</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-contacts.html">
+            <span class="nav-icon"><i class="ph ph-address-book"></i></span>
+            <span class="nav-text">Contacts</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-file-manager.html">
+            <span class="nav-icon"><i class="ph ph-folder-open"></i></span>
+            <span class="nav-text">File Manager</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-email.html">
+            <span class="nav-icon"><i class="ph ph-envelope"></i></span>
+            <span class="nav-text">Email</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-todo.html">
+            <span class="nav-icon"><i class="ph ph-check-square"></i></span>
+            <span class="nav-text">Todo List</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-support.html">
+            <span class="nav-icon"><i class="ph ph-headset"></i></span>
+            <span class="nav-text">Support Center</span>
+          </a>
+        </li>
+
+        <!-- UI Elements Section -->
+        <li class="nav-heading"><span>UI Elements</span></li>
+
+        <li class="nav-item has-submenu open">
+          <a class="nav-link" href="#" aria-expanded="true">
+            <span class="nav-icon"><i class="ph ph-puzzle-piece"></i></span>
+            <span class="nav-text">Components</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu show">
+            <li><a class="nav-link " href="components-alerts.html">Alerts</a></li>
+            <li><a class="nav-link " href="components-accordion.html">Accordion</a></li>
+            <li><a class="nav-link " href="components-badges.html">Badges</a></li>
+            <li><a class="nav-link " href="components-breadcrumbs.html">Breadcrumbs</a></li>
+            <li><a class="nav-link " href="components-buttons.html">Buttons</a></li>
+            <li><a class="nav-link " href="components-cards.html">Cards</a></li>
+            <li><a class="nav-link " href="components-carousel.html">Carousel</a></li>
+            <li><a class="nav-link " href="components-dropdowns.html">Dropdowns</a></li>
+            <li><a class="nav-link " href="components-list-group.html">List Group</a></li>
+            <li><a class="nav-link " href="components-modal.html">Modal</a></li>
+            <li><a class="nav-link " href="components-nav-tabs.html">Navs & Tabs</a></li>
+            <li><a class="nav-link " href="components-offcanvas.html">Offcanvas</a></li>
+            <li><a class="nav-link " href="components-pagination.html">Pagination</a></li>
+            <li><a class="nav-link " href="components-popovers.html">Popovers</a></li>
+            <li><a class="nav-link " href="components-progress.html">Progress</a></li>
+            <li><a class="nav-link " href="components-spinners.html">Spinners</a></li>
+            <li><a class="nav-link " href="components-toasts.html">Toasts</a></li>
+            <li><a class="nav-link active" href="components-tooltips.html">Tooltips</a></li>
+          </ul>
+        </li>
+
+        <!-- Widgets -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-stack"></i></span>
+            <span class="nav-text">Widgets</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="widgets-cards.html">Cards</a></li>
+            <li><a class="nav-link " href="widgets-banners.html">Banners</a></li>
+            <li><a class="nav-link " href="widgets-charts.html">Charts</a></li>
+            <li><a class="nav-link " href="widgets-apps.html">Apps</a></li>
+            <li><a class="nav-link " href="widgets-data.html">Data</a></li>
+          </ul>
+        </li>
+
+        <!-- Forms Section -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-list-checks"></i></span>
+            <span class="nav-text">Forms</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="forms-elements.html">Form Elements</a></li>
+            <li><a class="nav-link " href="forms-layouts.html">Form Layouts</a></li>
+            <li><a class="nav-link " href="forms-validation.html">Validation</a></li>
+            <li><a class="nav-link " href="forms-wizard.html">Wizard</a></li>
+            <li><a class="nav-link " href="forms-editors.html">Rich Editors</a></li>
+            <li><a class="nav-link " href="forms-pickers.html">Date/Time Pickers</a></li>
+            <li><a class="nav-link " href="forms-select.html">Advanced Select</a></li>
+            <li><a class="nav-link " href="forms-upload.html">File Upload</a></li>
+          </ul>
+        </li>
+
+        <!-- Tables Section -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-table"></i></span>
+            <span class="nav-text">Tables</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="tables-basic.html">Basic Tables</a></li>
+            <li><a class="nav-link " href="tables-datatables.html">DataTables</a></li>
+            <li><a class="nav-link " href="tables-responsive.html">Responsive Tables</a></li>
+          </ul>
+        </li>
+
+        <!-- Charts Section -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-chart-bar"></i></span>
+            <span class="nav-text">Charts</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="charts-apexcharts.html">ApexCharts</a></li>
+            <li><a class="nav-link " href="charts-chartjs.html">Chart.js</a></li>
+            <li><a class="nav-link " href="charts-echarts.html">ECharts</a></li>
+          </ul>
+        </li>
+
+        <!-- Icons Section -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-diamond"></i></span>
+            <span class="nav-text">Icons</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="icons-bootstrap.html">Bootstrap Icons</a></li>
+            <li><a class="nav-link " href="icons-remixicon.html">Remix Icons</a></li>
+            <li><a class="nav-link " href="icons-fontawesome.html">Font Awesome</a></li>
+            <li><a class="nav-link " href="icons-phosphor.html">Phosphor Icons</a></li>
+            <li><a class="nav-link " href="icons-lucide.html">Lucide Icons</a></li>
+          </ul>
+        </li>
+
+        <!-- Pages Section -->
+        <li class="nav-heading"><span>Pages</span></li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="contact.html">
+            <span class="nav-icon"><i class="ph ph-envelope-simple"></i></span>
+            <span class="nav-text">Contact</span>
+          </a>
+        </li>
+
+        <!-- Invoices -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-receipt"></i></span>
+            <span class="nav-text">Invoices</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="invoice-list.html">Invoice List</a></li>
+            <li><a class="nav-link " href="invoice.html">Invoice View</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="pricing.html">
+            <span class="nav-icon"><i class="ph ph-tag"></i></span>
+            <span class="nav-text">Pricing</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="faq.html">
+            <span class="nav-icon"><i class="ph ph-question"></i></span>
+            <span class="nav-text">FAQ</span>
+          </a>
+        </li>
+
+        <!-- Error Pages -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-warning"></i></span>
+            <span class="nav-text">Error Pages</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="error-404.html">404 Not Found</a></li>
+            <li><a class="nav-link " href="error-403.html">403 Forbidden</a></li>
+            <li><a class="nav-link " href="error-500.html">500 Server Error</a></li>
+            <li><a class="nav-link " href="error-maintenance.html">Maintenance</a></li>
+            <li><a class="nav-link " href="error-coming-soon.html">Coming Soon</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="timeline.html">
+            <span class="nav-icon"><i class="ph ph-clock-counter-clockwise"></i></span>
+            <span class="nav-text">Timeline</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="search-results.html">
+            <span class="nav-icon"><i class="ph ph-magnifying-glass"></i></span>
+            <span class="nav-text">Search Results</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="blank.html">
+            <span class="nav-icon"><i class="ph ph-file"></i></span>
+            <span class="nav-text">Blank Page</span>
+          </a>
+        </li>
+
+      </ul>
+    </nav>
+
+    <!-- Sidebar Footer - User Card -->
+    <div class="sidebar-footer">
+      <div class="sidebar-user">
+        <a href="profile.html" class="sidebar-user-link">
+          <span class="sidebar-user-avatar">
+            <img src="assets/img/profile-img.webp" alt="User">
+            <span class="sidebar-user-status"></span>
+          </span>
+          <span class="sidebar-user-info">
+            <span class="sidebar-user-name">John Doe</span>
+            <span class="sidebar-user-role">Administrator</span>
+          </span>
+        </a>
+        <div class="sidebar-user-actions">
+          <a href="settings.html" class="sidebar-user-action" title="Settings">
+            <i class="ph ph-gear"></i>
+          </a>
+          <a href="auth-login.html" class="sidebar-user-action sidebar-user-logout" title="Logout">
+            <i class="ph ph-sign-out"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Sidebar Overlay (Mobile) -->
+  <div class="sidebar-overlay"></div>
+
+  <!-- Main Content -->
+  <main class="main">
+    <div class="main-content page-components-tooltips">
+      <!-- Page Header -->
+      <div class="page-header">
+        <h1 class="page-title">Tooltips</h1>
+        <nav class="breadcrumb">
+          <a href="index.html" class="breadcrumb-item">Home</a>
+          <a href="#" class="breadcrumb-item">Components</a>
+          <span class="breadcrumb-item active">Tooltips</span>
+        </nav>
+      </div>
+
+      <!-- Basic Tooltips -->
+      <section class="section">
+        <div class="row g-4">
+          <!-- Default Tooltip -->
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Default Tooltips</h5>
+                <p class="card-subtitle">Hover over elements to see tooltips</p>
+              </div>
+              <div class="card-body">
+                <p class="mb-4">
+                  Tooltips are great for providing
+                  <a href="#" data-bs-toggle="tooltip" data-bs-title="This is a tooltip on a link">additional context</a>
+                  to users without cluttering the interface.
+                </p>
+                <div class="d-flex flex-wrap gap-2">
+                  <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-title="Default tooltip">
+                    Hover me
+                  </button>
+                  <button type="button" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-title="I'm a primary button tooltip">
+                    Primary
+                  </button>
+                  <button type="button" class="btn btn-success" data-bs-toggle="tooltip" data-bs-title="Success action tooltip">
+                    Success
+                  </button>
+                  <button type="button" class="btn btn-danger" data-bs-toggle="tooltip" data-bs-title="Danger! Be careful">
+                    Danger
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tooltip Directions -->
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Tooltip Directions</h5>
+                <p class="card-subtitle">Tooltips can appear in four directions</p>
+              </div>
+              <div class="card-body">
+                <div class="d-flex flex-wrap justify-content-center gap-3">
+                  <button type="button" class="btn btn-outline-primary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Tooltip on top">
+                    Top
+                  </button>
+                  <button type="button" class="btn btn-outline-primary" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Tooltip on right">
+                    Right
+                  </button>
+                  <button type="button" class="btn btn-outline-primary" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Tooltip on bottom">
+                    Bottom
+                  </button>
+                  <button type="button" class="btn btn-outline-primary" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Tooltip on left">
+                    Left
+                  </button>
+                </div>
+                <div class="mt-4 p-4 bg-light rounded text-center">
+                  <p class="text-muted small mb-3">Visual direction reference:</p>
+                  <div class="d-inline-block position-relative" style="width: 120px; height: 80px;">
+                    <span class="position-absolute top-0 start-50 translate-middle-x badge bg-primary">Top</span>
+                    <span class="position-absolute top-50 end-0 translate-middle-y badge bg-primary">Right</span>
+                    <span class="position-absolute bottom-0 start-50 translate-middle-x badge bg-primary">Bottom</span>
+                    <span class="position-absolute top-50 start-0 translate-middle-y badge bg-primary">Left</span>
+                    <span class="position-absolute top-50 start-50 translate-middle border rounded px-3 py-2 bg-white">Element</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tooltip on Elements -->
+      <section class="section">
+        <h5 class="section-title mb-3">Tooltips on Various Elements</h5>
+        <div class="row g-4">
+          <!-- Icons -->
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Tooltips on Icons</h5>
+                <p class="card-subtitle">Common pattern for icon-only buttons</p>
+              </div>
+              <div class="card-body">
+                <div class="d-flex flex-wrap gap-2 mb-4">
+                  <button type="button" class="btn btn-outline-secondary" data-bs-toggle="tooltip" data-bs-title="Edit">
+                    <i class="ph ph-pencil-simple"></i>
+                  </button>
+                  <button type="button" class="btn btn-outline-secondary" data-bs-toggle="tooltip" data-bs-title="Delete">
+                    <i class="ph ph-trash"></i>
+                  </button>
+                  <button type="button" class="btn btn-outline-secondary" data-bs-toggle="tooltip" data-bs-title="Download">
+                    <i class="ph ph-download-simple"></i>
+                  </button>
+                  <button type="button" class="btn btn-outline-secondary" data-bs-toggle="tooltip" data-bs-title="Share">
+                    <i class="ph ph-share-network"></i>
+                  </button>
+                  <button type="button" class="btn btn-outline-secondary" data-bs-toggle="tooltip" data-bs-title="Settings">
+                    <i class="ph ph-gear"></i>
+                  </button>
+                  <button type="button" class="btn btn-outline-secondary" data-bs-toggle="tooltip" data-bs-title="More options">
+                    <i class="ph ph-dots-three-vertical"></i>
+                  </button>
+                </div>
+                <p class="small text-muted mb-3">Standalone icons:</p>
+                <div class="d-flex flex-wrap gap-3">
+                  <i class="ph ph-info text-primary fs-5" data-bs-toggle="tooltip" data-bs-title="Information" style="cursor: pointer;"></i>
+                  <i class="ph ph-question text-info fs-5" data-bs-toggle="tooltip" data-bs-title="Help" style="cursor: pointer;"></i>
+                  <i class="ph ph-warning-circle text-warning fs-5" data-bs-toggle="tooltip" data-bs-title="Warning" style="cursor: pointer;"></i>
+                  <i class="ph ph-check-circle text-success fs-5" data-bs-toggle="tooltip" data-bs-title="Verified" style="cursor: pointer;"></i>
+                  <i class="ph ph-x-circle text-danger fs-5" data-bs-toggle="tooltip" data-bs-title="Error" style="cursor: pointer;"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Links & Text -->
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Tooltips on Links & Text</h5>
+                <p class="card-subtitle">Provide additional context for text elements</p>
+              </div>
+              <div class="card-body">
+                <p class="mb-3">
+                  Our <a href="#" data-bs-toggle="tooltip" data-bs-title="View our complete privacy policy">privacy policy</a>
+                  explains how we handle your data. For questions about
+                  <a href="#" data-bs-toggle="tooltip" data-bs-title="Learn about our pricing tiers">pricing</a>,
+                  please contact our <a href="#" data-bs-toggle="tooltip" data-bs-title="Available Mon-Fri, 9am-5pm">sales team</a>.
+                </p>
+                <p class="mb-3">
+                  Technical terms like <abbr title="" data-bs-toggle="tooltip" data-bs-title="Application Programming Interface">API</abbr>,
+                  <abbr title="" data-bs-toggle="tooltip" data-bs-title="Cascading Style Sheets">CSS</abbr>, and
+                  <abbr title="" data-bs-toggle="tooltip" data-bs-title="HyperText Markup Language">HTML</abbr>
+                  can be explained with tooltips.
+                </p>
+                <div class="border-top pt-3 mt-3">
+                  <p class="small text-muted mb-2">Inline help text:</p>
+                  <p class="mb-0">
+                    Password requirements
+                    <i class="ph ph-info text-muted" data-bs-toggle="tooltip" data-bs-title="Must be 8+ characters with at least one uppercase, lowercase, number, and special character"></i>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- HTML & Custom Tooltips -->
+      <section class="section">
+        <h5 class="section-title mb-3">HTML & Custom Tooltips</h5>
+        <div class="row g-4">
+          <!-- HTML Content -->
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">HTML Content in Tooltips</h5>
+                <p class="card-subtitle">Rich content with formatting</p>
+              </div>
+              <div class="card-body">
+                <div class="d-flex flex-wrap gap-3">
+                  <button type="button" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<strong>Bold</strong> and <em>italic</em> text">
+                    Formatted Text
+                  </button>
+                  <button type="button" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<i class='ph-duotone ph-star text-warning'></i> 4.8 rating (2,453 reviews)">
+                    With Icon
+                  </button>
+                  <button type="button" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="Line 1<br>Line 2<br>Line 3">
+                    Multi-line
+                  </button>
+                  <button type="button" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<span class='badge bg-success'>Active</span> User is online">
+                    With Badge
+                  </button>
+                </div>
+                <div class="mt-4 p-3 bg-light rounded">
+                  <code class="small">data-bs-html="true"</code>
+                  <p class="small text-muted mb-0 mt-2">Enable HTML content in tooltips with this attribute.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Disabled Elements -->
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Tooltips on Disabled Elements</h5>
+                <p class="card-subtitle">Wrap disabled elements in a container</p>
+              </div>
+              <div class="card-body">
+                <p class="text-muted small mb-3">Disabled elements need a wrapper for tooltips to work:</p>
+                <div class="d-flex flex-wrap gap-3 mb-4">
+                  <span data-bs-toggle="tooltip" data-bs-title="You don't have permission to perform this action">
+                    <button class="btn btn-primary" disabled>Disabled Button</button>
+                  </span>
+                  <span data-bs-toggle="tooltip" data-bs-title="This feature is coming soon">
+                    <button class="btn btn-success" disabled>Coming Soon</button>
+                  </span>
+                  <span data-bs-toggle="tooltip" data-bs-title="Please complete the form first">
+                    <button class="btn btn-outline-primary" disabled>Submit</button>
+                  </span>
+                </div>
+                <div class="p-3 bg-light rounded">
+                  <p class="small mb-2"><strong>Pattern:</strong></p>
+                  <code class="small">&lt;span data-bs-toggle="tooltip" title="..."&gt;<br>&nbsp;&nbsp;&lt;button disabled&gt;...&lt;/button&gt;<br>&lt;/span&gt;</code>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Form Tooltips -->
+      <section class="section">
+        <h5 class="section-title mb-3">Tooltips in Forms</h5>
+        <div class="row g-4">
+          <!-- Form Field Tooltips -->
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Form Field Tooltips</h5>
+                <p class="card-subtitle">Help users understand form requirements</p>
+              </div>
+              <div class="card-body">
+                <form>
+                  <div class="mb-3">
+                    <label for="usernameField" class="form-label">
+                      Username
+                      <i class="ph ph-info text-muted" data-bs-toggle="tooltip" data-bs-title="Choose a unique username between 3-20 characters. Only letters, numbers, and underscores allowed."></i>
+                    </label>
+                    <input type="text" class="form-control" id="usernameField" placeholder="Enter username">
+                  </div>
+                  <div class="mb-3">
+                    <label for="emailField" class="form-label">
+                      Email address
+                      <i class="ph ph-info text-muted" data-bs-toggle="tooltip" data-bs-title="We'll never share your email with anyone else."></i>
+                    </label>
+                    <input type="email" class="form-control" id="emailField" placeholder="name@example.com">
+                  </div>
+                  <div class="mb-3">
+                    <label for="passwordField" class="form-label">
+                      Password
+                      <i class="ph ph-info text-muted" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<strong>Requirements:</strong><br>• 8+ characters<br>• One uppercase<br>• One lowercase<br>• One number"></i>
+                    </label>
+                    <input type="password" class="form-control" id="passwordField" placeholder="Enter password">
+                  </div>
+                  <div class="mb-3">
+                    <label for="apiKeyField" class="form-label">
+                      API Key
+                      <i class="ph ph-question text-muted" data-bs-toggle="tooltip" data-bs-title="Find your API key in Settings > Developer > API Keys"></i>
+                    </label>
+                    <div class="input-group">
+                      <input type="text" class="form-control" id="apiKeyField" placeholder="sk_live_...">
+                      <button class="btn btn-outline-secondary" type="button" data-bs-toggle="tooltip" data-bs-title="Generate new key">
+                        <i class="ph ph-arrows-clockwise"></i>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <!-- Validation Tooltips -->
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Validation Tooltips</h5>
+                <p class="card-subtitle">Bootstrap validation with tooltip feedback</p>
+              </div>
+              <div class="card-body">
+                <form class="needs-validation" novalidate>
+                  <div class="mb-3 position-relative">
+                    <label for="validationTooltip01" class="form-label">First name</label>
+                    <input type="text" class="form-control" id="validationTooltip01" value="John" required>
+                    <div class="valid-tooltip">Looks good!</div>
+                  </div>
+                  <div class="mb-3 position-relative">
+                    <label for="validationTooltip02" class="form-label">Last name</label>
+                    <input type="text" class="form-control" id="validationTooltip02" value="Doe" required>
+                    <div class="valid-tooltip">Looks good!</div>
+                  </div>
+                  <div class="mb-3 position-relative">
+                    <label for="validationTooltipUsername" class="form-label">Username</label>
+                    <div class="input-group has-validation">
+                      <span class="input-group-text">@</span>
+                      <input type="text" class="form-control" id="validationTooltipUsername" required>
+                      <div class="invalid-tooltip">Please choose a unique username.</div>
+                    </div>
+                  </div>
+                  <div class="mb-3 position-relative">
+                    <label for="validationTooltip03" class="form-label">City</label>
+                    <input type="text" class="form-control" id="validationTooltip03" required>
+                    <div class="invalid-tooltip">Please provide a valid city.</div>
+                  </div>
+                  <button class="btn btn-primary" type="submit">Validate Form</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Real-World Examples -->
+      <section class="section">
+        <h5 class="section-title mb-3">Real-World Examples</h5>
+        <div class="row g-4">
+          <!-- Toolbar -->
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Editor Toolbar</h5>
+                <p class="card-subtitle">Text editor with tooltip-enabled buttons</p>
+              </div>
+              <div class="card-body">
+                <div class="border rounded">
+                  <div class="d-flex flex-wrap gap-1 p-2 border-bottom bg-light">
+                    <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="tooltip" data-bs-title="Bold (Ctrl+B)">
+                      <i class="ph ph-text-b"></i>
+                    </button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="tooltip" data-bs-title="Italic (Ctrl+I)">
+                      <i class="ph ph-text-italic"></i>
+                    </button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="tooltip" data-bs-title="Underline (Ctrl+U)">
+                      <i class="ph ph-text-underline"></i>
+                    </button>
+                    <div class="vr mx-1"></div>
+                    <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="tooltip" data-bs-title="Align Left">
+                      <i class="ph ph-text-align-left"></i>
+                    </button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="tooltip" data-bs-title="Align Center">
+                      <i class="ph ph-text-align-center"></i>
+                    </button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="tooltip" data-bs-title="Align Right">
+                      <i class="ph ph-text-align-right"></i>
+                    </button>
+                    <div class="vr mx-1"></div>
+                    <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="tooltip" data-bs-title="Bulleted List">
+                      <i class="ph ph-list-bullets"></i>
+                    </button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="tooltip" data-bs-title="Numbered List">
+                      <i class="ph ph-list-numbers"></i>
+                    </button>
+                    <div class="vr mx-1"></div>
+                    <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="tooltip" data-bs-title="Insert Link (Ctrl+K)">
+                      <i class="ph ph-link"></i>
+                    </button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="tooltip" data-bs-title="Insert Image">
+                      <i class="ph ph-image"></i>
+                    </button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="tooltip" data-bs-title="Insert Code">
+                      <i class="ph ph-code"></i>
+                    </button>
+                  </div>
+                  <div class="p-3" style="min-height: 100px;">
+                    <p class="text-muted mb-0">Start typing here...</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- User Table -->
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">User Table with Actions</h5>
+                <p class="card-subtitle">Tooltips on table action buttons</p>
+              </div>
+              <div class="card-body">
+                <table class="table table-hover mb-0">
+                  <thead>
+                    <tr>
+                      <th>User</th>
+                      <th>Status</th>
+                      <th class="text-end">Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div class="d-flex align-items-center gap-2">
+                          <img src="assets/img/avatars/avatar-1.webp" class="rounded-circle" width="32" height="32" alt="User">
+                          <div>
+                            <div class="fw-medium">John Doe</div>
+                            <small class="text-muted">john@example.com</small>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <span class="badge bg-success" data-bs-toggle="tooltip" data-bs-title="Last active 2 minutes ago">Active</span>
+                      </td>
+                      <td class="text-end">
+                        <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="tooltip" data-bs-title="View Profile">
+                          <i class="ph ph-eye"></i>
+                        </button>
+                        <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="tooltip" data-bs-title="Edit User">
+                          <i class="ph ph-pencil-simple"></i>
+                        </button>
+                        <button class="btn btn-sm btn-outline-danger" data-bs-toggle="tooltip" data-bs-title="Delete User">
+                          <i class="ph ph-trash"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="d-flex align-items-center gap-2">
+                          <img src="assets/img/avatars/avatar-2.webp" class="rounded-circle" width="32" height="32" alt="User">
+                          <div>
+                            <div class="fw-medium">Sarah Smith</div>
+                            <small class="text-muted">sarah@example.com</small>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <span class="badge bg-warning" data-bs-toggle="tooltip" data-bs-title="Last active 3 hours ago">Away</span>
+                      </td>
+                      <td class="text-end">
+                        <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="tooltip" data-bs-title="View Profile">
+                          <i class="ph ph-eye"></i>
+                        </button>
+                        <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="tooltip" data-bs-title="Edit User">
+                          <i class="ph ph-pencil-simple"></i>
+                        </button>
+                        <button class="btn btn-sm btn-outline-danger" data-bs-toggle="tooltip" data-bs-title="Delete User">
+                          <i class="ph ph-trash"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="d-flex align-items-center gap-2">
+                          <img src="assets/img/avatars/avatar-3.webp" class="rounded-circle" width="32" height="32" alt="User">
+                          <div>
+                            <div class="fw-medium">Mike Johnson</div>
+                            <small class="text-muted">mike@example.com</small>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <span class="badge bg-secondary" data-bs-toggle="tooltip" data-bs-title="Last active 2 days ago">Offline</span>
+                      </td>
+                      <td class="text-end">
+                        <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="tooltip" data-bs-title="View Profile">
+                          <i class="ph ph-eye"></i>
+                        </button>
+                        <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="tooltip" data-bs-title="Edit User">
+                          <i class="ph ph-pencil-simple"></i>
+                        </button>
+                        <button class="btn btn-sm btn-outline-danger" data-bs-toggle="tooltip" data-bs-title="Delete User">
+                          <i class="ph ph-trash"></i>
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stats Cards -->
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Stats with Tooltips</h5>
+                <p class="card-subtitle">Dashboard stats with explanatory tooltips</p>
+              </div>
+              <div class="card-body">
+                <div class="row g-3">
+                  <div class="col-6">
+                    <div class="border rounded p-3">
+                      <div class="d-flex align-items-center justify-content-between mb-2">
+                        <span class="text-muted small">Total Revenue</span>
+                        <i class="ph ph-info text-muted" data-bs-toggle="tooltip" data-bs-title="Total revenue before taxes and refunds"></i>
+                      </div>
+                      <h4 class="mb-0">$48,294</h4>
+                      <small class="text-success">
+                        <i class="ph ph-arrow-up"></i> 12.5%
+                        <span class="text-muted" data-bs-toggle="tooltip" data-bs-title="Compared to previous period">vs last month</span>
+                      </small>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="border rounded p-3">
+                      <div class="d-flex align-items-center justify-content-between mb-2">
+                        <span class="text-muted small">Conversion Rate</span>
+                        <i class="ph ph-info text-muted" data-bs-toggle="tooltip" data-bs-title="Percentage of visitors who made a purchase"></i>
+                      </div>
+                      <h4 class="mb-0">3.24%</h4>
+                      <small class="text-danger">
+                        <i class="ph ph-arrow-down"></i> 2.1%
+                        <span class="text-muted" data-bs-toggle="tooltip" data-bs-title="Compared to previous period">vs last month</span>
+                      </small>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="border rounded p-3">
+                      <div class="d-flex align-items-center justify-content-between mb-2">
+                        <span class="text-muted small">Avg. Order Value</span>
+                        <i class="ph ph-info text-muted" data-bs-toggle="tooltip" data-bs-title="Average amount spent per order"></i>
+                      </div>
+                      <h4 class="mb-0">$127.50</h4>
+                      <small class="text-success">
+                        <i class="ph ph-arrow-up"></i> 5.3%
+                        <span class="text-muted" data-bs-toggle="tooltip" data-bs-title="Compared to previous period">vs last month</span>
+                      </small>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="border rounded p-3">
+                      <div class="d-flex align-items-center justify-content-between mb-2">
+                        <span class="text-muted small">Active Users</span>
+                        <i class="ph ph-info text-muted" data-bs-toggle="tooltip" data-bs-title="Users active in the last 30 days"></i>
+                      </div>
+                      <h4 class="mb-0">8,420</h4>
+                      <small class="text-success">
+                        <i class="ph ph-arrow-up"></i> 18.2%
+                        <span class="text-muted" data-bs-toggle="tooltip" data-bs-title="Compared to previous period">vs last month</span>
+                      </small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Navigation -->
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Navigation with Tooltips</h5>
+                <p class="card-subtitle">Compact navigation with icon tooltips</p>
+              </div>
+              <div class="card-body">
+                <p class="text-muted small mb-3">Icon-only navigation (compact sidebar style):</p>
+                <div class="d-flex flex-column gap-2 p-3 bg-dark rounded" style="width: fit-content;">
+                  <button class="btn btn-dark" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Dashboard">
+                    <i class="ph ph-squares-four text-white"></i>
+                  </button>
+                  <button class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Analytics">
+                    <i class="ph ph-chart-bar"></i>
+                  </button>
+                  <button class="btn btn-dark" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Messages">
+                    <i class="ph ph-chat-circle-dots text-white"></i>
+                  </button>
+                  <button class="btn btn-dark" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Calendar">
+                    <i class="ph ph-calendar-blank text-white"></i>
+                  </button>
+                  <button class="btn btn-dark" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Files">
+                    <i class="ph ph-folder text-white"></i>
+                  </button>
+                  <hr class="border-secondary my-1">
+                  <button class="btn btn-dark" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Settings">
+                    <i class="ph ph-gear text-white"></i>
+                  </button>
+                  <button class="btn btn-dark" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Help & Support">
+                    <i class="ph ph-question text-white"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social Sharing -->
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Social Sharing Buttons</h5>
+                <p class="card-subtitle">Share buttons with platform names in tooltips</p>
+              </div>
+              <div class="card-body">
+                <p class="text-muted small mb-3">Share this article:</p>
+                <div class="d-flex flex-wrap gap-2">
+                  <button class="btn btn-outline-primary" data-bs-toggle="tooltip" data-bs-title="Share on Facebook">
+                    <i class="ph ph-facebook-logo"></i>
+                  </button>
+                  <button class="btn btn-outline-info" data-bs-toggle="tooltip" data-bs-title="Share on Twitter">
+                    <i class="ph ph-x-logo"></i>
+                  </button>
+                  <button class="btn btn-outline-primary" data-bs-toggle="tooltip" data-bs-title="Share on LinkedIn">
+                    <i class="ph ph-linkedin-logo"></i>
+                  </button>
+                  <button class="btn btn-outline-danger" data-bs-toggle="tooltip" data-bs-title="Share on Pinterest">
+                    <i class="ph ph-pinterest-logo"></i>
+                  </button>
+                  <button class="btn btn-outline-success" data-bs-toggle="tooltip" data-bs-title="Share via WhatsApp">
+                    <i class="ph ph-whatsapp-logo"></i>
+                  </button>
+                  <button class="btn btn-outline-secondary" data-bs-toggle="tooltip" data-bs-title="Share via Email">
+                    <i class="ph ph-envelope"></i>
+                  </button>
+                  <button class="btn btn-outline-secondary" data-bs-toggle="tooltip" data-bs-title="Copy Link">
+                    <i class="ph ph-link"></i>
+                  </button>
+                </div>
+                <hr>
+                <p class="text-muted small mb-3">Colored buttons variant:</p>
+                <div class="d-flex flex-wrap gap-2">
+                  <button class="btn btn-primary" style="background-color: #1877f2; border-color: #1877f2;" data-bs-toggle="tooltip" data-bs-title="Share on Facebook">
+                    <i class="ph ph-facebook-logo"></i>
+                  </button>
+                  <button class="btn btn-dark" data-bs-toggle="tooltip" data-bs-title="Share on Twitter">
+                    <i class="ph ph-x-logo"></i>
+                  </button>
+                  <button class="btn btn-primary" style="background-color: #0a66c2; border-color: #0a66c2;" data-bs-toggle="tooltip" data-bs-title="Share on LinkedIn">
+                    <i class="ph ph-linkedin-logo"></i>
+                  </button>
+                  <button class="btn btn-danger" style="background-color: #e60023; border-color: #e60023;" data-bs-toggle="tooltip" data-bs-title="Share on Pinterest">
+                    <i class="ph ph-pinterest-logo"></i>
+                  </button>
+                  <button class="btn btn-success" style="background-color: #25d366; border-color: #25d366;" data-bs-toggle="tooltip" data-bs-title="Share via WhatsApp">
+                    <i class="ph ph-whatsapp-logo"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Truncated Text -->
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Truncated Text with Tooltips</h5>
+                <p class="card-subtitle">Show full content on hover for truncated text</p>
+              </div>
+              <div class="card-body">
+                <ul class="list-group">
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <span class="text-truncate me-3" style="max-width: 250px;" data-bs-toggle="tooltip" data-bs-title="This is a very long file name that gets truncated in the UI display.pdf">
+                      This is a very long file name that gets truncated in the UI display.pdf
+                    </span>
+                    <span class="badge bg-primary">2.4 MB</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <span class="text-truncate me-3" style="max-width: 250px;" data-bs-toggle="tooltip" data-bs-title="Annual_Financial_Report_2024_Q4_Final_Version_Approved.xlsx">
+                      Annual_Financial_Report_2024_Q4_Final_Version_Approved.xlsx
+                    </span>
+                    <span class="badge bg-success">1.8 MB</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <span class="text-truncate me-3" style="max-width: 250px;" data-bs-toggle="tooltip" data-bs-title="Project_Documentation_and_Technical_Specifications_v3.2.docx">
+                      Project_Documentation_and_Technical_Specifications_v3.2.docx
+                    </span>
+                    <span class="badge bg-info">856 KB</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <span class="footer-brand-mark"><i class="bi bi-lightning-charge-fill"></i></span>
+          <span class="footer-copyright">
+            &copy; 2026 <a href="#">TrendyAdmin</a>. All Rights Reserved.
+          </span>
+        </div>
+        <div class="footer-links">
+          <a href="#">About</a>
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Contact</a>
+        </div>
+        <div class="footer-credits">
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Back to Top -->
+  <a href="#" class="back-to-top">
+    <i class="ph ph-arrow-up"></i>
+  </a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="assets/vendor/chart.js/chart.umd.js"></script>
+  <script src="assets/vendor/echarts/echarts.min.js"></script>
+  <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="assets/vendor/quill/quill.js"></script>
+  <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+  <script src="assets/vendor/choices.js/choices.min.js"></script>
+  <script src="assets/vendor/flatpickr/flatpickr.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS Files -->
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <!-- App Sidebar Toggle (for app pages with sidebars) -->
+  <script src="assets/js/apps-sidebar-toggle.js"></script>
+
+  <script>
+    // Initialize all tooltips
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+    // Form validation example
+    const forms = document.querySelectorAll('.needs-validation');
+    Array.from(forms).forEach(form => {
+      form.addEventListener('submit', event => {
+        if (!form.checkValidity()) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  </script>
+</body>
+
+</html>

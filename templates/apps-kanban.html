@@ -1,0 +1,1634 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kanban Board - TrendyAdmin</title>
+  <meta name="description" content="TrendyAdmin - Bootstrap Admin Template">
+  <meta name="keywords" content="admin, dashboard, bootstrap">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts - Plus Jakarta Sans (body) + Outfit (headings) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="assets/vendor/phosphor-icons/phosphor-icons.css" rel="stylesheet">
+  <link href="assets/vendor/lucide-icons/lucide.css" rel="stylesheet">
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/choices.js/choices.min.css" rel="stylesheet">
+  <link href="assets/vendor/flatpickr/flatpickr.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+    * Template Name: TrendyAdmin - Bootstrap Admin Template
+    * Template URL: https://bootstrapmade.com/trendy-admin-bootstrap-dashboard-template/
+    * Updated: Jul 29 2026 with Bootstrap v5.3.8
+    * Author: BootstrapMade.com
+    * License: https://bootstrapmade.com/license/
+    ======================================================== -->
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-inner">
+      <!-- Header Left -->
+      <div class="header-left">
+        <button class="sidebar-toggle" title="Toggle Sidebar">
+          <i class="ph ph-list"></i>
+        </button>
+        <a href="index.html" class="header-logo">
+          <span class="header-logo-mark"><i class="bi bi-lightning-charge-fill"></i></span>
+          <span class="header-logo-text">TrendyAdmin</span>
+        </a>
+
+        <!-- Apps Quick Access -->
+        <div class="header-action dropdown apps-dropdown">
+          <button class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" title="Quick Access">
+            <i class="ph ph-dots-nine"></i>
+          </button>
+          <div class="dropdown-menu">
+            <div class="apps-menu-header">
+              <h6>Quick Access</h6>
+              <span>Jump straight into an app</span>
+            </div>
+            <div class="apps-grid">
+              <a href="apps-chat.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-chat-circle-dots"></i></span>
+                <span>Chat</span>
+              </a>
+              <a href="apps-email.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-envelope"></i></span>
+                <span>Email</span>
+              </a>
+              <a href="apps-calendar.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-calendar-blank"></i></span>
+                <span>Calendar</span>
+              </a>
+              <a href="apps-kanban.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-kanban"></i></span>
+                <span>Kanban</span>
+              </a>
+              <a href="apps-file-manager.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-folder-open"></i></span>
+                <span>Files</span>
+              </a>
+              <a href="apps-todo.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-check-square"></i></span>
+                <span>Todo</span>
+              </a>
+              <a href="apps-contacts.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-address-book"></i></span>
+                <span>Contacts</span>
+              </a>
+              <a href="apps-support.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-headset"></i></span>
+                <span>Support</span>
+              </a>
+              <a href="invoice-list.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-receipt"></i></span>
+                <span>Invoices</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Header Search (Desktop) -->
+      <div class="header-search">
+        <form class="search-form" action="search-results.html" method="GET">
+          <button type="submit"><i class="ph ph-magnifying-glass"></i></button>
+          <input type="search" name="q" placeholder="Search anything..." autocomplete="off">
+          <span class="search-hint">⌘K</span>
+        </form>
+      </div>
+
+      <!-- Header Right -->
+      <div class="header-right">
+        <!-- Desktop Actions (hidden on mobile, shown in mobile menu) -->
+        <div class="header-actions-desktop">
+          <!-- Quick Create -->
+          <div class="dropdown create-dropdown">
+            <button class="create-btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="ph ph-plus"></i>
+              <span>Create</span>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end create-menu">
+              <a class="dropdown-item" href="apps-kanban.html">
+                <span class="create-item-icon"><i class="ph ph-kanban"></i></span>
+                <span class="create-item-text">
+                  <span class="create-item-title">New Project</span>
+                  <span class="create-item-sub">Start a kanban board</span>
+                </span>
+              </a>
+              <a class="dropdown-item" href="apps-todo.html">
+                <span class="create-item-icon"><i class="ph ph-check-square"></i></span>
+                <span class="create-item-text">
+                  <span class="create-item-title">New Task</span>
+                  <span class="create-item-sub">Add to your todo list</span>
+                </span>
+              </a>
+              <a class="dropdown-item" href="apps-contacts.html">
+                <span class="create-item-icon"><i class="ph ph-user-plus"></i></span>
+                <span class="create-item-text">
+                  <span class="create-item-title">New Contact</span>
+                  <span class="create-item-sub">Save a new person</span>
+                </span>
+              </a>
+              <a class="dropdown-item" href="invoice-list.html">
+                <span class="create-item-icon"><i class="ph ph-receipt"></i></span>
+                <span class="create-item-text">
+                  <span class="create-item-title">New Invoice</span>
+                  <span class="create-item-sub">Bill a customer</span>
+                </span>
+              </a>
+            </div>
+          </div>
+
+          <div class="header-divider"></div>
+
+          <!-- Theme Toggle -->
+          <button class="header-action theme-toggle" title="Toggle Theme">
+            <i class="ph ph-moon icon-dark"></i>
+            <i class="ph ph-sun icon-light"></i>
+          </button>
+
+          <!-- Fullscreen Toggle -->
+          <button class="header-action fullscreen-toggle" onclick="toggleFullscreen()" title="Fullscreen">
+            <i class="ph ph-arrows-out icon-enter"></i>
+            <i class="ph ph-arrows-in icon-exit"></i>
+          </button>
+
+          <!-- Messages -->
+          <div class="header-action dropdown messages-dropdown">
+            <button class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" title="Messages">
+              <i class="ph ph-chat-teardrop-text"></i>
+              <span class="badge">2</span>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end">
+              <div class="messages-header">
+                <h6>Messages</h6>
+                <a href="apps-chat.html">View all</a>
+              </div>
+              <div class="messages-list">
+                <a href="apps-chat.html" class="message-item unread">
+                  <span class="message-avatar">
+                    <img src="assets/img/avatars/avatar-2.webp" alt="Sarah Johnson">
+                    <span class="message-status"></span>
+                  </span>
+                  <span class="message-content">
+                    <span class="message-name">Sarah Johnson</span>
+                    <span class="message-text">The new dashboard mockups look amazing! 🔥</span>
+                  </span>
+                  <span class="message-time">2m</span>
+                </a>
+                <a href="apps-chat.html" class="message-item unread">
+                  <span class="message-avatar">
+                    <img src="assets/img/avatars/avatar-3.webp" alt="Mike Chen">
+                  </span>
+                  <span class="message-content">
+                    <span class="message-name">Mike Chen</span>
+                    <span class="message-text">Can you review my PR when you get a chance?</span>
+                  </span>
+                  <span class="message-time">1h</span>
+                </a>
+                <a href="apps-chat.html" class="message-item">
+                  <span class="message-avatar">
+                    <img src="assets/img/avatars/avatar-4.webp" alt="Emma Davis">
+                  </span>
+                  <span class="message-content">
+                    <span class="message-name">Emma Davis</span>
+                    <span class="message-text">Meeting moved to 3pm tomorrow</span>
+                  </span>
+                  <span class="message-time">3h</span>
+                </a>
+              </div>
+              <div class="messages-footer">
+                <a href="apps-chat.html">Open chat <i class="ph ph-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Notifications -->
+          <div class="header-action dropdown notification-dropdown">
+            <button class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" title="Notifications">
+              <i class="ph ph-bell"></i>
+              <span class="badge">3</span>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end">
+              <div class="notification-header">
+                <h6>You have 3 new notifications</h6>
+                <a href="#" class="notification-mark-read" data-notification-action="mark-all-read" title="Mark all as read">
+                  <i class="ph ph-checks"></i>
+                </a>
+              </div>
+              <div class="notification-list">
+                <div class="notification-item unread">
+                  <span class="notification-icon success">
+                    <i class="ph ph-check-circle"></i>
+                  </span>
+                  <span class="notification-content">
+                    <span class="notification-title">Order Completed</span>
+                    <span class="notification-text">Your order #12345 has been delivered</span>
+                  </span>
+                  <span class="notification-meta">
+                    <span class="notification-time">5m</span>
+                    <span class="notification-dot"></span>
+                  </span>
+                </div>
+                <div class="notification-item unread">
+                  <span class="notification-icon warning">
+                    <i class="ph ph-warning"></i>
+                  </span>
+                  <span class="notification-content">
+                    <span class="notification-title">Low Storage</span>
+                    <span class="notification-text">Server storage is running low (85% used)</span>
+                  </span>
+                  <span class="notification-meta">
+                    <span class="notification-time">1h</span>
+                    <span class="notification-dot"></span>
+                  </span>
+                </div>
+                <div class="notification-item">
+                  <span class="notification-icon info">
+                    <i class="ph ph-info"></i>
+                  </span>
+                  <span class="notification-content">
+                    <span class="notification-title">New Feature</span>
+                    <span class="notification-text">Dark mode is now available</span>
+                  </span>
+                  <span class="notification-meta">
+                    <span class="notification-time">2h</span>
+                    <span class="notification-dot"></span>
+                  </span>
+                </div>
+              </div>
+              <div class="notification-footer">
+                <a href="notifications.html">View all</a>
+                <a href="settings.html">Settings</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="header-divider"></div>
+
+          <!-- User Dropdown -->
+          <div class="header-action dropdown user-dropdown">
+            <button class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="assets/img/profile-img.webp" alt="User" class="avatar">
+              <span class="user-name">John Doe</span>
+              <i class="ph ph-caret-down user-caret"></i>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end">
+              <div class="user-menu-card">
+                <span class="user-menu-avatar">
+                  <img src="assets/img/profile-img.webp" alt="User">
+                </span>
+                <span class="user-menu-name">John Doe</span>
+                <span class="user-menu-mail">john@trendyadmin.com</span>
+                <span class="user-menu-role">Administrator</span>
+              </div>
+              <div class="user-menu-body">
+                <a class="dropdown-item" href="profile.html">
+                  <span class="user-menu-item-icon"><i class="ph ph-user"></i></span>
+                  My Profile
+                  <i class="ph ph-caret-right user-menu-item-caret"></i>
+                </a>
+                <a class="dropdown-item" href="settings.html">
+                  <span class="user-menu-item-icon"><i class="ph ph-gear"></i></span>
+                  Settings
+                  <i class="ph ph-caret-right user-menu-item-caret"></i>
+                </a>
+                <a class="dropdown-item" href="activity.html">
+                  <span class="user-menu-item-icon"><i class="ph ph-pulse"></i></span>
+                  Activity Log
+                  <i class="ph ph-caret-right user-menu-item-caret"></i>
+                </a>
+                <a class="dropdown-item" href="invoice-list.html">
+                  <span class="user-menu-item-icon"><i class="ph ph-receipt"></i></span>
+                  Billing
+                  <i class="ph ph-caret-right user-menu-item-caret"></i>
+                </a>
+              </div>
+              <div class="user-menu-footer">
+                <a href="auth-login.html" class="user-menu-signout">
+                  <i class="ph ph-sign-out"></i> Sign Out
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile Actions (visible only on mobile) -->
+        <div class="header-actions-mobile">
+          <!-- Search Toggle (Mobile) -->
+          <button class="header-action search-toggle" title="Search">
+            <i class="ph ph-magnifying-glass"></i>
+          </button>
+
+          <!-- Mobile Menu Toggle -->
+          <button class="header-action mobile-menu-toggle" title="More">
+            <i class="ph ph-dots-three-vertical"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Search -->
+  <div class="mobile-search">
+    <form class="search-form" action="search-results.html" method="GET">
+      <input type="search" name="q" placeholder="Search anything..." autocomplete="off">
+      <button type="submit"><i class="ph ph-magnifying-glass"></i></button>
+    </form>
+  </div>
+
+  <!-- Mobile Header Menu -->
+  <div class="mobile-header-menu">
+    <div class="mobile-header-menu-content">
+      <!-- Theme Toggle -->
+      <button class="mobile-menu-item theme-toggle" title="Toggle Theme">
+        <i class="ph ph-moon icon-dark"></i>
+        <i class="ph ph-sun icon-light"></i>
+        <span class="mobile-menu-label">Theme</span>
+      </button>
+
+      <!-- Fullscreen Toggle -->
+      <button class="mobile-menu-item fullscreen-toggle" onclick="toggleFullscreen()" title="Fullscreen">
+        <i class="ph ph-arrows-out icon-enter"></i>
+        <i class="ph ph-arrows-in icon-exit"></i>
+        <span class="mobile-menu-label">Fullscreen</span>
+      </button>
+
+      <!-- Messages -->
+      <a href="apps-chat.html" class="mobile-menu-item">
+        <i class="ph ph-chat-teardrop-text"></i>
+        <span class="badge">2</span>
+        <span class="mobile-menu-label">Messages</span>
+      </a>
+
+      <!-- Notifications -->
+      <a href="notifications.html" class="mobile-menu-item">
+        <i class="ph ph-bell"></i>
+        <span class="badge">3</span>
+        <span class="mobile-menu-label">Notifications</span>
+      </a>
+
+      <!-- Profile -->
+      <a href="profile.html" class="mobile-menu-item">
+        <i class="ph ph-user"></i>
+        <span class="mobile-menu-label">Profile</span>
+      </a>
+
+      <!-- Sign Out -->
+      <a href="auth-login.html" class="mobile-menu-item mobile-menu-item-danger">
+        <i class="ph ph-sign-out"></i>
+        <span class="mobile-menu-label">Sign Out</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <!-- Sidebar Header -->
+    <div class="sidebar-header">
+      <a href="index.html" class="sidebar-logo">
+        <span class="sidebar-logo-mark"><i class="bi bi-lightning-charge-fill"></i></span>
+        <span class="sidebar-logo-text">TrendyAdmin</span>
+      </a>
+      <button class="sidebar-close">
+        <i class="ph ph-x"></i>
+      </button>
+    </div>
+
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar-nav">
+      <ul class="nav-menu">
+        <li class="nav-heading"><span>Overview</span></li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="index.html">
+            <span class="nav-icon"><i class="ph ph-house"></i></span>
+            <span class="nav-text">Home</span>
+          </a>
+        </li>
+
+        <!-- Dashboards Submenu -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-gauge"></i></span>
+            <span class="nav-text">Dashboards</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="dashboard-sales.html">Sales</a></li>
+            <li><a class="nav-link " href="dashboard-analytics.html">Analytics</a></li>
+            <li><a class="nav-link " href="dashboard-crm.html">CRM</a></li>
+            <li><a class="nav-link " href="dashboard-marketing.html">Marketing</a></li>
+            <li><a class="nav-link " href="dashboard-projects.html">Projects</a></li>
+            <li><a class="nav-link " href="dashboard-finance.html">Finance</a></li>
+          </ul>
+        </li>
+
+        <!-- Users -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-users"></i></span>
+            <span class="nav-text">Users</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="users.html">Users List</a></li>
+            <li><a class="nav-link " href="users-view.html">User View</a></li>
+            <li><a class="nav-link " href="users-edit.html">User Edit</a></li>
+            <li><a class="nav-link " href="profile.html">Profile</a></li>
+            <!-- 3rd Level - Settings submenu -->
+            <li class="has-submenu ">
+              <a class="nav-link" href="#" aria-expanded="false">
+                Settings
+                <i class="ph ph-caret-right nav-arrow"></i>
+              </a>
+              <ul class="nav-submenu ">
+                <li><a class="nav-link " href="settings.html">Account</a></li>
+                <li><a class="nav-link " href="notifications.html">Notifications</a></li>
+                <li><a class="nav-link " href="activity.html">Activity</a></li>
+              </ul>
+            </li>
+            <li><a class="nav-link " href="roles.html">Roles & Permissions</a></li>
+          </ul>
+        </li>
+
+        <!-- Authentication -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-shield-check"></i></span>
+            <span class="nav-text">Authentication</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="auth-login.html">Login</a></li>
+            <li><a class="nav-link " href="auth-register.html">Register</a></li>
+            <li><a class="nav-link " href="auth-forgot-password.html">Forgot Password</a></li>
+            <li><a class="nav-link " href="auth-reset-password.html">Reset Password</a></li>
+            <li><a class="nav-link " href="auth-verify-email.html">Email Verification</a></li>
+            <li><a class="nav-link " href="auth-two-factor.html">Two Factor Auth</a></li>
+            <li><a class="nav-link " href="auth-lock-screen.html">Lock Screen</a></li>
+          </ul>
+        </li>
+
+        <!-- Apps Section -->
+        <li class="nav-heading"><span>Apps</span></li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-calendar.html">
+            <span class="nav-icon"><i class="ph ph-calendar-blank"></i></span>
+            <span class="nav-text">Calendar</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link active" href="apps-kanban.html">
+            <span class="nav-icon"><i class="ph ph-kanban"></i></span>
+            <span class="nav-text">Kanban Board</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-chat.html">
+            <span class="nav-icon"><i class="ph ph-chat-circle-dots"></i></span>
+            <span class="nav-text">Chat</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-contacts.html">
+            <span class="nav-icon"><i class="ph ph-address-book"></i></span>
+            <span class="nav-text">Contacts</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-file-manager.html">
+            <span class="nav-icon"><i class="ph ph-folder-open"></i></span>
+            <span class="nav-text">File Manager</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-email.html">
+            <span class="nav-icon"><i class="ph ph-envelope"></i></span>
+            <span class="nav-text">Email</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-todo.html">
+            <span class="nav-icon"><i class="ph ph-check-square"></i></span>
+            <span class="nav-text">Todo List</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-support.html">
+            <span class="nav-icon"><i class="ph ph-headset"></i></span>
+            <span class="nav-text">Support Center</span>
+          </a>
+        </li>
+
+        <!-- UI Elements Section -->
+        <li class="nav-heading"><span>UI Elements</span></li>
+
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-puzzle-piece"></i></span>
+            <span class="nav-text">Components</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="components-alerts.html">Alerts</a></li>
+            <li><a class="nav-link " href="components-accordion.html">Accordion</a></li>
+            <li><a class="nav-link " href="components-badges.html">Badges</a></li>
+            <li><a class="nav-link " href="components-breadcrumbs.html">Breadcrumbs</a></li>
+            <li><a class="nav-link " href="components-buttons.html">Buttons</a></li>
+            <li><a class="nav-link " href="components-cards.html">Cards</a></li>
+            <li><a class="nav-link " href="components-carousel.html">Carousel</a></li>
+            <li><a class="nav-link " href="components-dropdowns.html">Dropdowns</a></li>
+            <li><a class="nav-link " href="components-list-group.html">List Group</a></li>
+            <li><a class="nav-link " href="components-modal.html">Modal</a></li>
+            <li><a class="nav-link " href="components-nav-tabs.html">Navs & Tabs</a></li>
+            <li><a class="nav-link " href="components-offcanvas.html">Offcanvas</a></li>
+            <li><a class="nav-link " href="components-pagination.html">Pagination</a></li>
+            <li><a class="nav-link " href="components-popovers.html">Popovers</a></li>
+            <li><a class="nav-link " href="components-progress.html">Progress</a></li>
+            <li><a class="nav-link " href="components-spinners.html">Spinners</a></li>
+            <li><a class="nav-link " href="components-toasts.html">Toasts</a></li>
+            <li><a class="nav-link " href="components-tooltips.html">Tooltips</a></li>
+          </ul>
+        </li>
+
+        <!-- Widgets -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-stack"></i></span>
+            <span class="nav-text">Widgets</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="widgets-cards.html">Cards</a></li>
+            <li><a class="nav-link " href="widgets-banners.html">Banners</a></li>
+            <li><a class="nav-link " href="widgets-charts.html">Charts</a></li>
+            <li><a class="nav-link " href="widgets-apps.html">Apps</a></li>
+            <li><a class="nav-link " href="widgets-data.html">Data</a></li>
+          </ul>
+        </li>
+
+        <!-- Forms Section -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-list-checks"></i></span>
+            <span class="nav-text">Forms</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="forms-elements.html">Form Elements</a></li>
+            <li><a class="nav-link " href="forms-layouts.html">Form Layouts</a></li>
+            <li><a class="nav-link " href="forms-validation.html">Validation</a></li>
+            <li><a class="nav-link " href="forms-wizard.html">Wizard</a></li>
+            <li><a class="nav-link " href="forms-editors.html">Rich Editors</a></li>
+            <li><a class="nav-link " href="forms-pickers.html">Date/Time Pickers</a></li>
+            <li><a class="nav-link " href="forms-select.html">Advanced Select</a></li>
+            <li><a class="nav-link " href="forms-upload.html">File Upload</a></li>
+          </ul>
+        </li>
+
+        <!-- Tables Section -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-table"></i></span>
+            <span class="nav-text">Tables</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="tables-basic.html">Basic Tables</a></li>
+            <li><a class="nav-link " href="tables-datatables.html">DataTables</a></li>
+            <li><a class="nav-link " href="tables-responsive.html">Responsive Tables</a></li>
+          </ul>
+        </li>
+
+        <!-- Charts Section -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-chart-bar"></i></span>
+            <span class="nav-text">Charts</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="charts-apexcharts.html">ApexCharts</a></li>
+            <li><a class="nav-link " href="charts-chartjs.html">Chart.js</a></li>
+            <li><a class="nav-link " href="charts-echarts.html">ECharts</a></li>
+          </ul>
+        </li>
+
+        <!-- Icons Section -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-diamond"></i></span>
+            <span class="nav-text">Icons</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="icons-bootstrap.html">Bootstrap Icons</a></li>
+            <li><a class="nav-link " href="icons-remixicon.html">Remix Icons</a></li>
+            <li><a class="nav-link " href="icons-fontawesome.html">Font Awesome</a></li>
+            <li><a class="nav-link " href="icons-phosphor.html">Phosphor Icons</a></li>
+            <li><a class="nav-link " href="icons-lucide.html">Lucide Icons</a></li>
+          </ul>
+        </li>
+
+        <!-- Pages Section -->
+        <li class="nav-heading"><span>Pages</span></li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="contact.html">
+            <span class="nav-icon"><i class="ph ph-envelope-simple"></i></span>
+            <span class="nav-text">Contact</span>
+          </a>
+        </li>
+
+        <!-- Invoices -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-receipt"></i></span>
+            <span class="nav-text">Invoices</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="invoice-list.html">Invoice List</a></li>
+            <li><a class="nav-link " href="invoice.html">Invoice View</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="pricing.html">
+            <span class="nav-icon"><i class="ph ph-tag"></i></span>
+            <span class="nav-text">Pricing</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="faq.html">
+            <span class="nav-icon"><i class="ph ph-question"></i></span>
+            <span class="nav-text">FAQ</span>
+          </a>
+        </li>
+
+        <!-- Error Pages -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-warning"></i></span>
+            <span class="nav-text">Error Pages</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="error-404.html">404 Not Found</a></li>
+            <li><a class="nav-link " href="error-403.html">403 Forbidden</a></li>
+            <li><a class="nav-link " href="error-500.html">500 Server Error</a></li>
+            <li><a class="nav-link " href="error-maintenance.html">Maintenance</a></li>
+            <li><a class="nav-link " href="error-coming-soon.html">Coming Soon</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="timeline.html">
+            <span class="nav-icon"><i class="ph ph-clock-counter-clockwise"></i></span>
+            <span class="nav-text">Timeline</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="search-results.html">
+            <span class="nav-icon"><i class="ph ph-magnifying-glass"></i></span>
+            <span class="nav-text">Search Results</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="blank.html">
+            <span class="nav-icon"><i class="ph ph-file"></i></span>
+            <span class="nav-text">Blank Page</span>
+          </a>
+        </li>
+
+      </ul>
+    </nav>
+
+    <!-- Sidebar Footer - User Card -->
+    <div class="sidebar-footer">
+      <div class="sidebar-user">
+        <a href="profile.html" class="sidebar-user-link">
+          <span class="sidebar-user-avatar">
+            <img src="assets/img/profile-img.webp" alt="User">
+            <span class="sidebar-user-status"></span>
+          </span>
+          <span class="sidebar-user-info">
+            <span class="sidebar-user-name">John Doe</span>
+            <span class="sidebar-user-role">Administrator</span>
+          </span>
+        </a>
+        <div class="sidebar-user-actions">
+          <a href="settings.html" class="sidebar-user-action" title="Settings">
+            <i class="ph ph-gear"></i>
+          </a>
+          <a href="auth-login.html" class="sidebar-user-action sidebar-user-logout" title="Logout">
+            <i class="ph ph-sign-out"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Sidebar Overlay (Mobile) -->
+  <div class="sidebar-overlay"></div>
+
+  <!-- Main Content -->
+  <main class="main">
+    <div class="main-content page-kanban">
+      <!-- Page Header -->
+      <div class="page-header">
+        <h1 class="page-title">Kanban Board</h1>
+        <nav class="breadcrumb">
+          <a href="index.html" class="breadcrumb-item">Home</a>
+          <a href="#" class="breadcrumb-item">Apps</a>
+          <span class="breadcrumb-item active">Kanban</span>
+        </nav>
+      </div>
+
+      <!-- Kanban Header -->
+      <div class="kanban-header">
+        <div class="kanban-header-left">
+          <h2 class="kanban-title">Project Alpha</h2>
+          <div class="kanban-members">
+            <img src="assets/img/avatars/avatar-1.webp" alt="Member" class="kanban-member">
+            <img src="assets/img/avatars/avatar-2.webp" alt="Member" class="kanban-member">
+            <img src="assets/img/avatars/avatar-3.webp" alt="Member" class="kanban-member">
+            <img src="assets/img/avatars/avatar-4.webp" alt="Member" class="kanban-member">
+            <div class="kanban-member-add" title="Add member">
+              <i class="ph ph-plus"></i>
+            </div>
+          </div>
+        </div>
+        <div class="kanban-header-right">
+          <div class="dropdown">
+            <button class="btn btn-light btn-sm dropdown-toggle" data-bs-toggle="dropdown">
+              <i class="ph ph-funnel me-1"></i> Filter
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">All Tasks</a></li>
+              <li><a class="dropdown-item" href="#">My Tasks</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">High Priority</a></li>
+              <li><a class="dropdown-item" href="#">Due This Week</a></li>
+            </ul>
+          </div>
+          <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#addTaskModal">
+            <i class="ph ph-plus me-1"></i> Add Task
+          </button>
+        </div>
+      </div>
+
+      <!-- Kanban Board -->
+      <div class="kanban-board" id="kanbanBoard">
+        <!-- Backlog Column -->
+        <div class="kanban-column" data-status="backlog">
+          <div class="kanban-column-header">
+            <div class="kanban-column-title">
+              Backlog
+              <span class="kanban-column-count">3</span>
+            </div>
+            <div class="kanban-column-actions">
+              <button class="kanban-column-btn"><i class="ph ph-plus"></i></button>
+              <button class="kanban-column-btn"><i class="ph ph-dots-three"></i></button>
+            </div>
+          </div>
+          <div class="kanban-column-body" data-status="backlog">
+            <!-- Card 1 -->
+            <div class="kanban-card" draggable="true" data-id="1" data-priority="low">
+              <div class="kanban-card-labels">
+                <span class="kanban-label kanban-label-enhancement">Enhancement</span>
+              </div>
+              <div class="kanban-card-title">Implement dark mode toggle in settings</div>
+              <div class="kanban-card-description">Add a toggle switch in user settings to enable/disable dark mode across the application.</div>
+              <div class="kanban-card-footer">
+                <div class="kanban-card-meta">
+                  <span class="kanban-card-meta-item"><i class="ph ph-chat-circle-dots"></i> 3</span>
+                  <span class="kanban-card-meta-item"><i class="ph ph-paperclip"></i> 1</span>
+                </div>
+                <div class="kanban-card-assignees">
+                  <img src="assets/img/avatars/avatar-2.webp" alt="" class="kanban-card-assignee">
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="kanban-card" draggable="true" data-id="2" data-priority="medium">
+              <div class="kanban-card-labels">
+                <span class="kanban-label kanban-label-feature">Feature</span>
+              </div>
+              <div class="kanban-card-title">Add export functionality for reports</div>
+              <div class="kanban-card-footer">
+                <div class="kanban-card-meta">
+                  <span class="kanban-card-meta-item"><i class="ph ph-chat-circle-dots"></i> 5</span>
+                </div>
+                <div class="kanban-card-assignees">
+                  <img src="assets/img/avatars/avatar-3.webp" alt="" class="kanban-card-assignee">
+                  <img src="assets/img/avatars/avatar-4.webp" alt="" class="kanban-card-assignee">
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="kanban-card" draggable="true" data-id="3" data-priority="low">
+              <div class="kanban-card-labels">
+                <span class="kanban-label kanban-label-design">Design</span>
+              </div>
+              <div class="kanban-card-title">Update onboarding illustrations</div>
+              <div class="kanban-card-footer">
+                <div class="kanban-card-meta">
+                  <span class="kanban-card-meta-item"><i class="ph ph-paperclip"></i> 4</span>
+                </div>
+                <div class="kanban-card-assignees">
+                  <img src="assets/img/avatars/avatar-1.webp" alt="" class="kanban-card-assignee">
+                </div>
+              </div>
+            </div>
+
+            <button class="kanban-add-card">
+              <i class="ph ph-plus"></i> Add Card
+            </button>
+          </div>
+        </div>
+
+        <!-- To Do Column -->
+        <div class="kanban-column" data-status="todo">
+          <div class="kanban-column-header">
+            <div class="kanban-column-title">
+              To Do
+              <span class="kanban-column-count">4</span>
+            </div>
+            <div class="kanban-column-actions">
+              <button class="kanban-column-btn"><i class="ph ph-plus"></i></button>
+              <button class="kanban-column-btn"><i class="ph ph-dots-three"></i></button>
+            </div>
+          </div>
+          <div class="kanban-column-body" data-status="todo">
+            <!-- Card 4 -->
+            <div class="kanban-card" draggable="true" data-id="4" data-priority="high">
+              <div class="kanban-card-labels">
+                <span class="kanban-label kanban-label-bug">Bug</span>
+                <span class="kanban-label kanban-label-urgent">Urgent</span>
+              </div>
+              <div class="kanban-card-title">Fix login authentication timeout issue</div>
+              <div class="kanban-card-description">Users are being logged out unexpectedly after 5 minutes of inactivity.</div>
+              <span class="kanban-due-date overdue"><i class="ph ph-calendar-blank"></i> Jan 18</span>
+              <div class="kanban-card-footer">
+                <div class="kanban-card-meta">
+                  <span class="kanban-card-meta-item"><i class="ph ph-chat-circle-dots"></i> 8</span>
+                  <span class="kanban-card-meta-item"><i class="ph ph-paperclip"></i> 2</span>
+                </div>
+                <div class="kanban-card-assignees">
+                  <img src="assets/img/avatars/avatar-5.webp" alt="" class="kanban-card-assignee">
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="kanban-card" draggable="true" data-id="5" data-priority="medium">
+              <div class="kanban-card-labels">
+                <span class="kanban-label kanban-label-feature">Feature</span>
+              </div>
+              <div class="kanban-card-title">Implement user profile page</div>
+              <div class="kanban-card-progress">
+                <div class="kanban-card-progress-header">
+                  <span class="kanban-card-progress-label">Progress</span>
+                  <span class="kanban-card-progress-value">60%</span>
+                </div>
+                <div class="progress">
+                  <div class="progress-bar" style="width: 60%"></div>
+                </div>
+              </div>
+              <div class="kanban-card-footer">
+                <div class="kanban-card-meta">
+                  <span class="kanban-card-checklist"><i class="ph ph-check-square"></i> 3/5</span>
+                </div>
+                <div class="kanban-card-assignees">
+                  <img src="assets/img/avatars/avatar-2.webp" alt="" class="kanban-card-assignee">
+                  <img src="assets/img/avatars/avatar-6.webp" alt="" class="kanban-card-assignee">
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="kanban-card" draggable="true" data-id="6" data-priority="medium">
+              <div class="kanban-card-labels">
+                <span class="kanban-label kanban-label-enhancement">Enhancement</span>
+              </div>
+              <div class="kanban-card-title">Optimize database queries for dashboard</div>
+              <span class="kanban-due-date due-soon"><i class="ph ph-calendar-blank"></i> Jan 22</span>
+              <div class="kanban-card-footer">
+                <div class="kanban-card-meta">
+                  <span class="kanban-card-meta-item"><i class="ph ph-chat-circle-dots"></i> 2</span>
+                </div>
+                <div class="kanban-card-assignees">
+                  <img src="assets/img/avatars/avatar-3.webp" alt="" class="kanban-card-assignee">
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 7 -->
+            <div class="kanban-card" draggable="true" data-id="7" data-priority="low">
+              <div class="kanban-card-labels">
+                <span class="kanban-label kanban-label-design">Design</span>
+              </div>
+              <div class="kanban-card-title">Create mobile responsive navigation</div>
+              <div class="kanban-card-footer">
+                <div class="kanban-card-meta">
+                  <span class="kanban-card-meta-item"><i class="ph ph-paperclip"></i> 3</span>
+                </div>
+                <div class="kanban-card-assignees">
+                  <img src="assets/img/avatars/avatar-1.webp" alt="" class="kanban-card-assignee">
+                </div>
+              </div>
+            </div>
+
+            <button class="kanban-add-card">
+              <i class="ph ph-plus"></i> Add Card
+            </button>
+          </div>
+        </div>
+
+        <!-- In Progress Column -->
+        <div class="kanban-column" data-status="in-progress">
+          <div class="kanban-column-header">
+            <div class="kanban-column-title">
+              In Progress
+              <span class="kanban-column-count">3</span>
+            </div>
+            <div class="kanban-column-actions">
+              <button class="kanban-column-btn"><i class="ph ph-plus"></i></button>
+              <button class="kanban-column-btn"><i class="ph ph-dots-three"></i></button>
+            </div>
+          </div>
+          <div class="kanban-column-body" data-status="in-progress">
+            <!-- Card 8 -->
+            <div class="kanban-card" draggable="true" data-id="8" data-priority="high">
+              <div class="kanban-card-labels">
+                <span class="kanban-label kanban-label-feature">Feature</span>
+              </div>
+              <div class="kanban-card-title">Build notification system with real-time updates</div>
+              <div class="kanban-card-progress">
+                <div class="kanban-card-progress-header">
+                  <span class="kanban-card-progress-label">Progress</span>
+                  <span class="kanban-card-progress-value">75%</span>
+                </div>
+                <div class="progress">
+                  <div class="progress-bar bg-success" style="width: 75%"></div>
+                </div>
+              </div>
+              <div class="kanban-card-footer">
+                <div class="kanban-card-meta">
+                  <span class="kanban-card-meta-item"><i class="ph ph-chat-circle-dots"></i> 12</span>
+                  <span class="kanban-card-checklist"><i class="ph ph-check-square"></i> 6/8</span>
+                </div>
+                <div class="kanban-card-assignees">
+                  <img src="assets/img/avatars/avatar-4.webp" alt="" class="kanban-card-assignee">
+                  <img src="assets/img/avatars/avatar-5.webp" alt="" class="kanban-card-assignee">
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 9 -->
+            <div class="kanban-card" draggable="true" data-id="9" data-priority="medium">
+              <div class="kanban-card-labels">
+                <span class="kanban-label kanban-label-bug">Bug</span>
+              </div>
+              <div class="kanban-card-title">Fix image upload validation</div>
+              <div class="kanban-card-description">File size validation not working correctly for images over 5MB.</div>
+              <div class="kanban-card-footer">
+                <div class="kanban-card-meta">
+                  <span class="kanban-card-meta-item"><i class="ph ph-chat-circle-dots"></i> 4</span>
+                </div>
+                <div class="kanban-card-assignees">
+                  <img src="assets/img/avatars/avatar-6.webp" alt="" class="kanban-card-assignee">
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 10 -->
+            <div class="kanban-card" draggable="true" data-id="10" data-priority="medium">
+              <div class="kanban-card-labels">
+                <span class="kanban-label kanban-label-enhancement">Enhancement</span>
+              </div>
+              <div class="kanban-card-title">Add keyboard shortcuts for common actions</div>
+              <span class="kanban-due-date on-track"><i class="ph ph-calendar-blank"></i> Jan 25</span>
+              <div class="kanban-card-footer">
+                <div class="kanban-card-meta">
+                  <span class="kanban-card-checklist complete"><i class="ph-duotone ph-check-square"></i> 4/4</span>
+                </div>
+                <div class="kanban-card-assignees">
+                  <img src="assets/img/avatars/avatar-2.webp" alt="" class="kanban-card-assignee">
+                </div>
+              </div>
+            </div>
+
+            <button class="kanban-add-card">
+              <i class="ph ph-plus"></i> Add Card
+            </button>
+          </div>
+        </div>
+
+        <!-- Review Column -->
+        <div class="kanban-column" data-status="review">
+          <div class="kanban-column-header">
+            <div class="kanban-column-title">
+              Review
+              <span class="kanban-column-count">2</span>
+            </div>
+            <div class="kanban-column-actions">
+              <button class="kanban-column-btn"><i class="ph ph-plus"></i></button>
+              <button class="kanban-column-btn"><i class="ph ph-dots-three"></i></button>
+            </div>
+          </div>
+          <div class="kanban-column-body" data-status="review">
+            <!-- Card 11 -->
+            <div class="kanban-card" draggable="true" data-id="11" data-priority="high">
+              <div class="kanban-card-labels">
+                <span class="kanban-label kanban-label-feature">Feature</span>
+              </div>
+              <div class="kanban-card-title">Implement two-factor authentication</div>
+              <div class="kanban-card-description">Add SMS and authenticator app options for 2FA.</div>
+              <div class="kanban-card-footer">
+                <div class="kanban-card-meta">
+                  <span class="kanban-card-meta-item"><i class="ph ph-chat-circle-dots"></i> 15</span>
+                  <span class="kanban-card-meta-item"><i class="ph ph-paperclip"></i> 5</span>
+                </div>
+                <div class="kanban-card-assignees">
+                  <img src="assets/img/avatars/avatar-5.webp" alt="" class="kanban-card-assignee">
+                  <img src="assets/img/avatars/avatar-3.webp" alt="" class="kanban-card-assignee">
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 12 -->
+            <div class="kanban-card" draggable="true" data-id="12" data-priority="medium">
+              <div class="kanban-card-labels">
+                <span class="kanban-label kanban-label-design">Design</span>
+              </div>
+              <div class="kanban-card-title">Redesign email templates</div>
+              <div class="kanban-card-footer">
+                <div class="kanban-card-meta">
+                  <span class="kanban-card-meta-item"><i class="ph ph-paperclip"></i> 8</span>
+                </div>
+                <div class="kanban-card-assignees">
+                  <img src="assets/img/avatars/avatar-1.webp" alt="" class="kanban-card-assignee">
+                </div>
+              </div>
+            </div>
+
+            <button class="kanban-add-card">
+              <i class="ph ph-plus"></i> Add Card
+            </button>
+          </div>
+        </div>
+
+        <!-- Done Column -->
+        <div class="kanban-column" data-status="done">
+          <div class="kanban-column-header">
+            <div class="kanban-column-title">
+              Done
+              <span class="kanban-column-count">2</span>
+            </div>
+            <div class="kanban-column-actions">
+              <button class="kanban-column-btn"><i class="ph ph-plus"></i></button>
+              <button class="kanban-column-btn"><i class="ph ph-dots-three"></i></button>
+            </div>
+          </div>
+          <div class="kanban-column-body" data-status="done">
+            <!-- Card 13 -->
+            <div class="kanban-card" draggable="true" data-id="13" data-priority="medium">
+              <div class="kanban-card-labels">
+                <span class="kanban-label kanban-label-feature">Feature</span>
+              </div>
+              <div class="kanban-card-title">Set up CI/CD pipeline</div>
+              <div class="kanban-card-footer">
+                <div class="kanban-card-meta">
+                  <span class="kanban-card-meta-item"><i class="ph ph-chat-circle-dots"></i> 6</span>
+                  <span class="kanban-card-checklist complete"><i class="ph-duotone ph-check-square"></i> 5/5</span>
+                </div>
+                <div class="kanban-card-assignees">
+                  <img src="assets/img/avatars/avatar-4.webp" alt="" class="kanban-card-assignee">
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 14 -->
+            <div class="kanban-card" draggable="true" data-id="14" data-priority="low">
+              <div class="kanban-card-labels">
+                <span class="kanban-label kanban-label-enhancement">Enhancement</span>
+              </div>
+              <div class="kanban-card-title">Add loading skeletons to dashboard</div>
+              <div class="kanban-card-footer">
+                <div class="kanban-card-meta">
+                  <span class="kanban-card-meta-item"><i class="ph ph-chat-circle-dots"></i> 2</span>
+                </div>
+                <div class="kanban-card-assignees">
+                  <img src="assets/img/avatars/avatar-2.webp" alt="" class="kanban-card-assignee">
+                </div>
+              </div>
+            </div>
+
+            <button class="kanban-add-card">
+              <i class="ph ph-plus"></i> Add Card
+            </button>
+          </div>
+        </div>
+
+        <!-- Add Column -->
+        <div class="kanban-add-column">
+          <button class="kanban-add-column-btn">
+            <i class="ph ph-plus"></i> Add Column
+          </button>
+        </div>
+      </div>
+
+      <!-- Add Task Modal -->
+      <div class="modal fade task-modal" id="addTaskModal" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Add New Task</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+              <form id="addTaskForm">
+                <div class="mb-3">
+                  <label for="taskTitle" class="form-label">Task Title</label>
+                  <input type="text" class="form-control" id="taskTitle" placeholder="Enter task title" required>
+                </div>
+                <div class="mb-3">
+                  <label for="taskDescription" class="form-label">Description</label>
+                  <textarea class="form-control" id="taskDescription" rows="3" placeholder="Add a description (optional)"></textarea>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-6">
+                    <label for="taskStatus" class="form-label">Status</label>
+                    <select class="form-select" id="taskStatus">
+                      <option value="backlog">Backlog</option>
+                      <option value="todo" selected>To Do</option>
+                      <option value="in-progress">In Progress</option>
+                      <option value="review">Review</option>
+                      <option value="done">Done</option>
+                    </select>
+                  </div>
+                  <div class="col-6">
+                    <label for="taskPriority" class="form-label">Priority</label>
+                    <select class="form-select" id="taskPriority">
+                      <option value="low">Low</option>
+                      <option value="medium" selected>Medium</option>
+                      <option value="high">High</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-6">
+                    <label for="taskLabel" class="form-label">Label</label>
+                    <select class="form-select" id="taskLabel">
+                      <option value="feature">Feature</option>
+                      <option value="bug">Bug</option>
+                      <option value="enhancement">Enhancement</option>
+                      <option value="design">Design</option>
+                    </select>
+                  </div>
+                  <div class="col-6">
+                    <label for="taskDueDate" class="form-label">Due Date</label>
+                    <input type="date" class="form-control" id="taskDueDate">
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Assignees</label>
+                  <div class="d-flex gap-2">
+                    <img src="assets/img/avatars/avatar-1.webp" alt="" class="kanban-member" style="margin: 0; cursor: pointer; opacity: 0.5;">
+                    <img src="assets/img/avatars/avatar-2.webp" alt="" class="kanban-member" style="margin: 0; cursor: pointer;">
+                    <img src="assets/img/avatars/avatar-3.webp" alt="" class="kanban-member" style="margin: 0; cursor: pointer; opacity: 0.5;">
+                    <img src="assets/img/avatars/avatar-4.webp" alt="" class="kanban-member" style="margin: 0; cursor: pointer; opacity: 0.5;">
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cancel</button>
+              <button type="button" class="btn btn-primary" id="saveTaskBtn">Add Task</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Task Detail Modal -->
+      <div class="modal fade task-modal" id="taskDetailModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <div>
+                <span class="kanban-label kanban-label-feature mb-2">Feature</span>
+                <h5 class="modal-title" id="taskDetailTitle">Build notification system with real-time updates</h5>
+              </div>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-lg-8">
+                  <div class="task-detail-row">
+                    <div class="task-detail-icon"><i class="ph ph-text-align-left"></i></div>
+                    <div class="task-detail-content">
+                      <div class="task-detail-label">Description</div>
+                      <div class="task-detail-value">
+                        <p>Implement a comprehensive notification system that supports real-time updates using WebSockets. The system should include:</p>
+                        <ul>
+                          <li>Push notifications</li>
+                          <li>In-app notification center</li>
+                          <li>Email notifications (optional)</li>
+                          <li>Notification preferences per user</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="task-detail-row">
+                    <div class="task-detail-icon"><i class="ph ph-check-square"></i></div>
+                    <div class="task-detail-content">
+                      <div class="task-detail-label">Checklist (6/8)</div>
+                      <div class="task-detail-value">
+                        <div class="form-check mb-2">
+                          <input class="form-check-input" type="checkbox" checked id="check1">
+                          <label class="form-check-label" for="check1">Set up WebSocket server</label>
+                        </div>
+                        <div class="form-check mb-2">
+                          <input class="form-check-input" type="checkbox" checked id="check2">
+                          <label class="form-check-label" for="check2">Create notification model</label>
+                        </div>
+                        <div class="form-check mb-2">
+                          <input class="form-check-input" type="checkbox" checked id="check3">
+                          <label class="form-check-label" for="check3">Build notification API endpoints</label>
+                        </div>
+                        <div class="form-check mb-2">
+                          <input class="form-check-input" type="checkbox" checked id="check4">
+                          <label class="form-check-label" for="check4">Implement real-time updates</label>
+                        </div>
+                        <div class="form-check mb-2">
+                          <input class="form-check-input" type="checkbox" checked id="check5">
+                          <label class="form-check-label" for="check5">Create notification center UI</label>
+                        </div>
+                        <div class="form-check mb-2">
+                          <input class="form-check-input" type="checkbox" checked id="check6">
+                          <label class="form-check-label" for="check6">Add notification badges</label>
+                        </div>
+                        <div class="form-check mb-2">
+                          <input class="form-check-input" type="checkbox" id="check7">
+                          <label class="form-check-label" for="check7">Implement push notifications</label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="check8">
+                          <label class="form-check-label" for="check8">Add user notification preferences</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="task-detail-row">
+                    <div class="task-detail-icon"><i class="ph ph-chat-circle-dots"></i></div>
+                    <div class="task-detail-content">
+                      <div class="task-detail-label">Comments (12)</div>
+                      <div class="task-detail-value">
+                        <div class="d-flex gap-2 mb-3">
+                          <img src="assets/img/avatars/avatar-4.webp" alt="" width="32" height="32" class="rounded-circle">
+                          <div>
+                            <div class="fw-medium">Mike Johnson <small class="text-muted">2 hours ago</small></div>
+                            <p class="mb-0 small">WebSocket implementation is complete. Moving to the UI components now.</p>
+                          </div>
+                        </div>
+                        <div class="d-flex gap-2">
+                          <img src="assets/img/avatars/avatar-5.webp" alt="" width="32" height="32" class="rounded-circle">
+                          <div>
+                            <div class="fw-medium">Sarah Wilson <small class="text-muted">4 hours ago</small></div>
+                            <p class="mb-0 small">Great progress! Let me know if you need help with the frontend.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4">
+                  <div class="task-detail-row">
+                    <div class="task-detail-icon"><i class="ph ph-flag"></i></div>
+                    <div class="task-detail-content">
+                      <div class="task-detail-label">Priority</div>
+                      <div class="task-detail-value"><span class="badge bg-danger">High</span></div>
+                    </div>
+                  </div>
+
+                  <div class="task-detail-row">
+                    <div class="task-detail-icon"><i class="ph ph-squares-four"></i></div>
+                    <div class="task-detail-content">
+                      <div class="task-detail-label">Status</div>
+                      <div class="task-detail-value">In Progress</div>
+                    </div>
+                  </div>
+
+                  <div class="task-detail-row">
+                    <div class="task-detail-icon"><i class="ph ph-calendar-blank"></i></div>
+                    <div class="task-detail-content">
+                      <div class="task-detail-label">Due Date</div>
+                      <div class="task-detail-value">January 25, 2026</div>
+                    </div>
+                  </div>
+
+                  <div class="task-detail-row">
+                    <div class="task-detail-icon"><i class="ph ph-users"></i></div>
+                    <div class="task-detail-content">
+                      <div class="task-detail-label">Assignees</div>
+                      <div class="task-detail-value">
+                        <div class="d-flex gap-2 align-items-center">
+                          <img src="assets/img/avatars/avatar-4.webp" alt="" width="28" height="28" class="rounded-circle">
+                          <span>Mike Johnson</span>
+                        </div>
+                        <div class="d-flex gap-2 align-items-center mt-2">
+                          <img src="assets/img/avatars/avatar-5.webp" alt="" width="28" height="28" class="rounded-circle">
+                          <span>Sarah Wilson</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="task-detail-row">
+                    <div class="task-detail-icon"><i class="ph ph-clock-counter-clockwise"></i></div>
+                    <div class="task-detail-content">
+                      <div class="task-detail-label">Created</div>
+                      <div class="task-detail-value">January 10, 2026</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-outline-danger me-auto"><i class="ph ph-trash me-1"></i> Delete</button>
+              <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary"><i class="ph ph-pencil-simple me-1"></i> Edit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <span class="footer-brand-mark"><i class="bi bi-lightning-charge-fill"></i></span>
+          <span class="footer-copyright">
+            &copy; 2026 <a href="#">TrendyAdmin</a>. All Rights Reserved.
+          </span>
+        </div>
+        <div class="footer-links">
+          <a href="#">About</a>
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Contact</a>
+        </div>
+        <div class="footer-credits">
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Back to Top -->
+  <a href="#" class="back-to-top">
+    <i class="ph ph-arrow-up"></i>
+  </a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="assets/vendor/chart.js/chart.umd.js"></script>
+  <script src="assets/vendor/echarts/echarts.min.js"></script>
+  <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="assets/vendor/quill/quill.js"></script>
+  <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+  <script src="assets/vendor/choices.js/choices.min.js"></script>
+  <script src="assets/vendor/flatpickr/flatpickr.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS Files -->
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <!-- App Sidebar Toggle (for app pages with sidebars) -->
+  <script src="assets/js/apps-sidebar-toggle.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const board = document.getElementById('kanbanBoard');
+      let draggedCard = null;
+      // Get all cards and columns
+      const cards = document.querySelectorAll('.kanban-card');
+      const columns = document.querySelectorAll('.kanban-column-body');
+      // Add drag event listeners to cards
+      cards.forEach(card => {
+        card.addEventListener('dragstart', handleDragStart);
+        card.addEventListener('dragend', handleDragEnd);
+        // Open task detail modal on title click
+        const title = card.querySelector('.kanban-card-title');
+        if (title) {
+          title.addEventListener('click', () => {
+            const modal = new bootstrap.Modal(document.getElementById('taskDetailModal'));
+            document.getElementById('taskDetailTitle').textContent = title.textContent;
+            modal.show();
+          });
+        }
+      });
+      // Add drop event listeners to columns
+      columns.forEach(column => {
+        column.addEventListener('dragover', handleDragOver);
+        column.addEventListener('dragenter', handleDragEnter);
+        column.addEventListener('dragleave', handleDragLeave);
+        column.addEventListener('drop', handleDrop);
+      });
+
+      function handleDragStart(e) {
+        draggedCard = this;
+        this.classList.add('dragging');
+        e.dataTransfer.effectAllowed = 'move';
+        e.dataTransfer.setData('text/plain', this.dataset.id);
+      }
+
+      function handleDragEnd(e) {
+        this.classList.remove('dragging');
+        draggedCard = null;
+        // Remove drag-over class from all columns
+        columns.forEach(column => {
+          column.classList.remove('drag-over');
+        });
+        // Update column counts
+        updateColumnCounts();
+      }
+
+      function handleDragOver(e) {
+        e.preventDefault();
+        e.dataTransfer.dropEffect = 'move';
+        // Find the card we're hovering over
+        const afterElement = getDragAfterElement(this, e.clientY);
+        const dragging = document.querySelector('.dragging');
+        if (dragging) {
+          if (afterElement == null) {
+            // Insert before the "Add Card" button
+            const addBtn = this.querySelector('.kanban-add-card');
+            if (addBtn) {
+              this.insertBefore(dragging, addBtn);
+            } else {
+              this.appendChild(dragging);
+            }
+          } else {
+            this.insertBefore(dragging, afterElement);
+          }
+        }
+      }
+
+      function handleDragEnter(e) {
+        e.preventDefault();
+        this.classList.add('drag-over');
+      }
+
+      function handleDragLeave(e) {
+        // Only remove if we're actually leaving the column
+        if (!this.contains(e.relatedTarget)) {
+          this.classList.remove('drag-over');
+        }
+      }
+
+      function handleDrop(e) {
+        e.preventDefault();
+        this.classList.remove('drag-over');
+        if (draggedCard) {
+          // Update the card's status
+          const newStatus = this.dataset.status;
+          draggedCard.dataset.status = newStatus;
+        }
+      }
+
+      function getDragAfterElement(container, y) {
+        const draggableElements = [...container.querySelectorAll('.kanban-card:not(.dragging)')];
+        return draggableElements.reduce((closest, child) => {
+          const box = child.getBoundingClientRect();
+          const offset = y - box.top - box.height / 2;
+          if (offset < 0 && offset > closest.offset) {
+            return {
+              offset: offset,
+              element: child
+            };
+          } else {
+            return closest;
+          }
+        }, {
+          offset: Number.NEGATIVE_INFINITY
+        }).element;
+      }
+
+      function updateColumnCounts() {
+        document.querySelectorAll('.kanban-column').forEach(column => {
+          const body = column.querySelector('.kanban-column-body');
+          const count = body.querySelectorAll('.kanban-card').length;
+          const countEl = column.querySelector('.kanban-column-count');
+          if (countEl) {
+            countEl.textContent = count;
+          }
+        });
+      }
+      // Add card button functionality
+      document.querySelectorAll('.kanban-add-card').forEach(btn => {
+        btn.addEventListener('click', function() {
+          const status = this.closest('.kanban-column-body').dataset.status;
+          document.getElementById('taskStatus').value = status;
+          const modal = new bootstrap.Modal(document.getElementById('addTaskModal'));
+          modal.show();
+        });
+      });
+      // Save new task
+      document.getElementById('saveTaskBtn').addEventListener('click', function() {
+        const form = document.getElementById('addTaskForm');
+        const title = document.getElementById('taskTitle').value;
+        if (!title.trim()) {
+          document.getElementById('taskTitle').focus();
+          return;
+        }
+        const status = document.getElementById('taskStatus').value;
+        const priority = document.getElementById('taskPriority').value;
+        const label = document.getElementById('taskLabel').value;
+        // Create new card
+        const newCard = document.createElement('div');
+        newCard.className = 'kanban-card';
+        newCard.draggable = true;
+        newCard.dataset.id = Date.now();
+        newCard.dataset.priority = priority;
+        newCard.innerHTML = `
+      <div class="kanban-card-labels">
+        <span class="kanban-label kanban-label-${label}">${label.charAt(0).toUpperCase() + label.slice(1)}</span>
+      </div>
+      <div class="kanban-card-title">${title}</div>
+      <div class="kanban-card-footer">
+        <div class="kanban-card-meta">
+          <span class="kanban-card-meta-item"><i class="ph ph-chat-circle-dots"></i> 0</span>
+        </div>
+        <div class="kanban-card-assignees">
+          <img src="assets/img/avatars/avatar-2.webp" alt="" class="kanban-card-assignee">
+        </div>
+      </div>
+    `;
+        // Add event listeners
+        newCard.addEventListener('dragstart', handleDragStart);
+        newCard.addEventListener('dragend', handleDragEnd);
+        const titleEl = newCard.querySelector('.kanban-card-title');
+        titleEl.addEventListener('click', () => {
+          const modal = new bootstrap.Modal(document.getElementById('taskDetailModal'));
+          document.getElementById('taskDetailTitle').textContent = titleEl.textContent;
+          modal.show();
+        });
+        // Add to column
+        const column = document.querySelector(`.kanban-column-body[data-status="${status}"]`);
+        const addBtn = column.querySelector('.kanban-add-card');
+        column.insertBefore(newCard, addBtn);
+        // Update count
+        updateColumnCounts();
+        // Reset form and close modal
+        form.reset();
+        bootstrap.Modal.getInstance(document.getElementById('addTaskModal')).hide();
+      });
+    });
+  </script>
+</body>
+
+</html>

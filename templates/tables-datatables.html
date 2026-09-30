@@ -1,0 +1,1859 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DataTables - TrendyAdmin</title>
+  <meta name="description" content="TrendyAdmin - Bootstrap Admin Template">
+  <meta name="keywords" content="admin, dashboard, bootstrap">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts - Plus Jakarta Sans (body) + Outfit (headings) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="assets/vendor/phosphor-icons/phosphor-icons.css" rel="stylesheet">
+  <link href="assets/vendor/lucide-icons/lucide.css" rel="stylesheet">
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/choices.js/choices.min.css" rel="stylesheet">
+  <link href="assets/vendor/flatpickr/flatpickr.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+    * Template Name: TrendyAdmin - Bootstrap Admin Template
+    * Template URL: https://bootstrapmade.com/trendy-admin-bootstrap-dashboard-template/
+    * Updated: Jul 29 2026 with Bootstrap v5.3.8
+    * Author: BootstrapMade.com
+    * License: https://bootstrapmade.com/license/
+    ======================================================== -->
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-inner">
+      <!-- Header Left -->
+      <div class="header-left">
+        <button class="sidebar-toggle" title="Toggle Sidebar">
+          <i class="ph ph-list"></i>
+        </button>
+        <a href="index.html" class="header-logo">
+          <span class="header-logo-mark"><i class="bi bi-lightning-charge-fill"></i></span>
+          <span class="header-logo-text">TrendyAdmin</span>
+        </a>
+
+        <!-- Apps Quick Access -->
+        <div class="header-action dropdown apps-dropdown">
+          <button class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" title="Quick Access">
+            <i class="ph ph-dots-nine"></i>
+          </button>
+          <div class="dropdown-menu">
+            <div class="apps-menu-header">
+              <h6>Quick Access</h6>
+              <span>Jump straight into an app</span>
+            </div>
+            <div class="apps-grid">
+              <a href="apps-chat.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-chat-circle-dots"></i></span>
+                <span>Chat</span>
+              </a>
+              <a href="apps-email.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-envelope"></i></span>
+                <span>Email</span>
+              </a>
+              <a href="apps-calendar.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-calendar-blank"></i></span>
+                <span>Calendar</span>
+              </a>
+              <a href="apps-kanban.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-kanban"></i></span>
+                <span>Kanban</span>
+              </a>
+              <a href="apps-file-manager.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-folder-open"></i></span>
+                <span>Files</span>
+              </a>
+              <a href="apps-todo.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-check-square"></i></span>
+                <span>Todo</span>
+              </a>
+              <a href="apps-contacts.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-address-book"></i></span>
+                <span>Contacts</span>
+              </a>
+              <a href="apps-support.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-headset"></i></span>
+                <span>Support</span>
+              </a>
+              <a href="invoice-list.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-receipt"></i></span>
+                <span>Invoices</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Header Search (Desktop) -->
+      <div class="header-search">
+        <form class="search-form" action="search-results.html" method="GET">
+          <button type="submit"><i class="ph ph-magnifying-glass"></i></button>
+          <input type="search" name="q" placeholder="Search anything..." autocomplete="off">
+          <span class="search-hint">⌘K</span>
+        </form>
+      </div>
+
+      <!-- Header Right -->
+      <div class="header-right">
+        <!-- Desktop Actions (hidden on mobile, shown in mobile menu) -->
+        <div class="header-actions-desktop">
+          <!-- Quick Create -->
+          <div class="dropdown create-dropdown">
+            <button class="create-btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="ph ph-plus"></i>
+              <span>Create</span>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end create-menu">
+              <a class="dropdown-item" href="apps-kanban.html">
+                <span class="create-item-icon"><i class="ph ph-kanban"></i></span>
+                <span class="create-item-text">
+                  <span class="create-item-title">New Project</span>
+                  <span class="create-item-sub">Start a kanban board</span>
+                </span>
+              </a>
+              <a class="dropdown-item" href="apps-todo.html">
+                <span class="create-item-icon"><i class="ph ph-check-square"></i></span>
+                <span class="create-item-text">
+                  <span class="create-item-title">New Task</span>
+                  <span class="create-item-sub">Add to your todo list</span>
+                </span>
+              </a>
+              <a class="dropdown-item" href="apps-contacts.html">
+                <span class="create-item-icon"><i class="ph ph-user-plus"></i></span>
+                <span class="create-item-text">
+                  <span class="create-item-title">New Contact</span>
+                  <span class="create-item-sub">Save a new person</span>
+                </span>
+              </a>
+              <a class="dropdown-item" href="invoice-list.html">
+                <span class="create-item-icon"><i class="ph ph-receipt"></i></span>
+                <span class="create-item-text">
+                  <span class="create-item-title">New Invoice</span>
+                  <span class="create-item-sub">Bill a customer</span>
+                </span>
+              </a>
+            </div>
+          </div>
+
+          <div class="header-divider"></div>
+
+          <!-- Theme Toggle -->
+          <button class="header-action theme-toggle" title="Toggle Theme">
+            <i class="ph ph-moon icon-dark"></i>
+            <i class="ph ph-sun icon-light"></i>
+          </button>
+
+          <!-- Fullscreen Toggle -->
+          <button class="header-action fullscreen-toggle" onclick="toggleFullscreen()" title="Fullscreen">
+            <i class="ph ph-arrows-out icon-enter"></i>
+            <i class="ph ph-arrows-in icon-exit"></i>
+          </button>
+
+          <!-- Messages -->
+          <div class="header-action dropdown messages-dropdown">
+            <button class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" title="Messages">
+              <i class="ph ph-chat-teardrop-text"></i>
+              <span class="badge">2</span>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end">
+              <div class="messages-header">
+                <h6>Messages</h6>
+                <a href="apps-chat.html">View all</a>
+              </div>
+              <div class="messages-list">
+                <a href="apps-chat.html" class="message-item unread">
+                  <span class="message-avatar">
+                    <img src="assets/img/avatars/avatar-2.webp" alt="Sarah Johnson">
+                    <span class="message-status"></span>
+                  </span>
+                  <span class="message-content">
+                    <span class="message-name">Sarah Johnson</span>
+                    <span class="message-text">The new dashboard mockups look amazing! 🔥</span>
+                  </span>
+                  <span class="message-time">2m</span>
+                </a>
+                <a href="apps-chat.html" class="message-item unread">
+                  <span class="message-avatar">
+                    <img src="assets/img/avatars/avatar-3.webp" alt="Mike Chen">
+                  </span>
+                  <span class="message-content">
+                    <span class="message-name">Mike Chen</span>
+                    <span class="message-text">Can you review my PR when you get a chance?</span>
+                  </span>
+                  <span class="message-time">1h</span>
+                </a>
+                <a href="apps-chat.html" class="message-item">
+                  <span class="message-avatar">
+                    <img src="assets/img/avatars/avatar-4.webp" alt="Emma Davis">
+                  </span>
+                  <span class="message-content">
+                    <span class="message-name">Emma Davis</span>
+                    <span class="message-text">Meeting moved to 3pm tomorrow</span>
+                  </span>
+                  <span class="message-time">3h</span>
+                </a>
+              </div>
+              <div class="messages-footer">
+                <a href="apps-chat.html">Open chat <i class="ph ph-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Notifications -->
+          <div class="header-action dropdown notification-dropdown">
+            <button class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" title="Notifications">
+              <i class="ph ph-bell"></i>
+              <span class="badge">3</span>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end">
+              <div class="notification-header">
+                <h6>You have 3 new notifications</h6>
+                <a href="#" class="notification-mark-read" data-notification-action="mark-all-read" title="Mark all as read">
+                  <i class="ph ph-checks"></i>
+                </a>
+              </div>
+              <div class="notification-list">
+                <div class="notification-item unread">
+                  <span class="notification-icon success">
+                    <i class="ph ph-check-circle"></i>
+                  </span>
+                  <span class="notification-content">
+                    <span class="notification-title">Order Completed</span>
+                    <span class="notification-text">Your order #12345 has been delivered</span>
+                  </span>
+                  <span class="notification-meta">
+                    <span class="notification-time">5m</span>
+                    <span class="notification-dot"></span>
+                  </span>
+                </div>
+                <div class="notification-item unread">
+                  <span class="notification-icon warning">
+                    <i class="ph ph-warning"></i>
+                  </span>
+                  <span class="notification-content">
+                    <span class="notification-title">Low Storage</span>
+                    <span class="notification-text">Server storage is running low (85% used)</span>
+                  </span>
+                  <span class="notification-meta">
+                    <span class="notification-time">1h</span>
+                    <span class="notification-dot"></span>
+                  </span>
+                </div>
+                <div class="notification-item">
+                  <span class="notification-icon info">
+                    <i class="ph ph-info"></i>
+                  </span>
+                  <span class="notification-content">
+                    <span class="notification-title">New Feature</span>
+                    <span class="notification-text">Dark mode is now available</span>
+                  </span>
+                  <span class="notification-meta">
+                    <span class="notification-time">2h</span>
+                    <span class="notification-dot"></span>
+                  </span>
+                </div>
+              </div>
+              <div class="notification-footer">
+                <a href="notifications.html">View all</a>
+                <a href="settings.html">Settings</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="header-divider"></div>
+
+          <!-- User Dropdown -->
+          <div class="header-action dropdown user-dropdown">
+            <button class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="assets/img/profile-img.webp" alt="User" class="avatar">
+              <span class="user-name">John Doe</span>
+              <i class="ph ph-caret-down user-caret"></i>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end">
+              <div class="user-menu-card">
+                <span class="user-menu-avatar">
+                  <img src="assets/img/profile-img.webp" alt="User">
+                </span>
+                <span class="user-menu-name">John Doe</span>
+                <span class="user-menu-mail">john@trendyadmin.com</span>
+                <span class="user-menu-role">Administrator</span>
+              </div>
+              <div class="user-menu-body">
+                <a class="dropdown-item" href="profile.html">
+                  <span class="user-menu-item-icon"><i class="ph ph-user"></i></span>
+                  My Profile
+                  <i class="ph ph-caret-right user-menu-item-caret"></i>
+                </a>
+                <a class="dropdown-item" href="settings.html">
+                  <span class="user-menu-item-icon"><i class="ph ph-gear"></i></span>
+                  Settings
+                  <i class="ph ph-caret-right user-menu-item-caret"></i>
+                </a>
+                <a class="dropdown-item" href="activity.html">
+                  <span class="user-menu-item-icon"><i class="ph ph-pulse"></i></span>
+                  Activity Log
+                  <i class="ph ph-caret-right user-menu-item-caret"></i>
+                </a>
+                <a class="dropdown-item" href="invoice-list.html">
+                  <span class="user-menu-item-icon"><i class="ph ph-receipt"></i></span>
+                  Billing
+                  <i class="ph ph-caret-right user-menu-item-caret"></i>
+                </a>
+              </div>
+              <div class="user-menu-footer">
+                <a href="auth-login.html" class="user-menu-signout">
+                  <i class="ph ph-sign-out"></i> Sign Out
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile Actions (visible only on mobile) -->
+        <div class="header-actions-mobile">
+          <!-- Search Toggle (Mobile) -->
+          <button class="header-action search-toggle" title="Search">
+            <i class="ph ph-magnifying-glass"></i>
+          </button>
+
+          <!-- Mobile Menu Toggle -->
+          <button class="header-action mobile-menu-toggle" title="More">
+            <i class="ph ph-dots-three-vertical"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Search -->
+  <div class="mobile-search">
+    <form class="search-form" action="search-results.html" method="GET">
+      <input type="search" name="q" placeholder="Search anything..." autocomplete="off">
+      <button type="submit"><i class="ph ph-magnifying-glass"></i></button>
+    </form>
+  </div>
+
+  <!-- Mobile Header Menu -->
+  <div class="mobile-header-menu">
+    <div class="mobile-header-menu-content">
+      <!-- Theme Toggle -->
+      <button class="mobile-menu-item theme-toggle" title="Toggle Theme">
+        <i class="ph ph-moon icon-dark"></i>
+        <i class="ph ph-sun icon-light"></i>
+        <span class="mobile-menu-label">Theme</span>
+      </button>
+
+      <!-- Fullscreen Toggle -->
+      <button class="mobile-menu-item fullscreen-toggle" onclick="toggleFullscreen()" title="Fullscreen">
+        <i class="ph ph-arrows-out icon-enter"></i>
+        <i class="ph ph-arrows-in icon-exit"></i>
+        <span class="mobile-menu-label">Fullscreen</span>
+      </button>
+
+      <!-- Messages -->
+      <a href="apps-chat.html" class="mobile-menu-item">
+        <i class="ph ph-chat-teardrop-text"></i>
+        <span class="badge">2</span>
+        <span class="mobile-menu-label">Messages</span>
+      </a>
+
+      <!-- Notifications -->
+      <a href="notifications.html" class="mobile-menu-item">
+        <i class="ph ph-bell"></i>
+        <span class="badge">3</span>
+        <span class="mobile-menu-label">Notifications</span>
+      </a>
+
+      <!-- Profile -->
+      <a href="profile.html" class="mobile-menu-item">
+        <i class="ph ph-user"></i>
+        <span class="mobile-menu-label">Profile</span>
+      </a>
+
+      <!-- Sign Out -->
+      <a href="auth-login.html" class="mobile-menu-item mobile-menu-item-danger">
+        <i class="ph ph-sign-out"></i>
+        <span class="mobile-menu-label">Sign Out</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <!-- Sidebar Header -->
+    <div class="sidebar-header">
+      <a href="index.html" class="sidebar-logo">
+        <span class="sidebar-logo-mark"><i class="bi bi-lightning-charge-fill"></i></span>
+        <span class="sidebar-logo-text">TrendyAdmin</span>
+      </a>
+      <button class="sidebar-close">
+        <i class="ph ph-x"></i>
+      </button>
+    </div>
+
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar-nav">
+      <ul class="nav-menu">
+        <li class="nav-heading"><span>Overview</span></li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="index.html">
+            <span class="nav-icon"><i class="ph ph-house"></i></span>
+            <span class="nav-text">Home</span>
+          </a>
+        </li>
+
+        <!-- Dashboards Submenu -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-gauge"></i></span>
+            <span class="nav-text">Dashboards</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="dashboard-sales.html">Sales</a></li>
+            <li><a class="nav-link " href="dashboard-analytics.html">Analytics</a></li>
+            <li><a class="nav-link " href="dashboard-crm.html">CRM</a></li>
+            <li><a class="nav-link " href="dashboard-marketing.html">Marketing</a></li>
+            <li><a class="nav-link " href="dashboard-projects.html">Projects</a></li>
+            <li><a class="nav-link " href="dashboard-finance.html">Finance</a></li>
+          </ul>
+        </li>
+
+        <!-- Users -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-users"></i></span>
+            <span class="nav-text">Users</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="users.html">Users List</a></li>
+            <li><a class="nav-link " href="users-view.html">User View</a></li>
+            <li><a class="nav-link " href="users-edit.html">User Edit</a></li>
+            <li><a class="nav-link " href="profile.html">Profile</a></li>
+            <!-- 3rd Level - Settings submenu -->
+            <li class="has-submenu ">
+              <a class="nav-link" href="#" aria-expanded="false">
+                Settings
+                <i class="ph ph-caret-right nav-arrow"></i>
+              </a>
+              <ul class="nav-submenu ">
+                <li><a class="nav-link " href="settings.html">Account</a></li>
+                <li><a class="nav-link " href="notifications.html">Notifications</a></li>
+                <li><a class="nav-link " href="activity.html">Activity</a></li>
+              </ul>
+            </li>
+            <li><a class="nav-link " href="roles.html">Roles & Permissions</a></li>
+          </ul>
+        </li>
+
+        <!-- Authentication -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-shield-check"></i></span>
+            <span class="nav-text">Authentication</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="auth-login.html">Login</a></li>
+            <li><a class="nav-link " href="auth-register.html">Register</a></li>
+            <li><a class="nav-link " href="auth-forgot-password.html">Forgot Password</a></li>
+            <li><a class="nav-link " href="auth-reset-password.html">Reset Password</a></li>
+            <li><a class="nav-link " href="auth-verify-email.html">Email Verification</a></li>
+            <li><a class="nav-link " href="auth-two-factor.html">Two Factor Auth</a></li>
+            <li><a class="nav-link " href="auth-lock-screen.html">Lock Screen</a></li>
+          </ul>
+        </li>
+
+        <!-- Apps Section -->
+        <li class="nav-heading"><span>Apps</span></li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-calendar.html">
+            <span class="nav-icon"><i class="ph ph-calendar-blank"></i></span>
+            <span class="nav-text">Calendar</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-kanban.html">
+            <span class="nav-icon"><i class="ph ph-kanban"></i></span>
+            <span class="nav-text">Kanban Board</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-chat.html">
+            <span class="nav-icon"><i class="ph ph-chat-circle-dots"></i></span>
+            <span class="nav-text">Chat</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-contacts.html">
+            <span class="nav-icon"><i class="ph ph-address-book"></i></span>
+            <span class="nav-text">Contacts</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-file-manager.html">
+            <span class="nav-icon"><i class="ph ph-folder-open"></i></span>
+            <span class="nav-text">File Manager</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-email.html">
+            <span class="nav-icon"><i class="ph ph-envelope"></i></span>
+            <span class="nav-text">Email</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-todo.html">
+            <span class="nav-icon"><i class="ph ph-check-square"></i></span>
+            <span class="nav-text">Todo List</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-support.html">
+            <span class="nav-icon"><i class="ph ph-headset"></i></span>
+            <span class="nav-text">Support Center</span>
+          </a>
+        </li>
+
+        <!-- UI Elements Section -->
+        <li class="nav-heading"><span>UI Elements</span></li>
+
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-puzzle-piece"></i></span>
+            <span class="nav-text">Components</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="components-alerts.html">Alerts</a></li>
+            <li><a class="nav-link " href="components-accordion.html">Accordion</a></li>
+            <li><a class="nav-link " href="components-badges.html">Badges</a></li>
+            <li><a class="nav-link " href="components-breadcrumbs.html">Breadcrumbs</a></li>
+            <li><a class="nav-link " href="components-buttons.html">Buttons</a></li>
+            <li><a class="nav-link " href="components-cards.html">Cards</a></li>
+            <li><a class="nav-link " href="components-carousel.html">Carousel</a></li>
+            <li><a class="nav-link " href="components-dropdowns.html">Dropdowns</a></li>
+            <li><a class="nav-link " href="components-list-group.html">List Group</a></li>
+            <li><a class="nav-link " href="components-modal.html">Modal</a></li>
+            <li><a class="nav-link " href="components-nav-tabs.html">Navs & Tabs</a></li>
+            <li><a class="nav-link " href="components-offcanvas.html">Offcanvas</a></li>
+            <li><a class="nav-link " href="components-pagination.html">Pagination</a></li>
+            <li><a class="nav-link " href="components-popovers.html">Popovers</a></li>
+            <li><a class="nav-link " href="components-progress.html">Progress</a></li>
+            <li><a class="nav-link " href="components-spinners.html">Spinners</a></li>
+            <li><a class="nav-link " href="components-toasts.html">Toasts</a></li>
+            <li><a class="nav-link " href="components-tooltips.html">Tooltips</a></li>
+          </ul>
+        </li>
+
+        <!-- Widgets -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-stack"></i></span>
+            <span class="nav-text">Widgets</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="widgets-cards.html">Cards</a></li>
+            <li><a class="nav-link " href="widgets-banners.html">Banners</a></li>
+            <li><a class="nav-link " href="widgets-charts.html">Charts</a></li>
+            <li><a class="nav-link " href="widgets-apps.html">Apps</a></li>
+            <li><a class="nav-link " href="widgets-data.html">Data</a></li>
+          </ul>
+        </li>
+
+        <!-- Forms Section -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-list-checks"></i></span>
+            <span class="nav-text">Forms</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="forms-elements.html">Form Elements</a></li>
+            <li><a class="nav-link " href="forms-layouts.html">Form Layouts</a></li>
+            <li><a class="nav-link " href="forms-validation.html">Validation</a></li>
+            <li><a class="nav-link " href="forms-wizard.html">Wizard</a></li>
+            <li><a class="nav-link " href="forms-editors.html">Rich Editors</a></li>
+            <li><a class="nav-link " href="forms-pickers.html">Date/Time Pickers</a></li>
+            <li><a class="nav-link " href="forms-select.html">Advanced Select</a></li>
+            <li><a class="nav-link " href="forms-upload.html">File Upload</a></li>
+          </ul>
+        </li>
+
+        <!-- Tables Section -->
+        <li class="nav-item has-submenu open">
+          <a class="nav-link" href="#" aria-expanded="true">
+            <span class="nav-icon"><i class="ph ph-table"></i></span>
+            <span class="nav-text">Tables</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu show">
+            <li><a class="nav-link " href="tables-basic.html">Basic Tables</a></li>
+            <li><a class="nav-link active" href="tables-datatables.html">DataTables</a></li>
+            <li><a class="nav-link " href="tables-responsive.html">Responsive Tables</a></li>
+          </ul>
+        </li>
+
+        <!-- Charts Section -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-chart-bar"></i></span>
+            <span class="nav-text">Charts</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="charts-apexcharts.html">ApexCharts</a></li>
+            <li><a class="nav-link " href="charts-chartjs.html">Chart.js</a></li>
+            <li><a class="nav-link " href="charts-echarts.html">ECharts</a></li>
+          </ul>
+        </li>
+
+        <!-- Icons Section -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-diamond"></i></span>
+            <span class="nav-text">Icons</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="icons-bootstrap.html">Bootstrap Icons</a></li>
+            <li><a class="nav-link " href="icons-remixicon.html">Remix Icons</a></li>
+            <li><a class="nav-link " href="icons-fontawesome.html">Font Awesome</a></li>
+            <li><a class="nav-link " href="icons-phosphor.html">Phosphor Icons</a></li>
+            <li><a class="nav-link " href="icons-lucide.html">Lucide Icons</a></li>
+          </ul>
+        </li>
+
+        <!-- Pages Section -->
+        <li class="nav-heading"><span>Pages</span></li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="contact.html">
+            <span class="nav-icon"><i class="ph ph-envelope-simple"></i></span>
+            <span class="nav-text">Contact</span>
+          </a>
+        </li>
+
+        <!-- Invoices -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-receipt"></i></span>
+            <span class="nav-text">Invoices</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="invoice-list.html">Invoice List</a></li>
+            <li><a class="nav-link " href="invoice.html">Invoice View</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="pricing.html">
+            <span class="nav-icon"><i class="ph ph-tag"></i></span>
+            <span class="nav-text">Pricing</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="faq.html">
+            <span class="nav-icon"><i class="ph ph-question"></i></span>
+            <span class="nav-text">FAQ</span>
+          </a>
+        </li>
+
+        <!-- Error Pages -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-warning"></i></span>
+            <span class="nav-text">Error Pages</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="error-404.html">404 Not Found</a></li>
+            <li><a class="nav-link " href="error-403.html">403 Forbidden</a></li>
+            <li><a class="nav-link " href="error-500.html">500 Server Error</a></li>
+            <li><a class="nav-link " href="error-maintenance.html">Maintenance</a></li>
+            <li><a class="nav-link " href="error-coming-soon.html">Coming Soon</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="timeline.html">
+            <span class="nav-icon"><i class="ph ph-clock-counter-clockwise"></i></span>
+            <span class="nav-text">Timeline</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="search-results.html">
+            <span class="nav-icon"><i class="ph ph-magnifying-glass"></i></span>
+            <span class="nav-text">Search Results</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="blank.html">
+            <span class="nav-icon"><i class="ph ph-file"></i></span>
+            <span class="nav-text">Blank Page</span>
+          </a>
+        </li>
+
+      </ul>
+    </nav>
+
+    <!-- Sidebar Footer - User Card -->
+    <div class="sidebar-footer">
+      <div class="sidebar-user">
+        <a href="profile.html" class="sidebar-user-link">
+          <span class="sidebar-user-avatar">
+            <img src="assets/img/profile-img.webp" alt="User">
+            <span class="sidebar-user-status"></span>
+          </span>
+          <span class="sidebar-user-info">
+            <span class="sidebar-user-name">John Doe</span>
+            <span class="sidebar-user-role">Administrator</span>
+          </span>
+        </a>
+        <div class="sidebar-user-actions">
+          <a href="settings.html" class="sidebar-user-action" title="Settings">
+            <i class="ph ph-gear"></i>
+          </a>
+          <a href="auth-login.html" class="sidebar-user-action sidebar-user-logout" title="Logout">
+            <i class="ph ph-sign-out"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Sidebar Overlay (Mobile) -->
+  <div class="sidebar-overlay"></div>
+
+  <!-- Main Content -->
+  <main class="main">
+    <div class="main-content page-tables-datatables">
+      <!-- Page Header -->
+      <div class="page-header">
+        <h1 class="page-title">DataTables</h1>
+        <nav class="breadcrumb">
+          <a href="index.html" class="breadcrumb-item">Home</a>
+          <a href="#" class="breadcrumb-item">Tables</a>
+          <span class="breadcrumb-item active">DataTables</span>
+        </nav>
+      </div>
+
+      <!-- Basic DataTable -->
+      <section class="section">
+        <div class="row g-4">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="card-title">Basic DataTable</h5>
+                <p class="card-subtitle">DataTable with search, pagination, and sorting using simple-datatables</p>
+              </div>
+              <div class="card-body">
+                <table id="basicDataTable" class="table">
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Position</th>
+                      <th>Office</th>
+                      <th>Age</th>
+                      <th>Start Date</th>
+                      <th>Salary</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Tiger Nixon</td>
+                      <td>System Architect</td>
+                      <td>Edinburgh</td>
+                      <td>61</td>
+                      <td>2011/04/25</td>
+                      <td>$320,800</td>
+                    </tr>
+                    <tr>
+                      <td>Garrett Winters</td>
+                      <td>Accountant</td>
+                      <td>Tokyo</td>
+                      <td>63</td>
+                      <td>2011/07/25</td>
+                      <td>$170,750</td>
+                    </tr>
+                    <tr>
+                      <td>Ashton Cox</td>
+                      <td>Junior Technical Author</td>
+                      <td>San Francisco</td>
+                      <td>66</td>
+                      <td>2009/01/12</td>
+                      <td>$86,000</td>
+                    </tr>
+                    <tr>
+                      <td>Cedric Kelly</td>
+                      <td>Senior Javascript Developer</td>
+                      <td>Edinburgh</td>
+                      <td>22</td>
+                      <td>2012/03/29</td>
+                      <td>$433,060</td>
+                    </tr>
+                    <tr>
+                      <td>Airi Satou</td>
+                      <td>Accountant</td>
+                      <td>Tokyo</td>
+                      <td>33</td>
+                      <td>2008/11/28</td>
+                      <td>$162,700</td>
+                    </tr>
+                    <tr>
+                      <td>Brielle Williamson</td>
+                      <td>Integration Specialist</td>
+                      <td>New York</td>
+                      <td>61</td>
+                      <td>2012/12/02</td>
+                      <td>$372,000</td>
+                    </tr>
+                    <tr>
+                      <td>Herrod Chandler</td>
+                      <td>Sales Assistant</td>
+                      <td>San Francisco</td>
+                      <td>59</td>
+                      <td>2012/08/06</td>
+                      <td>$137,500</td>
+                    </tr>
+                    <tr>
+                      <td>Rhona Davidson</td>
+                      <td>Integration Specialist</td>
+                      <td>Tokyo</td>
+                      <td>55</td>
+                      <td>2010/10/14</td>
+                      <td>$327,900</td>
+                    </tr>
+                    <tr>
+                      <td>Colleen Hurst</td>
+                      <td>Javascript Developer</td>
+                      <td>San Francisco</td>
+                      <td>39</td>
+                      <td>2009/09/15</td>
+                      <td>$205,500</td>
+                    </tr>
+                    <tr>
+                      <td>Sonya Frost</td>
+                      <td>Software Engineer</td>
+                      <td>Edinburgh</td>
+                      <td>23</td>
+                      <td>2008/12/13</td>
+                      <td>$103,600</td>
+                    </tr>
+                    <tr>
+                      <td>Jena Gaines</td>
+                      <td>Office Manager</td>
+                      <td>London</td>
+                      <td>30</td>
+                      <td>2008/12/19</td>
+                      <td>$90,560</td>
+                    </tr>
+                    <tr>
+                      <td>Quinn Flynn</td>
+                      <td>Support Lead</td>
+                      <td>Edinburgh</td>
+                      <td>22</td>
+                      <td>2013/03/03</td>
+                      <td>$342,000</td>
+                    </tr>
+                    <tr>
+                      <td>Charde Marshall</td>
+                      <td>Regional Director</td>
+                      <td>San Francisco</td>
+                      <td>36</td>
+                      <td>2008/10/16</td>
+                      <td>$470,600</td>
+                    </tr>
+                    <tr>
+                      <td>Haley Kennedy</td>
+                      <td>Senior Marketing Designer</td>
+                      <td>London</td>
+                      <td>43</td>
+                      <td>2012/12/18</td>
+                      <td>$313,500</td>
+                    </tr>
+                    <tr>
+                      <td>Tatyana Fitzpatrick</td>
+                      <td>Regional Director</td>
+                      <td>London</td>
+                      <td>19</td>
+                      <td>2010/03/17</td>
+                      <td>$385,750</td>
+                    </tr>
+                    <tr>
+                      <td>Michael Silva</td>
+                      <td>Marketing Designer</td>
+                      <td>London</td>
+                      <td>66</td>
+                      <td>2012/11/27</td>
+                      <td>$198,500</td>
+                    </tr>
+                    <tr>
+                      <td>Paul Byrd</td>
+                      <td>Chief Financial Officer</td>
+                      <td>New York</td>
+                      <td>64</td>
+                      <td>2010/06/09</td>
+                      <td>$725,000</td>
+                    </tr>
+                    <tr>
+                      <td>Gloria Little</td>
+                      <td>Systems Administrator</td>
+                      <td>New York</td>
+                      <td>59</td>
+                      <td>2009/04/10</td>
+                      <td>$237,500</td>
+                    </tr>
+                    <tr>
+                      <td>Bradley Greer</td>
+                      <td>Software Engineer</td>
+                      <td>London</td>
+                      <td>41</td>
+                      <td>2012/10/13</td>
+                      <td>$132,000</td>
+                    </tr>
+                    <tr>
+                      <td>Dai Rios</td>
+                      <td>Personnel Lead</td>
+                      <td>Edinburgh</td>
+                      <td>35</td>
+                      <td>2012/09/26</td>
+                      <td>$217,500</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- DataTable with Custom Options -->
+      <section class="section">
+        <h5 class="section-title mb-3">DataTable Options</h5>
+        <div class="row g-4">
+          <!-- Fixed Columns -->
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Fixed Columns</h5>
+                <p class="card-subtitle">Table with fixed number of visible columns</p>
+              </div>
+              <div class="card-body">
+                <table id="fixedColumnsTable" class="table">
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Ext.</th>
+                      <th>City</th>
+                      <th data-sortable="false">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Unity Butler</td>
+                      <td>5384</td>
+                      <td>San Francisco</td>
+                      <td><button class="btn btn-sm btn-primary">View</button></td>
+                    </tr>
+                    <tr>
+                      <td>Howard Hatfield</td>
+                      <td>7198</td>
+                      <td>London</td>
+                      <td><button class="btn btn-sm btn-primary">View</button></td>
+                    </tr>
+                    <tr>
+                      <td>Hope Fuentes</td>
+                      <td>6318</td>
+                      <td>San Francisco</td>
+                      <td><button class="btn btn-sm btn-primary">View</button></td>
+                    </tr>
+                    <tr>
+                      <td>Vivian Harrell</td>
+                      <td>9422</td>
+                      <td>Edinburgh</td>
+                      <td><button class="btn btn-sm btn-primary">View</button></td>
+                    </tr>
+                    <tr>
+                      <td>Timothy Mooney</td>
+                      <td>7580</td>
+                      <td>Tokyo</td>
+                      <td><button class="btn btn-sm btn-primary">View</button></td>
+                    </tr>
+                    <tr>
+                      <td>Jackson Bradshaw</td>
+                      <td>1042</td>
+                      <td>New York</td>
+                      <td><button class="btn btn-sm btn-primary">View</button></td>
+                    </tr>
+                    <tr>
+                      <td>Olivia Liang</td>
+                      <td>2120</td>
+                      <td>Singapore</td>
+                      <td><button class="btn btn-sm btn-primary">View</button></td>
+                    </tr>
+                    <tr>
+                      <td>Bruno Nash</td>
+                      <td>6222</td>
+                      <td>London</td>
+                      <td><button class="btn btn-sm btn-primary">View</button></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- Search Only -->
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Search Only</h5>
+                <p class="card-subtitle">Table with search but no pagination</p>
+              </div>
+              <div class="card-body">
+                <table id="searchOnlyTable" class="table">
+                  <thead>
+                    <tr>
+                      <th>Product</th>
+                      <th>Category</th>
+                      <th>Price</th>
+                      <th>Stock</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>MacBook Pro 16"</td>
+                      <td>Laptops</td>
+                      <td>$2,499</td>
+                      <td>45</td>
+                    </tr>
+                    <tr>
+                      <td>iPhone 15 Pro</td>
+                      <td>Phones</td>
+                      <td>$1,199</td>
+                      <td>128</td>
+                    </tr>
+                    <tr>
+                      <td>iPad Pro 12.9"</td>
+                      <td>Tablets</td>
+                      <td>$1,099</td>
+                      <td>67</td>
+                    </tr>
+                    <tr>
+                      <td>AirPods Pro 2</td>
+                      <td>Audio</td>
+                      <td>$249</td>
+                      <td>234</td>
+                    </tr>
+                    <tr>
+                      <td>Apple Watch Ultra 2</td>
+                      <td>Wearables</td>
+                      <td>$799</td>
+                      <td>89</td>
+                    </tr>
+                    <tr>
+                      <td>Magic Keyboard</td>
+                      <td>Accessories</td>
+                      <td>$299</td>
+                      <td>156</td>
+                    </tr>
+                    <tr>
+                      <td>Studio Display</td>
+                      <td>Monitors</td>
+                      <td>$1,599</td>
+                      <td>23</td>
+                    </tr>
+                    <tr>
+                      <td>Mac Mini M2</td>
+                      <td>Desktops</td>
+                      <td>$599</td>
+                      <td>78</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- User Management DataTable -->
+      <section class="section">
+        <h5 class="section-title mb-3">User Management DataTable</h5>
+        <div class="row g-4">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header d-flex justify-content-between align-items-center">
+                <div>
+                  <h5 class="card-title">User List</h5>
+                  <p class="card-subtitle">Manage users with avatars, roles, and status indicators</p>
+                </div>
+                <button class="btn btn-primary btn-sm">
+                  <i class="ph ph-plus me-1"></i> Add User
+                </button>
+              </div>
+              <div class="card-body">
+                <table id="userDataTable" class="table">
+                  <thead>
+                    <tr>
+                      <th>User</th>
+                      <th>Email</th>
+                      <th>Role</th>
+                      <th>Status</th>
+                      <th>Joined</th>
+                      <th data-sortable="false">Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td data-sort="Sarah Johnson">
+                        <div class="table-user">
+                          <img src="assets/img/avatars/avatar-1.webp" alt="User" class="table-user-avatar">
+                          <div class="table-user-name">Sarah Johnson</div>
+                        </div>
+                      </td>
+                      <td>sarah.johnson@example.com</td>
+                      <td><span class="badge badge-soft-primary">Admin</span></td>
+                      <td><span class="badge badge-soft-success">Active</span></td>
+                      <td>Jan 15, 2024</td>
+                      <td>
+                        <div class="table-actions">
+                          <button class="btn btn-icon btn-sm btn-light" title="Edit"><i class="ph ph-pencil-simple"></i></button>
+                          <button class="btn btn-icon btn-sm btn-light" title="Delete"><i class="ph ph-trash"></i></button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td data-sort="Michael Chen">
+                        <div class="table-user">
+                          <img src="assets/img/avatars/avatar-2.webp" alt="User" class="table-user-avatar">
+                          <div class="table-user-name">Michael Chen</div>
+                        </div>
+                      </td>
+                      <td>michael.chen@example.com</td>
+                      <td><span class="badge badge-soft-info">Editor</span></td>
+                      <td><span class="badge badge-soft-success">Active</span></td>
+                      <td>Feb 22, 2024</td>
+                      <td>
+                        <div class="table-actions">
+                          <button class="btn btn-icon btn-sm btn-light" title="Edit"><i class="ph ph-pencil-simple"></i></button>
+                          <button class="btn btn-icon btn-sm btn-light" title="Delete"><i class="ph ph-trash"></i></button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td data-sort="Emily Davis">
+                        <div class="table-user">
+                          <img src="assets/img/avatars/avatar-3.webp" alt="User" class="table-user-avatar">
+                          <div class="table-user-name">Emily Davis</div>
+                        </div>
+                      </td>
+                      <td>emily.davis@example.com</td>
+                      <td><span class="badge badge-soft-secondary">Viewer</span></td>
+                      <td><span class="badge badge-soft-warning">Pending</span></td>
+                      <td>Mar 10, 2024</td>
+                      <td>
+                        <div class="table-actions">
+                          <button class="btn btn-icon btn-sm btn-light" title="Edit"><i class="ph ph-pencil-simple"></i></button>
+                          <button class="btn btn-icon btn-sm btn-light" title="Delete"><i class="ph ph-trash"></i></button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td data-sort="David Wilson">
+                        <div class="table-user">
+                          <img src="assets/img/avatars/avatar-4.webp" alt="User" class="table-user-avatar">
+                          <div class="table-user-name">David Wilson</div>
+                        </div>
+                      </td>
+                      <td>david.wilson@example.com</td>
+                      <td><span class="badge badge-soft-info">Editor</span></td>
+                      <td><span class="badge badge-soft-danger">Inactive</span></td>
+                      <td>Apr 05, 2024</td>
+                      <td>
+                        <div class="table-actions">
+                          <button class="btn btn-icon btn-sm btn-light" title="Edit"><i class="ph ph-pencil-simple"></i></button>
+                          <button class="btn btn-icon btn-sm btn-light" title="Delete"><i class="ph ph-trash"></i></button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td data-sort="Lisa Anderson">
+                        <div class="table-user">
+                          <img src="assets/img/avatars/avatar-5.webp" alt="User" class="table-user-avatar">
+                          <div class="table-user-name">Lisa Anderson</div>
+                        </div>
+                      </td>
+                      <td>lisa.anderson@example.com</td>
+                      <td><span class="badge badge-soft-primary">Admin</span></td>
+                      <td><span class="badge badge-soft-success">Active</span></td>
+                      <td>May 18, 2024</td>
+                      <td>
+                        <div class="table-actions">
+                          <button class="btn btn-icon btn-sm btn-light" title="Edit"><i class="ph ph-pencil-simple"></i></button>
+                          <button class="btn btn-icon btn-sm btn-light" title="Delete"><i class="ph ph-trash"></i></button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td data-sort="James Rodriguez">
+                        <div class="table-user">
+                          <img src="assets/img/avatars/avatar-6.webp" alt="User" class="table-user-avatar">
+                          <div class="table-user-name">James Rodriguez</div>
+                        </div>
+                      </td>
+                      <td>james.rodriguez@example.com</td>
+                      <td><span class="badge badge-soft-secondary">Viewer</span></td>
+                      <td><span class="badge badge-soft-success">Active</span></td>
+                      <td>Jun 30, 2024</td>
+                      <td>
+                        <div class="table-actions">
+                          <button class="btn btn-icon btn-sm btn-light" title="Edit"><i class="ph ph-pencil-simple"></i></button>
+                          <button class="btn btn-icon btn-sm btn-light" title="Delete"><i class="ph ph-trash"></i></button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td data-sort="Emma Thompson">
+                        <div class="table-user">
+                          <img src="assets/img/avatars/avatar-7.webp" alt="User" class="table-user-avatar">
+                          <div class="table-user-name">Emma Thompson</div>
+                        </div>
+                      </td>
+                      <td>emma.thompson@example.com</td>
+                      <td><span class="badge badge-soft-info">Editor</span></td>
+                      <td><span class="badge badge-soft-success">Active</span></td>
+                      <td>Jul 12, 2024</td>
+                      <td>
+                        <div class="table-actions">
+                          <button class="btn btn-icon btn-sm btn-light" title="Edit"><i class="ph ph-pencil-simple"></i></button>
+                          <button class="btn btn-icon btn-sm btn-light" title="Delete"><i class="ph ph-trash"></i></button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td data-sort="Robert Kim">
+                        <div class="table-user">
+                          <img src="assets/img/avatars/avatar-8.webp" alt="User" class="table-user-avatar">
+                          <div class="table-user-name">Robert Kim</div>
+                        </div>
+                      </td>
+                      <td>robert.kim@example.com</td>
+                      <td><span class="badge badge-soft-primary">Admin</span></td>
+                      <td><span class="badge badge-soft-warning">Pending</span></td>
+                      <td>Aug 25, 2024</td>
+                      <td>
+                        <div class="table-actions">
+                          <button class="btn btn-icon btn-sm btn-light" title="Edit"><i class="ph ph-pencil-simple"></i></button>
+                          <button class="btn btn-icon btn-sm btn-light" title="Delete"><i class="ph ph-trash"></i></button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td data-sort="Sophia Martinez">
+                        <div class="table-user">
+                          <img src="assets/img/avatars/avatar-9.webp" alt="User" class="table-user-avatar">
+                          <div class="table-user-name">Sophia Martinez</div>
+                        </div>
+                      </td>
+                      <td>sophia.martinez@example.com</td>
+                      <td><span class="badge badge-soft-secondary">Viewer</span></td>
+                      <td><span class="badge badge-soft-success">Active</span></td>
+                      <td>Sep 08, 2024</td>
+                      <td>
+                        <div class="table-actions">
+                          <button class="btn btn-icon btn-sm btn-light" title="Edit"><i class="ph ph-pencil-simple"></i></button>
+                          <button class="btn btn-icon btn-sm btn-light" title="Delete"><i class="ph ph-trash"></i></button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td data-sort="William Brown">
+                        <div class="table-user">
+                          <img src="assets/img/avatars/avatar-1.webp" alt="User" class="table-user-avatar">
+                          <div class="table-user-name">William Brown</div>
+                        </div>
+                      </td>
+                      <td>william.brown@example.com</td>
+                      <td><span class="badge badge-soft-info">Editor</span></td>
+                      <td><span class="badge badge-soft-danger">Inactive</span></td>
+                      <td>Oct 20, 2024</td>
+                      <td>
+                        <div class="table-actions">
+                          <button class="btn btn-icon btn-sm btn-light" title="Edit"><i class="ph ph-pencil-simple"></i></button>
+                          <button class="btn btn-icon btn-sm btn-light" title="Delete"><i class="ph ph-trash"></i></button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td data-sort="Olivia Garcia">
+                        <div class="table-user">
+                          <img src="assets/img/avatars/avatar-2.webp" alt="User" class="table-user-avatar">
+                          <div class="table-user-name">Olivia Garcia</div>
+                        </div>
+                      </td>
+                      <td>olivia.garcia@example.com</td>
+                      <td><span class="badge badge-soft-primary">Admin</span></td>
+                      <td><span class="badge badge-soft-success">Active</span></td>
+                      <td>Nov 15, 2024</td>
+                      <td>
+                        <div class="table-actions">
+                          <button class="btn btn-icon btn-sm btn-light" title="Edit"><i class="ph ph-pencil-simple"></i></button>
+                          <button class="btn btn-icon btn-sm btn-light" title="Delete"><i class="ph ph-trash"></i></button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td data-sort="Daniel Lee">
+                        <div class="table-user">
+                          <img src="assets/img/avatars/avatar-3.webp" alt="User" class="table-user-avatar">
+                          <div class="table-user-name">Daniel Lee</div>
+                        </div>
+                      </td>
+                      <td>daniel.lee@example.com</td>
+                      <td><span class="badge badge-soft-secondary">Viewer</span></td>
+                      <td><span class="badge badge-soft-success">Active</span></td>
+                      <td>Dec 01, 2024</td>
+                      <td>
+                        <div class="table-actions">
+                          <button class="btn btn-icon btn-sm btn-light" title="Edit"><i class="ph ph-pencil-simple"></i></button>
+                          <button class="btn btn-icon btn-sm btn-light" title="Delete"><i class="ph ph-trash"></i></button>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Order Management DataTable -->
+      <section class="section">
+        <h5 class="section-title mb-3">Order Management DataTable</h5>
+        <div class="row g-4">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header d-flex justify-content-between align-items-center">
+                <div>
+                  <h5 class="card-title">Recent Orders</h5>
+                  <p class="card-subtitle">Track and manage customer orders</p>
+                </div>
+                <div class="d-flex gap-2">
+                  <button class="btn btn-outline-secondary btn-sm">
+                    <i class="ph ph-download-simple me-1"></i> Export
+                  </button>
+                  <button class="btn btn-primary btn-sm">
+                    <i class="ph ph-plus me-1"></i> New Order
+                  </button>
+                </div>
+              </div>
+              <div class="card-body">
+                <table id="orderDataTable" class="table">
+                  <thead>
+                    <tr>
+                      <th>Order ID</th>
+                      <th>Customer</th>
+                      <th>Product</th>
+                      <th>Amount</th>
+                      <th>Date</th>
+                      <th>Status</th>
+                      <th data-sortable="false">Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><a href="#" class="fw-medium">#ORD-7245</a></td>
+                      <td>James Rodriguez</td>
+                      <td>MacBook Pro 16"</td>
+                      <td data-sort="2499">$2,499.00</td>
+                      <td data-sort="2026-01-15">Jan 15, 2026</td>
+                      <td><span class="badge badge-soft-success">Delivered</span></td>
+                      <td>
+                        <div class="table-actions">
+                          <button class="btn btn-icon btn-sm btn-light" title="View"><i class="ph ph-eye"></i></button>
+                          <button class="btn btn-icon btn-sm btn-light" title="Edit"><i class="ph ph-pencil-simple"></i></button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><a href="#" class="fw-medium">#ORD-7244</a></td>
+                      <td>Emma Thompson</td>
+                      <td>iPhone 15 Pro Max</td>
+                      <td data-sort="1199">$1,199.00</td>
+                      <td data-sort="2026-01-14">Jan 14, 2026</td>
+                      <td><span class="badge badge-soft-warning">Processing</span></td>
+                      <td>
+                        <div class="table-actions">
+                          <button class="btn btn-icon btn-sm btn-light" title="View"><i class="ph ph-eye"></i></button>
+                          <button class="btn btn-icon btn-sm btn-light" title="Edit"><i class="ph ph-pencil-simple"></i></button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><a href="#" class="fw-medium">#ORD-7243</a></td>
+                      <td>Robert Kim</td>
+                      <td>AirPods Pro 2</td>
+                      <td data-sort="249">$249.00</td>
+                      <td data-sort="2026-01-14">Jan 14, 2026</td>
+                      <td><span class="badge badge-soft-info">Shipped</span></td>
+                      <td>
+                        <div class="table-actions">
+                          <button class="btn btn-icon btn-sm btn-light" title="View"><i class="ph ph-eye"></i></button>
+                          <button class="btn btn-icon btn-sm btn-light" title="Edit"><i class="ph ph-pencil-simple"></i></button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><a href="#" class="fw-medium">#ORD-7242</a></td>
+                      <td>Sophia Martinez</td>
+                      <td>Apple Watch Ultra 2</td>
+                      <td data-sort="799">$799.00</td>
+                      <td data-sort="2026-01-13">Jan 13, 2026</td>
+                      <td><span class="badge badge-soft-danger">Cancelled</span></td>
+                      <td>
+                        <div class="table-actions">
+                          <button class="btn btn-icon btn-sm btn-light" title="View"><i class="ph ph-eye"></i></button>
+                          <button class="btn btn-icon btn-sm btn-light" title="Edit"><i class="ph ph-pencil-simple"></i></button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><a href="#" class="fw-medium">#ORD-7241</a></td>
+                      <td>William Brown</td>
+                      <td>iPad Pro 12.9"</td>
+                      <td data-sort="1099">$1,099.00</td>
+                      <td data-sort="2026-01-12">Jan 12, 2026</td>
+                      <td><span class="badge badge-soft-success">Delivered</span></td>
+                      <td>
+                        <div class="table-actions">
+                          <button class="btn btn-icon btn-sm btn-light" title="View"><i class="ph ph-eye"></i></button>
+                          <button class="btn btn-icon btn-sm btn-light" title="Edit"><i class="ph ph-pencil-simple"></i></button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><a href="#" class="fw-medium">#ORD-7240</a></td>
+                      <td>Olivia Garcia</td>
+                      <td>Magic Keyboard</td>
+                      <td data-sort="299">$299.00</td>
+                      <td data-sort="2026-01-11">Jan 11, 2026</td>
+                      <td><span class="badge badge-soft-success">Delivered</span></td>
+                      <td>
+                        <div class="table-actions">
+                          <button class="btn btn-icon btn-sm btn-light" title="View"><i class="ph ph-eye"></i></button>
+                          <button class="btn btn-icon btn-sm btn-light" title="Edit"><i class="ph ph-pencil-simple"></i></button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><a href="#" class="fw-medium">#ORD-7239</a></td>
+                      <td>Daniel Lee</td>
+                      <td>Studio Display</td>
+                      <td data-sort="1599">$1,599.00</td>
+                      <td data-sort="2026-01-10">Jan 10, 2026</td>
+                      <td><span class="badge badge-soft-info">Shipped</span></td>
+                      <td>
+                        <div class="table-actions">
+                          <button class="btn btn-icon btn-sm btn-light" title="View"><i class="ph ph-eye"></i></button>
+                          <button class="btn btn-icon btn-sm btn-light" title="Edit"><i class="ph ph-pencil-simple"></i></button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><a href="#" class="fw-medium">#ORD-7238</a></td>
+                      <td>Sarah Johnson</td>
+                      <td>Mac Mini M2 Pro</td>
+                      <td data-sort="1299">$1,299.00</td>
+                      <td data-sort="2026-01-09">Jan 09, 2026</td>
+                      <td><span class="badge badge-soft-warning">Processing</span></td>
+                      <td>
+                        <div class="table-actions">
+                          <button class="btn btn-icon btn-sm btn-light" title="View"><i class="ph ph-eye"></i></button>
+                          <button class="btn btn-icon btn-sm btn-light" title="Edit"><i class="ph ph-pencil-simple"></i></button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><a href="#" class="fw-medium">#ORD-7237</a></td>
+                      <td>Michael Chen</td>
+                      <td>HomePod 2</td>
+                      <td data-sort="299">$299.00</td>
+                      <td data-sort="2026-01-08">Jan 08, 2026</td>
+                      <td><span class="badge badge-soft-success">Delivered</span></td>
+                      <td>
+                        <div class="table-actions">
+                          <button class="btn btn-icon btn-sm btn-light" title="View"><i class="ph ph-eye"></i></button>
+                          <button class="btn btn-icon btn-sm btn-light" title="Edit"><i class="ph ph-pencil-simple"></i></button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><a href="#" class="fw-medium">#ORD-7236</a></td>
+                      <td>Emily Davis</td>
+                      <td>AirTag 4-Pack</td>
+                      <td data-sort="99">$99.00</td>
+                      <td data-sort="2026-01-07">Jan 07, 2026</td>
+                      <td><span class="badge badge-soft-success">Delivered</span></td>
+                      <td>
+                        <div class="table-actions">
+                          <button class="btn btn-icon btn-sm btn-light" title="View"><i class="ph ph-eye"></i></button>
+                          <button class="btn btn-icon btn-sm btn-light" title="Edit"><i class="ph ph-pencil-simple"></i></button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><a href="#" class="fw-medium">#ORD-7235</a></td>
+                      <td>David Wilson</td>
+                      <td>MacBook Air M3</td>
+                      <td data-sort="1299">$1,299.00</td>
+                      <td data-sort="2026-01-06">Jan 06, 2026</td>
+                      <td><span class="badge badge-soft-danger">Refunded</span></td>
+                      <td>
+                        <div class="table-actions">
+                          <button class="btn btn-icon btn-sm btn-light" title="View"><i class="ph ph-eye"></i></button>
+                          <button class="btn btn-icon btn-sm btn-light" title="Edit"><i class="ph ph-pencil-simple"></i></button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><a href="#" class="fw-medium">#ORD-7234</a></td>
+                      <td>Lisa Anderson</td>
+                      <td>Apple TV 4K</td>
+                      <td data-sort="179">$179.00</td>
+                      <td data-sort="2026-01-05">Jan 05, 2026</td>
+                      <td><span class="badge badge-soft-success">Delivered</span></td>
+                      <td>
+                        <div class="table-actions">
+                          <button class="btn btn-icon btn-sm btn-light" title="View"><i class="ph ph-eye"></i></button>
+                          <button class="btn btn-icon btn-sm btn-light" title="Edit"><i class="ph ph-pencil-simple"></i></button>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Product Inventory DataTable -->
+      <section class="section">
+        <h5 class="section-title mb-3">Product Inventory DataTable</h5>
+        <div class="row g-4">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="card-title">Product Inventory</h5>
+                <p class="card-subtitle">Monitor stock levels with export functionality</p>
+              </div>
+              <div class="card-body">
+                <table id="inventoryDataTable" class="table">
+                  <thead>
+                    <tr>
+                      <th>SKU</th>
+                      <th>Product Name</th>
+                      <th>Category</th>
+                      <th>Price</th>
+                      <th>Stock</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="font-monospace">SKU-001</td>
+                      <td>MacBook Pro 14" M3</td>
+                      <td>Laptops</td>
+                      <td data-sort="1999">$1,999.00</td>
+                      <td data-sort="45">45 units</td>
+                      <td><span class="badge badge-soft-success">In Stock</span></td>
+                    </tr>
+                    <tr>
+                      <td class="font-monospace">SKU-002</td>
+                      <td>MacBook Pro 16" M3 Max</td>
+                      <td>Laptops</td>
+                      <td data-sort="3499">$3,499.00</td>
+                      <td data-sort="12">12 units</td>
+                      <td><span class="badge badge-soft-warning">Low Stock</span></td>
+                    </tr>
+                    <tr>
+                      <td class="font-monospace">SKU-003</td>
+                      <td>MacBook Air 15" M3</td>
+                      <td>Laptops</td>
+                      <td data-sort="1299">$1,299.00</td>
+                      <td data-sort="78">78 units</td>
+                      <td><span class="badge badge-soft-success">In Stock</span></td>
+                    </tr>
+                    <tr>
+                      <td class="font-monospace">SKU-004</td>
+                      <td>iPhone 15 Pro 256GB</td>
+                      <td>Phones</td>
+                      <td data-sort="1099">$1,099.00</td>
+                      <td data-sort="156">156 units</td>
+                      <td><span class="badge badge-soft-success">In Stock</span></td>
+                    </tr>
+                    <tr>
+                      <td class="font-monospace">SKU-005</td>
+                      <td>iPhone 15 Pro Max 512GB</td>
+                      <td>Phones</td>
+                      <td data-sort="1399">$1,399.00</td>
+                      <td data-sort="8">8 units</td>
+                      <td><span class="badge badge-soft-warning">Low Stock</span></td>
+                    </tr>
+                    <tr>
+                      <td class="font-monospace">SKU-006</td>
+                      <td>iPad Pro 11" M4</td>
+                      <td>Tablets</td>
+                      <td data-sort="999">$999.00</td>
+                      <td data-sort="0">0 units</td>
+                      <td><span class="badge badge-soft-danger">Out of Stock</span></td>
+                    </tr>
+                    <tr>
+                      <td class="font-monospace">SKU-007</td>
+                      <td>iPad Pro 12.9" M4</td>
+                      <td>Tablets</td>
+                      <td data-sort="1299">$1,299.00</td>
+                      <td data-sort="34">34 units</td>
+                      <td><span class="badge badge-soft-success">In Stock</span></td>
+                    </tr>
+                    <tr>
+                      <td class="font-monospace">SKU-008</td>
+                      <td>Apple Watch Series 9</td>
+                      <td>Wearables</td>
+                      <td data-sort="399">$399.00</td>
+                      <td data-sort="89">89 units</td>
+                      <td><span class="badge badge-soft-success">In Stock</span></td>
+                    </tr>
+                    <tr>
+                      <td class="font-monospace">SKU-009</td>
+                      <td>Apple Watch Ultra 2</td>
+                      <td>Wearables</td>
+                      <td data-sort="799">$799.00</td>
+                      <td data-sort="5">5 units</td>
+                      <td><span class="badge badge-soft-warning">Low Stock</span></td>
+                    </tr>
+                    <tr>
+                      <td class="font-monospace">SKU-010</td>
+                      <td>AirPods Pro 2</td>
+                      <td>Audio</td>
+                      <td data-sort="249">$249.00</td>
+                      <td data-sort="234">234 units</td>
+                      <td><span class="badge badge-soft-success">In Stock</span></td>
+                    </tr>
+                    <tr>
+                      <td class="font-monospace">SKU-011</td>
+                      <td>AirPods Max</td>
+                      <td>Audio</td>
+                      <td data-sort="549">$549.00</td>
+                      <td data-sort="0">0 units</td>
+                      <td><span class="badge badge-soft-danger">Out of Stock</span></td>
+                    </tr>
+                    <tr>
+                      <td class="font-monospace">SKU-012</td>
+                      <td>Studio Display</td>
+                      <td>Monitors</td>
+                      <td data-sort="1599">$1,599.00</td>
+                      <td data-sort="23">23 units</td>
+                      <td><span class="badge badge-soft-success">In Stock</span></td>
+                    </tr>
+                    <tr>
+                      <td class="font-monospace">SKU-013</td>
+                      <td>Pro Display XDR</td>
+                      <td>Monitors</td>
+                      <td data-sort="4999">$4,999.00</td>
+                      <td data-sort="3">3 units</td>
+                      <td><span class="badge badge-soft-warning">Low Stock</span></td>
+                    </tr>
+                    <tr>
+                      <td class="font-monospace">SKU-014</td>
+                      <td>Mac Studio M2 Ultra</td>
+                      <td>Desktops</td>
+                      <td data-sort="3999">$3,999.00</td>
+                      <td data-sort="15">15 units</td>
+                      <td><span class="badge badge-soft-success">In Stock</span></td>
+                    </tr>
+                    <tr>
+                      <td class="font-monospace">SKU-015</td>
+                      <td>Mac Mini M2 Pro</td>
+                      <td>Desktops</td>
+                      <td data-sort="1299">$1,299.00</td>
+                      <td data-sort="67">67 units</td>
+                      <td><span class="badge badge-soft-success">In Stock</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <span class="footer-brand-mark"><i class="bi bi-lightning-charge-fill"></i></span>
+          <span class="footer-copyright">
+            &copy; 2026 <a href="#">TrendyAdmin</a>. All Rights Reserved.
+          </span>
+        </div>
+        <div class="footer-links">
+          <a href="#">About</a>
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Contact</a>
+        </div>
+        <div class="footer-credits">
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Back to Top -->
+  <a href="#" class="back-to-top">
+    <i class="ph ph-arrow-up"></i>
+  </a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="assets/vendor/chart.js/chart.umd.js"></script>
+  <script src="assets/vendor/echarts/echarts.min.js"></script>
+  <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="assets/vendor/quill/quill.js"></script>
+  <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+  <script src="assets/vendor/choices.js/choices.min.js"></script>
+  <script src="assets/vendor/flatpickr/flatpickr.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS Files -->
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <!-- App Sidebar Toggle (for app pages with sidebars) -->
+  <script src="assets/js/apps-sidebar-toggle.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Basic DataTable
+      if (document.getElementById('basicDataTable')) {
+        new simpleDatatables.DataTable('#basicDataTable', {
+          perPage: 5,
+          perPageSelect: [5, 10, 15, 20],
+          labels: {
+            placeholder: 'Search...',
+            perPage: '{select} entries per page',
+            noRows: 'No entries found',
+            info: 'Showing {start} to {end} of {rows} entries'
+          }
+        });
+      }
+      // Fixed Columns DataTable
+      if (document.getElementById('fixedColumnsTable')) {
+        new simpleDatatables.DataTable('#fixedColumnsTable', {
+          perPage: 5,
+          perPageSelect: false,
+          labels: {
+            placeholder: 'Search...',
+            noRows: 'No entries found',
+            info: 'Showing {start} to {end} of {rows} entries'
+          }
+        });
+      }
+      // Search Only DataTable (no pagination)
+      if (document.getElementById('searchOnlyTable')) {
+        new simpleDatatables.DataTable('#searchOnlyTable', {
+          paging: false,
+          labels: {
+            placeholder: 'Search products...',
+            noRows: 'No products found'
+          }
+        });
+      }
+      // User Management DataTable
+      if (document.getElementById('userDataTable')) {
+        new simpleDatatables.DataTable('#userDataTable', {
+          perPage: 5,
+          perPageSelect: [5, 10, 15, 25],
+          labels: {
+            placeholder: 'Search users...',
+            perPage: '{select} entries per page',
+            noRows: 'No users found',
+            info: 'Showing {start} to {end} of {rows} users'
+          }
+        });
+      }
+      // Order Management DataTable
+      if (document.getElementById('orderDataTable')) {
+        new simpleDatatables.DataTable('#orderDataTable', {
+          perPage: 5,
+          perPageSelect: [5, 10, 20, 50],
+          labels: {
+            placeholder: 'Search orders...',
+            perPage: '{select} entries per page',
+            noRows: 'No orders found',
+            info: 'Showing {start} to {end} of {rows} orders'
+          }
+        });
+      }
+      // Inventory DataTable with export
+      if (document.getElementById('inventoryDataTable')) {
+        new simpleDatatables.DataTable('#inventoryDataTable', {
+          perPage: 10,
+          perPageSelect: [10, 25, 50, 100],
+          labels: {
+            placeholder: 'Search inventory...',
+            perPage: '{select} entries per page',
+            noRows: 'No products found',
+            info: 'Showing {start} to {end} of {rows} products'
+          }
+        });
+      }
+    });
+  </script>
+</body>
+
+</html>

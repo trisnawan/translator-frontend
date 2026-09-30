@@ -1,0 +1,2071 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Card Widgets - TrendyAdmin</title>
+  <meta name="description" content="TrendyAdmin - Bootstrap Admin Template">
+  <meta name="keywords" content="admin, dashboard, bootstrap">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts - Plus Jakarta Sans (body) + Outfit (headings) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="assets/vendor/phosphor-icons/phosphor-icons.css" rel="stylesheet">
+  <link href="assets/vendor/lucide-icons/lucide.css" rel="stylesheet">
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/choices.js/choices.min.css" rel="stylesheet">
+  <link href="assets/vendor/flatpickr/flatpickr.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+    * Template Name: TrendyAdmin - Bootstrap Admin Template
+    * Template URL: https://bootstrapmade.com/trendy-admin-bootstrap-dashboard-template/
+    * Updated: Jul 29 2026 with Bootstrap v5.3.8
+    * Author: BootstrapMade.com
+    * License: https://bootstrapmade.com/license/
+    ======================================================== -->
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-inner">
+      <!-- Header Left -->
+      <div class="header-left">
+        <button class="sidebar-toggle" title="Toggle Sidebar">
+          <i class="ph ph-list"></i>
+        </button>
+        <a href="index.html" class="header-logo">
+          <span class="header-logo-mark"><i class="bi bi-lightning-charge-fill"></i></span>
+          <span class="header-logo-text">TrendyAdmin</span>
+        </a>
+
+        <!-- Apps Quick Access -->
+        <div class="header-action dropdown apps-dropdown">
+          <button class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" title="Quick Access">
+            <i class="ph ph-dots-nine"></i>
+          </button>
+          <div class="dropdown-menu">
+            <div class="apps-menu-header">
+              <h6>Quick Access</h6>
+              <span>Jump straight into an app</span>
+            </div>
+            <div class="apps-grid">
+              <a href="apps-chat.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-chat-circle-dots"></i></span>
+                <span>Chat</span>
+              </a>
+              <a href="apps-email.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-envelope"></i></span>
+                <span>Email</span>
+              </a>
+              <a href="apps-calendar.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-calendar-blank"></i></span>
+                <span>Calendar</span>
+              </a>
+              <a href="apps-kanban.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-kanban"></i></span>
+                <span>Kanban</span>
+              </a>
+              <a href="apps-file-manager.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-folder-open"></i></span>
+                <span>Files</span>
+              </a>
+              <a href="apps-todo.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-check-square"></i></span>
+                <span>Todo</span>
+              </a>
+              <a href="apps-contacts.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-address-book"></i></span>
+                <span>Contacts</span>
+              </a>
+              <a href="apps-support.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-headset"></i></span>
+                <span>Support</span>
+              </a>
+              <a href="invoice-list.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-receipt"></i></span>
+                <span>Invoices</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Header Search (Desktop) -->
+      <div class="header-search">
+        <form class="search-form" action="search-results.html" method="GET">
+          <button type="submit"><i class="ph ph-magnifying-glass"></i></button>
+          <input type="search" name="q" placeholder="Search anything..." autocomplete="off">
+          <span class="search-hint">⌘K</span>
+        </form>
+      </div>
+
+      <!-- Header Right -->
+      <div class="header-right">
+        <!-- Desktop Actions (hidden on mobile, shown in mobile menu) -->
+        <div class="header-actions-desktop">
+          <!-- Quick Create -->
+          <div class="dropdown create-dropdown">
+            <button class="create-btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="ph ph-plus"></i>
+              <span>Create</span>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end create-menu">
+              <a class="dropdown-item" href="apps-kanban.html">
+                <span class="create-item-icon"><i class="ph ph-kanban"></i></span>
+                <span class="create-item-text">
+                  <span class="create-item-title">New Project</span>
+                  <span class="create-item-sub">Start a kanban board</span>
+                </span>
+              </a>
+              <a class="dropdown-item" href="apps-todo.html">
+                <span class="create-item-icon"><i class="ph ph-check-square"></i></span>
+                <span class="create-item-text">
+                  <span class="create-item-title">New Task</span>
+                  <span class="create-item-sub">Add to your todo list</span>
+                </span>
+              </a>
+              <a class="dropdown-item" href="apps-contacts.html">
+                <span class="create-item-icon"><i class="ph ph-user-plus"></i></span>
+                <span class="create-item-text">
+                  <span class="create-item-title">New Contact</span>
+                  <span class="create-item-sub">Save a new person</span>
+                </span>
+              </a>
+              <a class="dropdown-item" href="invoice-list.html">
+                <span class="create-item-icon"><i class="ph ph-receipt"></i></span>
+                <span class="create-item-text">
+                  <span class="create-item-title">New Invoice</span>
+                  <span class="create-item-sub">Bill a customer</span>
+                </span>
+              </a>
+            </div>
+          </div>
+
+          <div class="header-divider"></div>
+
+          <!-- Theme Toggle -->
+          <button class="header-action theme-toggle" title="Toggle Theme">
+            <i class="ph ph-moon icon-dark"></i>
+            <i class="ph ph-sun icon-light"></i>
+          </button>
+
+          <!-- Fullscreen Toggle -->
+          <button class="header-action fullscreen-toggle" onclick="toggleFullscreen()" title="Fullscreen">
+            <i class="ph ph-arrows-out icon-enter"></i>
+            <i class="ph ph-arrows-in icon-exit"></i>
+          </button>
+
+          <!-- Messages -->
+          <div class="header-action dropdown messages-dropdown">
+            <button class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" title="Messages">
+              <i class="ph ph-chat-teardrop-text"></i>
+              <span class="badge">2</span>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end">
+              <div class="messages-header">
+                <h6>Messages</h6>
+                <a href="apps-chat.html">View all</a>
+              </div>
+              <div class="messages-list">
+                <a href="apps-chat.html" class="message-item unread">
+                  <span class="message-avatar">
+                    <img src="assets/img/avatars/avatar-2.webp" alt="Sarah Johnson">
+                    <span class="message-status"></span>
+                  </span>
+                  <span class="message-content">
+                    <span class="message-name">Sarah Johnson</span>
+                    <span class="message-text">The new dashboard mockups look amazing! 🔥</span>
+                  </span>
+                  <span class="message-time">2m</span>
+                </a>
+                <a href="apps-chat.html" class="message-item unread">
+                  <span class="message-avatar">
+                    <img src="assets/img/avatars/avatar-3.webp" alt="Mike Chen">
+                  </span>
+                  <span class="message-content">
+                    <span class="message-name">Mike Chen</span>
+                    <span class="message-text">Can you review my PR when you get a chance?</span>
+                  </span>
+                  <span class="message-time">1h</span>
+                </a>
+                <a href="apps-chat.html" class="message-item">
+                  <span class="message-avatar">
+                    <img src="assets/img/avatars/avatar-4.webp" alt="Emma Davis">
+                  </span>
+                  <span class="message-content">
+                    <span class="message-name">Emma Davis</span>
+                    <span class="message-text">Meeting moved to 3pm tomorrow</span>
+                  </span>
+                  <span class="message-time">3h</span>
+                </a>
+              </div>
+              <div class="messages-footer">
+                <a href="apps-chat.html">Open chat <i class="ph ph-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Notifications -->
+          <div class="header-action dropdown notification-dropdown">
+            <button class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" title="Notifications">
+              <i class="ph ph-bell"></i>
+              <span class="badge">3</span>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end">
+              <div class="notification-header">
+                <h6>You have 3 new notifications</h6>
+                <a href="#" class="notification-mark-read" data-notification-action="mark-all-read" title="Mark all as read">
+                  <i class="ph ph-checks"></i>
+                </a>
+              </div>
+              <div class="notification-list">
+                <div class="notification-item unread">
+                  <span class="notification-icon success">
+                    <i class="ph ph-check-circle"></i>
+                  </span>
+                  <span class="notification-content">
+                    <span class="notification-title">Order Completed</span>
+                    <span class="notification-text">Your order #12345 has been delivered</span>
+                  </span>
+                  <span class="notification-meta">
+                    <span class="notification-time">5m</span>
+                    <span class="notification-dot"></span>
+                  </span>
+                </div>
+                <div class="notification-item unread">
+                  <span class="notification-icon warning">
+                    <i class="ph ph-warning"></i>
+                  </span>
+                  <span class="notification-content">
+                    <span class="notification-title">Low Storage</span>
+                    <span class="notification-text">Server storage is running low (85% used)</span>
+                  </span>
+                  <span class="notification-meta">
+                    <span class="notification-time">1h</span>
+                    <span class="notification-dot"></span>
+                  </span>
+                </div>
+                <div class="notification-item">
+                  <span class="notification-icon info">
+                    <i class="ph ph-info"></i>
+                  </span>
+                  <span class="notification-content">
+                    <span class="notification-title">New Feature</span>
+                    <span class="notification-text">Dark mode is now available</span>
+                  </span>
+                  <span class="notification-meta">
+                    <span class="notification-time">2h</span>
+                    <span class="notification-dot"></span>
+                  </span>
+                </div>
+              </div>
+              <div class="notification-footer">
+                <a href="notifications.html">View all</a>
+                <a href="settings.html">Settings</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="header-divider"></div>
+
+          <!-- User Dropdown -->
+          <div class="header-action dropdown user-dropdown">
+            <button class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="assets/img/profile-img.webp" alt="User" class="avatar">
+              <span class="user-name">John Doe</span>
+              <i class="ph ph-caret-down user-caret"></i>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end">
+              <div class="user-menu-card">
+                <span class="user-menu-avatar">
+                  <img src="assets/img/profile-img.webp" alt="User">
+                </span>
+                <span class="user-menu-name">John Doe</span>
+                <span class="user-menu-mail">john@trendyadmin.com</span>
+                <span class="user-menu-role">Administrator</span>
+              </div>
+              <div class="user-menu-body">
+                <a class="dropdown-item" href="profile.html">
+                  <span class="user-menu-item-icon"><i class="ph ph-user"></i></span>
+                  My Profile
+                  <i class="ph ph-caret-right user-menu-item-caret"></i>
+                </a>
+                <a class="dropdown-item" href="settings.html">
+                  <span class="user-menu-item-icon"><i class="ph ph-gear"></i></span>
+                  Settings
+                  <i class="ph ph-caret-right user-menu-item-caret"></i>
+                </a>
+                <a class="dropdown-item" href="activity.html">
+                  <span class="user-menu-item-icon"><i class="ph ph-pulse"></i></span>
+                  Activity Log
+                  <i class="ph ph-caret-right user-menu-item-caret"></i>
+                </a>
+                <a class="dropdown-item" href="invoice-list.html">
+                  <span class="user-menu-item-icon"><i class="ph ph-receipt"></i></span>
+                  Billing
+                  <i class="ph ph-caret-right user-menu-item-caret"></i>
+                </a>
+              </div>
+              <div class="user-menu-footer">
+                <a href="auth-login.html" class="user-menu-signout">
+                  <i class="ph ph-sign-out"></i> Sign Out
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile Actions (visible only on mobile) -->
+        <div class="header-actions-mobile">
+          <!-- Search Toggle (Mobile) -->
+          <button class="header-action search-toggle" title="Search">
+            <i class="ph ph-magnifying-glass"></i>
+          </button>
+
+          <!-- Mobile Menu Toggle -->
+          <button class="header-action mobile-menu-toggle" title="More">
+            <i class="ph ph-dots-three-vertical"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Search -->
+  <div class="mobile-search">
+    <form class="search-form" action="search-results.html" method="GET">
+      <input type="search" name="q" placeholder="Search anything..." autocomplete="off">
+      <button type="submit"><i class="ph ph-magnifying-glass"></i></button>
+    </form>
+  </div>
+
+  <!-- Mobile Header Menu -->
+  <div class="mobile-header-menu">
+    <div class="mobile-header-menu-content">
+      <!-- Theme Toggle -->
+      <button class="mobile-menu-item theme-toggle" title="Toggle Theme">
+        <i class="ph ph-moon icon-dark"></i>
+        <i class="ph ph-sun icon-light"></i>
+        <span class="mobile-menu-label">Theme</span>
+      </button>
+
+      <!-- Fullscreen Toggle -->
+      <button class="mobile-menu-item fullscreen-toggle" onclick="toggleFullscreen()" title="Fullscreen">
+        <i class="ph ph-arrows-out icon-enter"></i>
+        <i class="ph ph-arrows-in icon-exit"></i>
+        <span class="mobile-menu-label">Fullscreen</span>
+      </button>
+
+      <!-- Messages -->
+      <a href="apps-chat.html" class="mobile-menu-item">
+        <i class="ph ph-chat-teardrop-text"></i>
+        <span class="badge">2</span>
+        <span class="mobile-menu-label">Messages</span>
+      </a>
+
+      <!-- Notifications -->
+      <a href="notifications.html" class="mobile-menu-item">
+        <i class="ph ph-bell"></i>
+        <span class="badge">3</span>
+        <span class="mobile-menu-label">Notifications</span>
+      </a>
+
+      <!-- Profile -->
+      <a href="profile.html" class="mobile-menu-item">
+        <i class="ph ph-user"></i>
+        <span class="mobile-menu-label">Profile</span>
+      </a>
+
+      <!-- Sign Out -->
+      <a href="auth-login.html" class="mobile-menu-item mobile-menu-item-danger">
+        <i class="ph ph-sign-out"></i>
+        <span class="mobile-menu-label">Sign Out</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <!-- Sidebar Header -->
+    <div class="sidebar-header">
+      <a href="index.html" class="sidebar-logo">
+        <span class="sidebar-logo-mark"><i class="bi bi-lightning-charge-fill"></i></span>
+        <span class="sidebar-logo-text">TrendyAdmin</span>
+      </a>
+      <button class="sidebar-close">
+        <i class="ph ph-x"></i>
+      </button>
+    </div>
+
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar-nav">
+      <ul class="nav-menu">
+        <li class="nav-heading"><span>Overview</span></li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="index.html">
+            <span class="nav-icon"><i class="ph ph-house"></i></span>
+            <span class="nav-text">Home</span>
+          </a>
+        </li>
+
+        <!-- Dashboards Submenu -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-gauge"></i></span>
+            <span class="nav-text">Dashboards</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="dashboard-sales.html">Sales</a></li>
+            <li><a class="nav-link " href="dashboard-analytics.html">Analytics</a></li>
+            <li><a class="nav-link " href="dashboard-crm.html">CRM</a></li>
+            <li><a class="nav-link " href="dashboard-marketing.html">Marketing</a></li>
+            <li><a class="nav-link " href="dashboard-projects.html">Projects</a></li>
+            <li><a class="nav-link " href="dashboard-finance.html">Finance</a></li>
+          </ul>
+        </li>
+
+        <!-- Users -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-users"></i></span>
+            <span class="nav-text">Users</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="users.html">Users List</a></li>
+            <li><a class="nav-link " href="users-view.html">User View</a></li>
+            <li><a class="nav-link " href="users-edit.html">User Edit</a></li>
+            <li><a class="nav-link " href="profile.html">Profile</a></li>
+            <!-- 3rd Level - Settings submenu -->
+            <li class="has-submenu ">
+              <a class="nav-link" href="#" aria-expanded="false">
+                Settings
+                <i class="ph ph-caret-right nav-arrow"></i>
+              </a>
+              <ul class="nav-submenu ">
+                <li><a class="nav-link " href="settings.html">Account</a></li>
+                <li><a class="nav-link " href="notifications.html">Notifications</a></li>
+                <li><a class="nav-link " href="activity.html">Activity</a></li>
+              </ul>
+            </li>
+            <li><a class="nav-link " href="roles.html">Roles & Permissions</a></li>
+          </ul>
+        </li>
+
+        <!-- Authentication -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-shield-check"></i></span>
+            <span class="nav-text">Authentication</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="auth-login.html">Login</a></li>
+            <li><a class="nav-link " href="auth-register.html">Register</a></li>
+            <li><a class="nav-link " href="auth-forgot-password.html">Forgot Password</a></li>
+            <li><a class="nav-link " href="auth-reset-password.html">Reset Password</a></li>
+            <li><a class="nav-link " href="auth-verify-email.html">Email Verification</a></li>
+            <li><a class="nav-link " href="auth-two-factor.html">Two Factor Auth</a></li>
+            <li><a class="nav-link " href="auth-lock-screen.html">Lock Screen</a></li>
+          </ul>
+        </li>
+
+        <!-- Apps Section -->
+        <li class="nav-heading"><span>Apps</span></li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-calendar.html">
+            <span class="nav-icon"><i class="ph ph-calendar-blank"></i></span>
+            <span class="nav-text">Calendar</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-kanban.html">
+            <span class="nav-icon"><i class="ph ph-kanban"></i></span>
+            <span class="nav-text">Kanban Board</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-chat.html">
+            <span class="nav-icon"><i class="ph ph-chat-circle-dots"></i></span>
+            <span class="nav-text">Chat</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-contacts.html">
+            <span class="nav-icon"><i class="ph ph-address-book"></i></span>
+            <span class="nav-text">Contacts</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-file-manager.html">
+            <span class="nav-icon"><i class="ph ph-folder-open"></i></span>
+            <span class="nav-text">File Manager</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-email.html">
+            <span class="nav-icon"><i class="ph ph-envelope"></i></span>
+            <span class="nav-text">Email</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-todo.html">
+            <span class="nav-icon"><i class="ph ph-check-square"></i></span>
+            <span class="nav-text">Todo List</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-support.html">
+            <span class="nav-icon"><i class="ph ph-headset"></i></span>
+            <span class="nav-text">Support Center</span>
+          </a>
+        </li>
+
+        <!-- UI Elements Section -->
+        <li class="nav-heading"><span>UI Elements</span></li>
+
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-puzzle-piece"></i></span>
+            <span class="nav-text">Components</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="components-alerts.html">Alerts</a></li>
+            <li><a class="nav-link " href="components-accordion.html">Accordion</a></li>
+            <li><a class="nav-link " href="components-badges.html">Badges</a></li>
+            <li><a class="nav-link " href="components-breadcrumbs.html">Breadcrumbs</a></li>
+            <li><a class="nav-link " href="components-buttons.html">Buttons</a></li>
+            <li><a class="nav-link " href="components-cards.html">Cards</a></li>
+            <li><a class="nav-link " href="components-carousel.html">Carousel</a></li>
+            <li><a class="nav-link " href="components-dropdowns.html">Dropdowns</a></li>
+            <li><a class="nav-link " href="components-list-group.html">List Group</a></li>
+            <li><a class="nav-link " href="components-modal.html">Modal</a></li>
+            <li><a class="nav-link " href="components-nav-tabs.html">Navs & Tabs</a></li>
+            <li><a class="nav-link " href="components-offcanvas.html">Offcanvas</a></li>
+            <li><a class="nav-link " href="components-pagination.html">Pagination</a></li>
+            <li><a class="nav-link " href="components-popovers.html">Popovers</a></li>
+            <li><a class="nav-link " href="components-progress.html">Progress</a></li>
+            <li><a class="nav-link " href="components-spinners.html">Spinners</a></li>
+            <li><a class="nav-link " href="components-toasts.html">Toasts</a></li>
+            <li><a class="nav-link " href="components-tooltips.html">Tooltips</a></li>
+          </ul>
+        </li>
+
+        <!-- Widgets -->
+        <li class="nav-item has-submenu open">
+          <a class="nav-link" href="#" aria-expanded="true">
+            <span class="nav-icon"><i class="ph ph-stack"></i></span>
+            <span class="nav-text">Widgets</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu show">
+            <li><a class="nav-link active" href="widgets-cards.html">Cards</a></li>
+            <li><a class="nav-link " href="widgets-banners.html">Banners</a></li>
+            <li><a class="nav-link " href="widgets-charts.html">Charts</a></li>
+            <li><a class="nav-link " href="widgets-apps.html">Apps</a></li>
+            <li><a class="nav-link " href="widgets-data.html">Data</a></li>
+          </ul>
+        </li>
+
+        <!-- Forms Section -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-list-checks"></i></span>
+            <span class="nav-text">Forms</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="forms-elements.html">Form Elements</a></li>
+            <li><a class="nav-link " href="forms-layouts.html">Form Layouts</a></li>
+            <li><a class="nav-link " href="forms-validation.html">Validation</a></li>
+            <li><a class="nav-link " href="forms-wizard.html">Wizard</a></li>
+            <li><a class="nav-link " href="forms-editors.html">Rich Editors</a></li>
+            <li><a class="nav-link " href="forms-pickers.html">Date/Time Pickers</a></li>
+            <li><a class="nav-link " href="forms-select.html">Advanced Select</a></li>
+            <li><a class="nav-link " href="forms-upload.html">File Upload</a></li>
+          </ul>
+        </li>
+
+        <!-- Tables Section -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-table"></i></span>
+            <span class="nav-text">Tables</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="tables-basic.html">Basic Tables</a></li>
+            <li><a class="nav-link " href="tables-datatables.html">DataTables</a></li>
+            <li><a class="nav-link " href="tables-responsive.html">Responsive Tables</a></li>
+          </ul>
+        </li>
+
+        <!-- Charts Section -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-chart-bar"></i></span>
+            <span class="nav-text">Charts</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="charts-apexcharts.html">ApexCharts</a></li>
+            <li><a class="nav-link " href="charts-chartjs.html">Chart.js</a></li>
+            <li><a class="nav-link " href="charts-echarts.html">ECharts</a></li>
+          </ul>
+        </li>
+
+        <!-- Icons Section -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-diamond"></i></span>
+            <span class="nav-text">Icons</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="icons-bootstrap.html">Bootstrap Icons</a></li>
+            <li><a class="nav-link " href="icons-remixicon.html">Remix Icons</a></li>
+            <li><a class="nav-link " href="icons-fontawesome.html">Font Awesome</a></li>
+            <li><a class="nav-link " href="icons-phosphor.html">Phosphor Icons</a></li>
+            <li><a class="nav-link " href="icons-lucide.html">Lucide Icons</a></li>
+          </ul>
+        </li>
+
+        <!-- Pages Section -->
+        <li class="nav-heading"><span>Pages</span></li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="contact.html">
+            <span class="nav-icon"><i class="ph ph-envelope-simple"></i></span>
+            <span class="nav-text">Contact</span>
+          </a>
+        </li>
+
+        <!-- Invoices -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-receipt"></i></span>
+            <span class="nav-text">Invoices</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="invoice-list.html">Invoice List</a></li>
+            <li><a class="nav-link " href="invoice.html">Invoice View</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="pricing.html">
+            <span class="nav-icon"><i class="ph ph-tag"></i></span>
+            <span class="nav-text">Pricing</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="faq.html">
+            <span class="nav-icon"><i class="ph ph-question"></i></span>
+            <span class="nav-text">FAQ</span>
+          </a>
+        </li>
+
+        <!-- Error Pages -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-warning"></i></span>
+            <span class="nav-text">Error Pages</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="error-404.html">404 Not Found</a></li>
+            <li><a class="nav-link " href="error-403.html">403 Forbidden</a></li>
+            <li><a class="nav-link " href="error-500.html">500 Server Error</a></li>
+            <li><a class="nav-link " href="error-maintenance.html">Maintenance</a></li>
+            <li><a class="nav-link " href="error-coming-soon.html">Coming Soon</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="timeline.html">
+            <span class="nav-icon"><i class="ph ph-clock-counter-clockwise"></i></span>
+            <span class="nav-text">Timeline</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="search-results.html">
+            <span class="nav-icon"><i class="ph ph-magnifying-glass"></i></span>
+            <span class="nav-text">Search Results</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="blank.html">
+            <span class="nav-icon"><i class="ph ph-file"></i></span>
+            <span class="nav-text">Blank Page</span>
+          </a>
+        </li>
+
+      </ul>
+    </nav>
+
+    <!-- Sidebar Footer - User Card -->
+    <div class="sidebar-footer">
+      <div class="sidebar-user">
+        <a href="profile.html" class="sidebar-user-link">
+          <span class="sidebar-user-avatar">
+            <img src="assets/img/profile-img.webp" alt="User">
+            <span class="sidebar-user-status"></span>
+          </span>
+          <span class="sidebar-user-info">
+            <span class="sidebar-user-name">John Doe</span>
+            <span class="sidebar-user-role">Administrator</span>
+          </span>
+        </a>
+        <div class="sidebar-user-actions">
+          <a href="settings.html" class="sidebar-user-action" title="Settings">
+            <i class="ph ph-gear"></i>
+          </a>
+          <a href="auth-login.html" class="sidebar-user-action sidebar-user-logout" title="Logout">
+            <i class="ph ph-sign-out"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Sidebar Overlay (Mobile) -->
+  <div class="sidebar-overlay"></div>
+
+  <!-- Main Content -->
+  <main class="main">
+    <div class="main-content page-widgets-cards">
+      <!-- Page Header -->
+      <div class="page-header">
+        <h1 class="page-title">Card Widgets</h1>
+        <nav class="breadcrumb">
+          <a href="index.html" class="breadcrumb-item">Home</a>
+          <a href="#" class="breadcrumb-item">Widgets</a>
+          <span class="breadcrumb-item active">Cards</span>
+        </nav>
+      </div>
+
+      <!-- Blog/Article Cards -->
+      <section class="section">
+        <h5 class="section-title mb-3">Blog / Article Cards</h5>
+        <div class="row g-4">
+          <!-- Blog Card 1 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card widget-blog-card">
+              <div class="widget-blog-image">
+                <img src="assets/img/blog/blog-1.webp" alt="Article">
+                <span class="widget-blog-read-time">4 min Read</span>
+              </div>
+              <div class="card-body">
+                <span class="badge badge-soft-primary mb-2">Design</span>
+                <h6 class="widget-blog-title">How minimalist design principles are reshaping modern interfaces</h6>
+                <div class="widget-blog-meta">
+                  <span><i class="ph ph-eye"></i> 7,842</span>
+                  <span><i class="ph ph-chat-circle"></i> 18</span>
+                  <span class="ms-auto"><i class="ph ph-calendar-blank"></i> Jan 15</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Blog Card 2 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card widget-blog-card">
+              <div class="widget-blog-image">
+                <img src="assets/img/blog/blog-2.webp" alt="Article">
+                <span class="widget-blog-read-time">6 min Read</span>
+              </div>
+              <div class="card-body">
+                <span class="badge badge-soft-info mb-2">Technology</span>
+                <h6 class="widget-blog-title">Machine learning models now predict customer behavior with 94% accuracy</h6>
+                <div class="widget-blog-meta">
+                  <span><i class="ph ph-eye"></i> 5,390</span>
+                  <span><i class="ph ph-chat-circle"></i> 27</span>
+                  <span class="ms-auto"><i class="ph ph-calendar-blank"></i> Jan 12</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Blog Card 3 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card widget-blog-card">
+              <div class="widget-blog-image">
+                <img src="assets/img/blog/blog-3.webp" alt="Article">
+                <span class="widget-blog-read-time">3 min Read</span>
+              </div>
+              <div class="card-body">
+                <span class="badge badge-soft-danger mb-2">Productivity</span>
+                <h6 class="widget-blog-title">Remote teams report 40% higher satisfaction with async communication tools</h6>
+                <div class="widget-blog-meta">
+                  <span><i class="ph ph-eye"></i> 11,204</span>
+                  <span><i class="ph ph-chat-circle"></i> 45</span>
+                  <span class="ms-auto"><i class="ph ph-calendar-blank"></i> Jan 10</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Product Cards -->
+      <section class="section">
+        <h5 class="section-title mb-3">Product Cards</h5>
+        <div class="row g-4">
+          <!-- Product Card 1 -->
+          <div class="col-lg-3 col-md-6">
+            <div class="card widget-product-card">
+              <div class="widget-product-image">
+                <img src="assets/img/products/product-1.webp" alt="Product">
+                <button class="widget-product-wishlist"><i class="ph ph-heart"></i></button>
+              </div>
+              <div class="card-body">
+                <h6 class="widget-product-title">Nova Wireless Pro</h6>
+                <div class="widget-product-price">
+                  <span class="current-price">$179</span>
+                  <span class="original-price">$249</span>
+                </div>
+                <div class="widget-product-rating">
+                  <i class="ph-duotone ph-star"></i>
+                  <i class="ph-duotone ph-star"></i>
+                  <i class="ph-duotone ph-star"></i>
+                  <i class="ph-duotone ph-star"></i>
+                  <i class="ph ph-star-half"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Card 2 -->
+          <div class="col-lg-3 col-md-6">
+            <div class="card widget-product-card">
+              <div class="widget-product-image">
+                <img src="assets/img/products/product-2.webp" alt="Product">
+                <button class="widget-product-wishlist active"><i class="ph-duotone ph-heart"></i></button>
+              </div>
+              <div class="card-body">
+                <h6 class="widget-product-title">UltraBook X15</h6>
+                <div class="widget-product-price">
+                  <span class="current-price">$1,299</span>
+                  <span class="original-price">$1,499</span>
+                </div>
+                <div class="widget-product-rating">
+                  <i class="ph-duotone ph-star"></i>
+                  <i class="ph-duotone ph-star"></i>
+                  <i class="ph-duotone ph-star"></i>
+                  <i class="ph-duotone ph-star"></i>
+                  <i class="ph-duotone ph-star"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Card 3 -->
+          <div class="col-lg-3 col-md-6">
+            <div class="card widget-product-card">
+              <div class="widget-product-image">
+                <img src="assets/img/products/product-3.webp" alt="Product">
+                <button class="widget-product-wishlist"><i class="ph ph-heart"></i></button>
+              </div>
+              <div class="card-body">
+                <h6 class="widget-product-title">Silk Blend Jacket</h6>
+                <div class="widget-product-price">
+                  <span class="current-price">$89</span>
+                  <span class="original-price">$129</span>
+                </div>
+                <div class="widget-product-rating">
+                  <i class="ph-duotone ph-star"></i>
+                  <i class="ph-duotone ph-star"></i>
+                  <i class="ph-duotone ph-star"></i>
+                  <i class="ph ph-star"></i>
+                  <i class="ph ph-star"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Card 4 -->
+          <div class="col-lg-3 col-md-6">
+            <div class="card widget-product-card">
+              <div class="widget-product-image">
+                <img src="assets/img/products/product-4.webp" alt="Product">
+                <button class="widget-product-wishlist"><i class="ph ph-heart"></i></button>
+              </div>
+              <div class="card-body">
+                <h6 class="widget-product-title">Gaming Bundle Pro</h6>
+                <div class="widget-product-price">
+                  <span class="current-price">$459</span>
+                  <span class="original-price">$599</span>
+                </div>
+                <div class="widget-product-rating">
+                  <i class="ph-duotone ph-star"></i>
+                  <i class="ph-duotone ph-star"></i>
+                  <i class="ph-duotone ph-star"></i>
+                  <i class="ph-duotone ph-star"></i>
+                  <i class="ph ph-star"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Music Player Cards -->
+      <section class="section">
+        <h5 class="section-title mb-3">Music Player Cards</h5>
+        <div class="row g-4">
+          <!-- Music Card 1 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card widget-music-card">
+              <div class="widget-music-content">
+                <div class="widget-music-info">
+                  <h6 class="widget-music-title">Midnight Drive</h6>
+                  <p class="widget-music-artist">The Neon Collective</p>
+                  <div class="widget-music-controls">
+                    <button class="widget-music-btn"><i class="ph-duotone ph-skip-back"></i></button>
+                    <button class="widget-music-btn play"><i class="ph-duotone ph-play"></i></button>
+                    <button class="widget-music-btn"><i class="ph-duotone ph-skip-forward"></i></button>
+                  </div>
+                </div>
+                <div class="widget-music-image">
+                  <img src="assets/img/albums/album-1.webp" alt="Album">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Music Card 2 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card widget-music-card">
+              <div class="widget-music-content">
+                <div class="widget-music-info">
+                  <h6 class="widget-music-title">Ocean Waves</h6>
+                  <p class="widget-music-artist">Aurora Dreams</p>
+                  <div class="widget-music-controls">
+                    <button class="widget-music-btn"><i class="ph-duotone ph-skip-back"></i></button>
+                    <button class="widget-music-btn play"><i class="ph-duotone ph-play"></i></button>
+                    <button class="widget-music-btn"><i class="ph-duotone ph-skip-forward"></i></button>
+                  </div>
+                </div>
+                <div class="widget-music-image">
+                  <img src="assets/img/albums/album-2.webp" alt="Album">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Music Card 3 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card widget-music-card">
+              <div class="widget-music-content">
+                <div class="widget-music-info">
+                  <h6 class="widget-music-title">City Lights</h6>
+                  <p class="widget-music-artist">Skyline Echo</p>
+                  <div class="widget-music-controls">
+                    <button class="widget-music-btn"><i class="ph-duotone ph-skip-back"></i></button>
+                    <button class="widget-music-btn play"><i class="ph-duotone ph-play"></i></button>
+                    <button class="widget-music-btn"><i class="ph-duotone ph-skip-forward"></i></button>
+                  </div>
+                </div>
+                <div class="widget-music-image">
+                  <img src="assets/img/albums/album-3.webp" alt="Album">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- User Profile Cards -->
+      <section class="section">
+        <h5 class="section-title mb-3">User Profile Cards (Horizontal)</h5>
+        <div class="row g-4">
+          <!-- User Card 1 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card widget-user-card-horizontal">
+              <div class="card-body">
+                <img src="assets/img/avatars/avatar-1.webp" alt="User" class="widget-user-avatar">
+                <div class="widget-user-info">
+                  <h6 class="widget-user-name">Elena Rodriguez</h6>
+                  <p class="widget-user-location"><i class="ph ph-map-pin"></i> Barcelona, Spain</p>
+                </div>
+                <button class="btn btn-primary btn-sm">Follow</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- User Card 2 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card widget-user-card-horizontal">
+              <div class="card-body">
+                <img src="assets/img/avatars/avatar-2.webp" alt="User" class="widget-user-avatar">
+                <div class="widget-user-info">
+                  <h6 class="widget-user-name">Marcus Chen</h6>
+                  <p class="widget-user-location"><i class="ph ph-map-pin"></i> Vancouver, Canada</p>
+                </div>
+                <button class="btn btn-primary btn-sm">Follow</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- User Card 3 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card widget-user-card-horizontal">
+              <div class="card-body">
+                <img src="assets/img/avatars/avatar-3.webp" alt="User" class="widget-user-avatar">
+                <div class="widget-user-info">
+                  <h6 class="widget-user-name">Priya Sharma</h6>
+                  <p class="widget-user-location"><i class="ph ph-map-pin"></i> Mumbai, India</p>
+                </div>
+                <button class="btn btn-primary btn-sm">Follow</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Friend Suggestion Cards -->
+      <section class="section">
+        <h5 class="section-title mb-3">Friend Suggestion Cards</h5>
+        <div class="row g-4">
+          <!-- Friend Card 1 -->
+          <div class="col-lg-3 col-md-6">
+            <div class="card widget-friend-card">
+              <div class="card-body text-center">
+                <img src="assets/img/avatars/avatar-4.webp" alt="User" class="widget-friend-avatar">
+                <h6 class="widget-friend-name">James Wilson</h6>
+                <div class="widget-friend-mutual">
+                  <div class="widget-friend-mutual-avatars">
+                    <img src="assets/img/avatars/avatar-5.webp" alt="Mutual">
+                    <img src="assets/img/avatars/avatar-6.webp" alt="Mutual">
+                    <img src="assets/img/avatars/avatar-7.webp" alt="Mutual">
+                  </div>
+                  <span>5 mutual connections</span>
+                </div>
+                <div class="widget-friend-actions">
+                  <button class="btn btn-primary btn-sm w-100">Connect</button>
+                  <button class="btn btn-outline-danger btn-sm w-100">Dismiss</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Friend Card 2 -->
+          <div class="col-lg-3 col-md-6">
+            <div class="card widget-friend-card">
+              <div class="card-body text-center">
+                <img src="assets/img/avatars/avatar-5.webp" alt="User" class="widget-friend-avatar">
+                <h6 class="widget-friend-name">Sophie Laurent</h6>
+                <div class="widget-friend-mutual">
+                  <div class="widget-friend-mutual-avatars">
+                    <img src="assets/img/avatars/avatar-1.webp" alt="Mutual">
+                    <img src="assets/img/avatars/avatar-2.webp" alt="Mutual">
+                    <img src="assets/img/avatars/avatar-3.webp" alt="Mutual">
+                  </div>
+                  <span>8 mutual connections</span>
+                </div>
+                <div class="widget-friend-actions">
+                  <button class="btn btn-primary btn-sm w-100">Connect</button>
+                  <button class="btn btn-outline-danger btn-sm w-100">Dismiss</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Friend Card 3 -->
+          <div class="col-lg-3 col-md-6">
+            <div class="card widget-friend-card">
+              <div class="card-body text-center">
+                <img src="assets/img/avatars/avatar-6.webp" alt="User" class="widget-friend-avatar">
+                <h6 class="widget-friend-name">Kenji Tanaka</h6>
+                <div class="widget-friend-mutual">
+                  <div class="widget-friend-mutual-avatars">
+                    <img src="assets/img/avatars/avatar-7.webp" alt="Mutual">
+                    <img src="assets/img/avatars/avatar-8.webp" alt="Mutual">
+                    <img src="assets/img/avatars/avatar-9.webp" alt="Mutual">
+                  </div>
+                  <span>2 mutual connections</span>
+                </div>
+                <div class="widget-friend-actions">
+                  <button class="btn btn-primary btn-sm w-100">Connect</button>
+                  <button class="btn btn-outline-danger btn-sm w-100">Dismiss</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Friend Card 4 -->
+          <div class="col-lg-3 col-md-6">
+            <div class="card widget-friend-card">
+              <div class="card-body text-center">
+                <img src="assets/img/avatars/avatar-7.webp" alt="User" class="widget-friend-avatar">
+                <h6 class="widget-friend-name">Nina Petrova</h6>
+                <div class="widget-friend-mutual">
+                  <div class="widget-friend-mutual-avatars">
+                    <img src="assets/img/avatars/avatar-1.webp" alt="Mutual">
+                    <img src="assets/img/avatars/avatar-4.webp" alt="Mutual">
+                    <img src="assets/img/avatars/avatar-5.webp" alt="Mutual">
+                  </div>
+                  <span>12 mutual connections</span>
+                </div>
+                <div class="widget-friend-actions">
+                  <button class="btn btn-primary btn-sm w-100">Connect</button>
+                  <button class="btn btn-outline-danger btn-sm w-100">Dismiss</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Profile Info Cards -->
+      <section class="section">
+        <h5 class="section-title mb-3">Profile Info Cards</h5>
+        <div class="row g-4">
+          <!-- Profile Card 1 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card widget-profile-card">
+              <div class="card-body text-center">
+                <img src="assets/img/avatars/avatar-1.webp" alt="User" class="widget-profile-avatar">
+                <h6 class="widget-profile-name">Elena Rodriguez</h6>
+                <p class="widget-profile-role">UX Design Lead</p>
+                <div class="widget-profile-social">
+                  <a href="#" class="widget-social-link facebook"><i class="ph ph-facebook-logo"></i></a>
+                  <a href="#" class="widget-social-link instagram"><i class="ph ph-instagram-logo"></i></a>
+                  <a href="#" class="widget-social-link github"><i class="ph ph-github-logo"></i></a>
+                  <a href="#" class="widget-social-link twitter"><i class="ph ph-x-logo"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Profile Card 2 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card widget-profile-card">
+              <div class="card-body text-center">
+                <img src="assets/img/avatars/avatar-2.webp" alt="User" class="widget-profile-avatar">
+                <h6 class="widget-profile-name">Marcus Chen</h6>
+                <p class="widget-profile-role">Data Architect</p>
+                <div class="widget-profile-social">
+                  <a href="#" class="widget-social-link facebook"><i class="ph ph-facebook-logo"></i></a>
+                  <a href="#" class="widget-social-link instagram"><i class="ph ph-instagram-logo"></i></a>
+                  <a href="#" class="widget-social-link github"><i class="ph ph-github-logo"></i></a>
+                  <a href="#" class="widget-social-link twitter"><i class="ph ph-x-logo"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Profile Card 3 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card widget-profile-card">
+              <div class="card-body text-center">
+                <img src="assets/img/avatars/avatar-3.webp" alt="User" class="widget-profile-avatar">
+                <h6 class="widget-profile-name">Priya Sharma</h6>
+                <p class="widget-profile-role">Product Manager</p>
+                <div class="widget-profile-social">
+                  <a href="#" class="widget-social-link facebook"><i class="ph ph-facebook-logo"></i></a>
+                  <a href="#" class="widget-social-link instagram"><i class="ph ph-instagram-logo"></i></a>
+                  <a href="#" class="widget-social-link github"><i class="ph ph-github-logo"></i></a>
+                  <a href="#" class="widget-social-link twitter"><i class="ph ph-x-logo"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Settings & Gift Cards -->
+      <section class="section">
+        <h5 class="section-title mb-3">Settings & Gift Cards</h5>
+        <div class="row g-4">
+          <!-- Settings Card -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card">
+              <div class="card-body">
+                <h6 class="card-title mb-3">Settings</h6>
+                <div class="widget-settings-item">
+                  <div class="widget-settings-icon primary">
+                    <i class="ph ph-speaker-high"></i>
+                  </div>
+                  <div class="widget-settings-info">
+                    <span class="widget-settings-label">Sound</span>
+                    <input type="range" class="form-range widget-settings-slider" min="0" max="100" value="72">
+                  </div>
+                  <span class="widget-settings-value">72%</span>
+                </div>
+                <div class="widget-settings-item">
+                  <div class="widget-settings-icon info">
+                    <i class="ph ph-chat-circle"></i>
+                  </div>
+                  <div class="widget-settings-info">
+                    <span class="widget-settings-label">Notifications</span>
+                    <span class="widget-settings-desc">Enable desktop alerts</span>
+                  </div>
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="chatSwitch">
+                  </div>
+                </div>
+                <div class="widget-settings-actions">
+                  <button class="btn btn-outline-danger btn-sm">Reset</button>
+                  <button class="btn btn-primary btn-sm">Apply</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Gift Card 1 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card widget-gift-card">
+              <div class="card-body">
+                <div class="widget-gift-header">
+                  <h6 class="widget-gift-name">James Wilson</h6>
+                  <button class="widget-gift-icon"><i class="ph ph-gift"></i></button>
+                </div>
+                <div class="widget-gift-image" style="background-color: #fef3c7;">
+                  <img src="assets/img/books/book-1.webp" alt="Book">
+                </div>
+                <button class="btn btn-primary w-100">Send Gift ($35.00)</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Gift Card 2 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card widget-gift-card">
+              <div class="card-body">
+                <div class="widget-gift-header">
+                  <h6 class="widget-gift-name">Sophie Laurent</h6>
+                  <button class="widget-gift-icon"><i class="ph ph-gift"></i></button>
+                </div>
+                <div class="widget-gift-image" style="background-color: #e0f2fe;">
+                  <img src="assets/img/books/book-2.webp" alt="Book">
+                </div>
+                <button class="btn btn-primary w-100">Send Gift ($42.00)</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Payment & Transaction Cards -->
+      <section class="section">
+        <h5 class="section-title mb-3">Payment & Transaction Cards</h5>
+        <div class="row g-4">
+          <!-- Payment Methods Card -->
+          <div class="col-lg-6">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="card-title">Recent Transactions</h5>
+                <div class="card-actions">
+                  <span class="text-muted small">Income Sources</span>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="widget-payment-item">
+                  <div class="widget-payment-icon paypal">
+                    <i class="ph ph-paypal-logo"></i>
+                  </div>
+                  <div class="widget-payment-info">
+                    <span class="widget-payment-title">Client Payment</span>
+                    <span class="widget-payment-subtitle">Project milestone</span>
+                  </div>
+                  <span class="widget-payment-amount positive">+$4,850</span>
+                </div>
+                <div class="widget-payment-item">
+                  <div class="widget-payment-icon wallet">
+                    <i class="ph ph-wallet"></i>
+                  </div>
+                  <div class="widget-payment-info">
+                    <span class="widget-payment-title">Wallet Transfer</span>
+                    <span class="widget-payment-subtitle">Internal funds</span>
+                  </div>
+                  <span class="widget-payment-amount positive">+$720</span>
+                </div>
+                <div class="widget-payment-item">
+                  <div class="widget-payment-icon credit">
+                    <i class="ph ph-credit-card"></i>
+                  </div>
+                  <div class="widget-payment-info">
+                    <span class="widget-payment-title">Subscription Revenue</span>
+                    <span class="widget-payment-subtitle">Monthly recurring</span>
+                  </div>
+                  <span class="widget-payment-amount positive">+$3,190</span>
+                </div>
+                <div class="widget-payment-item">
+                  <div class="widget-payment-icon refund">
+                    <i class="ph ph-arrow-counter-clockwise"></i>
+                  </div>
+                  <div class="widget-payment-info">
+                    <span class="widget-payment-title">Service Fee</span>
+                    <span class="widget-payment-subtitle">Platform charges</span>
+                  </div>
+                  <span class="widget-payment-amount negative">-$58</span>
+                </div>
+                <button class="btn btn-primary w-100 mt-3">View All Transactions</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Upcoming Activity Card -->
+          <div class="col-lg-6">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="card-title">Upcoming Activity</h5>
+                <div class="card-actions">
+                  <span class="text-muted small">This Week</span>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="widget-activity-item-alt">
+                  <div class="widget-activity-icon-alt primary">
+                    <i class="ph ph-map-pin"></i>
+                  </div>
+                  <div class="widget-activity-info-alt">
+                    <span class="widget-activity-title-alt">Team offsite in Austin</span>
+                    <span class="widget-activity-status-alt">confirmed</span>
+                  </div>
+                  <span class="widget-activity-time-alt">Tomorrow</span>
+                </div>
+                <div class="widget-activity-item-alt">
+                  <div class="widget-activity-icon-alt info">
+                    <i class="ph ph-archive"></i>
+                  </div>
+                  <div class="widget-activity-info-alt">
+                    <span class="widget-activity-title-alt">Quarterly backup</span>
+                    <span class="widget-activity-status-alt">scheduled</span>
+                  </div>
+                  <span class="widget-activity-time-alt">Wed</span>
+                </div>
+                <div class="widget-activity-item-alt">
+                  <div class="widget-activity-icon-alt warning">
+                    <i class="ph ph-user"></i>
+                  </div>
+                  <div class="widget-activity-info-alt">
+                    <span class="widget-activity-title-alt">Investor presentation</span>
+                    <span class="widget-activity-status-alt">preparing</span>
+                  </div>
+                  <span class="widget-activity-time-alt">Thu</span>
+                </div>
+                <div class="widget-activity-item-alt">
+                  <div class="widget-activity-icon-alt success">
+                    <i class="ph ph-users"></i>
+                  </div>
+                  <div class="widget-activity-info-alt">
+                    <span class="widget-activity-title-alt">Product launch review</span>
+                    <span class="widget-activity-status-alt">on track</span>
+                  </div>
+                  <span class="widget-activity-time-alt">Fri</span>
+                </div>
+                <div class="widget-activity-item-alt">
+                  <div class="widget-activity-icon-alt muted">
+                    <i class="ph ph-envelope"></i>
+                  </div>
+                  <div class="widget-activity-info-alt">
+                    <span class="widget-activity-title-alt">Send contracts to legal</span>
+                    <span class="widget-activity-status-alt">completed</span>
+                  </div>
+                  <span class="widget-activity-time-alt">Done</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Timeline Transaction Card -->
+      <section class="section">
+        <h5 class="section-title mb-3">Timeline Transaction Card</h5>
+        <div class="row g-4">
+          <div class="col-lg-4">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="card-title">Recent Transactions</h5>
+              </div>
+              <div class="card-body">
+                <div class="widget-timeline">
+                  <div class="widget-timeline-item">
+                    <span class="widget-timeline-time">08:45</span>
+                    <span class="widget-timeline-dot primary"></span>
+                    <div class="widget-timeline-content">
+                      <p>Invoice payment from Acme Corp for $2,340.00</p>
+                    </div>
+                  </div>
+                  <div class="widget-timeline-item">
+                    <span class="widget-timeline-time">10:15</span>
+                    <span class="widget-timeline-dot success"></span>
+                    <div class="widget-timeline-content">
+                      <p>New order confirmed <a href="#">#INV-7821</a></p>
+                    </div>
+                  </div>
+                  <div class="widget-timeline-item">
+                    <span class="widget-timeline-time">11:30</span>
+                    <span class="widget-timeline-dot warning"></span>
+                    <div class="widget-timeline-content">
+                      <p>Vendor payment of $890.50 to CloudHost Inc</p>
+                    </div>
+                  </div>
+                  <div class="widget-timeline-item">
+                    <span class="widget-timeline-time">14:00</span>
+                    <span class="widget-timeline-dot info"></span>
+                    <div class="widget-timeline-content">
+                      <p>Subscription renewal <a href="#">#SUB-4523</a></p>
+                    </div>
+                  </div>
+                  <div class="widget-timeline-item">
+                    <span class="widget-timeline-time">15:20</span>
+                    <span class="widget-timeline-dot danger"></span>
+                    <div class="widget-timeline-content">
+                      <p>Budget review meeting</p>
+                    </div>
+                  </div>
+                  <div class="widget-timeline-item">
+                    <span class="widget-timeline-time">17:00</span>
+                    <span class="widget-timeline-dot primary"></span>
+                    <div class="widget-timeline-content">
+                      <p>Wire transfer from TechStart Ltd for $5,120.00</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Popular Products Card -->
+          <div class="col-lg-4">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="card-title">Popular Products</h5>
+                <div class="card-actions">
+                  <span class="text-muted small">12k Monthly Views</span>
+                </div>
+              </div>
+              <div class="card-body p-0">
+                <table class="table widget-products-table mb-0">
+                  <thead>
+                    <tr>
+                      <th>Products</th>
+                      <th>Payment</th>
+                      <th>Status</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div class="widget-product-cell">
+                          <img src="assets/img/products/product-thumb-1.webp" alt="Product" class="widget-product-thumb">
+                          <div>
+                            <div class="widget-product-name-sm">ProMax Ultra 256GB Midnight Blue Edition</div>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="widget-product-payment">
+                          <strong>$320</strong> / 799
+                          <span class="widget-payment-label">Deposit paid</span>
+                        </div>
+                      </td>
+                      <td><span class="badge badge-soft-success">Shipped</span></td>
+                      <td><button class="btn btn-sm btn-light"><i class="ph ph-dots-three-vertical"></i></button></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="widget-product-cell">
+                          <img src="assets/img/products/product-thumb-2.webp" alt="Product" class="widget-product-thumb">
+                          <div>
+                            <div class="widget-product-name-sm">Studio Notebook 14 M2 Pro 512GB Silver</div>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="widget-product-payment">
+                          <strong>$1,499</strong> / 1499
+                          <span class="widget-payment-label">Complete</span>
+                        </div>
+                      </td>
+                      <td><span class="badge badge-soft-success">Delivered</span></td>
+                      <td><button class="btn btn-sm btn-light"><i class="ph ph-dots-three-vertical"></i></button></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="widget-product-cell">
+                          <img src="assets/img/products/product-thumb-3.webp" alt="Product" class="widget-product-thumb">
+                          <div>
+                            <div class="widget-product-name-sm">Elite Controller Wireless Edition White</div>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="widget-product-payment">
+                          <strong>$0</strong> / 189
+                          <span class="widget-payment-label">Refunded</span>
+                        </div>
+                      </td>
+                      <td><span class="badge badge-soft-danger">Returned</span></td>
+                      <td><button class="btn btn-sm btn-light"><i class="ph ph-dots-three-vertical"></i></button></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="widget-product-cell">
+                          <img src="assets/img/products/product-thumb-4.webp" alt="Product" class="widget-product-thumb">
+                          <div>
+                            <div class="widget-product-name-sm">ErgoFlex Executive Chair Lumbar Support</div>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="widget-product-payment">
+                          <strong>$275</strong> / 549
+                          <span class="widget-payment-label">Installment</span>
+                        </div>
+                      </td>
+                      <td><span class="badge badge-soft-success">Processing</span></td>
+                      <td><button class="btn btn-sm btn-light"><i class="ph ph-dots-three-vertical"></i></button></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- Upcoming Schedules Card -->
+          <div class="col-lg-4">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="card-title">Upcoming Schedules</h5>
+                <div class="card-actions">
+                  <span class="text-muted small">Logistics tracking</span>
+                  <button class="btn btn-sm btn-light ms-2"><i class="ph ph-dots-three-vertical"></i></button>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="widget-schedule-tabs">
+                  <button class="widget-schedule-tab active">Delivered</button>
+                  <button class="widget-schedule-tab">In Transit</button>
+                </div>
+                <div class="widget-schedule-list">
+                  <div class="widget-schedule-item">
+                    <div class="widget-schedule-icon primary">
+                      <i class="ph ph-truck"></i>
+                    </div>
+                    <div class="widget-schedule-info">
+                      <span class="widget-schedule-title">Express Cargo</span>
+                      <span class="widget-schedule-subtitle">#TRK-892341</span>
+                    </div>
+                    <span class="badge badge-soft-success">Arrived</span>
+                  </div>
+                  <div class="widget-schedule-item">
+                    <span class="widget-schedule-dot info"></span>
+                    <div class="widget-schedule-info">
+                      <span class="widget-schedule-title">Rotterdam Port</span>
+                      <span class="widget-schedule-subtitle">Netherlands</span>
+                    </div>
+                  </div>
+                  <div class="widget-schedule-item">
+                    <span class="widget-schedule-dot warning"></span>
+                    <div class="widget-schedule-info">
+                      <span class="widget-schedule-title">Berlin Distribution</span>
+                      <span class="widget-schedule-subtitle">Germany</span>
+                    </div>
+                  </div>
+                  <div class="widget-schedule-item">
+                    <div class="widget-schedule-icon success">
+                      <i class="ph ph-bus"></i>
+                    </div>
+                    <div class="widget-schedule-info">
+                      <span class="widget-schedule-title">Ground Transport</span>
+                      <span class="widget-schedule-subtitle">#GND-458712</span>
+                    </div>
+                    <span class="badge badge-soft-info">Active</span>
+                  </div>
+                  <div class="widget-schedule-item">
+                    <span class="widget-schedule-dot primary"></span>
+                    <div class="widget-schedule-info">
+                      <span class="widget-schedule-title">Valencia Terminal</span>
+                      <span class="widget-schedule-subtitle">Spain</span>
+                    </div>
+                  </div>
+                  <div class="widget-schedule-item">
+                    <span class="widget-schedule-dot danger"></span>
+                    <div class="widget-schedule-info">
+                      <span class="widget-schedule-title">Customs Processing</span>
+                      <span class="widget-schedule-subtitle"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Review & Location Cards -->
+      <section class="section">
+        <h5 class="section-title mb-3">Review & Location Cards</h5>
+        <div class="row g-4">
+          <!-- Latest Reviews Card -->
+          <div class="col-lg-6">
+            <div class="card">
+              <div class="card-header">
+                <div>
+                  <h5 class="card-title">Latest Reviews</h5>
+                  <span class="text-muted small">Customer feedback from all channels</span>
+                </div>
+                <div class="card-actions d-flex gap-2">
+                  <div class="input-group input-group-sm" style="width: 150px;">
+                    <span class="input-group-text"><i class="ph ph-magnifying-glass"></i></span>
+                    <input type="text" class="form-control" placeholder="Search">
+                  </div>
+                  <button class="btn btn-sm btn-light"><i class="ph ph-dots-three-vertical"></i></button>
+                </div>
+              </div>
+              <div class="card-body p-0">
+                <table class="table widget-reviews-table mb-0">
+                  <thead>
+                    <tr>
+                      <th><input type="checkbox" class="form-check-input"></th>
+                      <th>Customer</th>
+                      <th>Reviews</th>
+                      <th>Time</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><input type="checkbox" class="form-check-input"></td>
+                      <td>
+                        <div class="widget-reviewer">
+                          <img src="assets/img/avatars/avatar-1.webp" alt="User" class="widget-reviewer-avatar">
+                          <div>
+                            <div class="widget-reviewer-name">Rachel Torres</div>
+                            <div class="widget-reviewer-email">rtorres@company.io</div>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <p class="widget-review-text">Excellent interface and smooth onboarding. The team was very helpful...</p>
+                      </td>
+                      <td><span class="widget-review-time">Jan 14</span></td>
+                      <td><button class="btn btn-sm btn-light"><i class="ph ph-dots-three-vertical"></i></button></td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" class="form-check-input"></td>
+                      <td>
+                        <div class="widget-reviewer">
+                          <img src="assets/img/avatars/avatar-2.webp" alt="User" class="widget-reviewer-avatar">
+                          <div>
+                            <div class="widget-reviewer-name">David Kim</div>
+                            <div class="widget-reviewer-email">dkim@startup.co</div>
+                            <div class="widget-reviewer-rating">
+                              <i class="ph-duotone ph-star"></i>
+                              <i class="ph-duotone ph-star"></i>
+                              <i class="ph-duotone ph-star"></i>
+                              <i class="ph-duotone ph-star"></i>
+                              <i class="ph ph-star"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <p class="widget-review-text">Great product overall. Performance improvements are noticeable after...</p>
+                      </td>
+                      <td><span class="widget-review-time">Jan 12</span></td>
+                      <td><button class="btn btn-sm btn-light"><i class="ph ph-dots-three-vertical"></i></button></td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" class="form-check-input"></td>
+                      <td>
+                        <div class="widget-reviewer">
+                          <img src="assets/img/avatars/avatar-3.webp" alt="User" class="widget-reviewer-avatar">
+                          <div>
+                            <div class="widget-reviewer-name">Maria Santos</div>
+                            <div class="widget-reviewer-email">msantos@design.net</div>
+                            <div class="widget-reviewer-rating">
+                              <i class="ph-duotone ph-star"></i>
+                              <i class="ph-duotone ph-star"></i>
+                              <i class="ph-duotone ph-star"></i>
+                              <i class="ph-duotone ph-star"></i>
+                              <i class="ph-duotone ph-star"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <p class="widget-review-text">Absolutely love the new features. Customer support resolved my issue...</p>
+                      </td>
+                      <td><span class="widget-review-time">Jan 10</span></td>
+                      <td><button class="btn btn-sm btn-light"><i class="ph ph-dots-three-vertical"></i></button></td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" class="form-check-input"></td>
+                      <td>
+                        <div class="widget-reviewer">
+                          <img src="assets/img/avatars/avatar-4.webp" alt="User" class="widget-reviewer-avatar">
+                          <div>
+                            <div class="widget-reviewer-name">Alex Bennett</div>
+                            <div class="widget-reviewer-email">abennett@agency.com</div>
+                            <div class="widget-reviewer-rating">
+                              <i class="ph-duotone ph-star"></i>
+                              <i class="ph-duotone ph-star"></i>
+                              <i class="ph-duotone ph-star"></i>
+                              <i class="ph ph-star"></i>
+                              <i class="ph ph-star"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <p class="widget-review-text">Good value for the price. Would appreciate more customization options...</p>
+                      </td>
+                      <td><span class="widget-review-time">Jan 8</span></td>
+                      <td><button class="btn btn-sm btn-light"><i class="ph ph-dots-three-vertical"></i></button></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="widget-table-footer">
+                  <span class="text-muted small">1-4 of 47</span>
+                  <button class="btn btn-primary btn-sm">View All Reviews</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sales from Locations Card -->
+          <div class="col-lg-6">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="card-title">Sales by Region</h5>
+                <div class="card-actions">
+                  <span class="text-muted small">Europe</span>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="widget-map-placeholder">
+                  <i class="ph ph-map-pin"></i>
+                  <span>Map Placeholder</span>
+                </div>
+                <div class="widget-location-stats">
+                  <div class="widget-location-item">
+                    <span class="widget-location-code">UK</span>
+                    <div class="widget-location-bar">
+                      <div class="widget-location-fill" style="width: 34%; background: var(--accent-color);"></div>
+                    </div>
+                    <span class="widget-location-percent">34%</span>
+                  </div>
+                  <div class="widget-location-item">
+                    <span class="widget-location-code">DE</span>
+                    <div class="widget-location-bar">
+                      <div class="widget-location-fill" style="width: 26%; background: var(--info-color);"></div>
+                    </div>
+                    <span class="widget-location-percent">26%</span>
+                  </div>
+                  <div class="widget-location-item">
+                    <span class="widget-location-code">FR</span>
+                    <div class="widget-location-bar">
+                      <div class="widget-location-fill" style="width: 22%; background: var(--warning-color);"></div>
+                    </div>
+                    <span class="widget-location-percent">22%</span>
+                  </div>
+                  <div class="widget-location-item">
+                    <span class="widget-location-code">ES</span>
+                    <div class="widget-location-bar">
+                      <div class="widget-location-fill" style="width: 18%; background: var(--danger-color);"></div>
+                    </div>
+                    <span class="widget-location-percent">18%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Credit Card & Stats Cards -->
+      <section class="section">
+        <h5 class="section-title mb-3">Credit Card & Stat Cards</h5>
+        <div class="row g-4">
+          <!-- Payment Methods Card -->
+          <div class="col-lg-6">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="card-title">Payment Methods</h5>
+                <div class="card-actions">
+                  <button class="btn btn-sm btn-light"><i class="ph ph-dots-three-vertical"></i></button>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="widget-credit-cards">
+                  <div class="widget-credit-card visa">
+                    <div class="widget-credit-card-number">**** 4521</div>
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='16' viewBox='0 0 50 16'%3E%3Ctext x='0' y='12' fill='white' font-family='Arial' font-size='12' font-weight='bold'%3EVISA%3C/text%3E%3C/svg%3E" alt="Visa" class="widget-credit-card-logo">
+                    <div class="widget-credit-card-balance">
+                      <span class="label">Balance</span>
+                      <span class="amount">$18,742.85</span>
+                    </div>
+                  </div>
+                  <div class="widget-credit-card mastercard">
+                    <div class="widget-credit-card-number">**** 7893</div>
+                    <div class="widget-credit-card-mc-logo">
+                      <span class="mc-circle mc-red"></span>
+                      <span class="mc-circle mc-orange"></span>
+                    </div>
+                    <div class="widget-credit-card-balance">
+                      <span class="label">Balance</span>
+                      <span class="amount">$9,234.50</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="widget-transactions-mini">
+                  <div class="widget-transactions-header">
+                    <span>Transactions</span>
+                    <a href="#">See All <i class="ph ph-caret-right"></i></a>
+                  </div>
+                  <div class="widget-transaction-item-mini">
+                    <div class="widget-transaction-icon-mini netflix">S</div>
+                    <div class="widget-transaction-info-mini">
+                      <span class="widget-transaction-title-mini">Streaming Service</span>
+                      <span class="widget-transaction-date-mini">Today, 11:45am</span>
+                    </div>
+                    <div class="widget-transaction-amount-mini">
+                      <span class="badge badge-soft-success">Approved</span>
+                      <span class="amount negative">- $15.99</span>
+                      <span class="bonus positive">+8 Bonus</span>
+                    </div>
+                  </div>
+                  <div class="widget-transaction-item-mini">
+                    <div class="widget-transaction-icon-mini upwork">Fr</div>
+                    <div class="widget-transaction-info-mini">
+                      <span class="widget-transaction-title-mini">Freelance Platform</span>
+                      <span class="widget-transaction-date-mini">Jan 18, 2:30pm</span>
+                    </div>
+                    <div class="widget-transaction-amount-mini">
+                      <span class="badge badge-soft-warning">Processing</span>
+                      <span class="amount positive">+ $2,450.00</span>
+                      <span class="bonus positive">+120 Bonus</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Earning Report Card -->
+          <div class="col-lg-6">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="card-title">Earning Report</h5>
+                <div class="card-actions">
+                  <button class="btn btn-sm btn-light"><i class="ph ph-dots-three-vertical"></i></button>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="widget-earning-list">
+                  <div class="widget-earning-item">
+                    <div class="widget-earning-icon primary">
+                      <i class="ph ph-bank"></i>
+                    </div>
+                    <div class="widget-earning-info">
+                      <span class="widget-earning-title">Direct Deposits</span>
+                      <span class="widget-earning-subtitle">and +3 sources <i class="ph ph-info"></i></span>
+                    </div>
+                    <span class="badge badge-soft-success">+ 22.4%</span>
+                  </div>
+                  <div class="widget-earning-item">
+                    <div class="widget-earning-icon danger">
+                      <i class="ph ph-trend-up"></i>
+                    </div>
+                    <div class="widget-earning-info">
+                      <span class="widget-earning-title">Operating Margin</span>
+                      <span class="widget-earning-subtitle">and +2 metrics <i class="ph ph-info"></i></span>
+                    </div>
+                    <span class="badge badge-soft-success">+ 18.7%</span>
+                  </div>
+                  <div class="widget-earning-item">
+                    <div class="widget-earning-icon success">
+                      <i class="ph ph-currency-dollar"></i>
+                    </div>
+                    <div class="widget-earning-info">
+                      <span class="widget-earning-title">Gross Revenue</span>
+                      <span class="widget-earning-subtitle">and +5 streams <i class="ph ph-info"></i></span>
+                    </div>
+                    <span class="badge badge-soft-success">+ 31.2%</span>
+                  </div>
+                  <div class="widget-earning-item">
+                    <div class="widget-earning-icon warning">
+                      <i class="ph ph-receipt"></i>
+                    </div>
+                    <div class="widget-earning-info">
+                      <span class="widget-earning-title">Operational Costs</span>
+                      <span class="widget-earning-subtitle">and +4 categories <i class="ph ph-info"></i></span>
+                    </div>
+                    <span class="badge badge-soft-danger">- 5.8%</span>
+                  </div>
+                </div>
+                <a href="#" class="widget-earning-link">View detailed breakdown</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Mini Stat Cards -->
+      <section class="section">
+        <h5 class="section-title mb-3">Mini Stat Cards</h5>
+        <div class="row g-4">
+          <!-- Latest Deal Card -->
+          <div class="col-lg-3 col-md-6">
+            <div class="card widget-mini-stat">
+              <div class="card-body">
+                <div class="widget-mini-stat-header">
+                  <span class="widget-mini-stat-title">Active Campaign</span>
+                  <span class="badge badge-soft-success">92.3%</span>
+                </div>
+                <p class="widget-mini-stat-subtitle">Last 30 days</p>
+                <div class="widget-mini-stat-values">
+                  <span class="widget-mini-stat-current">$127,400</span>
+                  <span class="widget-mini-stat-total">$138,000</span>
+                </div>
+                <p class="widget-mini-stat-info">Vouchers redeemed: 24/30</p>
+                <div class="widget-mini-stat-footer">
+                  <span class="widget-mini-stat-label">Top Contributors</span>
+                  <div class="widget-mini-stat-avatars">
+                    <img src="assets/img/avatars/avatar-1.webp" alt="User">
+                    <img src="assets/img/avatars/avatar-2.webp" alt="User">
+                    <img src="assets/img/avatars/avatar-3.webp" alt="User">
+                    <img src="assets/img/avatars/avatar-4.webp" alt="User">
+                    <span class="widget-mini-stat-more">+12</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sales Stat Card -->
+          <div class="col-lg-3 col-md-6">
+            <div class="card widget-color-stat danger">
+              <div class="card-body">
+                <div class="widget-color-stat-icon">
+                  <i class="ph ph-bag"></i>
+                </div>
+                <div class="widget-color-stat-content">
+                  <div class="widget-color-stat-value">3,847 <span class="widget-color-stat-change">+31%</span></div>
+                  <div class="widget-color-stat-label">Orders</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Refunds Stat Card -->
+          <div class="col-lg-3 col-md-6">
+            <div class="card widget-color-stat success">
+              <div class="card-body">
+                <div class="widget-color-stat-icon">
+                  <i class="ph ph-arrow-counter-clockwise"></i>
+                </div>
+                <div class="widget-color-stat-content">
+                  <div class="widget-color-stat-value">186 <span class="widget-color-stat-change negative">-9%</span></div>
+                  <div class="widget-color-stat-label">Returns</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Earnings Stat Card -->
+          <div class="col-lg-3 col-md-6">
+            <div class="card widget-color-stat primary">
+              <div class="card-body">
+                <div class="widget-color-stat-icon">
+                  <i class="ph ph-currency-dollar"></i>
+                </div>
+                <div class="widget-color-stat-content">
+                  <div class="widget-color-stat-value">$312k <span class="widget-color-stat-change">+14%</span></div>
+                  <div class="widget-color-stat-label">Revenue</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <span class="footer-brand-mark"><i class="bi bi-lightning-charge-fill"></i></span>
+          <span class="footer-copyright">
+            &copy; 2026 <a href="#">TrendyAdmin</a>. All Rights Reserved.
+          </span>
+        </div>
+        <div class="footer-links">
+          <a href="#">About</a>
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Contact</a>
+        </div>
+        <div class="footer-credits">
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Back to Top -->
+  <a href="#" class="back-to-top">
+    <i class="ph ph-arrow-up"></i>
+  </a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="assets/vendor/chart.js/chart.umd.js"></script>
+  <script src="assets/vendor/echarts/echarts.min.js"></script>
+  <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="assets/vendor/quill/quill.js"></script>
+  <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+  <script src="assets/vendor/choices.js/choices.min.js"></script>
+  <script src="assets/vendor/flatpickr/flatpickr.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS Files -->
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <!-- App Sidebar Toggle (for app pages with sidebars) -->
+  <script src="assets/js/apps-sidebar-toggle.js"></script>
+
+</body>
+
+</html>

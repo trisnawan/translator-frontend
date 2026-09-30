@@ -1,0 +1,773 @@
+/*--------------------------------------------------------------
+# CRM Dashboard Page - TrendyAdmin
+# Pipeline board strip, deals table, contacts list, tasks
+# checklist, lead sources donut + revenue trend
+--------------------------------------------------------------*/
+
+.page-dashboard-crm {
+
+  /*------------------------------------------------------------
+  # Page Head
+  ------------------------------------------------------------*/
+  .crm-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .crm-head-title {
+    margin: 0 0 2px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--heading-color);
+  }
+
+  .crm-head-subtitle {
+    margin: 0;
+    font-size: 0.875rem;
+    color: var(--muted-color);
+  }
+
+  .crm-head-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+  }
+
+  .crm-btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 9px 16px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-full);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--default-color);
+    background: var(--surface-color);
+    cursor: pointer;
+    transition: border-color var(--transition-fast), color var(--transition-fast), box-shadow var(--transition-fast);
+  }
+
+  .crm-btn-ghost:hover {
+    border-color: color-mix(in srgb, var(--accent-color), transparent 55%);
+    color: var(--accent-color);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .crm-btn-gradient {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 9px 18px;
+    border: none;
+    border-radius: var(--radius-full);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--contrast-color);
+    background: linear-gradient(105deg, var(--accent-color), color-mix(in srgb, var(--accent-color), var(--danger-color) 42%));
+    box-shadow: 0 8px 18px -8px color-mix(in srgb, var(--accent-color), transparent 35%);
+    cursor: pointer;
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  }
+
+  .crm-btn-gradient:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px -8px color-mix(in srgb, var(--accent-color), transparent 25%);
+  }
+
+  /*------------------------------------------------------------
+  # KPI Row
+  ------------------------------------------------------------*/
+  .crm-kpis {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .crm-kpi {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    padding: var(--spacing-lg);
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--card-shadow);
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  }
+
+  .crm-kpi:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .crm-kpi-tile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    border-radius: var(--radius-lg);
+    font-size: 1.375rem;
+  }
+
+  .crm-kpi-meta {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    flex: 1;
+  }
+
+  .crm-kpi-value {
+    font-family: var(--heading-font);
+    font-size: 1.375rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    color: var(--heading-color);
+  }
+
+  .crm-kpi-label {
+    font-size: 0.75rem;
+    color: var(--muted-color);
+    white-space: nowrap;
+  }
+
+  .crm-kpi-trend {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    align-self: flex-start;
+    padding: 3px 9px;
+    font-size: 0.6875rem;
+    font-weight: 700;
+    border-radius: var(--radius-full);
+  }
+
+  .crm-kpi-trend.up {
+    color: var(--success-color);
+    background: var(--success-color-light);
+  }
+
+  .crm-kpi-trend.down {
+    color: var(--danger-color);
+    background: var(--danger-color-light);
+  }
+
+  /* Icon tile variants (shared by KPIs and company tiles) */
+  .tile-accent {
+    background: color-mix(in srgb, var(--accent-color), transparent 88%);
+    color: var(--accent-color);
+  }
+
+  .tile-info {
+    background: var(--info-color-light);
+    color: var(--info-color);
+  }
+
+  .tile-success {
+    background: var(--success-color-light);
+    color: var(--success-color);
+  }
+
+  .tile-warning {
+    background: var(--warning-color-light);
+    color: var(--warning-color);
+  }
+
+  .tile-danger {
+    background: var(--danger-color-light);
+    color: var(--danger-color);
+  }
+
+  /*------------------------------------------------------------
+  # Pipeline Board Strip
+  ------------------------------------------------------------*/
+  .crm-pipeline {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .crm-stage {
+    --stage-color: var(--accent-color);
+    position: relative;
+    padding: var(--spacing-md) var(--spacing-md) var(--spacing-sm);
+    background: linear-gradient(180deg, color-mix(in srgb, var(--stage-color), transparent 93%), var(--card-bg) 62%);
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--card-shadow);
+    overflow: hidden;
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  }
+
+  .crm-stage::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto;
+    height: 4px;
+    background: linear-gradient(90deg, var(--stage-color), color-mix(in srgb, var(--stage-color), transparent 45%));
+  }
+
+  .crm-stage:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .crm-stage.stage-info { --stage-color: var(--info-color); }
+  .crm-stage.stage-warning { --stage-color: var(--warning-color); }
+  .crm-stage.stage-danger { --stage-color: var(--danger-color); }
+  .crm-stage.stage-success { --stage-color: var(--success-color); }
+
+  .crm-stage-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-sm);
+    margin-bottom: 6px;
+  }
+
+  .crm-stage-name {
+    font-size: 0.6875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted-color);
+  }
+
+  .crm-stage-count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 26px;
+    padding: 2px 8px;
+    font-size: 0.6875rem;
+    font-weight: 700;
+    color: var(--stage-color);
+    background: color-mix(in srgb, var(--stage-color), transparent 86%);
+    border-radius: var(--radius-full);
+  }
+
+  .crm-stage-value {
+    font-family: var(--heading-font);
+    font-size: 1.125rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    color: var(--heading-color);
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .crm-stage-bar {
+    height: 5px;
+    border-radius: var(--radius-full);
+    background: color-mix(in srgb, var(--stage-color), transparent 88%);
+    overflow: hidden;
+    margin-bottom: 6px;
+  }
+
+  .crm-stage-bar span {
+    display: block;
+    height: 100%;
+    border-radius: var(--radius-full);
+    background: linear-gradient(90deg, var(--stage-color), color-mix(in srgb, var(--stage-color), transparent 30%));
+  }
+
+  .crm-stage-share {
+    font-size: 0.6875rem;
+    color: var(--light-color);
+  }
+
+  /*------------------------------------------------------------
+  # Main Row - Deals Table + Side Column
+  ------------------------------------------------------------*/
+  .crm-main {
+    display: grid;
+    grid-template-columns: 1.7fr 1fr;
+    gap: var(--spacing-lg);
+    align-items: start;
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .crm-main > .card {
+    margin-bottom: 0;
+  }
+
+  .crm-side {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+  }
+
+  .crm-side > .card {
+    margin-bottom: 0;
+  }
+
+  /* Avatar stack */
+  .crm-stack {
+    display: flex;
+    align-items: center;
+  }
+
+  .crm-stack img {
+    width: 32px;
+    height: 32px;
+    border-radius: var(--radius-full);
+    border: 2px solid var(--surface-color);
+    object-fit: cover;
+  }
+
+  .crm-stack img + img,
+  .crm-stack .crm-stack-more {
+    margin-left: -9px;
+  }
+
+  .crm-stack-more {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: var(--radius-full);
+    border: 2px solid var(--surface-color);
+    font-size: 0.6875rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    background: color-mix(in srgb, var(--accent-color), transparent 88%);
+  }
+
+  /* Deals table */
+  .crm-table-wrap {
+    overflow-x: auto;
+  }
+
+  .crm-table {
+    width: 100%;
+    min-width: 640px;
+    border-collapse: collapse;
+    font-size: 0.8437rem;
+  }
+
+  .crm-table th {
+    padding: 10px 12px;
+    font-size: 0.6875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    text-align: left;
+    color: var(--muted-color);
+    background: var(--table-header-bg);
+    white-space: nowrap;
+  }
+
+  .crm-table th:first-child {
+    border-radius: var(--radius-md) 0 0 var(--radius-md);
+  }
+
+  .crm-table th:last-child {
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  }
+
+  .crm-table td {
+    padding: 12px;
+    border-bottom: 1px solid var(--border-color-light);
+    vertical-align: middle;
+    white-space: nowrap;
+  }
+
+  .crm-table tr:last-child td {
+    border-bottom: none;
+  }
+
+  .crm-table tbody tr {
+    transition: background-color var(--transition-fast);
+  }
+
+  .crm-table tbody tr:hover {
+    background: var(--table-hover-bg);
+  }
+
+  .crm-deal-name {
+    font-weight: 600;
+    color: var(--heading-color);
+  }
+
+  .crm-deal-value {
+    font-family: var(--heading-font);
+    font-weight: 700;
+    color: var(--heading-color);
+  }
+
+  .crm-deal-date {
+    font-size: 0.75rem;
+    color: var(--muted-color);
+  }
+
+  .crm-co {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+  }
+
+  .crm-co-tile {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    border-radius: var(--radius-md);
+    font-size: 0.6875rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+  }
+
+  .crm-co-name {
+    color: var(--default-color);
+  }
+
+  .crm-owner {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.8125rem;
+    color: var(--default-color);
+  }
+
+  .crm-owner img {
+    width: 26px;
+    height: 26px;
+    border-radius: var(--radius-full);
+    object-fit: cover;
+  }
+
+  /* Status pills with glowing dot */
+  .crm-pill {
+    --pill-color: var(--accent-color);
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 4px 11px;
+    font-size: 0.6875rem;
+    font-weight: 700;
+    color: var(--pill-color);
+    background: color-mix(in srgb, var(--pill-color), transparent 88%);
+    border-radius: var(--radius-full);
+  }
+
+  .crm-pill-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: var(--radius-full);
+    background: var(--pill-color);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--pill-color), transparent 78%);
+  }
+
+  .crm-pill.pill-success { --pill-color: var(--success-color); }
+  .crm-pill.pill-warning { --pill-color: var(--warning-color); }
+  .crm-pill.pill-danger { --pill-color: var(--danger-color); }
+  .crm-pill.pill-info { --pill-color: var(--info-color); }
+
+  /*------------------------------------------------------------
+  # Recent Contacts
+  ------------------------------------------------------------*/
+  .crm-contact {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+  }
+
+  .crm-contact + .crm-contact {
+    margin-top: var(--spacing-md);
+    padding-top: var(--spacing-md);
+    border-top: 1px dashed var(--border-color-light);
+  }
+
+  .crm-contact-avatar {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: var(--radius-full);
+    object-fit: cover;
+  }
+
+  .crm-contact-info {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .crm-contact-name {
+    font-size: 0.8437rem;
+    font-weight: 600;
+    color: var(--heading-color);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .crm-contact-company {
+    font-size: 0.7187rem;
+    color: var(--muted-color);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .crm-contact-actions {
+    display: flex;
+    gap: 6px;
+    flex-shrink: 0;
+  }
+
+  .crm-icon-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-full);
+    font-size: 0.875rem;
+    color: var(--muted-color);
+    background: transparent;
+    cursor: pointer;
+    transition: color var(--transition-fast), border-color var(--transition-fast), background-color var(--transition-fast);
+  }
+
+  .crm-icon-btn:hover {
+    color: var(--accent-color);
+    border-color: color-mix(in srgb, var(--accent-color), transparent 55%);
+    background: color-mix(in srgb, var(--accent-color), transparent 92%);
+  }
+
+  /*------------------------------------------------------------
+  # Tasks Today Checklist
+  ------------------------------------------------------------*/
+  .crm-task {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+    margin: 0;
+    cursor: pointer;
+  }
+
+  .crm-task + .crm-task {
+    margin-top: var(--spacing-md);
+    padding-top: var(--spacing-md);
+    border-top: 1px dashed var(--border-color-light);
+  }
+
+  .crm-task-input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .crm-task-box {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    margin-top: 1px;
+    flex-shrink: 0;
+    border: 2px solid var(--border-color-dark);
+    border-radius: var(--radius-sm);
+    font-size: 0.75rem;
+    color: var(--contrast-color);
+    transition: background-color var(--transition-fast), border-color var(--transition-fast);
+  }
+
+  .crm-task-box i {
+    opacity: 0;
+    transition: opacity var(--transition-fast);
+  }
+
+  .crm-task-input:checked + .crm-task-box {
+    border-color: transparent;
+    background: linear-gradient(105deg, var(--accent-color), color-mix(in srgb, var(--accent-color), var(--danger-color) 42%));
+  }
+
+  .crm-task-input:checked + .crm-task-box i {
+    opacity: 1;
+  }
+
+  .crm-task-body {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .crm-task-title {
+    font-size: 0.8437rem;
+    font-weight: 500;
+    color: var(--heading-color);
+    transition: color var(--transition-fast);
+  }
+
+  .crm-task-input:checked ~ .crm-task-body .crm-task-title {
+    color: var(--light-color);
+    text-decoration: line-through;
+  }
+
+  .crm-task-time {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.7187rem;
+    color: var(--muted-color);
+  }
+
+  .crm-task-flag {
+    flex-shrink: 0;
+    padding: 3px 9px;
+    font-size: 0.625rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-radius: var(--radius-full);
+  }
+
+  .crm-task-flag.flag-high {
+    color: var(--danger-color);
+    background: var(--danger-color-light);
+  }
+
+  .crm-task-flag.flag-medium {
+    color: var(--warning-color);
+    background: var(--warning-color-light);
+  }
+
+  .crm-task-flag.flag-low {
+    color: var(--success-color);
+    background: var(--success-color-light);
+  }
+
+  /*------------------------------------------------------------
+  # Bottom Row - Donut + Revenue Trend
+  ------------------------------------------------------------*/
+  .crm-bottom {
+    display: grid;
+    grid-template-columns: 1fr 1.9fr;
+    gap: var(--spacing-lg);
+    align-items: start;
+  }
+
+  .crm-bottom > .card {
+    margin-bottom: 0;
+  }
+
+  /* Donut legend */
+  .crm-legend {
+    margin-top: var(--spacing-md);
+  }
+
+  .crm-legend-item {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 7px 0;
+  }
+
+  .crm-legend-item + .crm-legend-item {
+    border-top: 1px dashed var(--border-color-light);
+  }
+
+  .crm-legend-dot {
+    width: 9px;
+    height: 9px;
+    flex-shrink: 0;
+    border-radius: var(--radius-full);
+  }
+
+  .crm-legend-dot.dot-accent { background: var(--accent-color); }
+  .crm-legend-dot.dot-success { background: var(--success-color); }
+  .crm-legend-dot.dot-warning { background: var(--warning-color); }
+  .crm-legend-dot.dot-info { background: var(--info-color); }
+
+  .crm-legend-label {
+    flex: 1;
+    font-size: 0.8125rem;
+    color: var(--default-color);
+  }
+
+  .crm-legend-value {
+    font-size: 0.8125rem;
+    font-weight: 700;
+    color: var(--heading-color);
+  }
+
+  /* Segmented pill toggle */
+  .crm-seg {
+    display: flex;
+    gap: 2px;
+    padding: 3px;
+    background: var(--background-color);
+    border-radius: var(--radius-full);
+  }
+
+  .crm-seg-btn {
+    padding: 5px 14px;
+    border: none;
+    border-radius: var(--radius-full);
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--muted-color);
+    background: transparent;
+    cursor: pointer;
+    transition: background-color var(--transition-fast), color var(--transition-fast), box-shadow var(--transition-fast);
+  }
+
+  .crm-seg-btn:hover {
+    color: var(--heading-color);
+  }
+
+  .crm-seg-btn.active {
+    color: var(--accent-color);
+    background: var(--surface-color);
+    box-shadow: var(--shadow-sm);
+  }
+
+  /*------------------------------------------------------------
+  # Responsive
+  ------------------------------------------------------------*/
+  @media (max-width: 1399px) {
+    .crm-kpis {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 1199px) {
+    .crm-main {
+      grid-template-columns: 1fr;
+    }
+
+    .crm-bottom {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 575px) {
+    .crm-kpis {
+      grid-template-columns: 1fr;
+    }
+
+    .crm-head-actions {
+      width: 100%;
+    }
+
+    .dash-card-header {
+      flex-wrap: wrap;
+    }
+  }
+}

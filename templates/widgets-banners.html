@@ -1,0 +1,1340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Banner Widgets - TrendyAdmin</title>
+  <meta name="description" content="TrendyAdmin - Bootstrap Admin Template">
+  <meta name="keywords" content="admin, dashboard, bootstrap">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts - Plus Jakarta Sans (body) + Outfit (headings) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="assets/vendor/phosphor-icons/phosphor-icons.css" rel="stylesheet">
+  <link href="assets/vendor/lucide-icons/lucide.css" rel="stylesheet">
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/choices.js/choices.min.css" rel="stylesheet">
+  <link href="assets/vendor/flatpickr/flatpickr.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+    * Template Name: TrendyAdmin - Bootstrap Admin Template
+    * Template URL: https://bootstrapmade.com/trendy-admin-bootstrap-dashboard-template/
+    * Updated: Jul 29 2026 with Bootstrap v5.3.8
+    * Author: BootstrapMade.com
+    * License: https://bootstrapmade.com/license/
+    ======================================================== -->
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-inner">
+      <!-- Header Left -->
+      <div class="header-left">
+        <button class="sidebar-toggle" title="Toggle Sidebar">
+          <i class="ph ph-list"></i>
+        </button>
+        <a href="index.html" class="header-logo">
+          <span class="header-logo-mark"><i class="bi bi-lightning-charge-fill"></i></span>
+          <span class="header-logo-text">TrendyAdmin</span>
+        </a>
+
+        <!-- Apps Quick Access -->
+        <div class="header-action dropdown apps-dropdown">
+          <button class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" title="Quick Access">
+            <i class="ph ph-dots-nine"></i>
+          </button>
+          <div class="dropdown-menu">
+            <div class="apps-menu-header">
+              <h6>Quick Access</h6>
+              <span>Jump straight into an app</span>
+            </div>
+            <div class="apps-grid">
+              <a href="apps-chat.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-chat-circle-dots"></i></span>
+                <span>Chat</span>
+              </a>
+              <a href="apps-email.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-envelope"></i></span>
+                <span>Email</span>
+              </a>
+              <a href="apps-calendar.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-calendar-blank"></i></span>
+                <span>Calendar</span>
+              </a>
+              <a href="apps-kanban.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-kanban"></i></span>
+                <span>Kanban</span>
+              </a>
+              <a href="apps-file-manager.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-folder-open"></i></span>
+                <span>Files</span>
+              </a>
+              <a href="apps-todo.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-check-square"></i></span>
+                <span>Todo</span>
+              </a>
+              <a href="apps-contacts.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-address-book"></i></span>
+                <span>Contacts</span>
+              </a>
+              <a href="apps-support.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-headset"></i></span>
+                <span>Support</span>
+              </a>
+              <a href="invoice-list.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-receipt"></i></span>
+                <span>Invoices</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Header Search (Desktop) -->
+      <div class="header-search">
+        <form class="search-form" action="search-results.html" method="GET">
+          <button type="submit"><i class="ph ph-magnifying-glass"></i></button>
+          <input type="search" name="q" placeholder="Search anything..." autocomplete="off">
+          <span class="search-hint">⌘K</span>
+        </form>
+      </div>
+
+      <!-- Header Right -->
+      <div class="header-right">
+        <!-- Desktop Actions (hidden on mobile, shown in mobile menu) -->
+        <div class="header-actions-desktop">
+          <!-- Quick Create -->
+          <div class="dropdown create-dropdown">
+            <button class="create-btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="ph ph-plus"></i>
+              <span>Create</span>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end create-menu">
+              <a class="dropdown-item" href="apps-kanban.html">
+                <span class="create-item-icon"><i class="ph ph-kanban"></i></span>
+                <span class="create-item-text">
+                  <span class="create-item-title">New Project</span>
+                  <span class="create-item-sub">Start a kanban board</span>
+                </span>
+              </a>
+              <a class="dropdown-item" href="apps-todo.html">
+                <span class="create-item-icon"><i class="ph ph-check-square"></i></span>
+                <span class="create-item-text">
+                  <span class="create-item-title">New Task</span>
+                  <span class="create-item-sub">Add to your todo list</span>
+                </span>
+              </a>
+              <a class="dropdown-item" href="apps-contacts.html">
+                <span class="create-item-icon"><i class="ph ph-user-plus"></i></span>
+                <span class="create-item-text">
+                  <span class="create-item-title">New Contact</span>
+                  <span class="create-item-sub">Save a new person</span>
+                </span>
+              </a>
+              <a class="dropdown-item" href="invoice-list.html">
+                <span class="create-item-icon"><i class="ph ph-receipt"></i></span>
+                <span class="create-item-text">
+                  <span class="create-item-title">New Invoice</span>
+                  <span class="create-item-sub">Bill a customer</span>
+                </span>
+              </a>
+            </div>
+          </div>
+
+          <div class="header-divider"></div>
+
+          <!-- Theme Toggle -->
+          <button class="header-action theme-toggle" title="Toggle Theme">
+            <i class="ph ph-moon icon-dark"></i>
+            <i class="ph ph-sun icon-light"></i>
+          </button>
+
+          <!-- Fullscreen Toggle -->
+          <button class="header-action fullscreen-toggle" onclick="toggleFullscreen()" title="Fullscreen">
+            <i class="ph ph-arrows-out icon-enter"></i>
+            <i class="ph ph-arrows-in icon-exit"></i>
+          </button>
+
+          <!-- Messages -->
+          <div class="header-action dropdown messages-dropdown">
+            <button class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" title="Messages">
+              <i class="ph ph-chat-teardrop-text"></i>
+              <span class="badge">2</span>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end">
+              <div class="messages-header">
+                <h6>Messages</h6>
+                <a href="apps-chat.html">View all</a>
+              </div>
+              <div class="messages-list">
+                <a href="apps-chat.html" class="message-item unread">
+                  <span class="message-avatar">
+                    <img src="assets/img/avatars/avatar-2.webp" alt="Sarah Johnson">
+                    <span class="message-status"></span>
+                  </span>
+                  <span class="message-content">
+                    <span class="message-name">Sarah Johnson</span>
+                    <span class="message-text">The new dashboard mockups look amazing! 🔥</span>
+                  </span>
+                  <span class="message-time">2m</span>
+                </a>
+                <a href="apps-chat.html" class="message-item unread">
+                  <span class="message-avatar">
+                    <img src="assets/img/avatars/avatar-3.webp" alt="Mike Chen">
+                  </span>
+                  <span class="message-content">
+                    <span class="message-name">Mike Chen</span>
+                    <span class="message-text">Can you review my PR when you get a chance?</span>
+                  </span>
+                  <span class="message-time">1h</span>
+                </a>
+                <a href="apps-chat.html" class="message-item">
+                  <span class="message-avatar">
+                    <img src="assets/img/avatars/avatar-4.webp" alt="Emma Davis">
+                  </span>
+                  <span class="message-content">
+                    <span class="message-name">Emma Davis</span>
+                    <span class="message-text">Meeting moved to 3pm tomorrow</span>
+                  </span>
+                  <span class="message-time">3h</span>
+                </a>
+              </div>
+              <div class="messages-footer">
+                <a href="apps-chat.html">Open chat <i class="ph ph-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Notifications -->
+          <div class="header-action dropdown notification-dropdown">
+            <button class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" title="Notifications">
+              <i class="ph ph-bell"></i>
+              <span class="badge">3</span>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end">
+              <div class="notification-header">
+                <h6>You have 3 new notifications</h6>
+                <a href="#" class="notification-mark-read" data-notification-action="mark-all-read" title="Mark all as read">
+                  <i class="ph ph-checks"></i>
+                </a>
+              </div>
+              <div class="notification-list">
+                <div class="notification-item unread">
+                  <span class="notification-icon success">
+                    <i class="ph ph-check-circle"></i>
+                  </span>
+                  <span class="notification-content">
+                    <span class="notification-title">Order Completed</span>
+                    <span class="notification-text">Your order #12345 has been delivered</span>
+                  </span>
+                  <span class="notification-meta">
+                    <span class="notification-time">5m</span>
+                    <span class="notification-dot"></span>
+                  </span>
+                </div>
+                <div class="notification-item unread">
+                  <span class="notification-icon warning">
+                    <i class="ph ph-warning"></i>
+                  </span>
+                  <span class="notification-content">
+                    <span class="notification-title">Low Storage</span>
+                    <span class="notification-text">Server storage is running low (85% used)</span>
+                  </span>
+                  <span class="notification-meta">
+                    <span class="notification-time">1h</span>
+                    <span class="notification-dot"></span>
+                  </span>
+                </div>
+                <div class="notification-item">
+                  <span class="notification-icon info">
+                    <i class="ph ph-info"></i>
+                  </span>
+                  <span class="notification-content">
+                    <span class="notification-title">New Feature</span>
+                    <span class="notification-text">Dark mode is now available</span>
+                  </span>
+                  <span class="notification-meta">
+                    <span class="notification-time">2h</span>
+                    <span class="notification-dot"></span>
+                  </span>
+                </div>
+              </div>
+              <div class="notification-footer">
+                <a href="notifications.html">View all</a>
+                <a href="settings.html">Settings</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="header-divider"></div>
+
+          <!-- User Dropdown -->
+          <div class="header-action dropdown user-dropdown">
+            <button class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="assets/img/profile-img.webp" alt="User" class="avatar">
+              <span class="user-name">John Doe</span>
+              <i class="ph ph-caret-down user-caret"></i>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end">
+              <div class="user-menu-card">
+                <span class="user-menu-avatar">
+                  <img src="assets/img/profile-img.webp" alt="User">
+                </span>
+                <span class="user-menu-name">John Doe</span>
+                <span class="user-menu-mail">john@trendyadmin.com</span>
+                <span class="user-menu-role">Administrator</span>
+              </div>
+              <div class="user-menu-body">
+                <a class="dropdown-item" href="profile.html">
+                  <span class="user-menu-item-icon"><i class="ph ph-user"></i></span>
+                  My Profile
+                  <i class="ph ph-caret-right user-menu-item-caret"></i>
+                </a>
+                <a class="dropdown-item" href="settings.html">
+                  <span class="user-menu-item-icon"><i class="ph ph-gear"></i></span>
+                  Settings
+                  <i class="ph ph-caret-right user-menu-item-caret"></i>
+                </a>
+                <a class="dropdown-item" href="activity.html">
+                  <span class="user-menu-item-icon"><i class="ph ph-pulse"></i></span>
+                  Activity Log
+                  <i class="ph ph-caret-right user-menu-item-caret"></i>
+                </a>
+                <a class="dropdown-item" href="invoice-list.html">
+                  <span class="user-menu-item-icon"><i class="ph ph-receipt"></i></span>
+                  Billing
+                  <i class="ph ph-caret-right user-menu-item-caret"></i>
+                </a>
+              </div>
+              <div class="user-menu-footer">
+                <a href="auth-login.html" class="user-menu-signout">
+                  <i class="ph ph-sign-out"></i> Sign Out
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile Actions (visible only on mobile) -->
+        <div class="header-actions-mobile">
+          <!-- Search Toggle (Mobile) -->
+          <button class="header-action search-toggle" title="Search">
+            <i class="ph ph-magnifying-glass"></i>
+          </button>
+
+          <!-- Mobile Menu Toggle -->
+          <button class="header-action mobile-menu-toggle" title="More">
+            <i class="ph ph-dots-three-vertical"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Search -->
+  <div class="mobile-search">
+    <form class="search-form" action="search-results.html" method="GET">
+      <input type="search" name="q" placeholder="Search anything..." autocomplete="off">
+      <button type="submit"><i class="ph ph-magnifying-glass"></i></button>
+    </form>
+  </div>
+
+  <!-- Mobile Header Menu -->
+  <div class="mobile-header-menu">
+    <div class="mobile-header-menu-content">
+      <!-- Theme Toggle -->
+      <button class="mobile-menu-item theme-toggle" title="Toggle Theme">
+        <i class="ph ph-moon icon-dark"></i>
+        <i class="ph ph-sun icon-light"></i>
+        <span class="mobile-menu-label">Theme</span>
+      </button>
+
+      <!-- Fullscreen Toggle -->
+      <button class="mobile-menu-item fullscreen-toggle" onclick="toggleFullscreen()" title="Fullscreen">
+        <i class="ph ph-arrows-out icon-enter"></i>
+        <i class="ph ph-arrows-in icon-exit"></i>
+        <span class="mobile-menu-label">Fullscreen</span>
+      </button>
+
+      <!-- Messages -->
+      <a href="apps-chat.html" class="mobile-menu-item">
+        <i class="ph ph-chat-teardrop-text"></i>
+        <span class="badge">2</span>
+        <span class="mobile-menu-label">Messages</span>
+      </a>
+
+      <!-- Notifications -->
+      <a href="notifications.html" class="mobile-menu-item">
+        <i class="ph ph-bell"></i>
+        <span class="badge">3</span>
+        <span class="mobile-menu-label">Notifications</span>
+      </a>
+
+      <!-- Profile -->
+      <a href="profile.html" class="mobile-menu-item">
+        <i class="ph ph-user"></i>
+        <span class="mobile-menu-label">Profile</span>
+      </a>
+
+      <!-- Sign Out -->
+      <a href="auth-login.html" class="mobile-menu-item mobile-menu-item-danger">
+        <i class="ph ph-sign-out"></i>
+        <span class="mobile-menu-label">Sign Out</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <!-- Sidebar Header -->
+    <div class="sidebar-header">
+      <a href="index.html" class="sidebar-logo">
+        <span class="sidebar-logo-mark"><i class="bi bi-lightning-charge-fill"></i></span>
+        <span class="sidebar-logo-text">TrendyAdmin</span>
+      </a>
+      <button class="sidebar-close">
+        <i class="ph ph-x"></i>
+      </button>
+    </div>
+
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar-nav">
+      <ul class="nav-menu">
+        <li class="nav-heading"><span>Overview</span></li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="index.html">
+            <span class="nav-icon"><i class="ph ph-house"></i></span>
+            <span class="nav-text">Home</span>
+          </a>
+        </li>
+
+        <!-- Dashboards Submenu -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-gauge"></i></span>
+            <span class="nav-text">Dashboards</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="dashboard-sales.html">Sales</a></li>
+            <li><a class="nav-link " href="dashboard-analytics.html">Analytics</a></li>
+            <li><a class="nav-link " href="dashboard-crm.html">CRM</a></li>
+            <li><a class="nav-link " href="dashboard-marketing.html">Marketing</a></li>
+            <li><a class="nav-link " href="dashboard-projects.html">Projects</a></li>
+            <li><a class="nav-link " href="dashboard-finance.html">Finance</a></li>
+          </ul>
+        </li>
+
+        <!-- Users -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-users"></i></span>
+            <span class="nav-text">Users</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="users.html">Users List</a></li>
+            <li><a class="nav-link " href="users-view.html">User View</a></li>
+            <li><a class="nav-link " href="users-edit.html">User Edit</a></li>
+            <li><a class="nav-link " href="profile.html">Profile</a></li>
+            <!-- 3rd Level - Settings submenu -->
+            <li class="has-submenu ">
+              <a class="nav-link" href="#" aria-expanded="false">
+                Settings
+                <i class="ph ph-caret-right nav-arrow"></i>
+              </a>
+              <ul class="nav-submenu ">
+                <li><a class="nav-link " href="settings.html">Account</a></li>
+                <li><a class="nav-link " href="notifications.html">Notifications</a></li>
+                <li><a class="nav-link " href="activity.html">Activity</a></li>
+              </ul>
+            </li>
+            <li><a class="nav-link " href="roles.html">Roles & Permissions</a></li>
+          </ul>
+        </li>
+
+        <!-- Authentication -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-shield-check"></i></span>
+            <span class="nav-text">Authentication</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="auth-login.html">Login</a></li>
+            <li><a class="nav-link " href="auth-register.html">Register</a></li>
+            <li><a class="nav-link " href="auth-forgot-password.html">Forgot Password</a></li>
+            <li><a class="nav-link " href="auth-reset-password.html">Reset Password</a></li>
+            <li><a class="nav-link " href="auth-verify-email.html">Email Verification</a></li>
+            <li><a class="nav-link " href="auth-two-factor.html">Two Factor Auth</a></li>
+            <li><a class="nav-link " href="auth-lock-screen.html">Lock Screen</a></li>
+          </ul>
+        </li>
+
+        <!-- Apps Section -->
+        <li class="nav-heading"><span>Apps</span></li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-calendar.html">
+            <span class="nav-icon"><i class="ph ph-calendar-blank"></i></span>
+            <span class="nav-text">Calendar</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-kanban.html">
+            <span class="nav-icon"><i class="ph ph-kanban"></i></span>
+            <span class="nav-text">Kanban Board</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-chat.html">
+            <span class="nav-icon"><i class="ph ph-chat-circle-dots"></i></span>
+            <span class="nav-text">Chat</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-contacts.html">
+            <span class="nav-icon"><i class="ph ph-address-book"></i></span>
+            <span class="nav-text">Contacts</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-file-manager.html">
+            <span class="nav-icon"><i class="ph ph-folder-open"></i></span>
+            <span class="nav-text">File Manager</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-email.html">
+            <span class="nav-icon"><i class="ph ph-envelope"></i></span>
+            <span class="nav-text">Email</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-todo.html">
+            <span class="nav-icon"><i class="ph ph-check-square"></i></span>
+            <span class="nav-text">Todo List</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-support.html">
+            <span class="nav-icon"><i class="ph ph-headset"></i></span>
+            <span class="nav-text">Support Center</span>
+          </a>
+        </li>
+
+        <!-- UI Elements Section -->
+        <li class="nav-heading"><span>UI Elements</span></li>
+
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-puzzle-piece"></i></span>
+            <span class="nav-text">Components</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="components-alerts.html">Alerts</a></li>
+            <li><a class="nav-link " href="components-accordion.html">Accordion</a></li>
+            <li><a class="nav-link " href="components-badges.html">Badges</a></li>
+            <li><a class="nav-link " href="components-breadcrumbs.html">Breadcrumbs</a></li>
+            <li><a class="nav-link " href="components-buttons.html">Buttons</a></li>
+            <li><a class="nav-link " href="components-cards.html">Cards</a></li>
+            <li><a class="nav-link " href="components-carousel.html">Carousel</a></li>
+            <li><a class="nav-link " href="components-dropdowns.html">Dropdowns</a></li>
+            <li><a class="nav-link " href="components-list-group.html">List Group</a></li>
+            <li><a class="nav-link " href="components-modal.html">Modal</a></li>
+            <li><a class="nav-link " href="components-nav-tabs.html">Navs & Tabs</a></li>
+            <li><a class="nav-link " href="components-offcanvas.html">Offcanvas</a></li>
+            <li><a class="nav-link " href="components-pagination.html">Pagination</a></li>
+            <li><a class="nav-link " href="components-popovers.html">Popovers</a></li>
+            <li><a class="nav-link " href="components-progress.html">Progress</a></li>
+            <li><a class="nav-link " href="components-spinners.html">Spinners</a></li>
+            <li><a class="nav-link " href="components-toasts.html">Toasts</a></li>
+            <li><a class="nav-link " href="components-tooltips.html">Tooltips</a></li>
+          </ul>
+        </li>
+
+        <!-- Widgets -->
+        <li class="nav-item has-submenu open">
+          <a class="nav-link" href="#" aria-expanded="true">
+            <span class="nav-icon"><i class="ph ph-stack"></i></span>
+            <span class="nav-text">Widgets</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu show">
+            <li><a class="nav-link " href="widgets-cards.html">Cards</a></li>
+            <li><a class="nav-link active" href="widgets-banners.html">Banners</a></li>
+            <li><a class="nav-link " href="widgets-charts.html">Charts</a></li>
+            <li><a class="nav-link " href="widgets-apps.html">Apps</a></li>
+            <li><a class="nav-link " href="widgets-data.html">Data</a></li>
+          </ul>
+        </li>
+
+        <!-- Forms Section -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-list-checks"></i></span>
+            <span class="nav-text">Forms</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="forms-elements.html">Form Elements</a></li>
+            <li><a class="nav-link " href="forms-layouts.html">Form Layouts</a></li>
+            <li><a class="nav-link " href="forms-validation.html">Validation</a></li>
+            <li><a class="nav-link " href="forms-wizard.html">Wizard</a></li>
+            <li><a class="nav-link " href="forms-editors.html">Rich Editors</a></li>
+            <li><a class="nav-link " href="forms-pickers.html">Date/Time Pickers</a></li>
+            <li><a class="nav-link " href="forms-select.html">Advanced Select</a></li>
+            <li><a class="nav-link " href="forms-upload.html">File Upload</a></li>
+          </ul>
+        </li>
+
+        <!-- Tables Section -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-table"></i></span>
+            <span class="nav-text">Tables</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="tables-basic.html">Basic Tables</a></li>
+            <li><a class="nav-link " href="tables-datatables.html">DataTables</a></li>
+            <li><a class="nav-link " href="tables-responsive.html">Responsive Tables</a></li>
+          </ul>
+        </li>
+
+        <!-- Charts Section -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-chart-bar"></i></span>
+            <span class="nav-text">Charts</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="charts-apexcharts.html">ApexCharts</a></li>
+            <li><a class="nav-link " href="charts-chartjs.html">Chart.js</a></li>
+            <li><a class="nav-link " href="charts-echarts.html">ECharts</a></li>
+          </ul>
+        </li>
+
+        <!-- Icons Section -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-diamond"></i></span>
+            <span class="nav-text">Icons</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="icons-bootstrap.html">Bootstrap Icons</a></li>
+            <li><a class="nav-link " href="icons-remixicon.html">Remix Icons</a></li>
+            <li><a class="nav-link " href="icons-fontawesome.html">Font Awesome</a></li>
+            <li><a class="nav-link " href="icons-phosphor.html">Phosphor Icons</a></li>
+            <li><a class="nav-link " href="icons-lucide.html">Lucide Icons</a></li>
+          </ul>
+        </li>
+
+        <!-- Pages Section -->
+        <li class="nav-heading"><span>Pages</span></li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="contact.html">
+            <span class="nav-icon"><i class="ph ph-envelope-simple"></i></span>
+            <span class="nav-text">Contact</span>
+          </a>
+        </li>
+
+        <!-- Invoices -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-receipt"></i></span>
+            <span class="nav-text">Invoices</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="invoice-list.html">Invoice List</a></li>
+            <li><a class="nav-link " href="invoice.html">Invoice View</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="pricing.html">
+            <span class="nav-icon"><i class="ph ph-tag"></i></span>
+            <span class="nav-text">Pricing</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="faq.html">
+            <span class="nav-icon"><i class="ph ph-question"></i></span>
+            <span class="nav-text">FAQ</span>
+          </a>
+        </li>
+
+        <!-- Error Pages -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-warning"></i></span>
+            <span class="nav-text">Error Pages</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="error-404.html">404 Not Found</a></li>
+            <li><a class="nav-link " href="error-403.html">403 Forbidden</a></li>
+            <li><a class="nav-link " href="error-500.html">500 Server Error</a></li>
+            <li><a class="nav-link " href="error-maintenance.html">Maintenance</a></li>
+            <li><a class="nav-link " href="error-coming-soon.html">Coming Soon</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="timeline.html">
+            <span class="nav-icon"><i class="ph ph-clock-counter-clockwise"></i></span>
+            <span class="nav-text">Timeline</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="search-results.html">
+            <span class="nav-icon"><i class="ph ph-magnifying-glass"></i></span>
+            <span class="nav-text">Search Results</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="blank.html">
+            <span class="nav-icon"><i class="ph ph-file"></i></span>
+            <span class="nav-text">Blank Page</span>
+          </a>
+        </li>
+
+      </ul>
+    </nav>
+
+    <!-- Sidebar Footer - User Card -->
+    <div class="sidebar-footer">
+      <div class="sidebar-user">
+        <a href="profile.html" class="sidebar-user-link">
+          <span class="sidebar-user-avatar">
+            <img src="assets/img/profile-img.webp" alt="User">
+            <span class="sidebar-user-status"></span>
+          </span>
+          <span class="sidebar-user-info">
+            <span class="sidebar-user-name">John Doe</span>
+            <span class="sidebar-user-role">Administrator</span>
+          </span>
+        </a>
+        <div class="sidebar-user-actions">
+          <a href="settings.html" class="sidebar-user-action" title="Settings">
+            <i class="ph ph-gear"></i>
+          </a>
+          <a href="auth-login.html" class="sidebar-user-action sidebar-user-logout" title="Logout">
+            <i class="ph ph-sign-out"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Sidebar Overlay (Mobile) -->
+  <div class="sidebar-overlay"></div>
+
+  <!-- Main Content -->
+  <main class="main">
+    <div class="main-content page-widgets-banners">
+      <!-- Page Header -->
+      <div class="page-header">
+        <h1 class="page-title">Banner Widgets</h1>
+        <nav class="breadcrumb">
+          <a href="index.html" class="breadcrumb-item">Home</a>
+          <a href="#" class="breadcrumb-item">Widgets</a>
+          <span class="breadcrumb-item active">Banners</span>
+        </nav>
+      </div>
+
+      <!-- Welcome Banners -->
+      <section class="section">
+        <h5 class="section-title mb-3">Welcome Banners</h5>
+        <div class="row g-4">
+          <!-- Welcome Banner with Gradient -->
+          <div class="col-lg-8">
+            <div class="widget-banner-welcome gradient-primary">
+              <div class="widget-banner-content">
+                <h4 class="widget-banner-title">Good morning, Sarah!</h4>
+                <p class="widget-banner-text">Your productivity increased by 38% this week. Keep up the momentum!</p>
+                <button class="btn btn-danger btn-sm">View Report</button>
+              </div>
+              <div class="widget-banner-image">
+                <img src="assets/img/banners/banner-welcome.webp" alt="Welcome">
+              </div>
+            </div>
+          </div>
+
+          <!-- Level Up Banner -->
+          <div class="col-lg-4">
+            <div class="card widget-banner-achievement">
+              <div class="card-body text-center">
+                <span class="widget-banner-label">MILESTONE</span>
+                <div class="widget-banner-badge">
+                  <i class="ph-duotone ph-trophy"></i>
+                </div>
+                <h5 class="widget-banner-heading">Goal Achieved!</h5>
+                <p class="widget-banner-desc">You completed 100 tasks this month. Claim your reward.</p>
+                <button class="btn btn-info btn-sm">Claim Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Promo Banners -->
+      <section class="section">
+        <h5 class="section-title mb-3">Promo Banners</h5>
+        <div class="row g-4">
+          <!-- Track Transaction Banner -->
+          <div class="col-lg-8">
+            <div class="widget-banner-promo light">
+              <div class="widget-banner-content">
+                <h4 class="widget-banner-title">Organize Your Workflow Seamlessly</h4>
+                <p class="widget-banner-text">Manage projects, collaborate with your team, and automate repetitive tasks all in one place</p>
+                <button class="btn btn-primary btn-sm">Get Started</button>
+              </div>
+              <div class="widget-banner-image">
+                <img src="assets/img/banners/banner-promo.webp" alt="Promo">
+              </div>
+            </div>
+          </div>
+
+          <!-- Mutual Friend Banner -->
+          <div class="col-lg-4">
+            <div class="card widget-banner-friend">
+              <div class="card-body text-center">
+                <h5 class="widget-banner-heading">New Connection Request</h5>
+                <div class="widget-banner-avatar-wrapper">
+                  <img src="assets/img/avatars/avatar-1.webp" alt="User" class="widget-banner-avatar">
+                  <span class="widget-banner-notification">1</span>
+                </div>
+                <h6 class="widget-banner-name">Alexandra Mitchell</h6>
+                <p class="widget-banner-desc">Review and respond to the connection request</p>
+                <div class="widget-banner-actions">
+                  <button class="btn btn-primary btn-sm">Approve</button>
+                  <button class="btn btn-outline-danger btn-sm">Decline</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Status Banners -->
+      <section class="section">
+        <h5 class="section-title mb-3">Status Banners</h5>
+        <div class="row g-4">
+          <!-- Error Banner -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card widget-banner-status">
+              <div class="card-body text-center">
+                <div class="widget-banner-icon-wrapper">
+                  <img src="assets/img/banners/banner-error.webp" alt="Error" class="widget-banner-illustration">
+                </div>
+                <h5 class="widget-banner-heading">Connection Lost</h5>
+                <p class="widget-banner-desc">Unable to reach the server. Check your network settings.</p>
+                <button class="btn btn-danger btn-sm rounded-pill">Reconnect</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Empty Cart Banner -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card widget-banner-status">
+              <div class="card-body text-center">
+                <div class="widget-banner-icon-wrapper">
+                  <div class="widget-banner-empty-cart">
+                    <i class="ph ph-bag"></i>
+                  </div>
+                </div>
+                <h5 class="widget-banner-heading">No Items Found</h5>
+                <p class="widget-banner-desc">Your wishlist is empty. Browse our catalog to find items.</p>
+                <button class="btn btn-primary btn-sm">Browse Products</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Welcome Stats Banner -->
+          <div class="col-lg-4 col-md-6">
+            <div class="widget-banner-stats gradient-primary">
+              <div class="widget-banner-content">
+                <h4 class="widget-banner-title">Hello Marcus Chen</h4>
+                <p class="widget-banner-text">Here's your weekly summary</p>
+                <div class="widget-banner-stat-group">
+                  <div class="widget-banner-stat">
+                    <span class="widget-banner-stat-value">428</span>
+                    <span class="widget-banner-stat-label">Tasks Done</span>
+                  </div>
+                  <div class="widget-banner-stat">
+                    <span class="widget-banner-stat-value">92%</span>
+                    <span class="widget-banner-stat-label">On Track</span>
+                  </div>
+                </div>
+              </div>
+              <div class="widget-banner-image bottom">
+                <img src="assets/img/banners/banner-user.webp" alt="User">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Alert Banners -->
+      <section class="section">
+        <h5 class="section-title mb-3">Alert Banners</h5>
+        <div class="row g-4">
+          <!-- Success Alert Banner -->
+          <div class="col-lg-6">
+            <div class="widget-banner-alert success">
+              <div class="widget-banner-alert-icon">
+                <i class="ph-duotone ph-check-circle"></i>
+              </div>
+              <div class="widget-banner-alert-content">
+                <h6 class="widget-banner-alert-title">Export Completed!</h6>
+                <p class="widget-banner-alert-text">Your data export of 2,847 records has finished. Download available for 24 hours.</p>
+              </div>
+              <button class="widget-banner-alert-close"><i class="ph ph-x"></i></button>
+            </div>
+          </div>
+
+          <!-- Warning Alert Banner -->
+          <div class="col-lg-6">
+            <div class="widget-banner-alert warning">
+              <div class="widget-banner-alert-icon">
+                <i class="ph-duotone ph-warning"></i>
+              </div>
+              <div class="widget-banner-alert-content">
+                <h6 class="widget-banner-alert-title">Storage Almost Full</h6>
+                <p class="widget-banner-alert-text">You've used 85% of your allocated storage. Consider upgrading or removing unused files.</p>
+              </div>
+              <button class="widget-banner-alert-close"><i class="ph ph-x"></i></button>
+            </div>
+          </div>
+
+          <!-- Info Alert Banner -->
+          <div class="col-lg-6">
+            <div class="widget-banner-alert info">
+              <div class="widget-banner-alert-icon">
+                <i class="ph-duotone ph-info"></i>
+              </div>
+              <div class="widget-banner-alert-content">
+                <h6 class="widget-banner-alert-title">New Updates Available</h6>
+                <p class="widget-banner-alert-text">Version 3.2.1 includes performance improvements and bug fixes. Update at your convenience.</p>
+              </div>
+              <button class="widget-banner-alert-close"><i class="ph ph-x"></i></button>
+            </div>
+          </div>
+
+          <!-- Danger Alert Banner -->
+          <div class="col-lg-6">
+            <div class="widget-banner-alert danger">
+              <div class="widget-banner-alert-icon">
+                <i class="ph ph-shield-warning"></i>
+              </div>
+              <div class="widget-banner-alert-content">
+                <h6 class="widget-banner-alert-title">Password Change Required</h6>
+                <p class="widget-banner-alert-text">Your password hasn't been updated in 180 days. Please create a new secure password.</p>
+              </div>
+              <button class="widget-banner-alert-close"><i class="ph ph-x"></i></button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Banners -->
+      <section class="section">
+        <h5 class="section-title mb-3">Call-to-Action Banners</h5>
+        <div class="row g-4">
+          <!-- Upgrade Banner -->
+          <div class="col-lg-6">
+            <div class="widget-banner-cta gradient-success">
+              <div class="widget-banner-cta-content">
+                <span class="widget-banner-cta-badge">PREMIUM</span>
+                <h4 class="widget-banner-cta-title">Unlock Advanced Features</h4>
+                <p class="widget-banner-cta-text">Access analytics dashboards, custom integrations, and dedicated support resources.</p>
+                <div class="widget-banner-cta-buttons">
+                  <button class="btn btn-light btn-sm">Start Trial</button>
+                  <button class="btn btn-outline-light btn-sm">Compare Plans</button>
+                </div>
+              </div>
+              <div class="widget-banner-cta-icon">
+                <i class="ph ph-rocket-launch"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Invite Banner -->
+          <div class="col-lg-6">
+            <div class="widget-banner-cta gradient-info">
+              <div class="widget-banner-cta-content">
+                <span class="widget-banner-cta-badge">REFERRAL</span>
+                <h4 class="widget-banner-cta-title">Share & Get Rewarded</h4>
+                <p class="widget-banner-cta-text">Invite colleagues to join and receive 500 bonus credits for each verified signup.</p>
+                <div class="widget-banner-cta-buttons">
+                  <button class="btn btn-light btn-sm">Copy Link</button>
+                  <button class="btn btn-outline-light btn-sm">See History</button>
+                </div>
+              </div>
+              <div class="widget-banner-cta-icon">
+                <i class="ph ph-gift"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Download App Banner -->
+          <div class="col-12">
+            <div class="widget-banner-cta gradient-primary horizontal">
+              <div class="widget-banner-cta-content">
+                <h4 class="widget-banner-cta-title">Get the Mobile Experience</h4>
+                <p class="widget-banner-cta-text">Manage your dashboard anywhere. Free on all mobile platforms.</p>
+              </div>
+              <div class="widget-banner-cta-buttons">
+                <button class="btn btn-dark btn-sm"><i class="ph ph-apple-logo me-1"></i>App Store</button>
+                <button class="btn btn-dark btn-sm"><i class="ph ph-google-play-logo me-1"></i>Play Store</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Notification Banners -->
+      <section class="section">
+        <h5 class="section-title mb-3">Notification Banners</h5>
+        <div class="row g-4">
+          <!-- New Message Notification -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card widget-banner-notification">
+              <div class="card-body">
+                <div class="widget-banner-notif-header">
+                  <div class="widget-banner-notif-icon primary">
+                    <i class="ph ph-envelope"></i>
+                  </div>
+                  <span class="widget-banner-notif-time">5 mins ago</span>
+                </div>
+                <h6 class="widget-banner-notif-title">Document Shared With You</h6>
+                <p class="widget-banner-notif-text">Michael Torres shared "Q4 Budget Report" with editing permissions.</p>
+                <div class="widget-banner-notif-actions">
+                  <button class="btn btn-primary btn-sm">Open File</button>
+                  <button class="btn btn-light btn-sm">Later</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Order Update Notification -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card widget-banner-notification">
+              <div class="card-body">
+                <div class="widget-banner-notif-header">
+                  <div class="widget-banner-notif-icon success">
+                    <i class="ph ph-package"></i>
+                  </div>
+                  <span class="widget-banner-notif-time">1 hour ago</span>
+                </div>
+                <h6 class="widget-banner-notif-title">Deployment Complete</h6>
+                <p class="widget-banner-notif-text">Production build v2.4.7 deployed successfully to all regions.</p>
+                <div class="widget-banner-notif-actions">
+                  <button class="btn btn-success btn-sm">View Logs</button>
+                  <button class="btn btn-light btn-sm">Dismiss</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Calendar Reminder Notification -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card widget-banner-notification">
+              <div class="card-body">
+                <div class="widget-banner-notif-header">
+                  <div class="widget-banner-notif-icon warning">
+                    <i class="ph ph-calendar-dots"></i>
+                  </div>
+                  <span class="widget-banner-notif-time">In 15 mins</span>
+                </div>
+                <h6 class="widget-banner-notif-title">Client Call Starting Soon</h6>
+                <p class="widget-banner-notif-text">Review meeting with Acme Corp begins shortly. Prepare your notes.</p>
+                <div class="widget-banner-notif-actions">
+                  <button class="btn btn-warning btn-sm">Join Now</button>
+                  <button class="btn btn-light btn-sm">Postpone</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Feature Banners -->
+      <section class="section">
+        <h5 class="section-title mb-3">Feature Announcement Banners</h5>
+        <div class="row g-4">
+          <!-- New Feature Banner -->
+          <div class="col-lg-6">
+            <div class="widget-banner-feature">
+              <div class="widget-banner-feature-badge">NEW</div>
+              <div class="widget-banner-feature-content">
+                <h5 class="widget-banner-feature-title">AI Assistant Now Available</h5>
+                <p class="widget-banner-feature-text">Get intelligent suggestions and automate routine tasks with our new AI-powered helper.</p>
+                <a href="#" class="widget-banner-feature-link">Enable Feature <i class="ph ph-arrow-right"></i></a>
+              </div>
+              <div class="widget-banner-feature-icon">
+                <i class="ph ph-robot"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Update Banner -->
+          <div class="col-lg-6">
+            <div class="widget-banner-feature">
+              <div class="widget-banner-feature-badge update">IMPROVED</div>
+              <div class="widget-banner-feature-content">
+                <h5 class="widget-banner-feature-title">Faster Search Experience</h5>
+                <p class="widget-banner-feature-text">Search results now load 60% faster with improved filters and instant previews.</p>
+                <a href="#" class="widget-banner-feature-link">Read More <i class="ph ph-arrow-right"></i></a>
+              </div>
+              <div class="widget-banner-feature-icon">
+                <i class="ph ph-lightning"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Onboarding Banners -->
+      <section class="section">
+        <h5 class="section-title mb-3">Onboarding Banners</h5>
+        <div class="row g-4">
+          <!-- Welcome Onboarding -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card widget-banner-onboarding">
+              <div class="card-body text-center">
+                <div class="widget-banner-onboarding-step">1</div>
+                <div class="widget-banner-onboarding-icon">
+                  <i class="ph ph-user-plus"></i>
+                </div>
+                <h6 class="widget-banner-onboarding-title">Set Up Your Workspace</h6>
+                <p class="widget-banner-onboarding-text">Customize your dashboard layout and configure notification preferences.</p>
+                <button class="btn btn-primary btn-sm w-100">Configure</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Connect Onboarding -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card widget-banner-onboarding">
+              <div class="card-body text-center">
+                <div class="widget-banner-onboarding-step">2</div>
+                <div class="widget-banner-onboarding-icon">
+                  <i class="ph ph-link"></i>
+                </div>
+                <h6 class="widget-banner-onboarding-title">Import Your Data</h6>
+                <p class="widget-banner-onboarding-text">Bring in existing projects from external tools or upload spreadsheets.</p>
+                <button class="btn btn-outline-primary btn-sm w-100">Import</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Explore Onboarding -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card widget-banner-onboarding">
+              <div class="card-body text-center">
+                <div class="widget-banner-onboarding-step completed">
+                  <i class="ph ph-check"></i>
+                </div>
+                <div class="widget-banner-onboarding-icon success">
+                  <i class="ph ph-compass"></i>
+                </div>
+                <h6 class="widget-banner-onboarding-title">Invite Your Team</h6>
+                <p class="widget-banner-onboarding-text">Setup complete! Add team members to collaborate on projects together.</p>
+                <button class="btn btn-success btn-sm w-100">Add Members</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sale Banners -->
+      <section class="section">
+        <h5 class="section-title mb-3">Sale & Promotion Banners</h5>
+        <div class="row g-4">
+          <!-- Flash Sale Banner -->
+          <div class="col-lg-6">
+            <div class="widget-banner-sale gradient-danger">
+              <div class="widget-banner-sale-content">
+                <span class="widget-banner-sale-badge">LIMITED TIME</span>
+                <h3 class="widget-banner-sale-title">40% OFF</h3>
+                <p class="widget-banner-sale-text">Annual subscription discount ends soon</p>
+                <div class="widget-banner-sale-timer">
+                  <div class="widget-banner-timer-item">
+                    <span class="widget-banner-timer-value">05</span>
+                    <span class="widget-banner-timer-label">Hours</span>
+                  </div>
+                  <div class="widget-banner-timer-item">
+                    <span class="widget-banner-timer-value">23</span>
+                    <span class="widget-banner-timer-label">Mins</span>
+                  </div>
+                  <div class="widget-banner-timer-item">
+                    <span class="widget-banner-timer-value">47</span>
+                    <span class="widget-banner-timer-label">Secs</span>
+                  </div>
+                </div>
+                <button class="btn btn-light btn-sm">Upgrade Plan</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Discount Code Banner -->
+          <div class="col-lg-6">
+            <div class="widget-banner-sale gradient-warning">
+              <div class="widget-banner-sale-content">
+                <span class="widget-banner-sale-badge dark">SPECIAL</span>
+                <h3 class="widget-banner-sale-title">Get 3 Months Free</h3>
+                <p class="widget-banner-sale-text">Apply promo code at checkout</p>
+                <div class="widget-banner-sale-code">
+                  <span class="widget-banner-code">NEWYEAR2026</span>
+                  <button class="widget-banner-copy-btn"><i class="ph ph-clipboard"></i></button>
+                </div>
+                <button class="btn btn-dark btn-sm">Use Code</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Cookie & Consent Banners -->
+      <section class="section">
+        <h5 class="section-title mb-3">Cookie & Consent Banners</h5>
+        <div class="row g-4">
+          <!-- Cookie Banner -->
+          <div class="col-12">
+            <div class="widget-banner-cookie">
+              <div class="widget-banner-cookie-icon">
+                <i class="ph ph-cookie"></i>
+              </div>
+              <div class="widget-banner-cookie-content">
+                <h6 class="widget-banner-cookie-title">Privacy Preferences</h6>
+                <p class="widget-banner-cookie-text">We use essential cookies to operate the site and optional analytics to improve your experience. You can manage your preferences anytime.</p>
+              </div>
+              <div class="widget-banner-cookie-actions">
+                <button class="btn btn-primary btn-sm">Accept All</button>
+                <button class="btn btn-outline-secondary btn-sm">Manage</button>
+                <button class="btn btn-link btn-sm">Privacy Policy</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Newsletter Banner -->
+          <div class="col-lg-6">
+            <div class="widget-banner-newsletter">
+              <div class="widget-banner-newsletter-icon">
+                <i class="ph ph-newspaper"></i>
+              </div>
+              <div class="widget-banner-newsletter-content">
+                <h6 class="widget-banner-newsletter-title">Weekly Insights Digest</h6>
+                <p class="widget-banner-newsletter-text">Receive curated tips, product updates, and industry trends every Thursday.</p>
+                <div class="widget-banner-newsletter-form">
+                  <input type="email" class="form-control form-control-sm" placeholder="your@email.com">
+                  <button class="btn btn-primary btn-sm">Join</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- App Install Banner -->
+          <div class="col-lg-6">
+            <div class="widget-banner-app-install">
+              <div class="widget-banner-app-icon">
+                <i class="ph ph-device-mobile"></i>
+              </div>
+              <div class="widget-banner-app-content">
+                <h6 class="widget-banner-app-title">Add to Home Screen</h6>
+                <p class="widget-banner-app-text">Install this app for offline access and push notifications.</p>
+              </div>
+              <div class="widget-banner-app-actions">
+                <button class="btn btn-primary btn-sm">Add Now</button>
+                <button class="btn btn-light btn-sm">Maybe Later</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <span class="footer-brand-mark"><i class="bi bi-lightning-charge-fill"></i></span>
+          <span class="footer-copyright">
+            &copy; 2026 <a href="#">TrendyAdmin</a>. All Rights Reserved.
+          </span>
+        </div>
+        <div class="footer-links">
+          <a href="#">About</a>
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Contact</a>
+        </div>
+        <div class="footer-credits">
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Back to Top -->
+  <a href="#" class="back-to-top">
+    <i class="ph ph-arrow-up"></i>
+  </a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="assets/vendor/chart.js/chart.umd.js"></script>
+  <script src="assets/vendor/echarts/echarts.min.js"></script>
+  <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="assets/vendor/quill/quill.js"></script>
+  <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+  <script src="assets/vendor/choices.js/choices.min.js"></script>
+  <script src="assets/vendor/flatpickr/flatpickr.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS Files -->
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <!-- App Sidebar Toggle (for app pages with sidebars) -->
+  <script src="assets/js/apps-sidebar-toggle.js"></script>
+
+</body>
+
+</html>

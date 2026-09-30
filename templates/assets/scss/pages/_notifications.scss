@@ -1,0 +1,274 @@
+/*--------------------------------------------------------------
+# Notifications Page - TrendyAdmin
+# Date-grouped feed, delivery channel matrix, quiet hours
+--------------------------------------------------------------*/
+
+.page-notifications {
+
+  /* Toolbar */
+  .nf-toolbar {
+    padding: var(--spacing-md) var(--spacing-lg);
+    border-bottom: 1px solid var(--border-color-light);
+  }
+
+  /* Feed */
+  .nf-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nf-day {
+    padding: var(--spacing-sm) var(--spacing-lg);
+    font-size: 0.6875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted-color);
+    background: var(--background-color);
+  }
+
+  .nf-item {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md) var(--spacing-lg);
+    border-bottom: 1px solid var(--border-color-light);
+    transition: background-color var(--transition-fast), opacity var(--transition-base);
+  }
+
+  .nf-item:hover {
+    background: color-mix(in srgb, var(--accent-color), transparent 97%);
+  }
+
+  .nf-item.unread {
+    background: color-mix(in srgb, var(--accent-color), transparent 95%);
+    box-shadow: inset 3px 0 0 var(--accent-color);
+  }
+
+  .nf-item.unread:hover {
+    background: color-mix(in srgb, var(--accent-color), transparent 92%);
+  }
+
+  .nf-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    border-radius: var(--radius-lg);
+    font-size: 1.25rem;
+  }
+
+  .nf-icon.accent {
+    background: color-mix(in srgb, var(--accent-color), transparent 88%);
+    color: var(--accent-color);
+  }
+
+  .nf-icon.success {
+    background: var(--success-color-light);
+    color: var(--success-color);
+  }
+
+  .nf-icon.warning {
+    background: var(--warning-color-light);
+    color: var(--warning-color);
+  }
+
+  .nf-icon.danger {
+    background: var(--danger-color-light);
+    color: var(--danger-color);
+  }
+
+  .nf-icon.info {
+    background: var(--info-color-light);
+    color: var(--info-color);
+  }
+
+  .nf-body {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .nf-title {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--heading-color);
+  }
+
+  .nf-text {
+    font-size: 0.8125rem;
+    color: var(--muted-color);
+    line-height: 1.5;
+    margin-top: 2px;
+  }
+
+  .nf-meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+    margin-top: 6px;
+  }
+
+  .nf-time {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.7187rem;
+    color: var(--light-color);
+  }
+
+  .nf-cat {
+    padding: 2px 10px;
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--accent-color);
+    background: color-mix(in srgb, var(--accent-color), transparent 90%);
+    border-radius: var(--radius-full);
+  }
+
+  .nf-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    flex-shrink: 0;
+  }
+
+  .nf-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: var(--radius-full);
+    background: var(--accent-color);
+  }
+
+  .nf-delete {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: var(--radius-full);
+    background: transparent;
+    color: var(--light-color);
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity var(--transition-fast), background-color var(--transition-fast), color var(--transition-fast);
+  }
+
+  .nf-item:hover .nf-delete {
+    opacity: 1;
+  }
+
+  .nf-delete:hover {
+    background: var(--danger-color-light);
+    color: var(--danger-color);
+  }
+
+  .nf-footer {
+    padding: var(--spacing-md);
+    text-align: center;
+  }
+
+  /* Channel matrix */
+  .nf-matrix {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .nf-matrix th {
+    padding: 10px var(--spacing-md);
+    font-size: 0.6875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--muted-color);
+    border-bottom: 1px solid var(--border-color-light);
+    white-space: nowrap;
+  }
+
+  .nf-matrix th i {
+    color: var(--accent-color);
+    font-size: 0.875rem;
+    margin-right: 4px;
+  }
+
+  .nf-matrix th:not(:first-child) {
+    text-align: center;
+    width: 110px;
+  }
+
+  .nf-matrix td {
+    padding: 12px var(--spacing-md);
+    border-bottom: 1px solid var(--border-color-light);
+    vertical-align: middle;
+  }
+
+  .nf-matrix td:not(:first-child) {
+    text-align: center;
+  }
+
+  .nf-matrix td .form-check {
+    display: inline-block;
+    margin: 0;
+    min-height: auto;
+  }
+
+  .nf-matrix tbody tr:last-child td {
+    border-bottom: none;
+  }
+
+  .nf-matrix tbody tr:hover {
+    background: color-mix(in srgb, var(--accent-color), transparent 97%);
+  }
+
+  .nf-matrix-cat {
+    display: block;
+    font-size: 0.8437rem;
+    font-weight: 600;
+    color: var(--heading-color);
+  }
+
+  .nf-matrix-sub {
+    display: block;
+    font-size: 0.7187rem;
+    color: var(--muted-color);
+  }
+
+  /* Quiet hours day chips */
+  .nf-days {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .nf-day-chip {
+    padding: 7px 14px;
+    border-radius: var(--radius-full);
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--muted-color);
+    background: var(--background-color);
+    cursor: pointer;
+    user-select: none;
+    transition: background-color var(--transition-fast), color var(--transition-fast);
+  }
+
+  .nf-day-chip:hover {
+    color: var(--heading-color);
+  }
+
+  .nf-day-chip.active {
+    color: var(--contrast-color);
+    background: var(--accent-color);
+  }
+
+  /* Header switch alignment in quiet hours card */
+  .ue-section-header .form-check {
+    margin: 0;
+    min-height: auto;
+  }
+}

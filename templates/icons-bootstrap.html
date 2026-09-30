@@ -1,0 +1,1255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Icons - TrendyAdmin</title>
+  <meta name="description" content="TrendyAdmin - Bootstrap Admin Template">
+  <meta name="keywords" content="admin, dashboard, bootstrap">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts - Plus Jakarta Sans (body) + Outfit (headings) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="assets/vendor/phosphor-icons/phosphor-icons.css" rel="stylesheet">
+  <link href="assets/vendor/lucide-icons/lucide.css" rel="stylesheet">
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/choices.js/choices.min.css" rel="stylesheet">
+  <link href="assets/vendor/flatpickr/flatpickr.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+    * Template Name: TrendyAdmin - Bootstrap Admin Template
+    * Template URL: https://bootstrapmade.com/trendy-admin-bootstrap-dashboard-template/
+    * Updated: Jul 29 2026 with Bootstrap v5.3.8
+    * Author: BootstrapMade.com
+    * License: https://bootstrapmade.com/license/
+    ======================================================== -->
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-inner">
+      <!-- Header Left -->
+      <div class="header-left">
+        <button class="sidebar-toggle" title="Toggle Sidebar">
+          <i class="ph ph-list"></i>
+        </button>
+        <a href="index.html" class="header-logo">
+          <span class="header-logo-mark"><i class="bi bi-lightning-charge-fill"></i></span>
+          <span class="header-logo-text">TrendyAdmin</span>
+        </a>
+
+        <!-- Apps Quick Access -->
+        <div class="header-action dropdown apps-dropdown">
+          <button class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" title="Quick Access">
+            <i class="ph ph-dots-nine"></i>
+          </button>
+          <div class="dropdown-menu">
+            <div class="apps-menu-header">
+              <h6>Quick Access</h6>
+              <span>Jump straight into an app</span>
+            </div>
+            <div class="apps-grid">
+              <a href="apps-chat.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-chat-circle-dots"></i></span>
+                <span>Chat</span>
+              </a>
+              <a href="apps-email.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-envelope"></i></span>
+                <span>Email</span>
+              </a>
+              <a href="apps-calendar.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-calendar-blank"></i></span>
+                <span>Calendar</span>
+              </a>
+              <a href="apps-kanban.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-kanban"></i></span>
+                <span>Kanban</span>
+              </a>
+              <a href="apps-file-manager.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-folder-open"></i></span>
+                <span>Files</span>
+              </a>
+              <a href="apps-todo.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-check-square"></i></span>
+                <span>Todo</span>
+              </a>
+              <a href="apps-contacts.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-address-book"></i></span>
+                <span>Contacts</span>
+              </a>
+              <a href="apps-support.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-headset"></i></span>
+                <span>Support</span>
+              </a>
+              <a href="invoice-list.html" class="apps-grid-item">
+                <span class="apps-grid-icon"><i class="ph ph-receipt"></i></span>
+                <span>Invoices</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Header Search (Desktop) -->
+      <div class="header-search">
+        <form class="search-form" action="search-results.html" method="GET">
+          <button type="submit"><i class="ph ph-magnifying-glass"></i></button>
+          <input type="search" name="q" placeholder="Search anything..." autocomplete="off">
+          <span class="search-hint">⌘K</span>
+        </form>
+      </div>
+
+      <!-- Header Right -->
+      <div class="header-right">
+        <!-- Desktop Actions (hidden on mobile, shown in mobile menu) -->
+        <div class="header-actions-desktop">
+          <!-- Quick Create -->
+          <div class="dropdown create-dropdown">
+            <button class="create-btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="ph ph-plus"></i>
+              <span>Create</span>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end create-menu">
+              <a class="dropdown-item" href="apps-kanban.html">
+                <span class="create-item-icon"><i class="ph ph-kanban"></i></span>
+                <span class="create-item-text">
+                  <span class="create-item-title">New Project</span>
+                  <span class="create-item-sub">Start a kanban board</span>
+                </span>
+              </a>
+              <a class="dropdown-item" href="apps-todo.html">
+                <span class="create-item-icon"><i class="ph ph-check-square"></i></span>
+                <span class="create-item-text">
+                  <span class="create-item-title">New Task</span>
+                  <span class="create-item-sub">Add to your todo list</span>
+                </span>
+              </a>
+              <a class="dropdown-item" href="apps-contacts.html">
+                <span class="create-item-icon"><i class="ph ph-user-plus"></i></span>
+                <span class="create-item-text">
+                  <span class="create-item-title">New Contact</span>
+                  <span class="create-item-sub">Save a new person</span>
+                </span>
+              </a>
+              <a class="dropdown-item" href="invoice-list.html">
+                <span class="create-item-icon"><i class="ph ph-receipt"></i></span>
+                <span class="create-item-text">
+                  <span class="create-item-title">New Invoice</span>
+                  <span class="create-item-sub">Bill a customer</span>
+                </span>
+              </a>
+            </div>
+          </div>
+
+          <div class="header-divider"></div>
+
+          <!-- Theme Toggle -->
+          <button class="header-action theme-toggle" title="Toggle Theme">
+            <i class="ph ph-moon icon-dark"></i>
+            <i class="ph ph-sun icon-light"></i>
+          </button>
+
+          <!-- Fullscreen Toggle -->
+          <button class="header-action fullscreen-toggle" onclick="toggleFullscreen()" title="Fullscreen">
+            <i class="ph ph-arrows-out icon-enter"></i>
+            <i class="ph ph-arrows-in icon-exit"></i>
+          </button>
+
+          <!-- Messages -->
+          <div class="header-action dropdown messages-dropdown">
+            <button class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" title="Messages">
+              <i class="ph ph-chat-teardrop-text"></i>
+              <span class="badge">2</span>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end">
+              <div class="messages-header">
+                <h6>Messages</h6>
+                <a href="apps-chat.html">View all</a>
+              </div>
+              <div class="messages-list">
+                <a href="apps-chat.html" class="message-item unread">
+                  <span class="message-avatar">
+                    <img src="assets/img/avatars/avatar-2.webp" alt="Sarah Johnson">
+                    <span class="message-status"></span>
+                  </span>
+                  <span class="message-content">
+                    <span class="message-name">Sarah Johnson</span>
+                    <span class="message-text">The new dashboard mockups look amazing! 🔥</span>
+                  </span>
+                  <span class="message-time">2m</span>
+                </a>
+                <a href="apps-chat.html" class="message-item unread">
+                  <span class="message-avatar">
+                    <img src="assets/img/avatars/avatar-3.webp" alt="Mike Chen">
+                  </span>
+                  <span class="message-content">
+                    <span class="message-name">Mike Chen</span>
+                    <span class="message-text">Can you review my PR when you get a chance?</span>
+                  </span>
+                  <span class="message-time">1h</span>
+                </a>
+                <a href="apps-chat.html" class="message-item">
+                  <span class="message-avatar">
+                    <img src="assets/img/avatars/avatar-4.webp" alt="Emma Davis">
+                  </span>
+                  <span class="message-content">
+                    <span class="message-name">Emma Davis</span>
+                    <span class="message-text">Meeting moved to 3pm tomorrow</span>
+                  </span>
+                  <span class="message-time">3h</span>
+                </a>
+              </div>
+              <div class="messages-footer">
+                <a href="apps-chat.html">Open chat <i class="ph ph-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Notifications -->
+          <div class="header-action dropdown notification-dropdown">
+            <button class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" title="Notifications">
+              <i class="ph ph-bell"></i>
+              <span class="badge">3</span>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end">
+              <div class="notification-header">
+                <h6>You have 3 new notifications</h6>
+                <a href="#" class="notification-mark-read" data-notification-action="mark-all-read" title="Mark all as read">
+                  <i class="ph ph-checks"></i>
+                </a>
+              </div>
+              <div class="notification-list">
+                <div class="notification-item unread">
+                  <span class="notification-icon success">
+                    <i class="ph ph-check-circle"></i>
+                  </span>
+                  <span class="notification-content">
+                    <span class="notification-title">Order Completed</span>
+                    <span class="notification-text">Your order #12345 has been delivered</span>
+                  </span>
+                  <span class="notification-meta">
+                    <span class="notification-time">5m</span>
+                    <span class="notification-dot"></span>
+                  </span>
+                </div>
+                <div class="notification-item unread">
+                  <span class="notification-icon warning">
+                    <i class="ph ph-warning"></i>
+                  </span>
+                  <span class="notification-content">
+                    <span class="notification-title">Low Storage</span>
+                    <span class="notification-text">Server storage is running low (85% used)</span>
+                  </span>
+                  <span class="notification-meta">
+                    <span class="notification-time">1h</span>
+                    <span class="notification-dot"></span>
+                  </span>
+                </div>
+                <div class="notification-item">
+                  <span class="notification-icon info">
+                    <i class="ph ph-info"></i>
+                  </span>
+                  <span class="notification-content">
+                    <span class="notification-title">New Feature</span>
+                    <span class="notification-text">Dark mode is now available</span>
+                  </span>
+                  <span class="notification-meta">
+                    <span class="notification-time">2h</span>
+                    <span class="notification-dot"></span>
+                  </span>
+                </div>
+              </div>
+              <div class="notification-footer">
+                <a href="notifications.html">View all</a>
+                <a href="settings.html">Settings</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="header-divider"></div>
+
+          <!-- User Dropdown -->
+          <div class="header-action dropdown user-dropdown">
+            <button class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="assets/img/profile-img.webp" alt="User" class="avatar">
+              <span class="user-name">John Doe</span>
+              <i class="ph ph-caret-down user-caret"></i>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end">
+              <div class="user-menu-card">
+                <span class="user-menu-avatar">
+                  <img src="assets/img/profile-img.webp" alt="User">
+                </span>
+                <span class="user-menu-name">John Doe</span>
+                <span class="user-menu-mail">john@trendyadmin.com</span>
+                <span class="user-menu-role">Administrator</span>
+              </div>
+              <div class="user-menu-body">
+                <a class="dropdown-item" href="profile.html">
+                  <span class="user-menu-item-icon"><i class="ph ph-user"></i></span>
+                  My Profile
+                  <i class="ph ph-caret-right user-menu-item-caret"></i>
+                </a>
+                <a class="dropdown-item" href="settings.html">
+                  <span class="user-menu-item-icon"><i class="ph ph-gear"></i></span>
+                  Settings
+                  <i class="ph ph-caret-right user-menu-item-caret"></i>
+                </a>
+                <a class="dropdown-item" href="activity.html">
+                  <span class="user-menu-item-icon"><i class="ph ph-pulse"></i></span>
+                  Activity Log
+                  <i class="ph ph-caret-right user-menu-item-caret"></i>
+                </a>
+                <a class="dropdown-item" href="invoice-list.html">
+                  <span class="user-menu-item-icon"><i class="ph ph-receipt"></i></span>
+                  Billing
+                  <i class="ph ph-caret-right user-menu-item-caret"></i>
+                </a>
+              </div>
+              <div class="user-menu-footer">
+                <a href="auth-login.html" class="user-menu-signout">
+                  <i class="ph ph-sign-out"></i> Sign Out
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile Actions (visible only on mobile) -->
+        <div class="header-actions-mobile">
+          <!-- Search Toggle (Mobile) -->
+          <button class="header-action search-toggle" title="Search">
+            <i class="ph ph-magnifying-glass"></i>
+          </button>
+
+          <!-- Mobile Menu Toggle -->
+          <button class="header-action mobile-menu-toggle" title="More">
+            <i class="ph ph-dots-three-vertical"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Search -->
+  <div class="mobile-search">
+    <form class="search-form" action="search-results.html" method="GET">
+      <input type="search" name="q" placeholder="Search anything..." autocomplete="off">
+      <button type="submit"><i class="ph ph-magnifying-glass"></i></button>
+    </form>
+  </div>
+
+  <!-- Mobile Header Menu -->
+  <div class="mobile-header-menu">
+    <div class="mobile-header-menu-content">
+      <!-- Theme Toggle -->
+      <button class="mobile-menu-item theme-toggle" title="Toggle Theme">
+        <i class="ph ph-moon icon-dark"></i>
+        <i class="ph ph-sun icon-light"></i>
+        <span class="mobile-menu-label">Theme</span>
+      </button>
+
+      <!-- Fullscreen Toggle -->
+      <button class="mobile-menu-item fullscreen-toggle" onclick="toggleFullscreen()" title="Fullscreen">
+        <i class="ph ph-arrows-out icon-enter"></i>
+        <i class="ph ph-arrows-in icon-exit"></i>
+        <span class="mobile-menu-label">Fullscreen</span>
+      </button>
+
+      <!-- Messages -->
+      <a href="apps-chat.html" class="mobile-menu-item">
+        <i class="ph ph-chat-teardrop-text"></i>
+        <span class="badge">2</span>
+        <span class="mobile-menu-label">Messages</span>
+      </a>
+
+      <!-- Notifications -->
+      <a href="notifications.html" class="mobile-menu-item">
+        <i class="ph ph-bell"></i>
+        <span class="badge">3</span>
+        <span class="mobile-menu-label">Notifications</span>
+      </a>
+
+      <!-- Profile -->
+      <a href="profile.html" class="mobile-menu-item">
+        <i class="ph ph-user"></i>
+        <span class="mobile-menu-label">Profile</span>
+      </a>
+
+      <!-- Sign Out -->
+      <a href="auth-login.html" class="mobile-menu-item mobile-menu-item-danger">
+        <i class="ph ph-sign-out"></i>
+        <span class="mobile-menu-label">Sign Out</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <!-- Sidebar Header -->
+    <div class="sidebar-header">
+      <a href="index.html" class="sidebar-logo">
+        <span class="sidebar-logo-mark"><i class="bi bi-lightning-charge-fill"></i></span>
+        <span class="sidebar-logo-text">TrendyAdmin</span>
+      </a>
+      <button class="sidebar-close">
+        <i class="ph ph-x"></i>
+      </button>
+    </div>
+
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar-nav">
+      <ul class="nav-menu">
+        <li class="nav-heading"><span>Overview</span></li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="index.html">
+            <span class="nav-icon"><i class="ph ph-house"></i></span>
+            <span class="nav-text">Home</span>
+          </a>
+        </li>
+
+        <!-- Dashboards Submenu -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-gauge"></i></span>
+            <span class="nav-text">Dashboards</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="dashboard-sales.html">Sales</a></li>
+            <li><a class="nav-link " href="dashboard-analytics.html">Analytics</a></li>
+            <li><a class="nav-link " href="dashboard-crm.html">CRM</a></li>
+            <li><a class="nav-link " href="dashboard-marketing.html">Marketing</a></li>
+            <li><a class="nav-link " href="dashboard-projects.html">Projects</a></li>
+            <li><a class="nav-link " href="dashboard-finance.html">Finance</a></li>
+          </ul>
+        </li>
+
+        <!-- Users -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-users"></i></span>
+            <span class="nav-text">Users</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="users.html">Users List</a></li>
+            <li><a class="nav-link " href="users-view.html">User View</a></li>
+            <li><a class="nav-link " href="users-edit.html">User Edit</a></li>
+            <li><a class="nav-link " href="profile.html">Profile</a></li>
+            <!-- 3rd Level - Settings submenu -->
+            <li class="has-submenu ">
+              <a class="nav-link" href="#" aria-expanded="false">
+                Settings
+                <i class="ph ph-caret-right nav-arrow"></i>
+              </a>
+              <ul class="nav-submenu ">
+                <li><a class="nav-link " href="settings.html">Account</a></li>
+                <li><a class="nav-link " href="notifications.html">Notifications</a></li>
+                <li><a class="nav-link " href="activity.html">Activity</a></li>
+              </ul>
+            </li>
+            <li><a class="nav-link " href="roles.html">Roles & Permissions</a></li>
+          </ul>
+        </li>
+
+        <!-- Authentication -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-shield-check"></i></span>
+            <span class="nav-text">Authentication</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="auth-login.html">Login</a></li>
+            <li><a class="nav-link " href="auth-register.html">Register</a></li>
+            <li><a class="nav-link " href="auth-forgot-password.html">Forgot Password</a></li>
+            <li><a class="nav-link " href="auth-reset-password.html">Reset Password</a></li>
+            <li><a class="nav-link " href="auth-verify-email.html">Email Verification</a></li>
+            <li><a class="nav-link " href="auth-two-factor.html">Two Factor Auth</a></li>
+            <li><a class="nav-link " href="auth-lock-screen.html">Lock Screen</a></li>
+          </ul>
+        </li>
+
+        <!-- Apps Section -->
+        <li class="nav-heading"><span>Apps</span></li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-calendar.html">
+            <span class="nav-icon"><i class="ph ph-calendar-blank"></i></span>
+            <span class="nav-text">Calendar</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-kanban.html">
+            <span class="nav-icon"><i class="ph ph-kanban"></i></span>
+            <span class="nav-text">Kanban Board</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-chat.html">
+            <span class="nav-icon"><i class="ph ph-chat-circle-dots"></i></span>
+            <span class="nav-text">Chat</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-contacts.html">
+            <span class="nav-icon"><i class="ph ph-address-book"></i></span>
+            <span class="nav-text">Contacts</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-file-manager.html">
+            <span class="nav-icon"><i class="ph ph-folder-open"></i></span>
+            <span class="nav-text">File Manager</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-email.html">
+            <span class="nav-icon"><i class="ph ph-envelope"></i></span>
+            <span class="nav-text">Email</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-todo.html">
+            <span class="nav-icon"><i class="ph ph-check-square"></i></span>
+            <span class="nav-text">Todo List</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="apps-support.html">
+            <span class="nav-icon"><i class="ph ph-headset"></i></span>
+            <span class="nav-text">Support Center</span>
+          </a>
+        </li>
+
+        <!-- UI Elements Section -->
+        <li class="nav-heading"><span>UI Elements</span></li>
+
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-puzzle-piece"></i></span>
+            <span class="nav-text">Components</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="components-alerts.html">Alerts</a></li>
+            <li><a class="nav-link " href="components-accordion.html">Accordion</a></li>
+            <li><a class="nav-link " href="components-badges.html">Badges</a></li>
+            <li><a class="nav-link " href="components-breadcrumbs.html">Breadcrumbs</a></li>
+            <li><a class="nav-link " href="components-buttons.html">Buttons</a></li>
+            <li><a class="nav-link " href="components-cards.html">Cards</a></li>
+            <li><a class="nav-link " href="components-carousel.html">Carousel</a></li>
+            <li><a class="nav-link " href="components-dropdowns.html">Dropdowns</a></li>
+            <li><a class="nav-link " href="components-list-group.html">List Group</a></li>
+            <li><a class="nav-link " href="components-modal.html">Modal</a></li>
+            <li><a class="nav-link " href="components-nav-tabs.html">Navs & Tabs</a></li>
+            <li><a class="nav-link " href="components-offcanvas.html">Offcanvas</a></li>
+            <li><a class="nav-link " href="components-pagination.html">Pagination</a></li>
+            <li><a class="nav-link " href="components-popovers.html">Popovers</a></li>
+            <li><a class="nav-link " href="components-progress.html">Progress</a></li>
+            <li><a class="nav-link " href="components-spinners.html">Spinners</a></li>
+            <li><a class="nav-link " href="components-toasts.html">Toasts</a></li>
+            <li><a class="nav-link " href="components-tooltips.html">Tooltips</a></li>
+          </ul>
+        </li>
+
+        <!-- Widgets -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-stack"></i></span>
+            <span class="nav-text">Widgets</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="widgets-cards.html">Cards</a></li>
+            <li><a class="nav-link " href="widgets-banners.html">Banners</a></li>
+            <li><a class="nav-link " href="widgets-charts.html">Charts</a></li>
+            <li><a class="nav-link " href="widgets-apps.html">Apps</a></li>
+            <li><a class="nav-link " href="widgets-data.html">Data</a></li>
+          </ul>
+        </li>
+
+        <!-- Forms Section -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-list-checks"></i></span>
+            <span class="nav-text">Forms</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="forms-elements.html">Form Elements</a></li>
+            <li><a class="nav-link " href="forms-layouts.html">Form Layouts</a></li>
+            <li><a class="nav-link " href="forms-validation.html">Validation</a></li>
+            <li><a class="nav-link " href="forms-wizard.html">Wizard</a></li>
+            <li><a class="nav-link " href="forms-editors.html">Rich Editors</a></li>
+            <li><a class="nav-link " href="forms-pickers.html">Date/Time Pickers</a></li>
+            <li><a class="nav-link " href="forms-select.html">Advanced Select</a></li>
+            <li><a class="nav-link " href="forms-upload.html">File Upload</a></li>
+          </ul>
+        </li>
+
+        <!-- Tables Section -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-table"></i></span>
+            <span class="nav-text">Tables</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="tables-basic.html">Basic Tables</a></li>
+            <li><a class="nav-link " href="tables-datatables.html">DataTables</a></li>
+            <li><a class="nav-link " href="tables-responsive.html">Responsive Tables</a></li>
+          </ul>
+        </li>
+
+        <!-- Charts Section -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-chart-bar"></i></span>
+            <span class="nav-text">Charts</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="charts-apexcharts.html">ApexCharts</a></li>
+            <li><a class="nav-link " href="charts-chartjs.html">Chart.js</a></li>
+            <li><a class="nav-link " href="charts-echarts.html">ECharts</a></li>
+          </ul>
+        </li>
+
+        <!-- Icons Section -->
+        <li class="nav-item has-submenu open">
+          <a class="nav-link" href="#" aria-expanded="true">
+            <span class="nav-icon"><i class="ph ph-diamond"></i></span>
+            <span class="nav-text">Icons</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu show">
+            <li><a class="nav-link active" href="icons-bootstrap.html">Bootstrap Icons</a></li>
+            <li><a class="nav-link " href="icons-remixicon.html">Remix Icons</a></li>
+            <li><a class="nav-link " href="icons-fontawesome.html">Font Awesome</a></li>
+            <li><a class="nav-link " href="icons-phosphor.html">Phosphor Icons</a></li>
+            <li><a class="nav-link " href="icons-lucide.html">Lucide Icons</a></li>
+          </ul>
+        </li>
+
+        <!-- Pages Section -->
+        <li class="nav-heading"><span>Pages</span></li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="contact.html">
+            <span class="nav-icon"><i class="ph ph-envelope-simple"></i></span>
+            <span class="nav-text">Contact</span>
+          </a>
+        </li>
+
+        <!-- Invoices -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-receipt"></i></span>
+            <span class="nav-text">Invoices</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="invoice-list.html">Invoice List</a></li>
+            <li><a class="nav-link " href="invoice.html">Invoice View</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="pricing.html">
+            <span class="nav-icon"><i class="ph ph-tag"></i></span>
+            <span class="nav-text">Pricing</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="faq.html">
+            <span class="nav-icon"><i class="ph ph-question"></i></span>
+            <span class="nav-text">FAQ</span>
+          </a>
+        </li>
+
+        <!-- Error Pages -->
+        <li class="nav-item has-submenu ">
+          <a class="nav-link" href="#" aria-expanded="false">
+            <span class="nav-icon"><i class="ph ph-warning"></i></span>
+            <span class="nav-text">Error Pages</span>
+            <i class="ph ph-caret-right nav-arrow"></i>
+          </a>
+          <ul class="nav-submenu ">
+            <li><a class="nav-link " href="error-404.html">404 Not Found</a></li>
+            <li><a class="nav-link " href="error-403.html">403 Forbidden</a></li>
+            <li><a class="nav-link " href="error-500.html">500 Server Error</a></li>
+            <li><a class="nav-link " href="error-maintenance.html">Maintenance</a></li>
+            <li><a class="nav-link " href="error-coming-soon.html">Coming Soon</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="timeline.html">
+            <span class="nav-icon"><i class="ph ph-clock-counter-clockwise"></i></span>
+            <span class="nav-text">Timeline</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="search-results.html">
+            <span class="nav-icon"><i class="ph ph-magnifying-glass"></i></span>
+            <span class="nav-text">Search Results</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="blank.html">
+            <span class="nav-icon"><i class="ph ph-file"></i></span>
+            <span class="nav-text">Blank Page</span>
+          </a>
+        </li>
+
+      </ul>
+    </nav>
+
+    <!-- Sidebar Footer - User Card -->
+    <div class="sidebar-footer">
+      <div class="sidebar-user">
+        <a href="profile.html" class="sidebar-user-link">
+          <span class="sidebar-user-avatar">
+            <img src="assets/img/profile-img.webp" alt="User">
+            <span class="sidebar-user-status"></span>
+          </span>
+          <span class="sidebar-user-info">
+            <span class="sidebar-user-name">John Doe</span>
+            <span class="sidebar-user-role">Administrator</span>
+          </span>
+        </a>
+        <div class="sidebar-user-actions">
+          <a href="settings.html" class="sidebar-user-action" title="Settings">
+            <i class="ph ph-gear"></i>
+          </a>
+          <a href="auth-login.html" class="sidebar-user-action sidebar-user-logout" title="Logout">
+            <i class="ph ph-sign-out"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Sidebar Overlay (Mobile) -->
+  <div class="sidebar-overlay"></div>
+
+  <!-- Main Content -->
+  <main class="main">
+    <div class="main-content page-icons-bootstrap">
+      <!-- Page Header -->
+      <div class="page-header">
+        <h1 class="page-title">Bootstrap Icons</h1>
+        <nav class="breadcrumb">
+          <a href="index.html" class="breadcrumb-item">Home</a>
+          <a href="#" class="breadcrumb-item">Icons</a>
+          <span class="breadcrumb-item active">Bootstrap Icons</span>
+        </nav>
+      </div>
+
+      <section class="section">
+        <div class="card">
+          <div class="card-header">
+            <h5 class="card-title mb-0">Bootstrap Icons</h5>
+            <p class="text-muted mb-0 mt-1">2,078 icons available. Click any icon to copy its class name.</p>
+          </div>
+          <div class="card-body">
+            <!-- Filter Controls -->
+            <div class="row g-3 mb-4">
+              <div class="col-md-6">
+                <div class="input-group">
+                  <span class="input-group-text"><i class="ph ph-magnifying-glass"></i></span>
+                  <input type="text" class="form-control" id="iconSearch" placeholder="Search icons...">
+                </div>
+              </div>
+              <div class="col-md-6">
+                <select class="form-select" id="categoryFilter">
+                  <option value="all">All Categories</option>
+                  <option value="arrows">Arrows & Direction</option>
+                  <option value="media">Media & Players</option>
+                  <option value="communication">Communication</option>
+                  <option value="devices">Devices & Hardware</option>
+                  <option value="files">Files & Documents</option>
+                  <option value="shapes">Shapes & Symbols</option>
+                  <option value="weather">Weather</option>
+                  <option value="brands">Brands & Logos</option>
+                  <option value="people">People & Users</option>
+                  <option value="commerce">Commerce & Shopping</option>
+                  <option value="ui">UI Elements</option>
+                  <option value="misc">Miscellaneous</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Icons Count -->
+            <div class="mb-3">
+              <span class="text-muted">Showing <span id="iconCount">2078</span> icons</span>
+            </div>
+
+            <!-- Icons Grid -->
+            <div class="icons-grid" id="iconsGrid">
+              <!-- Icons will be loaded via JavaScript -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Copy Toast -->
+      <div class="copy-toast" id="copyToast">
+        <i class="ph ph-check-circle me-2"></i>
+        <span id="copyToastText">Copied!</span>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <span class="footer-brand-mark"><i class="bi bi-lightning-charge-fill"></i></span>
+          <span class="footer-copyright">
+            &copy; 2026 <a href="#">TrendyAdmin</a>. All Rights Reserved.
+          </span>
+        </div>
+        <div class="footer-links">
+          <a href="#">About</a>
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Contact</a>
+        </div>
+        <div class="footer-credits">
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Back to Top -->
+  <a href="#" class="back-to-top">
+    <i class="ph ph-arrow-up"></i>
+  </a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="assets/vendor/chart.js/chart.umd.js"></script>
+  <script src="assets/vendor/echarts/echarts.min.js"></script>
+  <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="assets/vendor/quill/quill.js"></script>
+  <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+  <script src="assets/vendor/choices.js/choices.min.js"></script>
+  <script src="assets/vendor/flatpickr/flatpickr.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS Files -->
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <!-- App Sidebar Toggle (for app pages with sidebars) -->
+  <script src="assets/js/apps-sidebar-toggle.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // All Bootstrap Icons
+      const allIcons = [
+        '0-circle-fill', '0-circle', '0-square-fill', '0-square', '1-circle-fill', '1-circle', '1-square-fill', '1-square', '123',
+        '2-circle-fill', '2-circle', '2-square-fill', '2-square', '3-circle-fill', '3-circle', '3-square-fill', '3-square',
+        '4-circle-fill', '4-circle', '4-square-fill', '4-square', '5-circle-fill', '5-circle', '5-square-fill', '5-square',
+        '6-circle-fill', '6-circle', '6-square-fill', '6-square', '7-circle-fill', '7-circle', '7-square-fill', '7-square',
+        '8-circle-fill', '8-circle', '8-square-fill', '8-square', '9-circle-fill', '9-circle', '9-square-fill', '9-square',
+        'activity', 'airplane-engines-fill', 'airplane-engines', 'airplane-fill', 'airplane', 'alarm-fill', 'alarm',
+        'alexa', 'align-bottom', 'align-center', 'align-end', 'align-middle', 'align-start', 'align-top', 'alipay',
+        'alphabet-uppercase', 'alphabet', 'alt', 'amazon', 'amd', 'android2', 'android', 'anthropic', 'app-indicator', 'app',
+        'apple-music', 'apple', 'archive-fill', 'archive', 'arrow-90deg-down', 'arrow-90deg-left', 'arrow-90deg-right', 'arrow-90deg-up',
+        'arrow-bar-down', 'arrow-bar-left', 'arrow-bar-right', 'arrow-bar-up', 'arrow-clockwise', 'arrow-counterclockwise',
+        'arrow-down-circle-fill', 'arrow-down-circle', 'arrow-down-left-circle-fill', 'arrow-down-left-circle',
+        'arrow-down-left-square-fill', 'arrow-down-left-square', 'arrow-down-left', 'arrow-down-right-circle-fill',
+        'arrow-down-right-circle', 'arrow-down-right-square-fill', 'arrow-down-right-square', 'arrow-down-right',
+        'arrow-down-short', 'arrow-down-square-fill', 'arrow-down-square', 'arrow-down-up', 'arrow-down',
+        'arrow-left-circle-fill', 'arrow-left-circle', 'arrow-left-right', 'arrow-left-short', 'arrow-left-square-fill',
+        'arrow-left-square', 'arrow-left', 'arrow-repeat', 'arrow-return-left', 'arrow-return-right',
+        'arrow-right-circle-fill', 'arrow-right-circle', 'arrow-right-short', 'arrow-right-square-fill', 'arrow-right-square',
+        'arrow-right', 'arrow-through-heart-fill', 'arrow-through-heart', 'arrow-up-circle-fill', 'arrow-up-circle',
+        'arrow-up-left-circle-fill', 'arrow-up-left-circle', 'arrow-up-left-square-fill', 'arrow-up-left-square', 'arrow-up-left',
+        'arrow-up-right-circle-fill', 'arrow-up-right-circle', 'arrow-up-right-square-fill', 'arrow-up-right-square', 'arrow-up-right',
+        'arrow-up-short', 'arrow-up-square-fill', 'arrow-up-square', 'arrow-up', 'arrows-angle-contract', 'arrows-angle-expand',
+        'arrows-collapse-vertical', 'arrows-collapse', 'arrows-expand-vertical', 'arrows-expand', 'arrows-fullscreen',
+        'arrows-move', 'arrows-vertical', 'arrows', 'aspect-ratio-fill', 'aspect-ratio', 'asterisk', 'at', 'award-fill', 'award',
+        'back', 'backpack-fill', 'backpack2-fill', 'backpack2', 'backpack3-fill', 'backpack3', 'backpack4-fill', 'backpack4', 'backpack',
+        'backspace-fill', 'backspace-reverse-fill', 'backspace-reverse', 'backspace', 'badge-3d-fill', 'badge-3d', 'badge-4k-fill',
+        'badge-4k', 'badge-8k-fill', 'badge-8k', 'badge-ad-fill', 'badge-ad', 'badge-ar-fill', 'badge-ar', 'badge-cc-fill', 'badge-cc',
+        'badge-hd-fill', 'badge-hd', 'badge-sd-fill', 'badge-sd', 'badge-tm-fill', 'badge-tm', 'badge-vo-fill', 'badge-vo',
+        'badge-vr-fill', 'badge-vr', 'badge-wc-fill', 'badge-wc', 'bag-check-fill', 'bag-check', 'bag-dash-fill', 'bag-dash',
+        'bag-fill', 'bag-heart-fill', 'bag-heart', 'bag-plus-fill', 'bag-plus', 'bag-x-fill', 'bag-x', 'bag', 'balloon-fill',
+        'balloon-heart-fill', 'balloon-heart', 'balloon', 'ban-fill', 'ban', 'bandaid-fill', 'bandaid', 'bank2', 'bank',
+        'bar-chart-fill', 'bar-chart-line-fill', 'bar-chart-line', 'bar-chart-steps', 'bar-chart', 'basket-fill', 'basket2-fill',
+        'basket2', 'basket3-fill', 'basket3', 'basket', 'battery-charging', 'battery-full', 'battery-half', 'battery-low', 'battery',
+        'beaker-fill', 'beaker', 'behance', 'bell-fill', 'bell-slash-fill', 'bell-slash', 'bell', 'bezier2', 'bezier', 'bicycle',
+        'bing', 'binoculars-fill', 'binoculars', 'blockquote-left', 'blockquote-right', 'bluesky', 'bluetooth', 'body-text',
+        'book-fill', 'book-half', 'book', 'bookmark-check-fill', 'bookmark-check', 'bookmark-dash-fill', 'bookmark-dash',
+        'bookmark-fill', 'bookmark-heart-fill', 'bookmark-heart', 'bookmark-plus-fill', 'bookmark-plus', 'bookmark-star-fill',
+        'bookmark-star', 'bookmark-x-fill', 'bookmark-x', 'bookmark', 'bookmarks-fill', 'bookmarks', 'bookshelf', 'boombox-fill',
+        'boombox', 'bootstrap-fill', 'bootstrap-reboot', 'bootstrap', 'border-all', 'border-bottom', 'border-center', 'border-inner',
+        'border-left', 'border-middle', 'border-outer', 'border-right', 'border-style', 'border-top', 'border-width', 'border',
+        'bounding-box-circles', 'bounding-box', 'box-arrow-down-left', 'box-arrow-down-right', 'box-arrow-down', 'box-arrow-in-down-left',
+        'box-arrow-in-down-right', 'box-arrow-in-down', 'box-arrow-in-left', 'box-arrow-in-right', 'box-arrow-in-up-left',
+        'box-arrow-in-up-right', 'box-arrow-in-up', 'box-arrow-left', 'box-arrow-right', 'box-arrow-up-left', 'box-arrow-up-right',
+        'box-arrow-up', 'box-fill', 'box-seam-fill', 'box-seam', 'box2-fill', 'box2-heart-fill', 'box2-heart', 'box2', 'box', 'boxes',
+        'braces-asterisk', 'braces', 'bricks', 'briefcase-fill', 'briefcase', 'brightness-alt-high-fill', 'brightness-alt-high',
+        'brightness-alt-low-fill', 'brightness-alt-low', 'brightness-high-fill', 'brightness-high', 'brightness-low-fill',
+        'brightness-low', 'brilliance', 'broadcast-pin', 'broadcast', 'browser-chrome', 'browser-edge', 'browser-firefox',
+        'browser-safari', 'brush-fill', 'brush', 'bucket-fill', 'bucket', 'bug-fill', 'bug', 'building-add', 'building-check',
+        'building-dash', 'building-down', 'building-exclamation', 'building-fill-add', 'building-fill-check', 'building-fill-dash',
+        'building-fill-down', 'building-fill-exclamation', 'building-fill-gear', 'building-fill-lock', 'building-fill-slash',
+        'building-fill-up', 'building-fill-x', 'building-fill', 'building-gear', 'building-lock', 'building-slash', 'building-up',
+        'building-x', 'building', 'buildings-fill', 'buildings', 'bullseye', 'bus-front-fill', 'bus-front', 'c-circle-fill', 'c-circle',
+        'c-square-fill', 'c-square', 'cake-fill', 'cake2-fill', 'cake2', 'cake', 'calculator-fill', 'calculator', 'calendar-check-fill',
+        'calendar-check', 'calendar-date-fill', 'calendar-date', 'calendar-day-fill', 'calendar-day', 'calendar-event-fill',
+        'calendar-event', 'calendar-fill', 'calendar-heart-fill', 'calendar-heart', 'calendar-minus-fill', 'calendar-minus',
+        'calendar-month-fill', 'calendar-month', 'calendar-plus-fill', 'calendar-plus', 'calendar-range-fill', 'calendar-range',
+        'calendar-week-fill', 'calendar-week', 'calendar-x-fill', 'calendar-x', 'calendar2-check-fill', 'calendar2-check',
+        'calendar2-date-fill', 'calendar2-date', 'calendar2-day-fill', 'calendar2-day', 'calendar2-event-fill', 'calendar2-event',
+        'calendar2-fill', 'calendar2-heart-fill', 'calendar2-heart', 'calendar2-minus-fill', 'calendar2-minus', 'calendar2-month-fill',
+        'calendar2-month', 'calendar2-plus-fill', 'calendar2-plus', 'calendar2-range-fill', 'calendar2-range', 'calendar2-week-fill',
+        'calendar2-week', 'calendar2-x-fill', 'calendar2-x', 'calendar2', 'calendar3-event-fill', 'calendar3-event', 'calendar3-fill',
+        'calendar3-range-fill', 'calendar3-range', 'calendar3-week-fill', 'calendar3-week', 'calendar3', 'calendar4-event',
+        'calendar4-range', 'calendar4-week', 'calendar4', 'calendar', 'camera-fill', 'camera-reels-fill', 'camera-reels',
+        'camera-video-fill', 'camera-video-off-fill', 'camera-video-off', 'camera-video', 'camera2', 'camera', 'capslock-fill',
+        'capslock', 'capsule-pill', 'capsule', 'car-front-fill', 'car-front', 'card-checklist', 'card-heading', 'card-image',
+        'card-list', 'card-text', 'caret-down-fill', 'caret-down-square-fill', 'caret-down-square', 'caret-down', 'caret-left-fill',
+        'caret-left-square-fill', 'caret-left-square', 'caret-left', 'caret-right-fill', 'caret-right-square-fill', 'caret-right-square',
+        'caret-right', 'caret-up-fill', 'caret-up-square-fill', 'caret-up-square', 'caret-up', 'cart-check-fill', 'cart-check',
+        'cart-dash-fill', 'cart-dash', 'cart-fill', 'cart-plus-fill', 'cart-plus', 'cart-x-fill', 'cart-x', 'cart2', 'cart3', 'cart4',
+        'cart', 'cash-coin', 'cash-stack', 'cash', 'cassette-fill', 'cassette', 'cast', 'cc-circle-fill', 'cc-circle', 'cc-square-fill',
+        'cc-square', 'chat-dots-fill', 'chat-dots', 'chat-fill', 'chat-heart-fill', 'chat-heart', 'chat-left-dots-fill', 'chat-left-dots',
+        'chat-left-fill', 'chat-left-heart-fill', 'chat-left-heart', 'chat-left-quote-fill', 'chat-left-quote', 'chat-left-text-fill',
+        'chat-left-text', 'chat-left', 'chat-quote-fill', 'chat-quote', 'chat-right-dots-fill', 'chat-right-dots', 'chat-right-fill',
+        'chat-right-heart-fill', 'chat-right-heart', 'chat-right-quote-fill', 'chat-right-quote', 'chat-right-text-fill',
+        'chat-right-text', 'chat-right', 'chat-square-dots-fill', 'chat-square-dots', 'chat-square-fill', 'chat-square-heart-fill',
+        'chat-square-heart', 'chat-square-quote-fill', 'chat-square-quote', 'chat-square-text-fill', 'chat-square-text', 'chat-square',
+        'chat-text-fill', 'chat-text', 'chat', 'check-all', 'check-circle-fill', 'check-circle', 'check-lg', 'check-square-fill',
+        'check-square', 'check2-all', 'check2-circle', 'check2-square', 'check2', 'check', 'chevron-bar-contract', 'chevron-bar-down',
+        'chevron-bar-expand', 'chevron-bar-left', 'chevron-bar-right', 'chevron-bar-up', 'chevron-compact-down', 'chevron-compact-left',
+        'chevron-compact-right', 'chevron-compact-up', 'chevron-contract', 'chevron-double-down', 'chevron-double-left',
+        'chevron-double-right', 'chevron-double-up', 'chevron-down', 'chevron-expand', 'chevron-left', 'chevron-right', 'chevron-up',
+        'circle-fill', 'circle-half', 'circle-square', 'circle', 'claude', 'clipboard-check-fill', 'clipboard-check', 'clipboard-data-fill',
+        'clipboard-data', 'clipboard-fill', 'clipboard-heart-fill', 'clipboard-heart', 'clipboard-minus-fill', 'clipboard-minus',
+        'clipboard-plus-fill', 'clipboard-plus', 'clipboard-pulse', 'clipboard-x-fill', 'clipboard-x', 'clipboard2-check-fill',
+        'clipboard2-check', 'clipboard2-data-fill', 'clipboard2-data', 'clipboard2-fill', 'clipboard2-heart-fill', 'clipboard2-heart',
+        'clipboard2-minus-fill', 'clipboard2-minus', 'clipboard2-plus-fill', 'clipboard2-plus', 'clipboard2-pulse-fill', 'clipboard2-pulse',
+        'clipboard2-x-fill', 'clipboard2-x', 'clipboard2', 'clipboard', 'clock-fill', 'clock-history', 'clock', 'cloud-arrow-down-fill',
+        'cloud-arrow-down', 'cloud-arrow-up-fill', 'cloud-arrow-up', 'cloud-check-fill', 'cloud-check', 'cloud-download-fill',
+        'cloud-download', 'cloud-drizzle-fill', 'cloud-drizzle', 'cloud-fill', 'cloud-fog-fill', 'cloud-fog2-fill', 'cloud-fog2',
+        'cloud-fog', 'cloud-hail-fill', 'cloud-hail', 'cloud-haze-fill', 'cloud-haze2-fill', 'cloud-haze2', 'cloud-haze',
+        'cloud-lightning-fill', 'cloud-lightning-rain-fill', 'cloud-lightning-rain', 'cloud-lightning', 'cloud-minus-fill', 'cloud-minus',
+        'cloud-moon-fill', 'cloud-moon', 'cloud-plus-fill', 'cloud-plus', 'cloud-rain-fill', 'cloud-rain-heavy-fill', 'cloud-rain-heavy',
+        'cloud-rain', 'cloud-slash-fill', 'cloud-slash', 'cloud-sleet-fill', 'cloud-sleet', 'cloud-snow-fill', 'cloud-snow',
+        'cloud-sun-fill', 'cloud-sun', 'cloud-upload-fill', 'cloud-upload', 'cloud', 'clouds-fill', 'clouds', 'cloudy-fill', 'cloudy',
+        'code-slash', 'code-square', 'code', 'coin', 'collection-fill', 'collection-play-fill', 'collection-play', 'collection',
+        'columns-gap', 'columns', 'command', 'compass-fill', 'compass', 'cone-striped', 'cone', 'controller', 'cookie', 'copy',
+        'cpu-fill', 'cpu', 'credit-card-2-back-fill', 'credit-card-2-back', 'credit-card-2-front-fill', 'credit-card-2-front',
+        'credit-card-fill', 'credit-card', 'crop', 'crosshair2', 'crosshair', 'css', 'cup-fill', 'cup-hot-fill', 'cup-hot', 'cup-straw',
+        'cup', 'currency-bitcoin', 'currency-dollar', 'currency-euro', 'currency-exchange', 'currency-pound', 'currency-rupee',
+        'currency-yen', 'cursor-fill', 'cursor-text', 'cursor', 'dash-circle-dotted', 'dash-circle-fill', 'dash-circle', 'dash-lg',
+        'dash-square-dotted', 'dash-square-fill', 'dash-square', 'dash', 'database-add', 'database-check', 'database-dash',
+        'database-down', 'database-exclamation', 'database-fill-add', 'database-fill-check', 'database-fill-dash', 'database-fill-down',
+        'database-fill-exclamation', 'database-fill-gear', 'database-fill-lock', 'database-fill-slash', 'database-fill-up',
+        'database-fill-x', 'database-fill', 'database-gear', 'database-lock', 'database-slash', 'database-up', 'database-x', 'database',
+        'device-hdd-fill', 'device-hdd', 'device-ssd-fill', 'device-ssd', 'diagram-2-fill', 'diagram-2', 'diagram-3-fill', 'diagram-3',
+        'diamond-fill', 'diamond-half', 'diamond', 'dice-1-fill', 'dice-1', 'dice-2-fill', 'dice-2', 'dice-3-fill', 'dice-3',
+        'dice-4-fill', 'dice-4', 'dice-5-fill', 'dice-5', 'dice-6-fill', 'dice-6', 'disc-fill', 'disc', 'discord', 'display-fill',
+        'display', 'displayport-fill', 'displayport', 'distribute-horizontal', 'distribute-vertical', 'door-closed-fill', 'door-closed',
+        'door-open-fill', 'door-open', 'dot', 'download', 'dpad-fill', 'dpad', 'dribbble', 'dropbox', 'droplet-fill', 'droplet-half',
+        'droplet', 'duffle-fill', 'duffle', 'ear-fill', 'ear', 'earbuds', 'easel-fill', 'easel2-fill', 'easel2', 'easel3-fill',
+        'easel3', 'easel', 'egg-fill', 'egg-fried', 'egg', 'eject-fill', 'eject', 'emoji-angry-fill', 'emoji-angry',
+        'emoji-astonished-fill', 'emoji-astonished', 'emoji-dizzy-fill', 'emoji-dizzy', 'emoji-expressionless-fill',
+        'emoji-expressionless', 'emoji-frown-fill', 'emoji-frown', 'emoji-grimace-fill', 'emoji-grimace', 'emoji-grin-fill',
+        'emoji-grin', 'emoji-heart-eyes-fill', 'emoji-heart-eyes', 'emoji-kiss-fill', 'emoji-kiss', 'emoji-laughing-fill',
+        'emoji-laughing', 'emoji-neutral-fill', 'emoji-neutral', 'emoji-smile-fill', 'emoji-smile-upside-down-fill',
+        'emoji-smile-upside-down', 'emoji-smile', 'emoji-sunglasses-fill', 'emoji-sunglasses', 'emoji-surprise-fill', 'emoji-surprise',
+        'emoji-tear-fill', 'emoji-tear', 'emoji-wink-fill', 'emoji-wink', 'envelope-arrow-down-fill', 'envelope-arrow-down',
+        'envelope-arrow-up-fill', 'envelope-arrow-up', 'envelope-at-fill', 'envelope-at', 'envelope-check-fill', 'envelope-check',
+        'envelope-dash-fill', 'envelope-dash', 'envelope-exclamation-fill', 'envelope-exclamation', 'envelope-fill',
+        'envelope-heart-fill', 'envelope-heart', 'envelope-open-fill', 'envelope-open-heart-fill', 'envelope-open-heart',
+        'envelope-open', 'envelope-paper-fill', 'envelope-paper-heart-fill', 'envelope-paper-heart', 'envelope-paper',
+        'envelope-plus-fill', 'envelope-plus', 'envelope-slash-fill', 'envelope-slash', 'envelope-x-fill', 'envelope-x', 'envelope',
+        'eraser-fill', 'eraser', 'escape', 'ethernet', 'ev-front-fill', 'ev-front', 'ev-station-fill', 'ev-station',
+        'exclamation-circle-fill', 'exclamation-circle', 'exclamation-diamond-fill', 'exclamation-diamond', 'exclamation-lg',
+        'exclamation-octagon-fill', 'exclamation-octagon', 'exclamation-square-fill', 'exclamation-square', 'exclamation-triangle-fill',
+        'exclamation-triangle', 'exclamation', 'exclude', 'explicit-fill', 'explicit', 'exposure', 'eye-fill', 'eye-slash-fill',
+        'eye-slash', 'eye', 'eyedropper', 'eyeglasses', 'facebook', 'fan', 'fast-forward-btn-fill', 'fast-forward-btn',
+        'fast-forward-circle-fill', 'fast-forward-circle', 'fast-forward-fill', 'fast-forward', 'feather2', 'feather',
+        'file-arrow-down-fill', 'file-arrow-down', 'file-arrow-up-fill', 'file-arrow-up', 'file-bar-graph-fill', 'file-bar-graph',
+        'file-binary-fill', 'file-binary', 'file-break-fill', 'file-break', 'file-check-fill', 'file-check', 'file-code-fill',
+        'file-code', 'file-diff-fill', 'file-diff', 'file-earmark-arrow-down-fill', 'file-earmark-arrow-down',
+        'file-earmark-arrow-up-fill', 'file-earmark-arrow-up', 'file-earmark-bar-graph-fill', 'file-earmark-bar-graph',
+        'file-earmark-binary-fill', 'file-earmark-binary', 'file-earmark-break-fill', 'file-earmark-break', 'file-earmark-check-fill',
+        'file-earmark-check', 'file-earmark-code-fill', 'file-earmark-code', 'file-earmark-diff-fill', 'file-earmark-diff',
+        'file-earmark-easel-fill', 'file-earmark-easel', 'file-earmark-excel-fill', 'file-earmark-excel', 'file-earmark-fill',
+        'file-earmark-font-fill', 'file-earmark-font', 'file-earmark-image-fill', 'file-earmark-image', 'file-earmark-lock-fill',
+        'file-earmark-lock2-fill', 'file-earmark-lock2', 'file-earmark-lock', 'file-earmark-medical-fill', 'file-earmark-medical',
+        'file-earmark-minus-fill', 'file-earmark-minus', 'file-earmark-music-fill', 'file-earmark-music', 'file-earmark-pdf-fill',
+        'file-earmark-pdf', 'file-earmark-person-fill', 'file-earmark-person', 'file-earmark-play-fill', 'file-earmark-play',
+        'file-earmark-plus-fill', 'file-earmark-plus', 'file-earmark-post-fill', 'file-earmark-post', 'file-earmark-ppt-fill',
+        'file-earmark-ppt', 'file-earmark-richtext-fill', 'file-earmark-richtext', 'file-earmark-ruled-fill', 'file-earmark-ruled',
+        'file-earmark-slides-fill', 'file-earmark-slides', 'file-earmark-spreadsheet-fill', 'file-earmark-spreadsheet',
+        'file-earmark-text-fill', 'file-earmark-text', 'file-earmark-word-fill', 'file-earmark-word', 'file-earmark-x-fill',
+        'file-earmark-x', 'file-earmark-zip-fill', 'file-earmark-zip', 'file-earmark', 'file-easel-fill', 'file-easel',
+        'file-excel-fill', 'file-excel', 'file-fill', 'file-font-fill', 'file-font', 'file-image-fill', 'file-image', 'file-lock-fill',
+        'file-lock2-fill', 'file-lock2', 'file-lock', 'file-medical-fill', 'file-medical', 'file-minus-fill', 'file-minus',
+        'file-music-fill', 'file-music', 'file-pdf-fill', 'file-pdf', 'file-person-fill', 'file-person', 'file-play-fill', 'file-play',
+        'file-plus-fill', 'file-plus', 'file-post-fill', 'file-post', 'file-ppt-fill', 'file-ppt', 'file-richtext-fill', 'file-richtext',
+        'file-ruled-fill', 'file-ruled', 'file-slides-fill', 'file-slides', 'file-spreadsheet-fill', 'file-spreadsheet',
+        'file-text-fill', 'file-text', 'file-word-fill', 'file-word', 'file-x-fill', 'file-x', 'file-zip-fill', 'file-zip', 'file',
+        'files-alt', 'files', 'filetype-aac', 'filetype-ai', 'filetype-bmp', 'filetype-cs', 'filetype-css', 'filetype-csv',
+        'filetype-doc', 'filetype-docx', 'filetype-exe', 'filetype-gif', 'filetype-heic', 'filetype-html', 'filetype-java',
+        'filetype-jpg', 'filetype-js', 'filetype-json', 'filetype-jsx', 'filetype-key', 'filetype-m4p', 'filetype-md', 'filetype-mdx',
+        'filetype-mov', 'filetype-mp3', 'filetype-mp4', 'filetype-otf', 'filetype-pdf', 'filetype-php', 'filetype-png', 'filetype-ppt',
+        'filetype-pptx', 'filetype-psd', 'filetype-py', 'filetype-raw', 'filetype-rb', 'filetype-sass', 'filetype-scss', 'filetype-sh',
+        'filetype-sql', 'filetype-svg', 'filetype-tiff', 'filetype-tsx', 'filetype-ttf', 'filetype-txt', 'filetype-wav', 'filetype-woff',
+        'filetype-xls', 'filetype-xlsx', 'filetype-xml', 'filetype-yml', 'film', 'filter-circle-fill', 'filter-circle', 'filter-left',
+        'filter-right', 'filter-square-fill', 'filter-square', 'filter', 'fingerprint', 'fire', 'flag-fill', 'flag', 'flask-fill',
+        'flask-florence-fill', 'flask-florence', 'flask', 'floppy-fill', 'floppy2-fill', 'floppy2', 'floppy', 'flower1', 'flower2',
+        'flower3', 'folder-check', 'folder-fill', 'folder-minus', 'folder-plus', 'folder-symlink-fill', 'folder-symlink', 'folder-x',
+        'folder2-open', 'folder2', 'folder', 'fonts', 'fork-knife', 'forward-fill', 'forward', 'front', 'fuel-pump-diesel-fill',
+        'fuel-pump-diesel', 'fuel-pump-fill', 'fuel-pump', 'fullscreen-exit', 'fullscreen', 'funnel-fill', 'funnel', 'gear-fill',
+        'gear-wide-connected', 'gear-wide', 'gear', 'gem', 'gender-ambiguous', 'gender-female', 'gender-male', 'gender-neuter',
+        'gender-trans', 'geo-alt-fill', 'geo-alt', 'geo-fill', 'geo', 'gift-fill', 'gift', 'git', 'github', 'gitlab',
+        'globe-americas-fill', 'globe-americas', 'globe-asia-australia-fill', 'globe-asia-australia', 'globe-central-south-asia-fill',
+        'globe-central-south-asia', 'globe-europe-africa-fill', 'globe-europe-africa', 'globe2', 'globe', 'google-play', 'google',
+        'gpu-card', 'graph-down-arrow', 'graph-down', 'graph-up-arrow', 'graph-up', 'grid-1x2-fill', 'grid-1x2', 'grid-3x2-gap-fill',
+        'grid-3x2-gap', 'grid-3x2', 'grid-3x3-gap-fill', 'grid-3x3-gap', 'grid-3x3', 'grid-fill', 'grid', 'grip-horizontal',
+        'grip-vertical', 'h-circle-fill', 'h-circle', 'h-square-fill', 'h-square', 'hammer', 'hand-index-fill', 'hand-index-thumb-fill',
+        'hand-index-thumb', 'hand-index', 'hand-thumbs-down-fill', 'hand-thumbs-down', 'hand-thumbs-up-fill', 'hand-thumbs-up',
+        'handbag-fill', 'handbag', 'hash', 'hdd-fill', 'hdd-network-fill', 'hdd-network', 'hdd-rack-fill', 'hdd-rack', 'hdd-stack-fill',
+        'hdd-stack', 'hdd', 'hdmi-fill', 'hdmi', 'headphones', 'headset-vr', 'headset', 'heart-arrow', 'heart-fill', 'heart-half',
+        'heart-pulse-fill', 'heart-pulse', 'heart', 'heartbreak-fill', 'heartbreak', 'hearts', 'heptagon-fill', 'heptagon-half',
+        'heptagon', 'hexagon-fill', 'hexagon-half', 'hexagon', 'highlighter', 'highlights', 'hospital-fill', 'hospital',
+        'hourglass-bottom', 'hourglass-split', 'hourglass-top', 'hourglass', 'house-add-fill', 'house-add', 'house-check-fill',
+        'house-check', 'house-dash-fill', 'house-dash', 'house-door-fill', 'house-door', 'house-down-fill', 'house-down',
+        'house-exclamation-fill', 'house-exclamation', 'house-fill', 'house-gear-fill', 'house-gear', 'house-heart-fill', 'house-heart',
+        'house-lock-fill', 'house-lock', 'house-slash-fill', 'house-slash', 'house-up-fill', 'house-up', 'house-x-fill', 'house-x',
+        'house', 'houses-fill', 'houses', 'hr', 'hurricane', 'hypnotize', 'image-alt', 'image-fill', 'image', 'images', 'inbox-fill',
+        'inbox', 'inboxes-fill', 'inboxes', 'incognito', 'indent', 'infinity', 'info-circle-fill', 'info-circle', 'info-lg',
+        'info-square-fill', 'info-square', 'info', 'input-cursor-text', 'input-cursor', 'instagram', 'intersect', 'javascript',
+        'journal-album', 'journal-arrow-down', 'journal-arrow-up', 'journal-bookmark-fill', 'journal-bookmark', 'journal-check',
+        'journal-code', 'journal-medical', 'journal-minus', 'journal-plus', 'journal-richtext', 'journal-text', 'journal-x', 'journal',
+        'journals', 'joystick', 'justify-left', 'justify-right', 'justify', 'kanban-fill', 'kanban', 'key-fill', 'key', 'keyboard-fill',
+        'keyboard', 'ladder', 'lamp-fill', 'lamp', 'laptop-fill', 'laptop', 'layer-backward', 'layer-forward', 'layers-fill',
+        'layers-half', 'layers', 'layout-sidebar-inset-reverse', 'layout-sidebar-inset', 'layout-sidebar-reverse', 'layout-sidebar',
+        'layout-split', 'layout-text-sidebar-reverse', 'layout-text-sidebar', 'layout-text-window-reverse', 'layout-text-window',
+        'layout-three-columns', 'layout-wtf', 'leaf-fill', 'leaf', 'life-preserver', 'lightbulb-fill', 'lightbulb-off-fill',
+        'lightbulb-off', 'lightbulb', 'lightning-charge-fill', 'lightning-charge', 'lightning-fill', 'lightning', 'line', 'link-45deg',
+        'link', 'linkedin', 'list-check', 'list-columns-reverse', 'list-columns', 'list-nested', 'list-ol', 'list-stars', 'list-task',
+        'list-ul', 'list', 'lock-fill', 'lock', 'luggage-fill', 'luggage', 'lungs-fill', 'lungs', 'magic', 'magnet-fill', 'magnet',
+        'mailbox-flag', 'mailbox2-flag', 'mailbox2', 'mailbox', 'map-fill', 'map', 'markdown-fill', 'markdown', 'marker-tip', 'mask',
+        'mastodon', 'measuring-cup-fill', 'measuring-cup', 'medium', 'megaphone-fill', 'megaphone', 'memory', 'menu-app-fill',
+        'menu-app', 'menu-button-fill', 'menu-button-wide-fill', 'menu-button-wide', 'menu-button', 'menu-down', 'menu-up', 'messenger',
+        'meta', 'mic-fill', 'mic-mute-fill', 'mic-mute', 'mic', 'microsoft-teams', 'microsoft', 'minecart-loaded', 'minecart',
+        'modem-fill', 'modem', 'moisture', 'moon-fill', 'moon-stars-fill', 'moon-stars', 'moon', 'mortarboard-fill', 'mortarboard',
+        'motherboard-fill', 'motherboard', 'mouse-fill', 'mouse2-fill', 'mouse2', 'mouse3-fill', 'mouse3', 'mouse', 'music-note-beamed',
+        'music-note-list', 'music-note', 'music-player-fill', 'music-player', 'newspaper', 'nintendo-switch', 'node-minus-fill',
+        'node-minus', 'node-plus-fill', 'node-plus', 'noise-reduction', 'nut-fill', 'nut', 'nvidia', 'nvme-fill', 'nvme',
+        'octagon-fill', 'octagon-half', 'octagon', 'openai', 'opencollective', 'optical-audio-fill', 'optical-audio', 'option',
+        'outlet', 'p-circle-fill', 'p-circle', 'p-square-fill', 'p-square', 'paint-bucket', 'palette-fill', 'palette2', 'palette',
+        'paperclip', 'paragraph', 'pass-fill', 'pass', 'passport-fill', 'passport', 'patch-check-fill', 'patch-check',
+        'patch-exclamation-fill', 'patch-exclamation', 'patch-minus-fill', 'patch-minus', 'patch-plus-fill', 'patch-plus',
+        'patch-question-fill', 'patch-question', 'pause-btn-fill', 'pause-btn', 'pause-circle-fill', 'pause-circle', 'pause-fill',
+        'pause', 'paypal', 'pc-display-horizontal', 'pc-display', 'pc-horizontal', 'pc', 'pci-card-network', 'pci-card-sound',
+        'pci-card', 'peace-fill', 'peace', 'pen-fill', 'pen', 'pencil-fill', 'pencil-square', 'pencil', 'pentagon-fill', 'pentagon-half',
+        'pentagon', 'people-fill', 'people', 'percent', 'perplexity', 'person-add', 'person-arms-up', 'person-badge-fill', 'person-badge',
+        'person-bounding-box', 'person-check-fill', 'person-check', 'person-circle', 'person-dash-fill', 'person-dash', 'person-down',
+        'person-exclamation', 'person-fill-add', 'person-fill-check', 'person-fill-dash', 'person-fill-down', 'person-fill-exclamation',
+        'person-fill-gear', 'person-fill-lock', 'person-fill-slash', 'person-fill-up', 'person-fill-x', 'person-fill', 'person-gear',
+        'person-heart', 'person-hearts', 'person-lines-fill', 'person-lock', 'person-plus-fill', 'person-plus', 'person-raised-hand',
+        'person-rolodex', 'person-slash', 'person-square', 'person-standing-dress', 'person-standing', 'person-up', 'person-vcard-fill',
+        'person-vcard', 'person-video2', 'person-video3', 'person-video', 'person-walking', 'person-wheelchair', 'person-workspace',
+        'person-x-fill', 'person-x', 'person', 'phone-fill', 'phone-flip', 'phone-landscape-fill', 'phone-landscape',
+        'phone-vibrate-fill', 'phone-vibrate', 'phone', 'pie-chart-fill', 'pie-chart', 'piggy-bank-fill', 'piggy-bank', 'pin-angle-fill',
+        'pin-angle', 'pin-fill', 'pin-map-fill', 'pin-map', 'pin', 'pinterest', 'pip-fill', 'pip', 'play-btn-fill', 'play-btn',
+        'play-circle-fill', 'play-circle', 'play-fill', 'play', 'playstation', 'plug-fill', 'plug', 'plugin', 'plus-circle-dotted',
+        'plus-circle-fill', 'plus-circle', 'plus-lg', 'plus-slash-minus', 'plus-square-dotted', 'plus-square-fill', 'plus-square',
+        'plus', 'postage-fill', 'postage-heart-fill', 'postage-heart', 'postage', 'postcard-fill', 'postcard-heart-fill',
+        'postcard-heart', 'postcard', 'power', 'prescription2', 'prescription', 'printer-fill', 'printer', 'projector-fill',
+        'projector', 'puzzle-fill', 'puzzle', 'qr-code-scan', 'qr-code', 'question-circle-fill', 'question-circle',
+        'question-diamond-fill', 'question-diamond', 'question-lg', 'question-octagon-fill', 'question-octagon', 'question-square-fill',
+        'question-square', 'question', 'quora', 'quote', 'r-circle-fill', 'r-circle', 'r-square-fill', 'r-square', 'radar',
+        'radioactive', 'rainbow', 'receipt-cutoff', 'receipt', 'reception-0', 'reception-1', 'reception-2', 'reception-3', 'reception-4',
+        'record-btn-fill', 'record-btn', 'record-circle-fill', 'record-circle', 'record-fill', 'record2-fill', 'record2', 'record',
+        'recycle', 'reddit', 'regex', 'repeat-1', 'repeat', 'reply-all-fill', 'reply-all', 'reply-fill', 'reply', 'rewind-btn-fill',
+        'rewind-btn', 'rewind-circle-fill', 'rewind-circle', 'rewind-fill', 'rewind', 'robot', 'rocket-fill', 'rocket-takeoff-fill',
+        'rocket-takeoff', 'rocket', 'router-fill', 'router', 'rss-fill', 'rss', 'rulers', 'safe-fill', 'safe2-fill', 'safe2', 'safe',
+        'save-fill', 'save2-fill', 'save2', 'save', 'scissors', 'scooter', 'screwdriver', 'sd-card-fill', 'sd-card', 'search-heart-fill',
+        'search-heart', 'search', 'segmented-nav', 'send-arrow-down-fill', 'send-arrow-down', 'send-arrow-up-fill', 'send-arrow-up',
+        'send-check-fill', 'send-check', 'send-dash-fill', 'send-dash', 'send-exclamation-fill', 'send-exclamation', 'send-fill',
+        'send-plus-fill', 'send-plus', 'send-slash-fill', 'send-slash', 'send-x-fill', 'send-x', 'send', 'server', 'shadows',
+        'share-fill', 'share', 'shield-check', 'shield-exclamation', 'shield-fill-check', 'shield-fill-exclamation', 'shield-fill-minus',
+        'shield-fill-plus', 'shield-fill-x', 'shield-fill', 'shield-lock-fill', 'shield-lock', 'shield-minus', 'shield-plus',
+        'shield-shaded', 'shield-slash-fill', 'shield-slash', 'shield-x', 'shield', 'shift-fill', 'shift', 'shop-window', 'shop',
+        'shuffle', 'sign-dead-end-fill', 'sign-dead-end', 'sign-do-not-enter-fill', 'sign-do-not-enter', 'sign-intersection-fill',
+        'sign-intersection-side-fill', 'sign-intersection-side', 'sign-intersection-t-fill', 'sign-intersection-t',
+        'sign-intersection-y-fill', 'sign-intersection-y', 'sign-intersection', 'sign-merge-left-fill', 'sign-merge-left',
+        'sign-merge-right-fill', 'sign-merge-right', 'sign-no-left-turn-fill', 'sign-no-left-turn', 'sign-no-parking-fill',
+        'sign-no-parking', 'sign-no-right-turn-fill', 'sign-no-right-turn', 'sign-railroad-fill', 'sign-railroad', 'sign-stop-fill',
+        'sign-stop-lights-fill', 'sign-stop-lights', 'sign-stop', 'sign-turn-left-fill', 'sign-turn-left', 'sign-turn-right-fill',
+        'sign-turn-right', 'sign-turn-slight-left-fill', 'sign-turn-slight-left', 'sign-turn-slight-right-fill',
+        'sign-turn-slight-right', 'sign-yield-fill', 'sign-yield', 'signal', 'signpost-2-fill', 'signpost-2', 'signpost-fill',
+        'signpost-split-fill', 'signpost-split', 'signpost', 'sim-fill', 'sim-slash-fill', 'sim-slash', 'sim', 'sina-weibo',
+        'skip-backward-btn-fill', 'skip-backward-btn', 'skip-backward-circle-fill', 'skip-backward-circle', 'skip-backward-fill',
+        'skip-backward', 'skip-end-btn-fill', 'skip-end-btn', 'skip-end-circle-fill', 'skip-end-circle', 'skip-end-fill', 'skip-end',
+        'skip-forward-btn-fill', 'skip-forward-btn', 'skip-forward-circle-fill', 'skip-forward-circle', 'skip-forward-fill',
+        'skip-forward', 'skip-start-btn-fill', 'skip-start-btn', 'skip-start-circle-fill', 'skip-start-circle', 'skip-start-fill',
+        'skip-start', 'skype', 'slack', 'slash-circle-fill', 'slash-circle', 'slash-lg', 'slash-square-fill', 'slash-square', 'slash',
+        'sliders2-vertical', 'sliders2', 'sliders', 'smartwatch', 'snapchat', 'snow2', 'snow3', 'snow', 'sort-alpha-down-alt',
+        'sort-alpha-down', 'sort-alpha-up-alt', 'sort-alpha-up', 'sort-down-alt', 'sort-down', 'sort-numeric-down-alt',
+        'sort-numeric-down', 'sort-numeric-up-alt', 'sort-numeric-up', 'sort-up-alt', 'sort-up', 'soundwave', 'sourceforge',
+        'speaker-fill', 'speaker', 'speedometer2', 'speedometer', 'spellcheck', 'spotify', 'square-fill', 'square-half', 'square',
+        'stack-overflow', 'stack', 'star-fill', 'star-half', 'star', 'stars', 'steam', 'stickies-fill', 'stickies', 'sticky-fill',
+        'sticky', 'stop-btn-fill', 'stop-btn', 'stop-circle-fill', 'stop-circle', 'stop-fill', 'stop', 'stoplights-fill', 'stoplights',
+        'stopwatch-fill', 'stopwatch', 'strava', 'stripe', 'subscript', 'substack', 'subtract', 'suit-club-fill', 'suit-club',
+        'suit-diamond-fill', 'suit-diamond', 'suit-heart-fill', 'suit-heart', 'suit-spade-fill', 'suit-spade', 'suitcase-fill',
+        'suitcase-lg-fill', 'suitcase-lg', 'suitcase2-fill', 'suitcase2', 'suitcase', 'sun-fill', 'sun', 'sunglasses', 'sunrise-fill',
+        'sunrise', 'sunset-fill', 'sunset', 'superscript', 'symmetry-horizontal', 'symmetry-vertical', 'table', 'tablet-fill',
+        'tablet-landscape-fill', 'tablet-landscape', 'tablet', 'tag-fill', 'tag', 'tags-fill', 'tags', 'taxi-front-fill', 'taxi-front',
+        'telegram', 'telephone-fill', 'telephone-forward-fill', 'telephone-forward', 'telephone-inbound-fill', 'telephone-inbound',
+        'telephone-minus-fill', 'telephone-minus', 'telephone-outbound-fill', 'telephone-outbound', 'telephone-plus-fill',
+        'telephone-plus', 'telephone-x-fill', 'telephone-x', 'telephone', 'tencent-qq', 'terminal-dash', 'terminal-fill',
+        'terminal-plus', 'terminal-split', 'terminal-x', 'terminal', 'text-center', 'text-indent-left', 'text-indent-right', 'text-left',
+        'text-paragraph', 'text-right', 'text-wrap', 'textarea-resize', 'textarea-t', 'textarea', 'thermometer-half', 'thermometer-high',
+        'thermometer-low', 'thermometer-snow', 'thermometer-sun', 'thermometer', 'threads-fill', 'threads', 'three-dots-vertical',
+        'three-dots', 'thunderbolt-fill', 'thunderbolt', 'ticket-detailed-fill', 'ticket-detailed', 'ticket-fill',
+        'ticket-perforated-fill', 'ticket-perforated', 'ticket', 'tiktok', 'toggle-off', 'toggle-on', 'toggle2-off', 'toggle2-on',
+        'toggles2', 'toggles', 'tools', 'tornado', 'train-freight-front-fill', 'train-freight-front', 'train-front-fill', 'train-front',
+        'train-lightrail-front-fill', 'train-lightrail-front', 'translate', 'transparency', 'trash-fill', 'trash2-fill', 'trash2',
+        'trash3-fill', 'trash3', 'trash', 'tree-fill', 'tree', 'trello', 'triangle-fill', 'triangle-half', 'triangle', 'trophy-fill',
+        'trophy', 'tropical-storm', 'truck-flatbed', 'truck-front-fill', 'truck-front', 'truck', 'tsunami', 'tux', 'tv-fill', 'tv',
+        'twitch', 'twitter-x', 'twitter', 'type-bold', 'type-h1', 'type-h2', 'type-h3', 'type-h4', 'type-h5', 'type-h6', 'type-italic',
+        'type-strikethrough', 'type-underline', 'type', 'typescript', 'ubuntu', 'ui-checks-grid', 'ui-checks', 'ui-radios-grid',
+        'ui-radios', 'umbrella-fill', 'umbrella', 'unindent', 'union', 'unity', 'universal-access-circle', 'universal-access',
+        'unlock-fill', 'unlock2-fill', 'unlock2', 'unlock', 'upc-scan', 'upc', 'upload', 'usb-c-fill', 'usb-c', 'usb-drive-fill',
+        'usb-drive', 'usb-fill', 'usb-micro-fill', 'usb-micro', 'usb-mini-fill', 'usb-mini', 'usb-plug-fill', 'usb-plug', 'usb-symbol',
+        'usb', 'valentine2', 'valentine', 'vector-pen', 'view-list', 'view-stacked', 'vignette', 'vimeo', 'vinyl-fill', 'vinyl',
+        'virus2', 'virus', 'voicemail', 'volume-down-fill', 'volume-down', 'volume-mute-fill', 'volume-mute', 'volume-off-fill',
+        'volume-off', 'volume-up-fill', 'volume-up', 'vr', 'wallet-fill', 'wallet2', 'wallet', 'watch', 'water', 'webcam-fill', 'webcam',
+        'wechat', 'whatsapp', 'wifi-1', 'wifi-2', 'wifi-off', 'wifi', 'wikipedia', 'wind', 'window-dash', 'window-desktop', 'window-dock',
+        'window-fullscreen', 'window-plus', 'window-sidebar', 'window-split', 'window-stack', 'window-x', 'window', 'windows',
+        'wordpress', 'wrench-adjustable-circle-fill', 'wrench-adjustable-circle', 'wrench-adjustable', 'wrench', 'x-circle-fill',
+        'x-circle', 'x-diamond-fill', 'x-diamond', 'x-lg', 'x-octagon-fill', 'x-octagon', 'x-square-fill', 'x-square', 'x', 'xbox',
+        'yelp', 'yin-yang', 'youtube', 'zoom-in', 'zoom-out'
+      ];
+      // Category mappings
+      const categories = {
+        arrows: ['arrow', 'caret', 'chevron', 'sort', 'arrows'],
+        media: ['play', 'pause', 'stop', 'record', 'volume', 'music', 'camera', 'video', 'film', 'mic', 'speaker', 'headphone', 'vinyl', 'disc', 'cassette', 'fast-forward', 'rewind', 'skip', 'shuffle', 'repeat'],
+        communication: ['chat', 'envelope', 'mail', 'send', 'telephone', 'phone', 'bell', 'megaphone', 'broadcast', 'rss', 'at', 'reply'],
+        devices: ['laptop', 'pc', 'display', 'phone', 'tablet', 'tv', 'printer', 'keyboard', 'mouse', 'cpu', 'gpu', 'hdd', 'ssd', 'usb', 'hdmi', 'ethernet', 'wifi', 'bluetooth', 'router', 'modem', 'sim', 'memory', 'motherboard', 'smartwatch', 'headset', 'webcam', 'projector'],
+        files: ['file', 'folder', 'document', 'journal', 'book', 'clipboard', 'archive', 'filetype'],
+        shapes: ['circle', 'square', 'triangle', 'diamond', 'hexagon', 'octagon', 'pentagon', 'heptagon', 'star', 'heart', 'check', 'x-', 'plus', 'dash', 'dot'],
+        weather: ['cloud', 'sun', 'moon', 'rain', 'snow', 'wind', 'lightning', 'thermometer', 'droplet', 'umbrella', 'tornado', 'hurricane', 'tsunami', 'rainbow', 'sunrise', 'sunset'],
+        brands: ['apple', 'android', 'windows', 'microsoft', 'google', 'facebook', 'twitter', 'instagram', 'linkedin', 'youtube', 'github', 'gitlab', 'slack', 'discord', 'twitch', 'spotify', 'paypal', 'amazon', 'bootstrap', 'reddit', 'pinterest', 'whatsapp', 'telegram', 'tiktok', 'snapchat', 'skype', 'steam', 'playstation', 'xbox', 'nintendo', 'ubuntu', 'nvidia', 'amd', 'bing', 'wordpress', 'dribbble', 'behance', 'vimeo', 'medium', 'quora', 'trello', 'dropbox', 'mastodon', 'meta', 'threads', 'bluesky', 'openai', 'anthropic', 'claude', 'stripe', 'strava', 'substack', 'alexa', 'alipay', 'wechat', 'line', 'messenger', 'opencollective', 'sourceforge', 'wikipedia', 'unity', 'perplexity', 'typescript', 'javascript', 'css'],
+        people: ['person', 'people', 'user', 'gender', 'emoji'],
+        commerce: ['cart', 'bag', 'basket', 'shop', 'credit-card', 'wallet', 'cash', 'currency', 'coin', 'bank', 'piggy', 'receipt', 'tag', 'gift', 'percent', 'ticket'],
+        ui: ['menu', 'grid', 'list', 'layout', 'columns', 'table', 'card', 'modal', 'dropdown', 'toggle', 'slider', 'input', 'form', 'button', 'badge', 'alert', 'toast', 'tooltip', 'popover', 'tab', 'nav', 'pagination', 'breadcrumb', 'progress', 'spinner', 'loading'],
+        misc: []
+      };
+      const grid = document.getElementById('iconsGrid');
+      const searchInput = document.getElementById('iconSearch');
+      const categorySelect = document.getElementById('categoryFilter');
+      const iconCount = document.getElementById('iconCount');
+      const copyToast = document.getElementById('copyToast');
+      // Get category for an icon
+      function getCategory(iconName) {
+        for (const [cat, keywords] of Object.entries(categories)) {
+          if (cat === 'misc') continue;
+          for (const keyword of keywords) {
+            if (iconName.includes(keyword)) return cat;
+          }
+        }
+        return 'misc';
+      }
+      // Render icons
+      function renderIcons(icons) {
+        grid.innerHTML = '';
+        iconCount.textContent = icons.length;
+        if (icons.length === 0) {
+          grid.innerHTML = '<div class="text-center text-muted py-5 w-100">No icons found matching your search.</div>';
+          return;
+        }
+        icons.forEach(icon => {
+          const div = document.createElement('div');
+          div.className = 'glyph-item';
+          div.dataset.icon = icon;
+          div.innerHTML = `
+        <i class="bi bi-${icon}"></i>
+        <span class="glyph-name">${icon}</span>
+      `;
+          div.addEventListener('click', () => copyToClipboard(icon, div));
+          grid.appendChild(div);
+        });
+      }
+      // Filter icons
+      function filterIcons() {
+        const search = searchInput.value.toLowerCase().trim();
+        const category = categorySelect.value;
+        let filtered = allIcons;
+        // Filter by category
+        if (category !== 'all') {
+          filtered = filtered.filter(icon => getCategory(icon) === category);
+        }
+        // Filter by search
+        if (search) {
+          filtered = filtered.filter(icon => icon.includes(search));
+        }
+        renderIcons(filtered);
+      }
+      // Copy to clipboard
+      function copyToClipboard(iconName, element) {
+        const html = `<i class="bi bi-${iconName}"></i>`;
+        navigator.clipboard.writeText(html).then(() => {
+          // Visual feedback
+          element.classList.add('copied');
+          setTimeout(() => element.classList.remove('copied'), 1000);
+          // Show toast
+          document.getElementById('copyToastText').textContent = `Copied: bi-${iconName}`;
+          copyToast.classList.add('show');
+          setTimeout(() => copyToast.classList.remove('show'), 2000);
+        });
+      }
+      // Event listeners
+      searchInput.addEventListener('input', filterIcons);
+      categorySelect.addEventListener('change', filterIcons);
+      // Initial render
+      renderIcons(allIcons);
+    });
+  </script>
+</body>
+
+</html>
