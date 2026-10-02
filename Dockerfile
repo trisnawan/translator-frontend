@@ -7,6 +7,7 @@ FROM node:24-alpine AS build
 
 WORKDIR /app
 
+ENV NODE_OPTIONS=--max-old-space-size=1024
 # Dependencies first, so this layer stays cached while only sources change.
 COPY package.json package-lock.json ./
 RUN npm ci --no-audit --no-fund
