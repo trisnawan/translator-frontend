@@ -1,0 +1,25 @@
+# Local / single-host deployment for the Translator frontend.
+#
+#   docker compose up -d --build
+#
+# Values come from `.env` (used both for the ${...} interpolation below and
+# passed into the container via env_file).
+#
+# On a serverless container platform (Cloud Run, App Runner, Azure Container
+# Apps, ...) build the image with plain `docker build` and set PORT +
+# API_BASE_URL as service environment variables instead - no compose needed.
+
+name: translator-frontend
+
+services:
+  frontend:
+    build:
+      context: .
+    image: translator-frontend:latest
+    container_name: translator-frontend
+    env_file:
+      - .env
+    ports:
+      # host:container - nginx listens on $PORT because the image templates it.
+      - '${PORT:-8080}:${PORT:-8080}'
+    restart: unless-stopped
