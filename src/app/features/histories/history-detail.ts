@@ -2,6 +2,7 @@ import {
   ChangeDetectionStrategy,
   Component,
   DestroyRef,
+  effect,
   inject,
   input,
   signal,
@@ -256,12 +257,29 @@ export class HistoryDetail {
   protected readonly polling = signal(true);
   protected readonly pollSeconds = POLL_INTERVAL_MS / 1000;
 
+  /** Id currently loaded, so a route change can clear the previous job. */
+  private loadedId: string | null = null;
+
   constructor() {
-    this.reload();
+    // `id` is bound from the route by `withComponentInputBinding()`, and inputs
+    // are assigned *after* construction — reading `id()` synchronously here threw
+    // NG0950 and made the router abort the navigation back to the list. The
+    // effect waits for the binding and also reloads when the user moves from one
+    // job to another (the router reuses this component for `histories/:id`).
+    effect(() => {
+      const id = this.id();
+
+      if (this.loadedId !== id) {
+        this.loadedId = id;
+        this.history.set(null);
+      }
+
+      this.fetch(id, false);
+    });
 
     const subscription = timer(POLL_INTERVAL_MS, POLL_INTERVAL_MS).subscribe(() => {
       if (this.polling() && this.history()?.status === 'requested') {
-        this.fetch(true);
+        this.fetch(this.id(), true);
       }
     });
 
@@ -277,7 +295,7 @@ export class HistoryDetail {
   }
 
   protected reload(): void {
-    this.fetch(false);
+    this.fetch(this.id(), false);
   }
 
   protected resendCallback(): void {
@@ -331,13 +349,13 @@ export class HistoryDetail {
   }
 
   /** `silent` keeps the polling refresh from flashing the spinner. */
-  private fetch(silent: boolean): void {
+  private fetch(id: string, silent: boolean): void {
     if (!silent) {
       this.loading.set(true);
     }
     this.error.set(null);
 
-    this.service.detail(this.id()).subscribe({
+    this.service.detail(id).subscribe({
       next: (history) => {
         this.history.set(history);
         this.loading.set(false);
